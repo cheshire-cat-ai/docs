@@ -44,22 +44,17 @@ You should configure ports in the `.env` file. Change according to your preferre
 # Decide host and port for your Cat. Default will be localhost:1865
 CORE_HOST=anotherhost.com
 CORE_PORT=9000
-
-# Decide host and port for your Cat Admin. Default will be localhost:3000
-ADMIN_HOST=myhost.eu
-ADMIN_PORT=2222
 ```
 
 #### Docker has no permissions to write
 This is a matter with your docker installation or the user you run docker from.
 
 #### The Cat seems not to be working from inside a Virtual Machine
-In VirtualBox you can select Settings->Network, then choose NAT in the "Attached to" drop down menu. Select "Advanced" to configure the port forwarding rules. Assuming the guest IP of your VM is 10.0.2.15 (the default) and the ports configred in the .env files are the defaults, you have to set at least the following rules:
+In VirtualBox you can select Settings->Network, then choose NAT in the "Attached to" drop down menu. Select "Advanced" to configure the port forwarding rules. Assuming the guest IP of your VM is 10.0.2.15 (the default) and the ports configred in the .env files are the defaults, you have to set at least the following rule:
 
 | Rule name | Protocol | Host IP     | Host Port | Guest IP   | Guest Port |
 |-----------|----------|-------------|-----------|------------|------------|
 | Rule 1    | TCP      | 127.0.0.1   | 1865      | 10.0.2.15  | 1865       |
-| Rule 2    | TCP      | 127.0.0.1   | 3000      | 10.0.2.15  | 3000       |
 
 If you want to work on the documentation of the Cat, you also have to add one rule for port 8000 which is used by `mkdocs`, and to configure `mkdocs` itself to respond to all requests (not only localhost as per the default).  
 
@@ -69,15 +64,11 @@ If you want to work on the documentation of the Cat, you also have to add one ru
 Plugins are any license you wish, you can also sell them.
 The Cat core is GPL3, meaning you are free to fork and go on your own, but you are forced to open source changes to the core.
 
-#### Port 1865 or port 3000 are not allowed by my operating system and/or firewall
-Change the ports as you wish in the `.env` file.
+#### Port 1865 is allowed by my operating system and/or firewall
+Change the port as you wish in the `.env` file.
 ```
 # Decide host and port for your Cat. Default will be localhost:1865
 CORE_HOST=localhost
 CORE_PORT=9000
-
-# Decide host and port for your Cat Admin. Default will be localhost:3000
-ADMIN_HOST=localhost
-ADMIN_PORT=2222
 ```
 

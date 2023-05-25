@@ -14,7 +14,7 @@ To run the Cheshire Cat, you need to have `docker` ([instructions](https://docs.
 - Create and API key on the language model provider website  
 - Make a copy of the `.env.example` file and rename it `.env`
 - Start the app with `docker-compose up` inside the repository
-- Open the app in your browser at `localhost:3000`
+- Open the app in your browser at `localhost:1865/admin`
 - Configure a LLM in the `Settings` tab and paste you API key
 - Start chatting
 

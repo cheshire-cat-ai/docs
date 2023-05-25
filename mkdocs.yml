@@ -24,6 +24,7 @@ nav:
       - How to write a plugin: plugins/plugins.md
       - Tools: plugins/tools.md
       - Hooks: plugins/hooks.md
+      - Dependencies: plugins/dependencies.md
   - Advanced: advanced.md
   - Tutorials:
       #- Overview: tutorials/overview.md

@@ -16,4 +16,4 @@ Insert a `requirements.txt` file in your plugin root folder:
 pycrypto==2.6.1
 ```
 
-To make changes effective, stop the Cat and run the [update instructions](/cheshire-cat/getting-started/#update).
+To make changes effective, stop the Cat and run the [update instructions](../getting-started.md#update).

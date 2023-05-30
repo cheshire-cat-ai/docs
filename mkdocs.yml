@@ -14,21 +14,37 @@ plugins:
 
 nav:
   - Hello, dear: index.md
-  - Getting Started: getting-started.md
-  - How the Cat works: how-the-cat-works.md
-  - Basics:
-      - Folders & APIs: basics/basics.md
-      - The Cat Core: basics/cat-core.md
-      - Admin Interface: basics/admin-interface.md
-  - Plugins:
-      - How to write a plugin: plugins/plugins.md
-      - Tools: plugins/tools.md
-      - Hooks: plugins/hooks.md
-      - Dependencies: plugins/dependencies.md
-  - Advanced: advanced.md
-  - Tutorials:
-      #- Overview: tutorials/overview.md
-      - Installation: tutorials/installation.md
+  - Conceptual:
+      - The Cheshire Cat:
+          - The Mad Hatter: conceptual/cheshire_cat/mad_hatter.md
+          - The Rabbit Hole: conceptual/cheshire_cat/rabbit_hole.md
+          - The Agent: conceptual/cheshire_cat/agent.md
+      - Memory:
+          - Vector Memory: conceptual/memory/vector_memory.md
+          - Long Term Memory: conceptual/memory/long_term_memory.md
+          - Working Memory: conceptual/memory/working_memory.md
+      - Prompts:
+          - HyDE prompt: conceptual/prompts/hyde.md
+          - Main Prompt: conceptual/prompts/main_prompt.md
+          - Summarization Prompt: conceptual/prompts/summarization.md
+      - Language Models: conceptual/llm.md
+      - Plugins: conceptual/plugins.md
+  - Technical:
+      - Getting Started: technical/getting-started.md
+      - How the Cat works: technical/how-the-cat-works.md
+      - Basics:
+          - Folders & APIs: technical/basics/basics.md
+          - The Cat Core: technical/basics/cat-core.md
+          - Admin Interface: technical/basics/admin-interface.md
+      - Plugins:
+          - How to write a plugin: technical/plugins/plugins.md
+          - Tools: technical/plugins/tools.md
+          - Hooks: technical/plugins/hooks.md
+          - Dependencies: technical/plugins/dependencies.md
+      - Advanced: technical/advanced.md
+      - Tutorials:
+          #- Overview: technical/tutorials/overview.md
+          - Installation: technical/tutorials/installation.md
   - FAQ: faq.md
 
 theme:
@@ -83,6 +99,7 @@ markdown_extensions:
   - pymdownx.details
   - attr_list
   - md_in_html
+  - footnotes
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg

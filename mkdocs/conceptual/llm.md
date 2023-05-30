@@ -9,7 +9,7 @@ By default, there are two classes of language models that tackles two different 
 
 ## Completion Model
 This is the most known type of language models 
-(see for examples [ChatGPT](https://openai.com/blog/chatgpt),[Cohere](https://cohere.com/) and many others). A completion model takes a string as input and generates a plausible answer by completion.
+(see for examples [ChatGPT](https://openai.com/blog/chatgpt), [Cohere](https://cohere.com/) and many others). A completion model takes a string as input and generates a plausible answer by completion.
 
 !!! warning
     A LLM answer should not be accepted as-is, since LLM are subjected to hallucinations.
@@ -30,5 +30,5 @@ For instance, measuring the distance between two points can inform us about the 
 !!! note "Developer documentation"
     [Language Models hooks](../technical/plugins/hooks.md)
 
-Nodes with the :hook: point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.
+Nodes with the :hook: point the execution places where there is an available [hook](../technical/plugins/plugins.md) to customize the execution pipeline.
 

@@ -7,6 +7,6 @@ Specifically, the Mad Hatter lists all available plugins in proper folder and so
 Then, it executes them following that order.
 
 !!! note "Developer documentation"   
-    - [How to write a plugin](../technical/plugins/plugins.md)   
-    - [Hooks](../technical/plugins/hooks.md)   
-    - [Tools](../technical/plugins/tools.md)
+    - [How to write a plugin](../../technical/plugins/plugins.md)   
+    - [Hooks](../../technical/plugins/hooks.md)   
+    - [Tools](../../technical/plugins/tools.md)

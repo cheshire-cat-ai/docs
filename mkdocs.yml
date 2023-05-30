@@ -40,7 +40,7 @@ nav:
           - How to write a plugin: technical/plugins/plugins.md
           - Tools: technical/plugins/tools.md
           - Hooks: technical/plugins/hooks.md
-          - Dependencies: plugins/dependencies.md
+          - Dependencies: technical/plugins/dependencies.md
       - Advanced: technical/advanced.md
       - Tutorials:
           - Overview: technical/tutorials/overview.md

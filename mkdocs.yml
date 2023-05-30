@@ -43,7 +43,7 @@ nav:
           - Dependencies: technical/plugins/dependencies.md
       - Advanced: technical/advanced.md
       - Tutorials:
-          - Overview: technical/tutorials/overview.md
+          #- Overview: technical/tutorials/overview.md
           - Installation: technical/tutorials/installation.md
   - FAQ: faq.md
 

@@ -45,4 +45,3 @@ GPT3, ChatGPT, Cohere, HuggingFace Hub, HuggingFace, Azure OpenAI endpoints
 __Credits__
 
 Logo image generated with MidJourney, prompted by [Edgars Romanovskis](https://www.linkedin.com/in/edgars-romanovskis-b28826259/)
-

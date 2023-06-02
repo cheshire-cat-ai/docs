@@ -1,6 +1,6 @@
 # 📚 How to contribute documentation
 
-1. Fork the repository and checkout to the `docs` branch.
+1. Fork the repository.
 2. Using Markdown syntax, edit or create new files for the documentation in the `/mkdocs` directory.
 3. Use headings, bullet points or numbered lists, code blocks and other formatting tools to make the documentation easy to read and understand.
 4. Use clear and concise language to explain the features, functions or concepts that are being documented.

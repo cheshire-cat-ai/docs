@@ -14,12 +14,12 @@ The output of your Tool will go back to the LLM or directly to the user:
 
 You can use Tools to:
 
- - communicate with a web service
- - search information in an external database
- - execute math calculations
- - run stuff in the terminal (danger zone)
- - keep track of specific information and do fancy stuff with it
- - your fantasy is the limit!
+- communicate with a web service
+- search information in an external database
+- execute math calculations
+- run stuff in the terminal (danger zone)
+- keep track of specific information and do fancy stuff with it
+- your fantasy is the limit!
 
 Tools in the Cheshire Cat are inspired and extend [langchain Tools](https://python.langchain.com/en/latest/modules/agents/tools.html), an elegant [Toolformer](https://arxiv.org/abs/2302.04761) implementation.
 
@@ -37,7 +37,7 @@ def get_the_time(tool_input, cat): # (2)
 ```
 
 1. Python functions in a plugin only become tools if you use the `@tool` decorator
-2. Every `@tool` receives two arguments: a string representing the tool input, and the Cat instance. 
+2. Every `@tool` receives two arguments: a string representing the tool input, and the Cat instance.
 3. This doc string is necessary, as it will show up in the LLM prompt. It should describe what the tool is useful for and how to prepare inputs, so the LLM can select the tool and input it properly.
 4. Always return a string, which goes back to the prompt informing the LLM on the Tool's output.
 

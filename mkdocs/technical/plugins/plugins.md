@@ -1,6 +1,6 @@
 # :electric_plug: How to write a plugin
 
-To write a plugin just create a new folder in `core/cat/plugins/`, in this example will be "myplugin". 
+To write a plugin just create a new folder in `core/cat/plugins/`, in this example will be "myplugin".
 
 You need two python files to your plugin folder:
 
@@ -10,7 +10,7 @@ You need two python files to your plugin folder:
     |   |   |   ├── myplugin
     |   |   |   |   ├ mypluginfile.py
     |   |   |   |   ├ plugin.json
-    
+
 The `plugin.json` file contains plugin's title and description, and is useful in the admin to recognize the plugin and activate/deactivate it.
 If your plugin does not contain a `plugin.json` the cat will not block your plugin, but it is useful to have it.
 
@@ -23,7 +23,6 @@ If your plugin does not contain a `plugin.json` the cat will not block your plug
 }
 ```
 
-
 Now let's start `mypluginfile.py` with a little import:
 
 ```python
@@ -31,7 +30,6 @@ from cat.mad_hatter.decorators import tool, hook
 ```
 
 You are now ready to change the Cat's behavior using Hooks and Tools.
-
 
 ## :toolbox: Tools
 
@@ -47,7 +45,6 @@ def get_the_time(tool_input, cat):
 ```
 
 More examples on tools [here](tools.md).
-
 
 ## :hook: Hooks
 
@@ -111,4 +108,3 @@ Please note that, in order to work as expected, the hook priority must be greate
 If you do not provide a priority, your hook will have `priority=1` and implicitly override the default one.
 
 More examples on hooks [here](hooks.md).
-

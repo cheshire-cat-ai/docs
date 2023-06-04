@@ -6,7 +6,7 @@ Clone the repository on your machine:
 
 ```bash
 # Clone the repository
-git clone https://github.com/pieroit/cheshire-cat.git
+git clone https://github.com/cheshire-cat-ai/core.git cheshire-cat
 ```
 
 ## Install

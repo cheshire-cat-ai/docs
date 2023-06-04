@@ -1,5 +1,5 @@
 site_name: Cheshire Cat Docs
-repo_url: https://github.com/pieroit/cheshire-cat
+repo_url: https://github.com/cheshire-cat-ai/core
 
 docs_dir: mkdocs
 site_dir: docs
@@ -81,8 +81,8 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/pieroit/cheshire-cat
-      name: The Cheshire Cat repo on GitHub
+      link: https://github.com/cheshire-cat-ai/core
+      name: The Cheshire Cat repository on GitHub
     - icon: fontawesome/brands/discord
       link: https://discord.gg/bHX5sNFCYU
       name: The Cheshire Cat Discord Server

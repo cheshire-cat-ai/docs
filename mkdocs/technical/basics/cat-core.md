@@ -174,7 +174,7 @@ Currently the following MIME types are supported:
         });
         ```
     === "cURL"
-        ```
+        ```bash
         # Upload an ASCII text file
         curl -v -X POST -H "accept: application/json" -F "file=@file.txt;type=text/plain" http://127.0.0.1:1865/rabbithole/
 

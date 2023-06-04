@@ -26,6 +26,7 @@ Tools in the Cheshire Cat are inspired and extend [langchain Tools](https://pyth
 ## Default tool
 
 The Cat comes already with a custom tool that allows to retrieve the time. You can find it in `core/cat/mad_hatter/core_plugin/tools.py`.  
+Let's take a look at it:
 
 ```python
 @tool # (1)

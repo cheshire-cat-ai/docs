@@ -21,12 +21,12 @@ We plan to adopt local LLMs, at which point all your data will be under your con
 
 #### Can I insert a long article into the chat?
 
-Please avoid pasting long articles into the chat.
+Please avoid pasting long articles into the chat.  
 Use Rabbit Hole to upload long texts instead: just click on the attachment icon in the chat input widget and upload your file.
 
 #### Are the configured LLM APIs used to "instruct" the Cat with the documents I'm going to upload?
 
-That's not exactly how it works: basically when you ask something to the Cat, we pass to the configured LLM a prompt with your actual question + data that can be useful to answer that question. Data can be parts of your documents or chat history.
+That's not exactly how it works: basically when you ask something to the Cat, we pass to the configured LLM a prompt with your actual question + data that can be useful to answer that question. Data can be parts of your documents or chat history.  
 Please check our documentation for more details about how the Cat works for you.
 
 #### Can I talk to the Cat in a language different from English?
@@ -51,7 +51,7 @@ Please check if you have a valid credit card connected or if you have used up al
 
 You should configure ports in the `.env` file. Change according to your preferred host and ports:
 
-```txt
+```text
 # Decide host and port for your Cat. Default will be localhost:1865
 CORE_HOST=anotherhost.com
 CORE_PORT=9000
@@ -82,7 +82,7 @@ The Cat core is GPL3, meaning you are free to fork and go on your own, but you a
 
 Change the port as you wish in the `.env` file.
 
-```txt
+```text
 # Decide host and port for your Cat. Default will be localhost:1865
 CORE_HOST=localhost
 CORE_PORT=9000

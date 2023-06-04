@@ -20,6 +20,7 @@ summarization_prompt = """Write a concise summary of the following:
     [Rabbit Hole hooks](../../technical/plugins/hooks.md)
 
 ```mermaid
+
 flowchart LR
 A["📄Document"] --> B[read];
 subgraph rb ["🐰RabbitHole"]

@@ -1,4 +1,5 @@
 # :cat2: Advanced
+
 ## :closed_lock_with_key: API Authentication
 
 In order to authenticate endpoints, it is necessary to include the `API_KEY=your-key-here` variable in the `.env` file. Multiple keys can be accepted by separating them with a pipe (`|`) as follows: `API_KEY=your-key-here|secondary_client_key`.
@@ -45,6 +46,6 @@ After configuration, all endpoints will require an `access_token` header for aut
                 }
             }
         });
-        ```
+        ```   
 
 By adding the variable to the `.env` file, all Swagger endpoints (`localhost:1865/docs`) will require authentication and can be accessed on the top right-hand corner of the page through the green **Authorize** button.

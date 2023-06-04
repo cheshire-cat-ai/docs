@@ -20,7 +20,7 @@ This is the most known type of language models
 ## Embedding Model
 
 This type of model takes a string as input and returns a vector as output. This is known as an *embedding*.
-Namely, this is a condensed representation of the input content.
+Namely, this is a condensed representation of the input content.  
 The output vector, indeed, embeds the semantic information of the input text.
 
 Despite being non-human readable, the embedding comes with the advantage of living in a Euclidean geometrical space.

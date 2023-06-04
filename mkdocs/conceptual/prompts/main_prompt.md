@@ -9,10 +9,10 @@ This prompt is split in three parts:
 - the instructions;
 - a suffix.
 
-Using such a complex prompt is an approach know as Retrieval Augmented Generation[^1].
-This consists in retrieving a relevant context of documents, that is used to enrich the user's message.
+Using such a complex prompt is an approach know as Retrieval Augmented Generation[^1].  
+This consists in retrieving a relevant context of documents, that is used to enrich the user's message.  
 Specifically, the Cat exploits the [Hypothetical Document Embedding](hyde.md)[^2] (HyDE) technique to recall the relevant
-context from the [Long Term Memory](../memory/long_term_memory.md) and, indeed, augment the Main Prompt.
+context from the [Long Term Memory](../memory/long_term_memory.md) and, indeed, augment the Main Prompt.  
 This is also augmented with the history of the recent conversation, a set of [tools](../plugins.md) and the history the [Agent's](../cheshire_cat/agent.md) reasoning.
 
 In the following sections, we explain every prompt component.
@@ -39,7 +39,7 @@ It also informs the Cat about whom the Cat is.
 
 ## Instructions
 
-This is the set of instructions that explain the [*Agent*](../cheshire_cat/agent.md) how to format its reasoning.
+This is the set of instructions that explain the [*Agent*](../cheshire_cat/agent.md) how to format its reasoning.  
 The [*Agent*](../cheshire_cat/agent.md) uses such chain of thoughts to decide *when* and *which* [tool](../plugins.md) is the most appropriate to fulfill the user's needs.
 
 By default, it is:
@@ -78,7 +78,7 @@ Answer concisely to the user needs as best you can, according to the provided re
 {agent_scratchpad}"""
 ```
 
-The main goal of this component is to provide the Cat with the recent conversation history, followed by the user's input.
+The main goal of this component is to provide the Cat with the recent conversation history, followed by the user's input.  
 Lastly, the `{agent_scratchpad}` is the collection of notes the Cat reads from and writes to its reasoning when performing chain of thoughts.
 
 ## Main Prompt flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }

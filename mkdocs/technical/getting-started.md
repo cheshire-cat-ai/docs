@@ -33,7 +33,6 @@ Create an API key with `+ Create new secret key` in your OpenAI [personal accoun
 ### CLI setup
 
 === "Linux & Mac"
-
     ```bash
     # Open the cloned repository
     cd cheshire-cat
@@ -45,11 +44,10 @@ Create an API key with `+ Create new secret key` in your OpenAI [personal accoun
     docker-compose up
     ```
 === "Windows"
-    
     ```bash
     # Open the cloned repository
     cd cheshire-cat
-    
+
     # Create the .env file
     copy .env.example .env
     

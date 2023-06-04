@@ -127,11 +127,11 @@ To keep it simple, we'll not rely on any third party library and we'll just assu
 Let's convert EUR to USD. In your `mypluginfile.py` create a new function with the `@tool` decorator:
 
 ```python
-from cat.mad_hatter.decorators import tool, hook
+from cat.mad_hatter.decorators import tool
 
 @tool
 def convert_currency(tool_input, cat): # (1)
-    """Useful to convert currencies. This tool converts euros (EUR) to dollars (USD).
+    """Useful to convert currencies. This tool converts euro (EUR) to dollars (USD).
      Input is an integer or floating point number.""" # (2)
     
     # Define fixed rate of change
@@ -190,11 +190,11 @@ When set to `True`, the returned value is printed in the chat as-is.
 Let's give it a try with a modified version of the `convert_currency` tool:
 
 ```python
-from cat.mad_hatter.decorators import tool, hook
+from cat.mad_hatter.decorators import tool
 
 @tool(return_direct=True)
 def convert_currency(tool_input, cat):
-    """Useful to convert currencies. This tool converts euros (EUR) to dollars (USD).
+    """Useful to convert currencies. This tool converts euro (EUR) to dollars (USD).
      Input is an integer or floating point number."""
     
     # Define fixed rate of change
@@ -223,7 +223,65 @@ the reasoning is not displayed as the goal of the `return_direct=True` parameter
 **Cat's answer**:
 > Result of the conversion: 10.50 EUR -> 11.24 USD
 
-[//]: # (### Complex input tools)
+### Complex input tools
+
+This sections re-proposes an explanation of langchain [multi-input tools](https://python.langchain.com/en/latest/modules/agents/tools/multi_input_tool.html).
+For example, we can make the `convert_currency` tool more flexible allowing the user to choose among a fixed set of currencies.
+
+#### Implementation
+
+```python
+from cat.mad_hatter.decorators import tool
+
+@tool
+def convert_currency(tool_input, cat): # (1)
+    """Useful to convert currencies. This tool converts euro (EUR) to a fixed set of other currencies.
+    Choises are: US dollar (USD), English pounds (GBP) or Japanese Yen (JPY).
+    Inputs are two values separated with a minus: the first one is an integer or floating point number;
+    the second one is a three capital letters currency symbol.""" # (2)
+    
+    # Parse the input
+    eur, currency = tool_input.split("-") # (3)
+    
+    # Define fixed rates of change
+    rate_of_change = {"USD": 1.07,
+                      "GBP": 0.86,
+                      "JPY": 150.13}
+    
+    # Convert EUR to float
+    eur = float(eur)
+    
+    # Check currency exists in our list
+    if currency in rate_of_change.keys():
+        # Convert EUR to selected currency
+        result = eur * rate_of_change[currency]
+
+    return result
+```
+
+1. The input to the function are always two
+2. Explain in detail how the inputs from the chat should look like. Here we want something like "3.25-JPY"
+3. The input is always a string, thus it's up to us correctly split and parse the input.
+
+#### How it works
+
+**User's input**:
+> Can you convert 7.5 euros to GBP?
+
+**Cat's reasoning** from the terminal:
+> **Thought**: Do I need to use a tool? Yes
+> 
+> **Action**: convert_currency
+> 
+> **Action Input**: 7.5-GBP
+> 
+> **Observation**: 6.45
+
+**Cat's answer**:
+> 7.5 euros is equal to 6.45 British Pounds.
+
+As you may see, the [Agent](../../conceptual/cheshire_cat/agent.md) correctly understands the desired output from the message
+and passes it to the tool function as explained in the docstring. Then, it is up to us parse the two inputs correctly for our tool.
 
 TODO:
 

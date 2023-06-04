@@ -3,15 +3,18 @@
 ## General
 
 #### I've found the Cat and I like it very much, but I'm not able to follow your instructions to install it on my machine. Can you help?
-The Cheshire Cat is a framework to help developers to build vertical AIs: you will need some basic technical skills to follow our instructions. 
+
+The Cheshire Cat is a framework to help developers to build vertical AIs: you will need some basic technical skills to follow our instructions.
 Please try to ask in the support channel in our discord server, and remember this is all volunteers effort: be kind! :)
 
 #### Why the Cat does not default to some open LLM instead of ChatGPT or GPT-3?
-Our intention is not to depend on any specific LLM: the Cat does not have a preference about which LLM to use. Nonetheless, at the moment, OpenAI tools still provide the best results for your bucks. 
+
+Our intention is not to depend on any specific LLM: the Cat does not have a preference about which LLM to use. Nonetheless, at the moment, OpenAI tools still provide the best results for your bucks.
 Decision is up to you.
 
 #### Are text and documents sent to the Cat safe and not shared with anybody?
-Well, the local memory is safe and under your control, although embeddings and prompts are shared with your configured LLM, meaning you need to check how safe is the LLM. 
+
+Well, the local memory is safe and under your control, although embeddings and prompts are shared with your configured LLM, meaning you need to check how safe is the LLM.
 We plan to adopt local LLMs, at which point all your data will be under your control.
 
 ## Basic Info

@@ -65,7 +65,6 @@ def before_cat_sends_message(message, cat):
 If you want to change the default Agent behavior you can start overriding the default plugin hooks, located in `/core/cat/mad_hatter/core_plugin/hooks/prompt.py`, rewriting them in the plugin file with an higher priority. Following an example of the `agent_prompt_prefix` hook that modify the personality of the Agent:
 
 ```python
-
 # Original Hook, from /core/cat/mad_hatter/core_plugin/hooks/prompt.py
 
 @hook(priority=0)
@@ -85,7 +84,6 @@ def agent_prompt_prefix(cat):
 ```
 
 ```python
-
 # Modified Hook, to be copied into mypluginfile.py
 
 @hook # default priority is 1

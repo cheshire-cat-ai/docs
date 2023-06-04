@@ -25,7 +25,8 @@ Tools in the Cheshire Cat are inspired and extend [langchain Tools](https://pyth
 
 ## Default tool
 The Cat comes already with a custom tool that allows to retrieve the time. You can find it in `core/cat/mad_hatter/core_plugin/tools.py`.   
-Let's take a look at it:
+
+#### Implementation
 
 ```python
 @tool # (1)
@@ -40,12 +41,12 @@ def get_the_time(tool_input, cat): # (2)
 3. This doc string is necessary, as it will show up in the LLM prompt. It should describe what the tool is useful for and how to prepare inputs, so the LLM can select the tool and input it properly.
 4. Always return a string, which goes back to the prompt informing the LLM on the Tool's output.
 
-Here is how it works in a sample conversation:
+#### How it works
 
 **User's Input**:
 > Can you tell me what time is it?
 
-**Cat's reasoning** from the terminal:
+**Cat's full prompt** from the terminal:
 > Entering new LLMChain chain...
 >
 > Prompt after formatting:
@@ -120,12 +121,18 @@ Here is how it works in a sample conversation:
 
 A Tool is just a python function. In this example, we'll show how to create a tool to convert currencies.
 To keep it simple, we'll not rely on any third party library and we'll just assume a fixed rate of change.   
+
+#### Implementation
+
 Let's convert EUR to USD. In your `mypluginfile.py` create a new function with the `@tool` decorator:
+
 ```python
+from cat.mad_hatter.decorators import tool, hook
+
 @tool
 def convert_currency(tool_input, cat): # (1)
     """Useful to convert currencies. This tool converts euros (EUR) to dollars (USD).
-     Input is a floating point number.""" # (2)
+     Input is an integer or floating point number.""" # (2)
     
     # Define fixed rate of change
     rate_of_change = 1.07
@@ -143,6 +150,80 @@ def convert_currency(tool_input, cat): # (1)
       Always remember the two mandatory arguments
 2. In the docstring we explicitly explain how the input should look like. In this way the LLM will be able to isolate it from our input sentence
 3. The input we receive is always a string, hence, we need to correctly parse it. In this case, we have to convert it to a floating number
+
+#### How it works
+
+**User's input**:
+> Can you convert 10.5 euro to dollars?
+
+**Cat's reasoning** from the terminal:
+> **Thought**: Do I need to use a tool? Yes
+> 
+> **Action**: convert_currency
+> 
+> **Action Input**: 10.5
+>
+> **Observation**: 11.235000000000001
+
+**Cat's answer**:
+> 10.5 euros is equivalent to 11.235000000000001 dollars.
+
+Writing as tool is as simple as this. The core aspect to remember are: 
+
+1. the two input arguments, i.e. the first is the string the LLM take from the chat and the Cat instance;
+2. the docstring from where the LLM understand how to use the tool and how the input should look like.
+
+## More tools
+
+As seen, writing basic tools is as simple as writing pure Python functions.  
+However, tools can be very flexible. Here are some examples.
+
+### Return the output directly
+
+The `@tool` decorator accepts an optional boolean argument that is `@tool(return_direct=True)`.
+This is set to `False` by default, which means the tool output is parsed again by the LLM.
+Specifically, the value the function returns is fed to the LLM that generate a new answer with it.
+When set to `True`, the returned value is printed in the chat as-is.  
+
+#### Implementation
+
+Let's give it a try with a modified version of the `convert_currency` tool:
+
+```python
+from cat.mad_hatter.decorators import tool, hook
+
+@tool(return_direct=True)
+def convert_currency(tool_input, cat):
+    """Useful to convert currencies. This tool converts euros (EUR) to dollars (USD).
+     Input is an integer or floating point number."""
+    
+    # Define fixed rate of change
+    rate_of_change = 1.07
+    
+    # Parse input
+    eur = float(tool_input) # (3)
+
+    # Compute USD
+    usd = eur * rate_of_change
+    
+    # Format the output
+    direct_output = f"Result of the conversion: {eur:.2f} EUR -> {usd:.2f} USD"
+
+    return direct_output
+```
+
+#### How it works
+
+**User's input**:
+> Can you convert 10.5 euro to dollars?
+
+**Cat's reasoning** from the terminal:
+the reasoning is not displayed as the goal of the `return_direct=True` parameter is to skip those steps and return the output directly. 
+
+**Cat's answer**:
+> Result of the conversion: 10.50 EUR -> 11.24 USD
+
+[//]: # (### Complex input tools)
 
 TODO:
 

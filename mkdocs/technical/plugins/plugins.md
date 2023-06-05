@@ -1,6 +1,6 @@
 # :electric_plug: How to write a plugin
 
-To write a plugin just create a new folder in `core/cat/plugins/`, in this example will be "myplugin". 
+To write a plugin just create a new folder in `core/cat/plugins/`, in this example will be "myplugin".
 
 You need two python files to your plugin folder:
 
@@ -10,7 +10,7 @@ You need two python files to your plugin folder:
     |   |   |   ├── myplugin
     |   |   |   |   ├ mypluginfile.py
     |   |   |   |   ├ plugin.json
-    
+
 The `plugin.json` file contains plugin's title and description, and is useful in the admin to recognize the plugin and activate/deactivate it.
 If your plugin does not contain a `plugin.json` the cat will not block your plugin, but it is useful to have it.
 
@@ -23,7 +23,6 @@ If your plugin does not contain a `plugin.json` the cat will not block your plug
 }
 ```
 
-
 Now let's start `mypluginfile.py` with a little import:
 
 ```python
@@ -31,7 +30,6 @@ from cat.mad_hatter.decorators import tool, hook
 ```
 
 You are now ready to change the Cat's behavior using Hooks and Tools.
-
 
 ## :toolbox: Tools
 
@@ -47,7 +45,6 @@ def get_the_time(tool_input, cat):
 ```
 
 More examples on tools [here](tools.md).
-
 
 ## :hook: Hooks
 
@@ -68,41 +65,39 @@ def before_cat_sends_message(message, cat):
 If you want to change the default Agent behavior you can start overriding the default plugin hooks, located in `/core/cat/mad_hatter/core_plugin/hooks/prompt.py`, rewriting them in the plugin file with an higher priority. Following an example of the `agent_prompt_prefix` hook that modify the personality of the Agent:
 
 ```python
-
 # Original Hook, from /core/cat/mad_hatter/core_plugin/hooks/prompt.py
 
 @hook(priority=0)
 def agent_prompt_prefix(cat):
     prefix = """This is a conversation between a human and an intelligent robot cat that passes the Turing test.
-The cat is curious and talks like the Cheshire Cat from Alice's adventures in wonderland.
-The cat replies are based on the Context provided below.
+    The cat is curious and talks like the Cheshire Cat from Alice's adventures in wonderland.
+    The cat replies are based on the Context provided below.
 
-Context of things the Human said in the past:{episodic_memory}
+    Context of things the Human said in the past:{episodic_memory}
 
-Context of documents containing relevant information:{declarative_memory}
+    Context of documents containing relevant information:{declarative_memory}
 
-If Context is not enough, you have access to the following tools:
-"""
+    If Context is not enough, you have access to the following tools:
+    """
 
     return prefix
 ```
 
 ```python
-
 # Modified Hook, to be copied into mypluginfile.py
 
 @hook # default priority is 1
 def agent_prompt_prefix(cat):
     prefix = """This is a conversation between a human and an intelligent robot dog that passes the Turing test called Scooby Doo.
-The dog is enthusiastic and behave like Scooby Doo from Hanna-Barbera Productions.
-The dog replies are based on the Context provided below.
+    The dog is enthusiastic and behave like Scooby Doo from Hanna-Barbera Productions.
+    The dog replies are based on the Context provided below.
 
-Context of things the Human said in the past:{episodic_memory}
+    Context of things the Human said in the past:{episodic_memory}
 
-Context of documents containing relevant information:{declarative_memory}
+    Context of documents containing relevant information:{declarative_memory}
 
-If Context is not enough, you have access to the following tools:
-"""
+    If Context is not enough, you have access to the following tools:
+    """
 
     return prefix
 ```
@@ -111,4 +106,3 @@ Please note that, in order to work as expected, the hook priority must be greate
 If you do not provide a priority, your hook will have `priority=1` and implicitly override the default one.
 
 More examples on hooks [here](hooks.md).
-

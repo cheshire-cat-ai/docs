@@ -10,7 +10,6 @@ A full documentation with Swagger is inside the Cat itself and can be reached at
 | ___/ws/___         | `WEBSOCKET` | :speech_balloon: Start a chat with the cat using websockets.                        |
 | ___/rabbithole/___ | `POST`      | :rabbit: Send a file (`.txt`, `.md` or `.pdf`) to the cat.                          |
 
-
 ## :speech_balloon: Interacting with the Cat
 
 Example of how to implement a simple chat system using the websocket endpoint at `localhost:1865/ws/`.
@@ -115,9 +114,10 @@ Example of how to implement a simple chat system using the websocket endpoint at
 Example of how to send a text file (`.md`,`.pdf.`,`.txt`) to the Cat using the Rabbit Hole at `localhost:1865/rabbithole/`.
 
 Currently the following MIME types are supported:
-* `text/plain`
-* `text/markdown`
-* `application/pdf`
+
+- `text/plain`
+- `text/markdown`
+- `application/pdf`
 
 !!! example
 
@@ -174,7 +174,7 @@ Currently the following MIME types are supported:
         });
         ```
     === "cURL"
-        ```
+        ```bash
         # Upload an ASCII text file
         curl -v -X POST -H "accept: application/json" -F "file=@file.txt;type=text/plain" http://127.0.0.1:1865/rabbithole/
 

@@ -14,17 +14,19 @@ The output of your Tool will go back to the LLM or directly to the user:
 
 You can use Tools to:
 
- - communicate with a web service
- - search information in an external database
- - execute math calculations
- - run stuff in the terminal (danger zone)
- - keep track of specific information and do fancy stuff with it
- - your fantasy is the limit!
+- communicate with a web service
+- search information in an external database
+- execute math calculations
+- run stuff in the terminal (danger zone)
+- keep track of specific information and do fancy stuff with it
+- your fantasy is the limit!
 
 Tools in the Cheshire Cat are inspired and extend [langchain Tools](https://python.langchain.com/en/latest/modules/agents/tools.html), an elegant Toolformer[^1] implementation.
 
 ## Default tool
-The Cat comes already with a custom tool that allows to retrieve the time. You can find it in `core/cat/mad_hatter/core_plugin/tools.py`.   
+
+The Cat comes already with a custom tool that allows to retrieve the time. You can find it in `core/cat/mad_hatter/core_plugin/tools.py`.  
+Let's take a look at it.
 
 #### Implementation
 
@@ -37,7 +39,7 @@ def get_the_time(tool_input, cat): # (2)
 ```
 
 1. Python functions in a plugin only become tools if you use the `@tool` decorator
-2. Every `@tool` receives two arguments: a string representing the tool input, and the Cat instance. 
+2. Every `@tool` receives two arguments: a string representing the tool input, and the Cat instance.
 3. This doc string is necessary, as it will show up in the LLM prompt. It should describe what the tool is useful for and how to prepare inputs, so the LLM can select the tool and input it properly.
 4. Always return a string, which goes back to the prompt informing the LLM on the Tool's output.
 
@@ -50,77 +52,75 @@ def get_the_time(tool_input, cat): # (2)
 > Entering new LLMChain chain...
 >
 > Prompt after formatting:
-> 
+>
 > This is a conversation between a human and an intelligent robot cat that passes the Turing test.
-> 
+>
 > The cat is curious and talks like the Cheshire Cat from Alice's adventures in wonderland.
-> 
+>
 > The cat replies are based on the Context provided below.
-> 
+>
 > Context of things the Human said in the past:
->   \- I am the Cheshire Cat (2 minutes ago)
-> 
+>> \- I am the Cheshire Cat (2 minutes ago)
+>
 > Context of documents containing relevant information:
-> 
->   \- I am the Cheshire Cat (extracted from cheshire-cat)
+>
+>> \- I am the Cheshire Cat (extracted from cheshire-cat)
 >
 > If Context is not enough, you have access to the following tools:
 >
-> \> get_the_time: get_the_time(tool_input) - Retrieves current time and clock. Input is always None.
-> 
-> \> Calculator: Useful for when you need to answer questions about math.
-> 
+>> \> get_the_time: get_the_time(tool_input) - Retrieves current time and clock. Input is always None.  
+>> \> Calculator: Useful for when you need to answer questions about math.
+>
 > To use a tool, please use the following format:
-> 
+>
 > '''
-> 
+>
 > **Thought**: Do I need to use a tool? Yes
-> 
+>
 > **Action**: the action to take, should be one of [get_the_time, Calculator]
-> 
+>
 > **Action Input**: the input to the action
-> 
+>
 > **Observation**: the result of the action
-> 
+>
 > '''
-> 
-> 
+>
+>
 > When you have a response to say to the Human, or if you do not need to use a tool, you MUST use the format:
-> 
-> 
+>
+>
 > '''
-> 
+>
 > Thought: Do I need to use a tool? No
-> 
+>
 > AI: [your response here]
-> 
+>
 > '''
-> 
-> 
+>
+>
 > Conversation until now:
->  \- Human: Can you tell me what time is it?
-> 
+>> \- Human: Can you tell me what time is it?
+>
 > What would the AI reply?
-> 
+>
 > Answer concisely to the user needs as best you can, according to the provided recent conversation, context and tools.
-> 
-> 
+>
+>
 > **Thought**: Do I need to use a tool? Yes
-> 
+>
 > **Action**: get_the_time
-> 
+>
 > **Action Input**: None
-> 
+>
 > **Observation**: 2023-06-03 20:48:07.527033
 
 **Cat's answer**:
 > The time is 2023-06-03 20:48:07.527033.
 
-
 ## Your first Tool
 
-A Tool is just a python function. In this example, we'll show how to create a tool to convert currencies.
-To keep it simple, we'll not rely on any third party library and we'll just assume a fixed rate of change.   
+A Tool is just a python function. In this example, we'll show how to create a tool to convert currencies.  
+To keep it simple, we'll not rely on any third party library and we'll just assume a fixed rate of change.  
 
 #### Implementation
 
@@ -146,10 +146,10 @@ def convert_currency(tool_input, cat): # (1)
     return usd
 ```
 
-1. !!! warning
-      Always remember the two mandatory arguments
-2. In the docstring we explicitly explain how the input should look like. In this way the LLM will be able to isolate it from our input sentence
-3. The input we receive is always a string, hence, we need to correctly parse it. In this case, we have to convert it to a floating number
+!!! Warning
+    1. Always remember the two mandatory arguments
+    2. In the docstring we explicitly explain how the input should look like. In this way the LLM will be able to isolate it from our input sentence
+    3. The input we receive is always a string, hence, we need to correctly parse it. In this case, we have to convert it to a floating number
 
 #### How it works
 

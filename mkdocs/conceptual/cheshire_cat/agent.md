@@ -1,7 +1,7 @@
 # Agent
 
-The Agent is the Cat's component that handles the [tools](../plugins.md) execution.   
-Sometimes a simple answer from the [language model](../llm.md#completion-model) is not enough. For this reason, the Cat can exploit a set of custom tools coming from the [plugins](../plugins.md). 
+The Agent is the Cat's component that handles the [tools](../plugins.md) execution.  
+Sometimes a simple answer from the [language model](../llm.md#completion-model) is not enough. For this reason, the Cat can exploit a set of custom tools coming from the [plugins](../plugins.md).  
 The decision on *whether* and *which* action should be taken to fulfill the user's request is delegated to the Agent component.
 
 The Agent outlines a reasoning to take the aforementioned action.

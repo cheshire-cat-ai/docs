@@ -11,11 +11,11 @@
 9. Open a pull request and ask for feedback from the community.
 10. Keep your contributions up-to-date with any changes or updates made to the main repository.
 
-There is a [dedicated channel for Docs on our official Discord](https://discord.com/channels/1092359754917089350/1092360068269359206), don't be shy and contact us there if you need help! 
+There is a [dedicated channel for Docs on our official Discord](https://discord.com/channels/1092359754917089350/1092360068269359206), don't be shy and contact us there if you need help!
 
 ## 🤹 Manage the tecnology [mkdocs]
 
-To modify the behavior of MkDocs and its plugins, everything you need is within the `mkdocs.yml` file. 
+To modify the behavior of MkDocs and its plugins, everything you need is within the `mkdocs.yml` file.  
 We invite you to read the documentation for the [MkDocs Material theme](https://squidfunk.github.io/mkdocs-material/reference/) to fully understand all the potential of the tool and how to make the most of its extensive features.
 
 ### 📦 Requirements

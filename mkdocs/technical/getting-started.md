@@ -1,14 +1,16 @@
 # :rocket: Getting started
 
 ## Download
+
 Clone the repository on your machine:
 
 ```bash
 # Clone the repository
-git clone https://github.com/pieroit/cheshire-cat.git
+git clone https://github.com/cheshire-cat-ai/core.git cheshire-cat
 ```
 
 ## Install
+
 To run the Cheshire Cat, you need to have `docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker-compose` ([instructions](https://docs.docker.com/compose/install/)) installed on your system.
 
 - Create and API key on the language model provider website  
@@ -23,13 +25,14 @@ You can also interact via REST API and try out the endpoints on `localhost:1865/
 The first time you run the `docker-compose up` command it will take several minutes as docker images occupy some GBs.
 
 ## Quickstart
+
 Here is an example of a quick setup running the `gpt3.5-turbo` OpenAI [model](https://platform.openai.com/docs/models/gpt-3-5).  
 
 Create an API key with `+ Create new secret key` in your OpenAI [personal account](https://platform.openai.com/account/api-keys), then:
 
 ### CLI setup
-=== "Linux & Mac"
 
+=== "Linux & Mac"
     ```bash
     # Open the cloned repository
     cd cheshire-cat
@@ -41,11 +44,10 @@ Create an API key with `+ Create new secret key` in your OpenAI [personal accoun
     docker-compose up
     ```
 === "Windows"
-    
     ```bash
     # Open the cloned repository
     cd cheshire-cat
-    
+
     # Create the .env file
     copy .env.example .env
     
@@ -53,15 +55,16 @@ Create an API key with `+ Create new secret key` in your OpenAI [personal accoun
     docker-compose up
     ```
 
-### GUI setup   
+### GUI setup
 
 ![type:video](../assets/vid/setup.mp4)
 
-    
 When you're done using the Cat, remember to CTRL+c in the terminal and `docker-compose down`.
 
 ## Update
+
 As the project is still a work in progress, if you want to update it run the following:
+
 ```bash
 # Open the cloned repository
 cd cheshire-cat

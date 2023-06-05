@@ -12,7 +12,7 @@ You decide to use the `pycrypto` package, from the version 2.6.1 up.
 
 Insert a `requirements.txt` file in your plugin root folder:
 
-```
+```txt
 pycrypto>=2.6.1
 ```
 

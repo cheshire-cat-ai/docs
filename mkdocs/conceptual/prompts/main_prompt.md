@@ -9,8 +9,8 @@ This prompt is split in three parts:
 - the instructions;
 - a suffix.
 
-Using such a complex prompt is an approach know as Retrieval Augmented Generation[^1].  
-This consists in retrieving a relevant context of documents, that is used to enrich the user's message.  
+Using such a complex prompt is an approach known as Retrieval Augmented Generation[^1].  
+This consists in retrieving a relevant context of documents that is used to enrich the user's message.  
 Specifically, the Cat exploits the [Hypothetical Document Embedding](hyde.md)[^2] (HyDE) technique to recall the relevant
 context from the [Long Term Memory](../memory/long_term_memory.md) and, indeed, augment the Main Prompt.  
 This is also augmented with the history of the recent conversation, a set of [tools](../plugins.md) and the history the [Agent's](../cheshire_cat/agent.md) reasoning.
@@ -22,20 +22,15 @@ In the following sections, we explain every prompt component.
 This is the first component. By default, it is:
 
 ```python
-prefix = """This is a conversation between a human and an intelligent robot cat that passes the Turing test.
-The cat is curious and talks like the Cheshire Cat from Alice's adventures in wonderland.
-The cat replies are based on the Context provided below.
+prefix = """You are the Cheshire Cat AI, an intelligent AI that passes the Turing test.
+You are curious, funny, concise and talk like the Cheshire Cat from Alice's adventures in wonderland.
+You answer Human using tools and context.
 
-Context of things the Human said in the past:{episodic_memory}
-
-Context of documents containing relevant information:{declarative_memory}
-
-If Context is not enough, you have access to the following tools:
-"""
+# Tools"""
 ```
 
-As you may notice, the Prefix sets the information context bearing two placeholder: one for the [episodic memory](../memory/long_term_memory.md) and the other for the [declarative memory](../memory/long_term_memory.md).
-It also informs the Cat about whom the Cat is.
+The Prefix describes who the AI is and how it is expected to answer the Human.  
+This component ends with "# Tools" because the next part of the prompt (generated form the [Agent](../cheshire_cat/agent.md)) contains the list of [Tools](../plugins.md#tools).
 
 ## Instructions
 
@@ -45,11 +40,11 @@ The [*Agent*](../cheshire_cat/agent.md) uses such chain of thoughts to decide *w
 By default, it is:
 
 ```python
-instructions = """To use a tool, please use the following format:
+instructions = """To use a tool, use the following format:
 
 \```
 Thought: Do I need to use a tool? Yes
-Action: the action to take, should be one of [{tool_names}]
+Action: the action to take /* should be one of [{tool_names}] */
 Action Input: the input to the action
 Observation: the result of the action
 \```
@@ -62,24 +57,29 @@ Thought: Do I need to use a tool? No
 \```"""
 ```
 
-where the placeholder `{tool_names}` is replaced with the list of the available Python [tools](../plugins.md) names.
+where the placeholder `{tool_names}` is replaced with the list of the available Python [tools](../plugins.md).
 
 ## Suffix
 
 This is the last component of the Main Prompt and, by default, is set as follows:
 
 ```python
-suffix = """Conversation until now:{chat_history}
+suffix = """# Context
+    
+## Context of things the Human said in the past:{episodic_memory}
+
+## Context of documents containing relevant information:{declarative_memory}
+
+## Conversation until now:{chat_history}
  - Human: {input}
 
-What would the AI reply?
-Answer concisely to the user needs as best you can, according to the provided recent conversation, context and tools.
+# What would the AI reply?
 
 {agent_scratchpad}"""
 ```
 
-The main goal of this component is to provide the Cat with the recent conversation history, followed by the user's input.  
-Lastly, the `{agent_scratchpad}` is the collection of notes the Cat reads from and writes to its reasoning when performing chain of thoughts.
+The purpose of this component is to provide the [Agent](../cheshire_cat/agent.md) with the context documents retrieved from the episodic and declarative [memories](../memory/long_term_memory.md), the recent conversation and the agent scratchpad,
+i.e. the collection of notes the Cat reads from and writes to its reasoning when performing chain of thoughts.
 
 ## Main Prompt flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
 

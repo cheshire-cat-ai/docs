@@ -146,10 +146,10 @@ def convert_currency(tool_input, cat): # (1)
     return usd
 ```
 
-!!! Warning
-    1. Always remember the two mandatory arguments
-    2. In the docstring we explicitly explain how the input should look like. In this way the LLM will be able to isolate it from our input sentence
-    3. The input we receive is always a string, hence, we need to correctly parse it. In this case, we have to convert it to a floating number
+1. !!! Warning
+        Always remember the two mandatory arguments
+2. In the docstring we explicitly explain how the input should look like. In this way the LLM will be able to isolate it from our input sentence
+3. The input we receive is always a string, hence, we need to correctly parse it. In this case, we have to convert it to a floating number
 
 #### How it works
 
@@ -282,6 +282,7 @@ def convert_currency(tool_input, cat): # (1)
 
 As you may see, the [Agent](../../conceptual/cheshire_cat/agent.md) correctly understands the desired output from the message
 and passes it to the tool function as explained in the docstring. Then, it is up to us parse the two inputs correctly for our tool.
+
 
 TODO:
 

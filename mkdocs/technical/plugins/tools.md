@@ -283,6 +283,75 @@ def convert_currency(tool_input, cat): # (1)
 As you may see, the [Agent](../../conceptual/cheshire_cat/agent.md) correctly understands the desired output from the message
 and passes it to the tool function as explained in the docstring. Then, it is up to us parse the two inputs correctly for our tool.
 
+### External library & the cat parameter
+
+Tools are extremely flexible as they allow to exploit the whole Python ecosystem of packages.
+Thus, we can update our tool making use of the [Currency Converter](https://github.com/alexprengere/currencyconverter) package.  
+Moreover, here is an example of how you could use the `cat` parameter passed to the tool function.
+
+#### Implementation
+
+```python
+from currency_converter import CurrencyConverter
+from cat.mad_hatter.decorators import tool
+
+
+@tool(return_direct=True)
+def convert_currency(tool_input, cat):
+    """Useful to convert currencies. This tool converts euros (EUR) to another currency.
+    The inputs are two values separated with a minus: the first one is a number;
+    the second one is the name of a currency. Example input: '15-GBP'.
+    Use when the user says something like: 'convert 15 EUR to GBP'"""
+    
+    # Currency Converter
+    converter = CurrencyConverter(decimal=True)
+
+    # Parse the input
+    parsed_input = tool_input.split("-")
+
+    # Check input is correct
+    if len(parsed_input) == 2:  # (1)
+        eur, currency = parsed_input[0].strip("'"), parsed_input[1].strip("'")
+    else:
+        return "Something went wrong using the tool"
+
+    # Ask the Cat to convert the currency name into its symbol
+    symbol = cat.llm(f"You will be given a currency code, translate the input in the corresponding currency symbol. \
+                    Examples: \
+                        euro -> € \
+                        {currency} -> [answer here]")  # (2)
+    # Remove new line if any
+    symbol = symbol.strip("\n")
+
+    # Check the currencies are in the list of available ones
+    if currency not in converter.currencies:
+        return f"{currency} is not available"
+
+    # Convert EUR to currency
+    result = converter.convert(float(eur), "EUR", currency)
+
+    return f"{eur}€ = {float(result):.2f}{symbol}"
+
+```
+
+1. LLMs can be extremely powerful, but they are not always precise. Hence, it's always better to have some checks when parsing the input.
+   A common scenario is that sometimes the Agent wraps the input around quotes and sometimes doesn't
+   E.g. Action Input: 7.5-GBP vs Action Input: '7.5-GBP'
+2. the `cat` instance gives access to any method of the [Cheshire Cat](). In this example, we directly call the LLM using one-shot example to get a currency symbol.
+
+#### How it works
+
+The thoughts under the hood are identical to the previous example, as nothing changed in the underlying behavior, but we improved a little
+the quality of our tool code.
+
+> **Thought**: Do I need to use a tool? Yes
+> 
+> **Action**: convert_currency
+> 
+> **Action Input**: 67-JPY
+> 
+> **Observation**: 67€ = 9846.99¥
+
 
 TODO:
 
@@ -293,7 +362,6 @@ TODO:
     - the tool reads/writes a file
     - the input string contains a dictionary (to be parsed with `json.loads`)
     - the tool manages a conversational form
-    - `@tool(return_direct=True)` to let the returned string go straight to the chat
     - show how you can access cat's functionality (memory, llm, embedder, rabbit_hole) from inside a tool
     - what else? dunno
 

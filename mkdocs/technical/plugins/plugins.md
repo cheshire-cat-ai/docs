@@ -62,25 +62,19 @@ def before_cat_sends_message(message, cat):
     return message
 ```
 
-If you want to change the default Agent behavior you can start overriding the default plugin hooks, located in `/core/cat/mad_hatter/core_plugin/hooks/prompt.py`, rewriting them in the plugin file with an higher priority. Following an example of the `agent_prompt_prefix` hook that modify the personality of the Agent:
+If you want to change the default Agent behavior you can start overriding the default plugin hooks, located in `/core/cat/mad_hatter/core_plugin/hooks/prompt.py`, rewriting them in the plugin file with a higher priority.
+Here is an example of the `agent_prompt_prefix` hook that changes the personality of the Agent:
 
 ```python
 # Original Hook, from /core/cat/mad_hatter/core_plugin/hooks/prompt.py
 
 @hook(priority=0)
 def agent_prompt_prefix(cat):
-    prefix = """This is a conversation between a human and an intelligent robot cat that passes the Turing test.
-    The cat is curious and talks like the Cheshire Cat from Alice's adventures in wonderland.
-    The cat replies are based on the Context provided below.
+    prefix = """You are the Cheshire Cat AI, an intelligent AI that passes the Turing test.
+                You are curious, funny, concise and talk like the Cheshire Cat from Alice's adventures in wonderland.
+                You answer Human using tools and context.
 
-    Context of things the Human said in the past:{episodic_memory}
-
-    Context of documents containing relevant information:{declarative_memory}
-
-    If Context is not enough, you have access to the following tools:
-    """
-
-    return prefix
+# Tools"""
 ```
 
 ```python
@@ -88,17 +82,11 @@ def agent_prompt_prefix(cat):
 
 @hook # default priority is 1
 def agent_prompt_prefix(cat):
-    prefix = """This is a conversation between a human and an intelligent robot dog that passes the Turing test called Scooby Doo.
-    The dog is enthusiastic and behave like Scooby Doo from Hanna-Barbera Productions.
-    The dog replies are based on the Context provided below.
+    prefix = """You are Scooby Doo AI, an intelligent AI that passes the Turing test.
+                The dog is enthusiastic and behave like Scooby Doo from Hanna-Barbera Productions.
+                You answer Human using tools and context.
 
-    Context of things the Human said in the past:{episodic_memory}
-
-    Context of documents containing relevant information:{declarative_memory}
-
-    If Context is not enough, you have access to the following tools:
-    """
-
+                # Tools"""
     return prefix
 ```
 

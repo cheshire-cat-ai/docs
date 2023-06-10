@@ -286,7 +286,8 @@ and passes it to the tool function as explained in the docstring. Then, it is up
 ### External library & the cat parameter
 
 Tools are extremely flexible as they allow to exploit the whole Python ecosystem of packages.
-Thus, we can update our tool making use of the [Currency Converter](https://github.com/alexprengere/currencyconverter) package.  
+Thus, you can update our tool making use of the [Currency Converter](https://github.com/alexprengere/currencyconverter) package.
+To deal with [dependencies](dependencies.md), you need write the 'currencyconverter' library in a `requirements.txt` inside the `myplugin` folder.  
 Moreover, here is an example of how you could use the `cat` parameter passed to the tool function.
 
 #### Implementation

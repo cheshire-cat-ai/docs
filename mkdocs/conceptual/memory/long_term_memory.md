@@ -2,8 +2,8 @@
 
 The Cat's Long Term Memory (LTM) is made of two components:
 
-- *episodic memory*, i.e. the context of documents uploaded to the Cat;
-- *declarative memory*, i.e. the context of things the user said in the past.
+- *episodic memory*, i.e. the context of things the user said in the past.
+- *declarative memory*, i.e. the context of documents uploaded to the Cat;
 
 These are nothing but two [vector databases](vector_memory.md) where memories are stored in the form of vectors.
 

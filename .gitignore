@@ -36,3 +36,5 @@ venv.bak/
 
 # Python IDEs
 .idea/
+
+cat/

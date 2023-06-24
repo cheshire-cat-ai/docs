@@ -11,6 +11,17 @@ plugins:
       video_autoplay: False
       video_type: mp4
   - search
+  - gen-files:
+      scripts:
+        - gen_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [mkdocs/technical/API_Documentation]
+          options:
+            docstring_style: numpy
 
 nav:
   - Hello, dear: index.md
@@ -43,8 +54,10 @@ nav:
           - Dependencies: technical/plugins/dependencies.md
       - Advanced: technical/advanced.md
       - Tutorials:
-          #- Overview: technical/tutorials/overview.md
           - Installation: technical/tutorials/installation.md
+      - Python Reference: technical/API_Documentation/
+      - HTTP Reference: technical/http_reference.md
+
   - FAQ: faq.md
 
 theme:

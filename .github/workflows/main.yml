@@ -30,7 +30,6 @@ jobs:
 
     - name: Change Directory
       run : |
-        cd ..
         ls -a
 
     - name: Build site 🏗️

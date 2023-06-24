@@ -28,6 +28,11 @@ jobs:
         sparse-checkout: |
           cat
 
+    - name: Change Directory
+      run : |
+        cd ..
+        ls -a
+
     - name: Build site 🏗️
       run: |
         mkdocs build

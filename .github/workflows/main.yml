@@ -30,11 +30,15 @@ jobs:
 
     - name: Change Directory
       run : |
+        ls -a
         cp -r core/cat /home/runner/work/docs/docs/cat
+        ls -a 
         cd /home/runner/work/docs/docs
+        ls -a 
 
     - name: Build site 🏗️
       run: |
+        ls -a 
         mkdocs build
 
     - name: Deploy to GitHub Pages 🚀

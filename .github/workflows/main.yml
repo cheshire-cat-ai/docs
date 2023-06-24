@@ -30,8 +30,9 @@ jobs:
 
     - name: Change Directory
       run : |
-        cp -r /home/runner/work/docs/core/cat /home/runner/work/docs/docs
+#        cp -r /home/runner/work/docs/core/cat /home/runner/work/docs/docs
         ls -a 
+        ls -a ..
         cd /home/runner/work/docs/docs
         ls -a 
 

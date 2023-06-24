@@ -38,8 +38,9 @@ jobs:
 
     - name: Build site 🏗️
       run: |
-        ls -a 
-        ls -a core
+#        ls -a
+#        ls -a core
+        cp -r core/core/cat ./
         mkdocs build
 
     - name: Deploy to GitHub Pages 🚀

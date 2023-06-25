@@ -35,4 +35,4 @@ Install dependencies:
 
 The build stage is automated using GitHub action, you don't need to do it in order to contribute. However, if you want to have a static copy of the documentation on your local machine you are free to do it.  
 
-`$ mkdocs build` or `$ python -m mkdocs build` will create the actual docs static website in a folder named `/docs`.
+`$ mkdocs build` or `$ python -m mkdocs build` will create the actual docs static website in a folder named `/docs`. 

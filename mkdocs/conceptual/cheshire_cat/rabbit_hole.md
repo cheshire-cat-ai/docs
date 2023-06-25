@@ -8,7 +8,7 @@ Currently supported file formats are: `.txt`, `.md`, `.pdf` or `.html` via web U
 ## Rabbit Hole flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
 
 !!! note "Developer documentation"
-    [Rabbit Hole hooks](../../technical/plugins/hooks.md)
+    [Rabbit Hole hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/)
 
 ```mermaid
 

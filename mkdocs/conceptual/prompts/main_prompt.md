@@ -84,7 +84,7 @@ i.e. the collection of notes the Cat reads from and writes to its reasoning when
 ## Main Prompt flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
 
 !!! note "Developer documentation"
-    [Main Prompt hooks](../../technical/plugins/hooks.md)
+    [Main Prompt hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/prompt.md#cat.mad_hatter.core_plugin.hooks.prompt.agent_prompt_instructions)
 
 ```mermaid
 flowchart LR

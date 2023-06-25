@@ -15,7 +15,7 @@ By default, Vector Memory Collections are created when the Cat is installed or a
 ## Vector Memory Collections flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
 
 !!! note "Developer documentation"
-    [Vector Memory Collections hooks](../../technical/plugins/hooks.md)
+    [Vector Memory Collections hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/memory.md)
 
 ```mermaid
 flowchart LR

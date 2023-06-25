@@ -12,6 +12,6 @@ The list of available tools can be manually filtered with hooks to condition the
 ## Agent flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
 
 !!! note "Developer documentation"
-    [Agent hooks](../../technical/plugins/hooks.md)
+    [Agent hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/agent.md)
 
 Nodes with the :hook: point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.

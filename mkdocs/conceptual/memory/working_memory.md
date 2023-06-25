@@ -9,7 +9,7 @@ Moreover, the Working Memory collects the relevant context that is fetched from 
 ## Working Memory flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
 
 !!! note "Developer documentation"
-    [Long Term Memory hooks](../../technical/plugins/hooks.md)
+    [Long Term Memory hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/flow.md#at.mad_hatter.core_plugin.hooks.flow.after_cat_recalls_memories)
 
 ```mermaid
 flowchart LR

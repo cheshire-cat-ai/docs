@@ -14,7 +14,7 @@ By default, the Cat queries the LTM to retrieve the relevant context that is use
 ## Long Term Memory flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
 
 !!! note "Developer documentation"
-    [Long Term Memory hooks](../../technical/plugins/hooks.md)
+    [Long Term Memory hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/flow.md#at.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_memories)
 
 ```mermaid
 flowchart LR

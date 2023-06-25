@@ -34,8 +34,8 @@ Sentence:
 ## HyDE flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
 
 !!! note "Developer documentation"
-    - [HyDE hooks](../../technical/plugins/hooks.md)
-    - [Prompts hooks](../../technical/plugins/hooks.md)
+    - [HyDE hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/prompt.md#cat.mad_hatter.core_plugin.hooks.prompt.hypothetical_embedding_prompt)
+    - [Prompts hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/prompt.md)
 
 ```mermaid
 flowchart LR

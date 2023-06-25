@@ -16,8 +16,8 @@ summarization_prompt = """Write a concise summary of the following:
 ## Summarization flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
 
 !!!! note "Developer documentation"
-    [Summarization hooks](../../technical/plugins/hooks.md)  
-    [Rabbit Hole hooks](../../technical/plugins/hooks.md)
+    [Summarization hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/prompt.md#cat.mad_hatter.core_plugin.hooks.prompt.summarization_prompt)  
+    [Rabbit Hole hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole.md)
 
 ```mermaid
 

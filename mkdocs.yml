@@ -45,9 +45,9 @@ nav:
       - Getting Started: technical/getting-started.md
       - How the Cat works: technical/how-the-cat-works.md
       - Basics:
-          - Folders & APIs: technical/basics/basics.md
           - The Cat Core: technical/basics/cat-core.md
           - Admin Interface: technical/basics/admin-interface.md
+          - Main endpoints: technical/basics/interacting.md
       - Plugins:
           - How to write a plugin: technical/plugins/plugins.md
           - Tools: technical/plugins/tools.md

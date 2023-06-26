@@ -24,9 +24,12 @@ If you want to build your custom AI architecture, the Cat can help you!
 | :earth_africa: Language model agnostic                          | :elephant: Long term memory                                     |
 | :rocket: Extendible via [plugins](technical/plugins/plugins.md) in Python | :whale2: 100% [dockerized](https://docs.docker.com/get-docker/) |
 
-## Currently Supported LLMs
+## Get started now!
 
-GPT3, ChatGPT, Cohere, HuggingFace Hub, HuggingFace, Azure OpenAI endpoints
+ - [QuickStart](technical/getting-started.md)
+ - [Write a plugin](technical/plugins/plugins.md)
+ - Tutorial (coming soon)
+
 
 | Get in touch with us!                                                                                   |                                                                                                                                |
 |---------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------|

@@ -18,14 +18,14 @@ By default, the Cat queries the LTM to retrieve the relevant context that is use
 
 ```mermaid
 flowchart LR
-    subgraph LTM ["🐘Long Term Memory"]
+    subgraph LTM ["&#128024;Long Term Memory"]
             direction TB
             C[(Episodic)];
             D[(Declarative)];
     end
     A[Query] --> LTM; 
-    LTM --> E["🪝"];
-    E["🪝"] --> wm["⚙️🐘Working Memory"];
+    LTM --> E["&#129693;"];
+    E["&#129693;"] --> wm["&#9881;&#128024;Working Memory"];
 ```
 
-Nodes with the :hook: point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.
+Nodes with the &#129693; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.

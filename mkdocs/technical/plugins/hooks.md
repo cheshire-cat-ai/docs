@@ -1,4 +1,4 @@
-# :hook: Hooks
+# &#129693; Hooks
 
 Hooks are python functions that are called directly from the Cat at runtime.  
 They allow you to change how the Cat does things by changing prompt, memory, endpoints and much more.
@@ -13,7 +13,7 @@ Both Hooks and Tools are python functions, but they have strong differences:
 
 ## Available Hooks
 
-Hooks will be listed and documented as soon as possible ( help needed! 😸 ).
+Hooks will be listed and documented as soon as possible ( help needed! &#128568; ).
 
 At the moment you can hack around by exploring the available hooks in `core/cat/mad_hatter/core_plugin/hooks/`.
 All the hooks you find in there define default Cat's behaviour and are ready to be overridden by your plugins.

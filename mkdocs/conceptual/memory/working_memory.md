@@ -13,17 +13,17 @@ Moreover, the Working Memory collects the relevant context that is fetched from 
 
 ```mermaid
 flowchart LR
-    subgraph WM ["⚙️🐘️Working Memory"]
+    subgraph WM ["&#9881;&#128024;Working Memory"]
             direction TB
             CH[Chat History]
             C[Episodic Memory];
             D[Declarative Memory];
     end
-    A["🐘Long Term Memory"] --> E["🪝"]; 
-    E["🪝"] --> WM;
+    A["&#128024;Long Term Memory"] --> E["&#129693;"]; 
+    E["&#129693;"] --> WM;
     CH --> main_prompt[Main Prompt];
     C --> main_prompt[Main Prompt];
     D --> main_prompt[Main Prompt];
 ```
 
-Nodes with the :hook: point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.
+Nodes with the &#129693; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.

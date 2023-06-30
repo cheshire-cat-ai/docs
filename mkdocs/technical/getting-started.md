@@ -1,4 +1,4 @@
-# :rocket: Getting started
+# &#128640; Getting started
 
 ## Download
 

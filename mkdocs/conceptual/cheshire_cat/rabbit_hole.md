@@ -13,15 +13,15 @@ Currently supported file formats are: `.txt`, `.md`, `.pdf` or `.html` via web U
 ```mermaid
 
 flowchart LR
-A["📄Document"] --> B[read];
-subgraph rb ["🐰RabbitHole"]
-B[read] --> C["🪝"];
-C["🪝"] --> D[recursive split];
-D["🪝recursive split"] --> E["🪝"];
-E["🪝"] --> F["🪝summarization"];
-F["🪝summarization"] --> G["🪝"];
+A["&#128196;Document"] --> B[read];
+subgraph rb ["&#128048;RabbitHole"]
+B[read] --> C["&#129693;"];
+C["&#129693;"] --> D[recursive split];
+D["&#129693;recursive split"] --> E["&#129693;"];
+E["&#129693;"] --> F["&#129693;summarization"];
+F["&#129693;summarization"] --> G["&#129693;"];
 end
-G["🪝"] --> H["🐘Episodic Memory"] 
+G["&#129693;"] --> H["&#128024;Episodic Memory"] 
 ```
 
-Nodes with the :hook: point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.
+Nodes with the &#129693; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.

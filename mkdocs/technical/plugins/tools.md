@@ -1,4 +1,4 @@
-# :toolbox: Tools
+# &#129520; Tools
 
 A Tool is a python function that can be called directly from the language model.  
 By "called" we mean that the LLM has a description of the available Tools in the prompt, and (given the conversation context) it can generate as output something like:
@@ -351,7 +351,7 @@ the quality of our tool code.
 > 
 > **Action Input**: 67-JPY
 > 
-> **Observation**: 67€ = 9846.99¥
+> **Observation**: 67€ = 9846.99¥;
 
 
 TODO:

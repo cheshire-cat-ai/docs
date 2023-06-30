@@ -25,7 +25,7 @@ flowchart LR
     end
     A[Query] --> LTM; 
     LTM --> E["&#129693;"];
-    E["&#129693;"] --> wm["&#9881;&#65039;&#128024;Working Memory"];
+    E["&#129693;"] --> wm["&#9881;&#128024;Working Memory"];
 ```
 
-Nodes with the &#129693;; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.
+Nodes with the &#129693; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.

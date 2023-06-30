@@ -32,4 +32,4 @@ For instance, measuring the distance between two points can inform us about the 
 !!! note "Developer documentation"
     [Language Models hooks](../technical/API_Documentation/mad_hatter/core_plugin/hooks/models.md)
 
-Nodes with the &#129693;; point the execution places where there is an available [hook](../technical/plugins/plugins.md) to customize the execution pipeline.
+Nodes with the &#129693; point the execution places where there is an available [hook](../technical/plugins/plugins.md) to customize the execution pipeline.

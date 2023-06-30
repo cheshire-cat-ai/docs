@@ -14,4 +14,4 @@ The list of available tools can be manually filtered with hooks to condition the
 !!! note "Developer documentation"
     [Agent hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/agent.md)
 
-Nodes with the &#129693;; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.
+Nodes with the &#129693; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.

@@ -34,4 +34,4 @@ flowchart LR
     F[Memory Swap] ----> LTM;
 ```
 
-Nodes with the &#129693;; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.
+Nodes with the &#129693; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.

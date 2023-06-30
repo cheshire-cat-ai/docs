@@ -10,7 +10,7 @@ By "called" we mean that the LLM has a description of the available Tools in the
 So your `search_ecommerce` Tool will be called and given the input string `"white sport shoes"`.
 The output of your Tool will go back to the LLM or directly to the user:
 
-> Observation: "Mike air Jordania shoes are available for 59.99&#8364;"
+> Observation: "Mike air Jordania shoes are available for 59.99€"
 
 You can use Tools to:
 
@@ -319,7 +319,7 @@ def convert_currency(tool_input, cat):
     # Ask the Cat to convert the currency name into its symbol
     symbol = cat.llm(f"You will be given a currency code, translate the input in the corresponding currency symbol. \
                     Examples: \
-                        euro -> &#8364; \
+                        euro -> € \
                         {currency} -> [answer here]")  # (2)
     # Remove new line if any
     symbol = symbol.strip("\n")
@@ -331,7 +331,7 @@ def convert_currency(tool_input, cat):
     # Convert EUR to currency
     result = converter.convert(float(eur), "EUR", currency)
 
-    return f"{eur}&#8364; = {float(result):.2f}{symbol}"
+    return f"{eur}€ = {float(result):.2f}{symbol}"
 
 ```
 
@@ -351,7 +351,7 @@ the quality of our tool code.
 > 
 > **Action Input**: 67-JPY
 > 
-> **Observation**: 67&#8364; = 9846.99&#165;
+> **Observation**: 67€ = 9846.99¥;
 
 
 TODO:
@@ -368,4 +368,4 @@ TODO:
 
 ## References
 
-[^1]:Schick, T., Dwivedi-Yu, J., Dess&#236;, R., Raileanu, R., Lomeli, M., Zettlemoyer, L., ... & Scialom, T. (2023). Toolformer: Language models can teach themselves to use tools. arXiv preprint arXiv:2302.04761.
+[^1]:Schick, T., Dwivedi-Yu, J., Dessì, R., Raileanu, R., Lomeli, M., Zettlemoyer, L., ... & Scialom, T. (2023). Toolformer: Language models can teach themselves to use tools. arXiv preprint arXiv:2302.04761.

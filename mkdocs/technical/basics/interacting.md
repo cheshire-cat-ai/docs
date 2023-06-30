@@ -1,6 +1,6 @@
 
 
-## :speech_balloon: Interacting with the Cat
+## &#128172; Interacting with the Cat
 
 Example of how to implement a simple chat system using the websocket endpoint at `localhost:1865/ws/`.
 !!! info "Request JSON schema"
@@ -99,7 +99,7 @@ Example of how to implement a simple chat system using the websocket endpoint at
         cat_chat();
         ```
 
-## :rabbit: Interacting with Rabbithole
+## &#128007; Interacting with Rabbithole
 
 Example of how to send a text file (`.md`,`.pdf.`,`.txt`) to the Cat using the Rabbit Hole at `localhost:1865/rabbithole/`.
 

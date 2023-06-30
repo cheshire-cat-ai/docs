@@ -39,19 +39,19 @@ Sentence:
 
 ```mermaid
 flowchart LR
-    subgraph cat ["🐱Cheshire Cat"]
+    subgraph cat ["&#128049;Cheshire Cat"]
     direction LR
-    hyde["🪝HyDE prompt"] --> llm[Language Model];
+    hyde["&#129693;HyDE prompt"] --> llm[Language Model];
     llm -->|generates|answer[Hypothetical Answer];
-    answer -->|similarity search|ltm["🐘Long Term Memory"];
+    answer -->|similarity search|ltm["&#128024;Long Term Memory"];
     ltm --> context[Relevant Context];
     context --->|inserted in|prompt[Main Prompt];
     end
-    A["👤User"] ---->|sends message|hyde;
+    A["&#128100;User"] ---->|sends message|hyde;
     A --> prompt
 ```
 
-Nodes with the :hook: point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.
+Nodes with the &#129693;; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.
 
 ## References
 

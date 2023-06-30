@@ -21,9 +21,9 @@ If you want to build your custom AI architecture, the Cat can help you!
 
 | Cheshire Cat Features                                           |                                                                 |
 |-----------------------------------------------------------------|-----------------------------------------------------------------|
-| :tools: Can use external tools                                  | :scroll: Can ingest documents (.txt, .pdf, .md)                 |
-| :earth_africa: Language model agnostic                          | :elephant: Long term memory                                     |
-| :rocket: Extendible via [plugins](technical/plugins/plugins.md) in Python | :whale2: 100% [dockerized](https://docs.docker.com/get-docker/) |
+| &#129520; Can use external tools                                  | &#128220; Can ingest documents (.txt, .pdf, .md)                 |
+| :earth_africa: Language model agnostic                          | &#128024; Long term memory                                     |
+| &#128640; Extendible via [plugins](technical/plugins/plugins.md) in Python | :whale2: 100% [dockerized](https://docs.docker.com/get-docker/) |
 
 ## Get started now!
 
@@ -34,7 +34,7 @@ If you want to build your custom AI architecture, the Cat can help you!
 
 | Get in touch with us!                                                                                   |                                                                                                                                |
 |---------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| [:fontawesome-brands-discord: Discord](https://discord.gg/bHX5sNFCYU){ .md-button .md-button--primary } | :point_left: **Join our Discord server and** :point_down: <br/> **don't forget to give the project a star! ⭐ Thanks again!🙏** |
+| [:fontawesome-brands-discord: Discord](https://discord.gg/bHX5sNFCYU){ .md-button .md-button--primary } | :point_left: **Join our Discord server and** :point_down: <br/> **don't forget to give the project a star! &#11088; Thanks again!&#128591;** |
 
 ![Wikipedia picture of the Cheshire Cat](assets/img/cheshire-cat-tree-shade.jpg)
 

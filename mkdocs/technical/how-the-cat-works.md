@@ -1,4 +1,4 @@
-# :smirk_cat: How the Cat works
+# &#128572; How the Cat works
 
 ![components](../assets/img/diagrams/components.png)
 

@@ -1,4 +1,4 @@
-# :raising_hand: FAQ
+# &#128587;&#8205;&#9794;&#65039; FAQ
 
 ## General
 

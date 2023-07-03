@@ -13,14 +13,14 @@ Moreover, the Working Memory collects the relevant context that is fetched from 
 
 ```mermaid
 flowchart LR
-    subgraph WM ["&#9881;&#128024;Working Memory"]
+    subgraph WM ["#9881;#128024;Working Memory"]
             direction TB
             CH[Chat History]
             C[Episodic Memory];
             D[Declarative Memory];
     end
-    A["&#128024;Long Term Memory"] --> E["&#129693;"]; 
-    E["&#129693;"] --> WM;
+    A["#128024;Long Term Memory"] --> E["#129693;"]; 
+    E["#129693;"] --> WM;
     CH --> main_prompt[Main Prompt];
     C --> main_prompt[Main Prompt];
     D --> main_prompt[Main Prompt];

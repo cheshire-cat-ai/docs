@@ -90,25 +90,25 @@ i.e. the collection of notes the Cat reads from and writes to its reasoning when
 flowchart LR
     subgraph MP ["Main Prompt"]
 %%        direction LR
-        Prefix["&#129693;Prefix"];
-        Instructions["&#129693;Instructions"];
-        Suffix["&#129693;Suffix"];    
+        Prefix["#129693;Prefix"];
+        Instructions["#129693;Instructions"];
+        Suffix["#129693;Suffix"];    
     end
-    subgraph CAT ["&#128049;Cheshire Cat"]
+    subgraph CAT ["#128049;Cheshire Cat"]
         HyDE
-        subgraph LTM ["&#128024;Long Term Memory"]
+        subgraph LTM ["#128024;Long Term Memory"]
 %%        direction
         C[(Episodic)];
         D[(Declarative)];
     end
-    subgraph Agent ["&#129302;Agent"]
+    subgraph Agent ["#129302;Agent"]
         A[Agent Scratchpad];
     end
     end
     
-    U["&#128100;User"] -->|sends message|HyDE ---> LTM["&#128024;Long Term Memory"];
-    C --> E["&#129693;"] ----> Prefix;
-    D --> E["&#129693;"] --> Prefix;
+    U["#128100;User"] -->|sends message|HyDE ---> LTM["#128024;Long Term Memory"];
+    C --> E["#129693;"] ----> Prefix;
+    D --> E["#129693;"] --> Prefix;
     A --> Suffix;
     MP -..->|fed back to|CAT -...-> Answer
 ```

@@ -19,16 +19,16 @@ By default, Vector Memory Collections are created when the Cat is installed or a
 
 ```mermaid
 flowchart LR
-    subgraph CAT ["&#128049;Cheshire Cat"]
+    subgraph CAT ["#128049;Cheshire Cat"]
         direction LR
-        subgraph LTM ["&#128024;Long Term Memory"]
+        subgraph LTM ["#128024;Long Term Memory"]
             direction TB
             C[(Episodic Memory)];
             D[(Declarative Memory)];
         end
-        A["First Memory"] --> H["&#129693;"];
-        H["&#129693;"] --> C[(Episodic)];
-        H["&#129693;"] --> D[(Declarative )];
+        A["First Memory"] --> H["#129693;"];
+        H["#129693;"] --> C[(Episodic)];
+        H["#129693;"] --> D[(Declarative )];
     end
     E[First Installation] ----> CAT;
     F[Memory Swap] ----> LTM;

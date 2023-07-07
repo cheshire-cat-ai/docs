@@ -9,7 +9,7 @@
 7. Add a new item or adjust menu levels through the `mkdocs.yml` file if you have made any structural modifications.
 8. When finished, commit and push your changes to your forked repository.
 9. Open a pull request and ask for feedback from the community.
-10. Keep your contributions up-to-date with any changes or updates made to the main repository.
+10. Keep your contributions up-to-date with any changes or updates made to the main repository. 
 
 There is a [dedicated channel for Docs on our official Discord](https://discord.com/channels/1092359754917089350/1092360068269359206), don't be shy and contact us there if you need help!
 

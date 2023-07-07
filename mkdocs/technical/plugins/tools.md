@@ -317,7 +317,7 @@ def convert_currency(tool_input, cat):
         return "Something went wrong using the tool"
 
     # Ask the Cat to convert the currency name into its symbol
-    symbol = cat.llm(f"You will be given a currency code, translate the input in the corresponding currency symbol. \
+    symbol = cat.llm.predict(f"You will be given a currency code, translate the input in the corresponding currency symbol. \
                     Examples: \
                         euro -> € \
                         {currency} -> [answer here]")  # (2)

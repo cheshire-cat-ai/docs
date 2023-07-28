@@ -52,11 +52,13 @@ By adding the variable to the `.env` file, all Swagger endpoints (`localhost:186
 
 ## &#128300; Testing
 
-To run tests, start the Cat as usual. Open another terminal in the same folder and launch:
+To run tests, start the Cat as usual.  
 Tests will run on the same containers you already launched, but with mock databases and plugin folder.
 End to end (e2e) tests are found in `tests/routes`, while all the other folders contain unit tests and mocks / utilities.
 
 ### Run all tests
+
+Open another terminal (in the same folder from where you start the Cat) and launch:
 
 ```bash
 docker exec cheshire_cat_core python -m pytest --color=yes .

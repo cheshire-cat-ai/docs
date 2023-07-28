@@ -13,11 +13,10 @@ git clone https://github.com/cheshire-cat-ai/core.git cheshire-cat
 
 To run the Cheshire Cat, you need to have `docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker-compose` ([instructions](https://docs.docker.com/compose/install/)) installed on your system.
 
-- Create and API key on the language model provider website  
-- Make a copy of the `.env.example` file and rename it `.env`
-- Start the app with `docker-compose up` inside the repository
+- Create and API key on the language model provider website
+- Start the app with `docker-compose up` inside the `cheshire-cat` folder
 - Open the app in your browser at `localhost:1865/admin`
-- Configure a LLM in the `Settings` tab and paste you API key
+- Configure a LLM in the `Settings` tab and paste your API key
 - Start chatting
 
 You can also interact via REST API and try out the endpoints on `localhost:1865/docs`
@@ -34,11 +33,12 @@ Create an API key with `+ Create new secret key` in your OpenAI [personal accoun
 
 === "Linux & Mac"
     ```bash
+
+    # Clone the repository
+    git clone https://github.com/cheshire-cat-ai/core.git cheshire-cat
+
     # Open the cloned repository
     cd cheshire-cat
-    
-    # Create the .env file
-    cp .env.example .env
     
     # Run docker containers
     docker-compose up
@@ -47,9 +47,6 @@ Create an API key with `+ Create new secret key` in your OpenAI [personal accoun
     ```bash
     # Open the cloned repository
     cd cheshire-cat
-
-    # Create the .env file
-    copy .env.example .env
     
     # Run docker containers
     docker-compose up

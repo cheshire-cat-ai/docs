@@ -38,6 +38,7 @@ nav:
       - Prompts:
           - HyDE prompt: conceptual/prompts/hyde.md
           - Main Prompt: conceptual/prompts/main_prompt.md
+          - Instruction Prompt: conceptual/prompts/instructions.md
           - Summarization Prompt: conceptual/prompts/summarization.md
       - Language Models: conceptual/llm.md
       - Plugins: conceptual/plugins.md

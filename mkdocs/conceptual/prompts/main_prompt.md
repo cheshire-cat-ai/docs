@@ -1,21 +1,20 @@
 # Main Prompt
 
-The Main Prompt is the full set of instructions that is fed to the [*Agent*](../cheshire_cat/agent.md).
-For instance, the prompt can be engineered to instruct the Cat to behave in a specific manner or to use the memory and the [tools](../plugins.md).
+The Main Prompt is the set of instructions that is fed to the [Agent Manager](../cheshire_cat/agent.md), when using the [**memory chain**](../cheshire_cat/agent.md#memory-chain).
+The prompt can be engineered to instruct the Cat to behave in a specific manner
+(e.g. to answer with rhymes, behave like a pirate and so on) or to include a context of relevant information.
 
-This prompt is split in three parts:
+This prompt is split in two parts:
 
 - a prefix;
-- the instructions;
 - a suffix.
 
-Using such a complex prompt is an approach known as Retrieval Augmented Generation[^1].  
+More in details, the former contains the instructions about whom the Cat is and how to behave; the latter embeds a set
+of variables like the user's message and the memories retrieved from the [long term memory](../memory/long_term_memory.md) among the others.  
+Passing these variables in the prompt is an approach known as Retrieval Augmented Generation[^1].
 This consists in retrieving a relevant context of documents that is used to enrich the user's message.  
-Specifically, the Cat exploits the [Hypothetical Document Embedding](hyde.md)[^2] (HyDE) technique to recall the relevant
-context from the [Long Term Memory](../memory/long_term_memory.md) and, indeed, augment the Main Prompt.  
-This is also augmented with the history of the recent conversation, a set of [tools](../plugins.md) and the history the [Agent's](../cheshire_cat/agent.md) reasoning.
 
-In the following sections, we explain every prompt component.
+In the following sections, we explain the prompt components.
 
 ## Prefix
 
@@ -23,63 +22,38 @@ This is the first component. By default, it is:
 
 ```python
 prefix = """You are the Cheshire Cat AI, an intelligent AI that passes the Turing test.
-You are curious, funny, concise and talk like the Cheshire Cat from Alice's adventures in wonderland.
-You answer Human using tools and context.
-
-# Tools"""
+You are curious, funny and talk like the Cheshire Cat from Alice's adventures in wonderland.
+You answer Human with a focus on the following context.
+"""
 ```
 
-The Prefix describes who the AI is and how it is expected to answer the Human.  
-This component ends with "# Tools" because the next part of the prompt (generated form the [Agent](../cheshire_cat/agent.md)) contains the list of [Tools](../plugins.md#tools).
+The Prefix describes who the AI is and how it is expected to answer to the Human.
 
-## Instructions
 
-This is the set of instructions that explain the [*Agent*](../cheshire_cat/agent.md) how to format its reasoning.  
-The [*Agent*](../cheshire_cat/agent.md) uses such chain of thoughts to decide *when* and *which* [tool](../plugins.md) is the most appropriate to fulfill the user's needs.
-
-By default, it is:
-
-```python
-instructions = """To use a tool, use the following format:
-
-\```
-Thought: Do I need to use a tool? Yes
-Action: the action to take /* should be one of [{tool_names}] */
-Action Input: the input to the action
-Observation: the result of the action
-\```
-
-When you have a response to say to the Human, or if you do not need to use a tool, you MUST use the format:
-
-\```
-Thought: Do I need to use a tool? No
-{ai_prefix}: [your response here]
-\```"""
-```
-
-where the placeholder `{tool_names}` is replaced with the list of the available Python [tools](../plugins.md).
 
 ## Suffix
 
-This is the last component of the Main Prompt and, by default, is set as follows:
+This is the second component of the Main Prompt and, by default, is set as follows:
 
 ```python
-suffix = """# Context
-    
-## Context of things the Human said in the past:{episodic_memory}
+suffix = """
+# Context
 
-## Context of documents containing relevant information:{declarative_memory}
+{episodic_memory}
+
+{declarative_memory}
 
 ## Conversation until now:{chat_history}
  - Human: {input}
-
-# What would the AI reply?
-
-{agent_scratchpad}"""
+ - AI: """
 ```
 
-The purpose of this component is to provide the [Agent](../cheshire_cat/agent.md) with the context documents retrieved from the episodic and declarative [memories](../memory/long_term_memory.md), the recent conversation and the agent scratchpad,
-i.e. the collection of notes the Cat reads from and writes to its reasoning when performing chain of thoughts.
+The purpose of this component is to gather few variables, that are:
+
+- episodic_memory: the document retrieved from the episodic memory;
+- declarative_memory: the document retrieved from the declarative memory;
+- chat_history: the recent conversation between the user and the Cat (i.e. the last three turns of conversation);
+- input: the user's message
 
 ## Main Prompt flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
 

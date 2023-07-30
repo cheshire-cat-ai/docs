@@ -47,7 +47,12 @@ nav:
       - How the Cat works: technical/how-the-cat-works.md
       - Basics:
           - The Cat Core: technical/basics/cat-core.md
-          - Admin Interface: technical/basics/admin-interface.md
+          - Admin Interface:
+              - Home: technical/basics/admin/admin-interface.md
+              - Memory: technical/basics/admin/memory.md
+              - Plugins: technical/basics/admin/plugins.md
+              - Settings: technical/basics/admin/settings.md
+              - Docs: technical/basics/admin/docs.md
           - Main endpoints: technical/basics/interacting.md
       - Plugins:
           - How to write a plugin: technical/plugins/plugins.md

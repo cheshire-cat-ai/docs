@@ -20,18 +20,25 @@ By default, Vector Memory Collections are created when the Cat is installed or a
 ```mermaid
 flowchart LR
     subgraph CAT ["#128049;Cheshire Cat"]
+        H["#129693;"] %% before_collection_created
+        H1["#129693;"] %% after_collection_created
         direction LR
         subgraph LTM ["#128024;Long Term Memory"]
             direction TB
-            C[(Episodic Memory)];
-            D[(Declarative Memory)];
+            C[(Episodic)];
+            D[(Declarative)];
+            P[(Procedural)]
         end
-        A["First Memory"] --> H["#129693;"];
-        H["#129693;"] --> C[(Episodic)];
-        H["#129693;"] --> D[(Declarative )];
+        H --> C
+        H --> D
+        H --> P
+        C --> H1
+        D --> H1
+        P --> H1
     end
-    E[First Installation] ----> CAT;
-    F[Memory Swap] ----> LTM;
+    E[First Installation] ----> H;
+    F[Memory Swap] ----> H
+
 ```
 
 Nodes with the &#129693; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.

@@ -57,6 +57,6 @@ at the bottom left the source of the memory and on the bottom right the upload t
 
 1. **Prompt settings**: allows customizing the main prompt [prefix](../../../conceptual/prompts/main_prompt.md#prefix).
 2. **Upload memories**: allows uploading memories in the format of JSON files.
-3. **Upload url**: allows uploading a web page in memory providing a url.
-4. **Upload file**: allows uploading a file in memory. Supportated formats are `.txt`, `.pdf` and `.md`.
+3. **Upload url**: allows uploading a web page in memory providing an url.
+4. **Upload file**: allows uploading a file in memory. Supported formats are `.txt`, `.pdf` and `.md`.
 5. **Clear conversation**: clear the current conversation and delete the conversation history in the [working memory](../../../conceptual/memory/working_memory.md).

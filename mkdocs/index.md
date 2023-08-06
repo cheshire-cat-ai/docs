@@ -23,7 +23,7 @@ If you want to build your custom AI architecture, the Cat can help you!
 |-----------------------------------------------------------------|-----------------------------------------------------------------|
 | &#129520; Can use external tools                                | &#128220; Can ingest documents (.txt, .pdf, .md)                 |
 | &#127757; Language model agnostic                               | &#128024; Long term memory                                     |
-| &#128640; Extendible via [plugins](technical/plugins/plugins.md) in Python | 	&#128011; 100% [dockerized](https://docs.docker.com/get-docker/) |
+| &#128640; Extendable via [plugins](technical/plugins/plugins.md) in Python | 	&#128011; 100% [dockerized](https://docs.docker.com/get-docker/) |
 
 ## Get started now!
 

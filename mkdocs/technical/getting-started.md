@@ -58,7 +58,7 @@ As the project is still a work in progress, if you want to update it run the fol
 cd cheshire-cat
 ```
 
-- Pull updates from the github repository
+- Pull updates from the GitHub repository
 
 ```bash
 git pull

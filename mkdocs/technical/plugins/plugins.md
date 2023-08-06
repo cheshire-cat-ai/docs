@@ -48,7 +48,7 @@ More examples on tools [here](tools.md).
 
 ## &#129693; Hooks
 
-Hooks are also python functions, but they pertain the Cat's runtime and not striclty the LLM. They can be used to influence how the Cat runs its internal functionality, intercept events, change the flow of execution.  
+Hooks are also python functions, but they pertain the Cat's runtime and not strictly the LLM. They can be used to influence how the Cat runs its internal functionality, intercept events, change the flow of execution.  
 
 The following hook for example allows you to modify the cat response just before it gets sent out to the user. In this case we make a "grumpy rephrase" of the original response.
 

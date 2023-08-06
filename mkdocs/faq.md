@@ -37,7 +37,7 @@ Of course you can: just change the prompts in the Plugin folder accordingly, and
 
 Just open the console in your browser to check the logs there. At some point soon, this information will end up in the user interface, but at the moment is behind the scenes.
 
-#### I sent to the Cat some text and documents I won't to get rid of, How can I do?
+#### I sent to the Cat some text and documents I want to get rid of, How can I do?
 
 You can delete the `long_term_memory` folder and restart the Cat!
 
@@ -97,7 +97,7 @@ Keys are store in a JSON file, `core/metadata.json`.
 #### Will OpenAI see my documents and conversations?
 
 If you are using the Cat with an OpenAI LLM, all your conversations and documents will indeed take a trip into OpenAI servers, because the models are there. 
-We advice to avoid uploading sensitive documents while using an external LLM. 
+We advise to avoid uploading sensitive documents while using an external LLM. 
 If you want to use the Cat in total security and privacy, use a local LLM or a cloud LLM in your control.
 
 ## Spending

@@ -10,7 +10,7 @@ By "called" we mean that the LLM has a description of the available Tools in the
 So your `search_ecommerce` Tool will be called and given the input string `"white sport shoes"`.
 The output of your Tool will go back to the LLM or directly to the user:
 
-> Observation: "Mike air Jordania shoes are available for 59.99€"
+> Observation: "Mike air Jordan shoes are available for 59.99€"
 
 You can use Tools to:
 
@@ -236,7 +236,7 @@ from cat.mad_hatter.decorators import tool
 @tool
 def convert_currency(tool_input, cat): # (1)
     """Useful to convert currencies. This tool converts euro (EUR) to a fixed set of other currencies.
-    Choises are: US dollar (USD), English pounds (GBP) or Japanese Yen (JPY).
+    Chooses are: US dollar (USD), English pounds (GBP) or Japanese Yen (JPY).
     Inputs are two values separated with a minus: the first one is an integer or floating point number;
     the second one is a three capital letters currency symbol.""" # (2)
     

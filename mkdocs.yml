@@ -110,8 +110,6 @@ extra:
       name: The Cheshire Cat Discord Server
 
 markdown_extensions:
-  - toc:
-      permalink: 
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span

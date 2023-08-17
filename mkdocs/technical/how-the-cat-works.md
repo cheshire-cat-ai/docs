@@ -1,8 +1,6 @@
-# &#128572; How the Cat works
+# &#128572; Components
 
 ![components](../assets/img/diagrams/components.png)
-
-## Components
 
 The Cheshire Cat is made of many pluggable components that make it fully customizable.
 

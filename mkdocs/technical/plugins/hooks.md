@@ -13,7 +13,7 @@ Both Hooks and Tools are python functions, but they have strong differences:
 
 ## Available Hooks
 
-Hooks will be listed and documented as soon as possible ( help needed! &#128568; ).
+The positions of the available hooks are indicated in the process diagrams found under the menu `How the Cat works`, but not all of the hooks have been documented yet. ( [help needed! &#128568;](https://discord.com/channels/1092359754917089350/1092360068269359206){:target="_blank"} ).
 
 At the moment you can hack around by exploring the available hooks in `core/cat/mad_hatter/core_plugin/hooks/`.
 All the hooks you find in there define default Cat's behaviour and are ready to be overridden by your plugins.

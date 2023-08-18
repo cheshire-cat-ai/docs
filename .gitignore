@@ -39,5 +39,9 @@ venv.bak/
 
 # Python IDEs
 .idea/
+.vscode/
 
 cat/
+
+# Drawio temporary files
+drawio-diagrams/.*

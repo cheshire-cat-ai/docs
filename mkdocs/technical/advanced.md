@@ -91,7 +91,7 @@ To create a complete backup for the memories of your Cheshire Cat, you simply ne
 To load your backup into a clean installation of Cheshire Cat, you just need to copy the `long_term_memory` folder into the root directory at the same level as the `core` folder. In case you've already started an instance of Cheshire Cat, you will find the `long_term_memory` folder there; you can safely overwrite it.
 
 !!! warning
-    The `long_term_memory` folder will be protected, and you might need to use the admin permissions of your system to access it.
+    The `long_term_memory` folder may be protected, and you might need to use the admin permissions of your system to access it.
 
 The terminal command to perform this operation is as follows:
 

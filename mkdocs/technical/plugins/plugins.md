@@ -39,7 +39,7 @@ Here is an example of Tool to let the Cat tell you what time it is:
 ```python
 @tool
 def get_the_time(tool_input, cat):
-    """Retrieves current time and clock. Input is always None."""
+    """Replies to "what time is it", "get the clock" and similar questions. Input is always None.."""
 
     return str(datetime.now())
 ```

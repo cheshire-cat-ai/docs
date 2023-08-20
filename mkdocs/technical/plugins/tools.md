@@ -33,7 +33,7 @@ Let's take a look at it.
 ```python
 @tool # (1)
 def get_the_time(tool_input, cat): # (2)
-    """Retrieves current time and clock. Input is always None.""" # (3)
+    """Replies to "what time is it", "get the clock" and similar questions. Input is always None..""" # (3)
     return str(datetime.now()) # (4)
 
 ```
@@ -64,12 +64,7 @@ def get_the_time(tool_input, cat): # (2)
 >
 > Context of documents containing relevant information:
 >
->> \- I am the Cheshire Cat (extracted from cheshire-cat)
->
-> If Context is not enough, you have access to the following tools:
->
->> \> get_the_time: get_the_time(tool_input) - Retrieves current time and clock. Input is always None.  
->> \> Calculator: Useful for when you need to answer questions about math.
+>> get_the_time: get_the_time(tool_input) - Replies to "what time is it", "get the clock" and similar questions. Input is always None.  
 >
 > To use a tool, please use the following format:
 >

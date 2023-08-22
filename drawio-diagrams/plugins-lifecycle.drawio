@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-08-22T17:56:05.147Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="IbG155_ncxEgiQ84DQSM" version="21.6.8" type="device">
+<mxfile host="Electron" modified="2023-08-22T20:03:08.419Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="3q1n7dj0u4rDFZN9PVI_" version="21.6.8" type="device">
   <diagram name="plugin-lifecycle" id="80Vu8jfyKvZRV5MrpKby">
-    <mxGraphModel dx="3469" dy="-381" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
+    <mxGraphModel dx="3155" dy="-572" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
       <root>
         <mxCell id="46SrbtFKzXqbLfu7bqyq-0" />
         <mxCell id="46SrbtFKzXqbLfu7bqyq-1" value="Docker Rect" parent="46SrbtFKzXqbLfu7bqyq-0" />
@@ -12,6 +12,9 @@
         </mxCell>
         <mxCell id="bjBoywsuVyPVTYMhQj95-8" value="Cheshire Cat (the Core)" style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=1;points=[[0,0,0,0,0],[0,0.25,0,0,0],[0,0.5,0,0,0],[0,0.75,0,0,0],[0,1,0,0,0],[0.24,0,0,0,0],[0.25,1,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.75,0,0,0,0],[0.75,1,0,0,0],[1,0,0,0,0],[1,0.25,0,0,0],[1,0.5,0,0,0],[1,0.75,0,0,0],[1,1,0,0,0]];sketch=1;curveFitting=1;jiggle=2;align=center;fontSize=25;fontFamily=Architects Daughter;fillColor=#0c1237;strokeColor=#19183f;fontColor=#15163c;strokeWidth=1;fillStyle=solid;gradientColor=#df77b8;gradientDirection=south;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;glass=0;shadow=0;fontStyle=1" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-1">
           <mxGeometry x="293" y="2724" width="323" height="69" as="geometry" />
+        </mxCell>
+        <mxCell id="bjBoywsuVyPVTYMhQj95-11" value="Require additional packages?" style="rhombus;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=11;fontColor=#fff2cc;strokeColor=#fff2cc;fillStyle=solid;labelBackgroundColor=none;fillColor=#2e303e;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-1">
+          <mxGeometry x="-407" y="3408" width="110" height="91" as="geometry" />
         </mxCell>
         <mxCell id="46SrbtFKzXqbLfu7bqyq-4" value="Main Flow" parent="46SrbtFKzXqbLfu7bqyq-0" />
         <mxCell id="46SrbtFKzXqbLfu7bqyq-5" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;sketch=1;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#fff2cc;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;endSize=6;fillColor=#f5f5f5;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-6" target="46SrbtFKzXqbLfu7bqyq-17">
@@ -68,8 +71,8 @@
             <mxPoint x="-253.49999999999955" y="2345" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="46SrbtFKzXqbLfu7bqyq-17" value="1. implement your Plugin in a separate github repository" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#fff2cc;fontColor=#fff2cc;sketch=1;curveFitting=1;jiggle=2;fillStyle=dashed;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;hachureGap=4;fontFamily=Helvetica;fontSize=12;points=[[0,0.5,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
-          <mxGeometry x="-356" y="2609" width="168" height="35" as="geometry" />
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-17" value="1. implement your plugin in a separate GitHub repository" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#fff2cc;fontColor=#fff2cc;sketch=1;curveFitting=1;jiggle=2;fillStyle=dashed;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;hachureGap=4;fontFamily=Helvetica;fontSize=12;points=[[0,0.5,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="-356" y="2609" width="183" height="35" as="geometry" />
         </mxCell>
         <mxCell id="46SrbtFKzXqbLfu7bqyq-18" value="Plugin &quot;Foo&quot;" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
           <mxGeometry x="-22" y="2407" width="460" height="231" as="geometry">
@@ -142,14 +145,9 @@
             <mxGeometry x="-357" y="3077" width="130" height="20" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="46SrbtFKzXqbLfu7bqyq-37" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;sketch=1;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#fff2cc;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;endSize=6;fillColor=#f5f5f5;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-6" target="46SrbtFKzXqbLfu7bqyq-39">
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-37" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;sketch=1;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#fff2cc;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;endSize=6;fillColor=#f5f5f5;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-6" target="bjBoywsuVyPVTYMhQj95-11">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-418" y="3151" as="sourcePoint" />
-            <Array as="points">
-              <mxPoint x="-484" y="3151" />
-              <mxPoint x="-485" y="3151" />
-              <mxPoint x="-485" y="3406" />
-            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="46SrbtFKzXqbLfu7bqyq-38" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#fff2cc;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#f5f5f5;endSize=6;strokeWidth=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-39" target="46SrbtFKzXqbLfu7bqyq-56">
@@ -158,8 +156,8 @@
             <mxPoint x="281" y="3278" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="46SrbtFKzXqbLfu7bqyq-39" value="4. rebuild the Docker image" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#fff2cc;fontColor=#fff2cc;sketch=1;curveFitting=1;jiggle=2;fillStyle=dashed;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;hachureGap=4;fontFamily=Helvetica;fontSize=12;points=[[0,0.5,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
-          <mxGeometry x="-353" y="3396" width="184" height="20" as="geometry" />
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-39" value="4.1. rebuild the Docker image" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#fff2cc;fontColor=#fff2cc;sketch=1;curveFitting=1;jiggle=2;fillStyle=dashed;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;hachureGap=4;fontFamily=Helvetica;fontSize=12;points=[[0,0.5,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="-238" y="3394" width="184" height="26" as="geometry" />
         </mxCell>
         <mxCell id="46SrbtFKzXqbLfu7bqyq-42" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cheshire-cat-ai.github.io/docs/assets/img/cheshire-cat-mj.png;clipPath=inset(22.07% 33.33% 22.07% 33.33% round 10%);" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
           <mxGeometry x="1031" y="2990" width="112" height="111.97" as="geometry" />
@@ -234,9 +232,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Q91ProublMyjG5C1oj_r-22" value="&lt;h1 style=&quot;text-align: left; border-color: var(--border-color); font-size: 11px;&quot;&gt;Do you need additional python packages?&lt;/h1&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;Add a requirements.txt file to your plugin.&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;The Cat will install your dependencies as soon as you rebuild the Docker image.&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;You don&#39;t need additional packages? You plugin is already active!&lt;/p&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fillColor=#fff2cc;gradientColor=#dfdc86;strokeColor=#d6b656;spacingTop=2;spacingLeft=4;spacing=2;fontColor=default;rounded=1;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
-          <mxGeometry x="-377" y="3156" width="158" height="177" as="geometry" />
+          <mxGeometry x="-455" y="3162" width="158" height="177" as="geometry" />
         </mxCell>
-        <mxCell id="Q91ProublMyjG5C1oj_r-23" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#d6b655;strokeWidth=1;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;endSize=6;fillColor=#f5f5f5;entryPerimeter=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="Q91ProublMyjG5C1oj_r-22">
+        <mxCell id="Q91ProublMyjG5C1oj_r-23" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#d6b655;strokeWidth=1;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;endSize=6;fillColor=#f5f5f5;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="Q91ProublMyjG5C1oj_r-22" target="bjBoywsuVyPVTYMhQj95-11">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="4.999999999999545" y="3474.8" as="sourcePoint" />
             <mxPoint x="-261" y="3396" as="targetPoint" />
@@ -271,13 +269,34 @@
             <mxPoint x="-251" y="3406" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="bjBoywsuVyPVTYMhQj95-5" value="&lt;h1 style=&quot;text-align: left; border-color: var(--border-color); font-size: 11px;&quot;&gt;Do you want to accellerate?&lt;/h1&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;You can use this &lt;a href=&quot;https://github.com/cheshire-cat-ai/plugin-template&quot;&gt;github template&lt;/a&gt; to speed up the implementation!&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;&lt;a href=&quot;https://cheshire-cat-ai.github.io/docs/technical/plugins/plugins/&quot;&gt;Here&lt;/a&gt; more documentation&lt;/p&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fillColor=#fff2cc;gradientColor=#dfdc86;strokeColor=#d6b656;spacingTop=2;spacingLeft=4;spacing=2;fontColor=default;rounded=1;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;verticalAlign=top;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+        <mxCell id="bjBoywsuVyPVTYMhQj95-5" value="&lt;h1 style=&quot;text-align: left; border-color: var(--border-color); font-size: 11px;&quot;&gt;Do you want to accellerate?&lt;/h1&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;You can use this &lt;a href=&quot;https://github.com/cheshire-cat-ai/plugin-template&quot;&gt;GitHub template&lt;/a&gt; to speed up the implementation!&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;&lt;a href=&quot;https://cheshire-cat-ai.github.io/docs/technical/plugins/plugins/&quot;&gt;Here&lt;/a&gt;&amp;nbsp;for more documentation&lt;/p&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fillColor=#fff2cc;gradientColor=#dfdc86;strokeColor=#d6b656;spacingTop=2;spacingLeft=4;spacing=2;fontColor=default;rounded=1;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;verticalAlign=top;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
           <mxGeometry x="-353" y="2372" width="125" height="160" as="geometry" />
         </mxCell>
         <mxCell id="bjBoywsuVyPVTYMhQj95-6" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#d6b655;strokeWidth=1;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;endSize=6;fillColor=#f5f5f5;entryPerimeter=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="bjBoywsuVyPVTYMhQj95-5" target="46SrbtFKzXqbLfu7bqyq-17">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-329" y="3036" as="sourcePoint" />
             <mxPoint x="-282" y="3087" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bjBoywsuVyPVTYMhQj95-12" value="4.2. restart the container" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#fff2cc;fontColor=#fff2cc;sketch=1;curveFitting=1;jiggle=2;fillStyle=dashed;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;hachureGap=4;fontFamily=Helvetica;fontSize=12;points=[[0,0.5,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="-241" y="3476" width="184" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bjBoywsuVyPVTYMhQj95-13" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;sketch=1;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#fff2cc;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;endSize=6;fillColor=#f5f5f5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="bjBoywsuVyPVTYMhQj95-11" target="46SrbtFKzXqbLfu7bqyq-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-474" y="2696" as="sourcePoint" />
+            <mxPoint x="-367" y="3458" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bjBoywsuVyPVTYMhQj95-14" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;sketch=1;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#fff2cc;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;endSize=6;fillColor=#f5f5f5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="bjBoywsuVyPVTYMhQj95-11" target="bjBoywsuVyPVTYMhQj95-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-287" y="3458" as="sourcePoint" />
+            <mxPoint x="-229" y="3450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bjBoywsuVyPVTYMhQj95-15" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#fff2cc;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#f5f5f5;endSize=6;strokeWidth=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;exitPerimeter=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="bjBoywsuVyPVTYMhQj95-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-44" y="3417" as="sourcePoint" />
+            <mxPoint x="683" y="3338" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>

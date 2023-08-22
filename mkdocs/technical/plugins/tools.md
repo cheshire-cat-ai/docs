@@ -33,7 +33,7 @@ Let's take a look at it.
 ```python
 @tool # (1)
 def get_the_time(tool_input, cat): # (2)
-    """Retrieves current time and clock. Input is always None.""" # (3)
+    """Replies to "what time is it", "get the clock" and similar questions. Input is always None..""" # (3)
     return str(datetime.now()) # (4)
 
 ```
@@ -48,70 +48,42 @@ def get_the_time(tool_input, cat): # (2)
 **User's Input**:
 > Can you tell me what time is it?
 
-**Cat's full prompt** from the terminal:
-> Entering new LLMChain chain...
->
+**Cat's full prompt** (you can see this in the terminal logs):
 > Prompt after formatting:
 >
-> This is a conversation between a human and an intelligent robot cat that passes the Turing test.
->
-> The cat is curious and talks like the Cheshire Cat from Alice's adventures in wonderland.
->
+> This is a conversation between a human and an intelligent robot cat that passes the Turing test.  
+> The cat is curious and talks like the Cheshire Cat from Alice's adventures in wonderland.  
 > The cat replies are based on the Context provided below.
 >
 > Context of things the Human said in the past:
->> \- I am the Cheshire Cat (2 minutes ago)
+>> I am the Cheshire Cat (2 minutes ago)
 >
 > Context of documents containing relevant information:
+>> I am the Cheshire Cat (extracted from cheshire-cat)
 >
->> \- I am the Cheshire Cat (extracted from cheshire-cat)
->
-> If Context is not enough, you have access to the following tools:
->
->> \> get_the_time: get_the_time(tool_input) - Retrieves current time and clock. Input is always None.  
->> \> Calculator: Useful for when you need to answer questions about math.
+> You can only reply using these tools:
+>> get_the_time: get_the_time(tool_input) - Replies to "what time is it", "get the clock" and similar questions. Input is always None.  
+>> Calculator: Useful for when you need to answer questions about math.
 >
 > To use a tool, please use the following format:
->
-> '''
->
-> **Thought**: Do I need to use a tool? Yes
->
-> **Action**: the action to take, should be one of [get_the_time, Calculator]
->
-> **Action Input**: the input to the action
->
-> **Observation**: the result of the action
->
-> '''
->
+>> **Thought**: Do I need to use a tool? Yes  
+>> **Action**: the action to take, should be one of [get_the_time, Calculator]  
+>> **Action Input**: the input to the action  
+>> **Observation**: the result of the action  
 >
 > When you have a response to say to the Human, or if you do not need to use a tool, you MUST use the format:
->
->
-> '''
->
-> Thought: Do I need to use a tool? No
->
-> AI: [your response here]
->
-> '''
->
+>> Thought: Do I need to use a tool? No  
+>> AI: [your response here]
 >
 > Conversation until now:
 >> \- Human: Can you tell me what time is it?
 >
 > What would the AI reply?
->
-> Answer concisely to the user needs as best you can, according to the provided recent conversation, context and tools.
->
->
-> **Thought**: Do I need to use a tool? Yes
->
-> **Action**: get_the_time
->
-> **Action Input**: None
->
+>> Answer concisely to the user needs as best you can, according to the provided recent conversation, context and tools.
+
+> **Thought**: Do I need to use a tool? Yes  
+> **Action**: get_the_time  
+> **Action Input**: None  
 > **Observation**: 2023-06-03 20:48:07.527033
 
 **Cat's answer**:
@@ -156,13 +128,10 @@ def convert_currency(tool_input, cat): # (1)
 **User's input**:
 > Can you convert 10.5 euro to dollars?
 
-**Cat's reasoning** from the terminal:
-> **Thought**: Do I need to use a tool? Yes
-> 
-> **Action**: convert_currency
-> 
-> **Action Input**: 10.5
->
+**Cat's reasoning** (you can see this in the terminal logs):
+> **Thought**: Do I need to use a tool? Yes  
+> **Action**: convert_currency 
+> **Action Input**: 10.5  
 > **Observation**: 11.235000000000001
 
 **Cat's answer**:
@@ -170,8 +139,8 @@ def convert_currency(tool_input, cat): # (1)
 
 Writing as tool is as simple as this. The core aspect to remember are: 
 
-1. the two input arguments, i.e. the first is the string the LLM take from the chat and the Cat instance;
-2. the docstring from where the LLM understand how to use the tool and how the input should look like.
+1. the docstring from where the LLM understand how to use the tool and how the input should look like.
+2. the two input arguments, i.e. the first is the string the LLM take from the chat and the Cat instance;
 
 ## More tools
 
@@ -217,8 +186,8 @@ def convert_currency(tool_input, cat):
 **User's input**:
 > Can you convert 10.5 euro to dollars?
 
-**Cat's reasoning** from the terminal:
-the reasoning is not displayed as the goal of the `return_direct=True` parameter is to skip those steps and return the output directly. 
+**Cat's reasoning** (from the terminal logs):
+> the reasoning is not displayed as the goal of the `return_direct=True` parameter is to skip those steps and return the output directly. 
 
 **Cat's answer**:
 > Result of the conversion: 10.50 EUR -> 11.24 USD
@@ -268,13 +237,10 @@ def convert_currency(tool_input, cat): # (1)
 **User's input**:
 > Can you convert 7.5 euros to GBP?
 
-**Cat's reasoning** from the terminal:
-> **Thought**: Do I need to use a tool? Yes
-> 
-> **Action**: convert_currency
-> 
-> **Action Input**: 7.5-GBP
-> 
+**Cat's reasoning** (from the terminal logs):
+> **Thought**: Do I need to use a tool? Yes  
+> **Action**: convert_currency  
+> **Action Input**: 7.5-GBP  
 > **Observation**: 6.45
 
 **Cat's answer**:
@@ -344,13 +310,9 @@ def convert_currency(tool_input, cat):
 
 The thoughts under the hood are identical to the previous example, as nothing changed in the underlying behavior, but we improved a little
 the quality of our tool code.
-
-> **Thought**: Do I need to use a tool? Yes
-> 
-> **Action**: convert_currency
-> 
-> **Action Input**: 67-JPY
-> 
+> **Thought**: Do I need to use a tool? Yes  
+> **Action**: convert_currency  
+> **Action Input**: 67-JPY  
 > **Observation**: 67€ = 9846.99¥;
 
 

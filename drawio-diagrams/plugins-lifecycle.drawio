@@ -1,0 +1,286 @@
+<mxfile host="Electron" modified="2023-08-22T17:56:05.147Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="IbG155_ncxEgiQ84DQSM" version="21.6.8" type="device">
+  <diagram name="plugin-lifecycle" id="80Vu8jfyKvZRV5MrpKby">
+    <mxGraphModel dx="3469" dy="-381" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
+      <root>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-0" />
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-1" value="Docker Rect" parent="46SrbtFKzXqbLfu7bqyq-0" />
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-2" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=11;fontColor=default;arcSize=8;fillColor=none;strokeWidth=13;connectable=0;recursiveResize=0;expand=0;movable=1;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-1">
+          <mxGeometry x="244" y="2685" width="923.37" height="650.79" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-3" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://msdynamicsnavashwinitripathi.files.wordpress.com/2021/01/docker_logo.png;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-1">
+          <mxGeometry x="1077.37" y="3269" width="66.63" height="56.91" as="geometry" />
+        </mxCell>
+        <mxCell id="bjBoywsuVyPVTYMhQj95-8" value="Cheshire Cat (the Core)" style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=1;points=[[0,0,0,0,0],[0,0.25,0,0,0],[0,0.5,0,0,0],[0,0.75,0,0,0],[0,1,0,0,0],[0.24,0,0,0,0],[0.25,1,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.75,0,0,0,0],[0.75,1,0,0,0],[1,0,0,0,0],[1,0.25,0,0,0],[1,0.5,0,0,0],[1,0.75,0,0,0],[1,1,0,0,0]];sketch=1;curveFitting=1;jiggle=2;align=center;fontSize=25;fontFamily=Architects Daughter;fillColor=#0c1237;strokeColor=#19183f;fontColor=#15163c;strokeWidth=1;fillStyle=solid;gradientColor=#df77b8;gradientDirection=south;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;glass=0;shadow=0;fontStyle=1" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-1">
+          <mxGeometry x="293" y="2724" width="323" height="69" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-4" value="Main Flow" parent="46SrbtFKzXqbLfu7bqyq-0" />
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-5" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;sketch=1;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#fff2cc;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;endSize=6;fillColor=#f5f5f5;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-6" target="46SrbtFKzXqbLfu7bqyq-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-6" value="1° Developer" style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=1;strokeWidth=6;strokeColor=default;fillColor=default;fillStyle=solid;gradientColor=none;gradientDirection=south;fontColor=default;fontSize=24;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;sketch=1;curveFitting=1;jiggle=2;glass=0;shadow=0;fontStyle=1" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="-679" y="2606" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-7" value="Mad Hatter (the Plugins Manager)" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=21;fillColor=#0c1237;strokeColor=#19183f;fontColor=#19183f;startSize=38;swimlaneFillColor=#363b5e;strokeWidth=1;fillStyle=solid;gradientColor=#df77b8;gradientDirection=south;glass=0;shadow=0;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="293" y="2846" width="713" height="356" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-8" value="Plugin &quot;Foo&quot;" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-7">
+          <mxGeometry x="31" y="78" width="460" height="231" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-9" value="Tool &quot;ABC&quot;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-8">
+          <mxGeometry x="171" y="54" width="126" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-10" value="Tool &quot;...&quot;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-8">
+          <mxGeometry x="321" y="54" width="126" height="60" as="geometry" />
+        </mxCell>
+        <UserObject label="Hook Implementation" linkTarget="_blank" id="46SrbtFKzXqbLfu7bqyq-11">
+          <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;fontStyle=0" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-8">
+            <mxGeometry x="179" y="134" width="121" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Hook Implementation" linkTarget="_blank" id="46SrbtFKzXqbLfu7bqyq-12">
+          <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;fontStyle=0" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-8">
+            <mxGeometry x="290" y="154" width="121" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Hook Implementation" linkTarget="_blank" id="46SrbtFKzXqbLfu7bqyq-13">
+          <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;fontStyle=0" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-8">
+            <mxGeometry x="206" y="177" width="121" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-14" value="plugin.json" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-8">
+          <mxGeometry x="16" y="54" width="126" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-15" value="requirement.txt" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-8">
+          <mxGeometry x="16" y="98.5" width="126" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-24" value="Plugin &quot;Bob&quot;" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-7">
+          <mxGeometry x="534" y="162" width="123" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-27" value="Plugin &quot;Bar&quot;" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-7">
+          <mxGeometry x="534" y="69.5" width="123" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-28" value="Plugin &quot;...&quot;" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-7">
+          <mxGeometry x="534" y="258" width="123" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-16" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#fff2cc;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=block;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#f5f5f5;endSize=6;strokeWidth=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-17" target="46SrbtFKzXqbLfu7bqyq-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-539.9999999999995" y="2466" as="sourcePoint" />
+            <mxPoint x="-253.49999999999955" y="2345" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-17" value="1. implement your Plugin in a separate github repository" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#fff2cc;fontColor=#fff2cc;sketch=1;curveFitting=1;jiggle=2;fillStyle=dashed;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;hachureGap=4;fontFamily=Helvetica;fontSize=12;points=[[0,0.5,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="-356" y="2609" width="168" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-18" value="Plugin &quot;Foo&quot;" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="-22" y="2407" width="460" height="231" as="geometry">
+            <mxRectangle x="-141" y="2511.5" width="108" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-19" value="Tool &quot;ABC&quot;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-18">
+          <mxGeometry x="171" y="54" width="126" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-20" value="Tool &quot;...&quot;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-18">
+          <mxGeometry x="321" y="54" width="126" height="60" as="geometry" />
+        </mxCell>
+        <UserObject label="Hook Implementation" linkTarget="_blank" id="46SrbtFKzXqbLfu7bqyq-21">
+          <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;fontStyle=0" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-18">
+            <mxGeometry x="179" y="134" width="121" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Hook Implementation" linkTarget="_blank" id="46SrbtFKzXqbLfu7bqyq-22">
+          <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;fontStyle=0" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-18">
+            <mxGeometry x="293" y="142.5" width="121" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Hook Implementation" linkTarget="_blank" id="46SrbtFKzXqbLfu7bqyq-23">
+          <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;fontStyle=0" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-18">
+            <mxGeometry x="206" y="177" width="121" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-24" value="plugin.json" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-18">
+          <mxGeometry x="16" y="54" width="126" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-25" value="requirement.txt" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-18">
+          <mxGeometry x="16" y="98.5" width="126" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-26" value="2. zip the Plugin" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#fff2cc;fontColor=#fff2cc;sketch=1;curveFitting=1;jiggle=2;fillStyle=dashed;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;hachureGap=4;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="-358" y="2827" width="165" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-27" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;sketch=1;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#fff2cc;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;endSize=6;fillColor=#f5f5f5;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-6" target="46SrbtFKzXqbLfu7bqyq-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-408" y="2637" as="sourcePoint" />
+            <mxPoint x="-348" y="2637" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-28" value="ZIP File" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=11;fontColor=default;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="-89" y="2797" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-29" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#fff2cc;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#f5f5f5;endSize=6;strokeWidth=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-26" target="46SrbtFKzXqbLfu7bqyq-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-138" y="2637" as="sourcePoint" />
+            <mxPoint x="36" y="2637" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-34" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;sketch=1;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#fff2cc;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;endSize=6;fillColor=#f5f5f5;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-6" target="46SrbtFKzXqbLfu7bqyq-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="218" y="3097" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-35" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#fff2cc;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#f5f5f5;endSize=6;strokeWidth=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-36" target="46SrbtFKzXqbLfu7bqyq-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50.000000000000455" y="2936" as="sourcePoint" />
+            <mxPoint x="387" y="3152" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="45" y="3087" />
+              <mxPoint x="45" y="3040" />
+              <mxPoint x="324" y="3040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="3. upload the zip" link="https://cheshire-cat-ai.github.io/docs/technical/basics/admin/plugins/" id="46SrbtFKzXqbLfu7bqyq-36">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#fff2cc;fontColor=#fff2cc;sketch=1;curveFitting=1;jiggle=2;fillStyle=dashed;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;hachureGap=4;fontFamily=Helvetica;fontSize=12;points=[[0,0.5,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+            <mxGeometry x="-357" y="3077" width="130" height="20" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-37" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;sketch=1;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#fff2cc;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;endSize=6;fillColor=#f5f5f5;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-6" target="46SrbtFKzXqbLfu7bqyq-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-418" y="3151" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-484" y="3151" />
+              <mxPoint x="-485" y="3151" />
+              <mxPoint x="-485" y="3406" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-38" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#fff2cc;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#f5f5f5;endSize=6;strokeWidth=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-39" target="46SrbtFKzXqbLfu7bqyq-56">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="74.00000000000045" y="3241" as="sourcePoint" />
+            <mxPoint x="281" y="3278" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-39" value="4. rebuild the Docker image" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#fff2cc;fontColor=#fff2cc;sketch=1;curveFitting=1;jiggle=2;fillStyle=dashed;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;hachureGap=4;fontFamily=Helvetica;fontSize=12;points=[[0,0.5,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="-353" y="3396" width="184" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-42" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cheshire-cat-ai.github.io/docs/assets/img/cheshire-cat-mj.png;clipPath=inset(22.07% 33.33% 22.07% 33.33% round 10%);" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="1031" y="2990" width="112" height="111.97" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-43" value="2° Happy User" style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=1;strokeWidth=6;strokeColor=default;fillColor=default;fillStyle=solid;gradientColor=none;gradientDirection=south;fontColor=default;fontSize=24;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;sketch=1;curveFitting=1;jiggle=2;glass=0;shadow=0;fontStyle=1" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="1467" y="3005.99" width="260" height="80" as="geometry" />
+        </mxCell>
+        <UserObject label="5. Chat with the Cat" link="https://cheshire-cat-ai.github.io/docs/technical/flows/chatting-with-the-cat/" linkTarget="_blank" id="46SrbtFKzXqbLfu7bqyq-44">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#fff2cc;fontColor=#fff2cc;sketch=1;curveFitting=1;jiggle=2;fillStyle=dashed;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontFamily=Helvetica;fontSize=12;points=[[0,0.5,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+            <mxGeometry x="1205" y="3036" width="203.63" height="20" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-45" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#fff2cc;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#f5f5f5;endSize=6;strokeWidth=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-44" target="46SrbtFKzXqbLfu7bqyq-42">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175.37" y="3416" as="sourcePoint" />
+            <mxPoint x="511.37" y="3415" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-46" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;sketch=1;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#fff2cc;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;endSize=6;fillColor=#f5f5f5;entryPerimeter=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-43" target="46SrbtFKzXqbLfu7bqyq-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-535.63" y="3161" as="sourcePoint" />
+            <mxPoint x="-64.63" y="3530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-51" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=21.5;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#3a5431;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=block;endFill=1;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;endSize=6;fillColor=#f5f5f5;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="46SrbtFKzXqbLfu7bqyq-52" target="46SrbtFKzXqbLfu7bqyq-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-548" y="2586" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-52" value="START HERE" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.start;fontStyle=1;fontSize=19;fillColor=#6d8764;strokeColor=#3A5431;fontFamily=Architects Daughter;fontColor=#ffffff;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;strokeWidth=2;hachureGap=4;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="-621.9999999999999" y="2456" width="148.73" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-53" value="" style="group" vertex="1" connectable="0" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="342" y="3237.5" width="163" height="51.5" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-54" value="python dependency" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=2" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-53">
+          <mxGeometry width="143" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-2" value="" style="group" vertex="1" connectable="0" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="579" y="3241.5" width="163" height="51.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-3" value="python dependency" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=2" vertex="1" parent="Q91ProublMyjG5C1oj_r-2">
+          <mxGeometry width="143" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-6" value="" style="group" vertex="1" connectable="0" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="835" y="3241" width="163" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-7" value="python dependency" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=2" vertex="1" parent="Q91ProublMyjG5C1oj_r-6">
+          <mxGeometry x="-31.369999999999997" y="1.5" width="143" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-8" value="python dependency" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=2" vertex="1" parent="Q91ProublMyjG5C1oj_r-6">
+          <mxGeometry x="-21.369999999999997" y="11.5" width="143" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-9" value="python dependency&lt;br&gt;of the core" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=2" vertex="1" parent="Q91ProublMyjG5C1oj_r-6">
+          <mxGeometry x="-5" y="21.5" width="143" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-55" value="python dependency" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=2" vertex="1" parent="Q91ProublMyjG5C1oj_r-6">
+          <mxGeometry x="-483" y="5" width="143" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="46SrbtFKzXqbLfu7bqyq-56" value="python dependency&lt;br&gt;of your plugin" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=2" vertex="1" parent="Q91ProublMyjG5C1oj_r-6">
+          <mxGeometry x="-473" y="15" width="143" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-4" value="python dependency" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=2" vertex="1" parent="Q91ProublMyjG5C1oj_r-6">
+          <mxGeometry x="-246" y="9" width="143" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-5" value="python dependency&lt;br&gt;of others plugin" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=2" vertex="1" parent="Q91ProublMyjG5C1oj_r-6">
+          <mxGeometry x="-236" y="19" width="143" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="bjBoywsuVyPVTYMhQj95-1" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;strokeColor=#d6b655;strokeWidth=1;endFill=0;dashed=1;fillColor=none;noLabel=0;container=1;" vertex="1" parent="Q91ProublMyjG5C1oj_r-6">
+          <mxGeometry x="-518" y="-15.5" width="681" height="85.5" as="geometry">
+            <mxRectangle x="26" y="65" width="50" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-22" value="&lt;h1 style=&quot;text-align: left; border-color: var(--border-color); font-size: 11px;&quot;&gt;Do you need additional python packages?&lt;/h1&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;Add a requirements.txt file to your plugin.&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;The Cat will install your dependencies as soon as you rebuild the Docker image.&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;You don&#39;t need additional packages? You plugin is already active!&lt;/p&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fillColor=#fff2cc;gradientColor=#dfdc86;strokeColor=#d6b656;spacingTop=2;spacingLeft=4;spacing=2;fontColor=default;rounded=1;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="-377" y="3156" width="158" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-23" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#d6b655;strokeWidth=1;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;endSize=6;fillColor=#f5f5f5;entryPerimeter=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="Q91ProublMyjG5C1oj_r-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4.999999999999545" y="3474.8" as="sourcePoint" />
+            <mxPoint x="-261" y="3396" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-29" value="&lt;h1 style=&quot;text-align: left; border-color: var(--border-color); font-size: 11px;&quot;&gt;More plugins!&lt;/h1&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;One Docker container can host plugins implemented by several people&lt;/p&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fillColor=#fff2cc;gradientColor=#dfdc86;strokeColor=#d6b656;spacingTop=2;spacingLeft=4;spacing=2;fontColor=default;rounded=1;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="1035" y="2577" width="120" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="Q91ProublMyjG5C1oj_r-30" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#d6b655;strokeWidth=1;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;endSize=6;fillColor=#f5f5f5;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="Q91ProublMyjG5C1oj_r-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-307" y="3343" as="sourcePoint" />
+            <mxPoint x="892" y="2909" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bjBoywsuVyPVTYMhQj95-0" value="&lt;h1 style=&quot;text-align: left; border-color: var(--border-color); font-size: 11px;&quot;&gt;Shared Python packages&lt;/h1&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;Python packages are shared between core and all plugins&lt;/p&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fillColor=#fff2cc;gradientColor=#dfdc86;strokeColor=#d6b656;spacingTop=2;spacingLeft=4;spacing=2;fontColor=default;rounded=1;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="944" y="3390" width="120" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="bjBoywsuVyPVTYMhQj95-2" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#d6b655;strokeWidth=1;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=open;endFill=0;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;endSize=6;fillColor=#f5f5f5;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="bjBoywsuVyPVTYMhQj95-0" target="bjBoywsuVyPVTYMhQj95-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1068" y="2737" as="sourcePoint" />
+            <mxPoint x="902" y="2919" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;h1 style=&quot;text-align: left; border-color: var(--border-color); font-size: 11px;&quot;&gt;How to upload the zip?&lt;/h1&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;Zip can be upload in the admin page in tab «Plugins»&lt;/p&gt;" link="https://cheshire-cat-ai.github.io/docs/technical/basics/admin/plugins/" id="bjBoywsuVyPVTYMhQj95-3">
+          <mxCell style="shape=note;size=20;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fillColor=#fff2cc;gradientColor=#dfdc86;strokeColor=#d6b656;spacingTop=2;spacingLeft=4;spacing=2;fontColor=default;rounded=1;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+            <mxGeometry x="-393" y="2898" width="108" height="128" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="bjBoywsuVyPVTYMhQj95-4" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#d6b655;strokeWidth=1;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;endSize=6;fillColor=#f5f5f5;entryPerimeter=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="bjBoywsuVyPVTYMhQj95-3" target="46SrbtFKzXqbLfu7bqyq-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-288" y="3343" as="sourcePoint" />
+            <mxPoint x="-251" y="3406" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bjBoywsuVyPVTYMhQj95-5" value="&lt;h1 style=&quot;text-align: left; border-color: var(--border-color); font-size: 11px;&quot;&gt;Do you want to accellerate?&lt;/h1&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;You can use this &lt;a href=&quot;https://github.com/cheshire-cat-ai/plugin-template&quot;&gt;github template&lt;/a&gt; to speed up the implementation!&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;&lt;a href=&quot;https://cheshire-cat-ai.github.io/docs/technical/plugins/plugins/&quot;&gt;Here&lt;/a&gt; more documentation&lt;/p&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fillColor=#fff2cc;gradientColor=#dfdc86;strokeColor=#d6b656;spacingTop=2;spacingLeft=4;spacing=2;fontColor=default;rounded=1;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;verticalAlign=top;" vertex="1" parent="46SrbtFKzXqbLfu7bqyq-4">
+          <mxGeometry x="-353" y="2372" width="125" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="bjBoywsuVyPVTYMhQj95-6" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#d6b655;strokeWidth=1;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;hachureGap=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;endSize=6;fillColor=#f5f5f5;entryPerimeter=0;" edge="1" parent="46SrbtFKzXqbLfu7bqyq-4" source="bjBoywsuVyPVTYMhQj95-5" target="46SrbtFKzXqbLfu7bqyq-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-329" y="3036" as="sourcePoint" />
+            <mxPoint x="-282" y="3087" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -45,3 +45,4 @@ cat/
 
 # Drawio temporary files
 drawio-diagrams/.*
+.$drawio-cheshire-cat-library.xml.bkp

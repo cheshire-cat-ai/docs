@@ -44,4 +44,4 @@ venv.bak/
 cat/
 
 # Drawio temporary files
-drawio-diagrams/.*
+mkdocs/assets/diagrams/.*

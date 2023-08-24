@@ -18,12 +18,6 @@ There is a [dedicated channel for Docs on our official Discord](https://discord.
 To modify the behavior of MkDocs and its plugins, everything you need is within the `mkdocs.yml` file.  
 We invite you to read the documentation for the [MkDocs Material theme](https://squidfunk.github.io/mkdocs-material/reference/) to fully understand all the potential of the tool and how to make the most of its extensive features.
 
-### 🖌️ Diagrams
-
-All the diagrams under the "How the Cat works" menu are created using draw.io, sketch using the draw.io library [drawio-cheshire-cat-library](drawio-cheshire-cat-library.xml).  
-The preview export to SVG and the complete diagram URL are, for now, still done manually.  
-Before exporting the URL, remember that the selected tab during the export will become the initial page when the link is opened, remember that the visible layers will be the default visible layers (the hooks have to be visible by default). Also, make sure to uncheck the "Edit" and "Tags" options.
-
 ### 📦 Requirements
 
 - Python 3.8+
@@ -36,6 +30,12 @@ Install dependencies:
 ### 🛠️ Develop
 
 `$ mkdocs serve` or `$ python -m mkdocs serve` will launch a local, non static, instance of the documentation website.
+
+### 🖌️ Diagrams
+
+All the diagrams under the "How the Cat works" menu are created using draw.io, sketch using the draw.io library [drawio-cheshire-cat-library](drawio-cheshire-cat-library.xml).  
+The preview export to SVG and the complete diagram URL are, for now, still done manually.  
+Before exporting the URL, remember that the selected tab during the export will become the initial page when the link is opened, remember that the visible layers will be the default visible layers (the hooks have to be visible by default). Also, make sure to uncheck the "Edit" and "Tags" options.
 
 ### 🏗️ Build
 

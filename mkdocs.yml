@@ -23,7 +23,9 @@ plugins:
           paths: [mkdocs/technical/API_Documentation]
           options:
             docstring_style: numpy
-  - drawio_file
+
+hooks:
+  - mkdocs/hooks/drawio_file.py
 
 nav:
   - Hello, dear: index.md

@@ -46,6 +46,7 @@ nav:
       - Getting Started: technical/getting-started.md
       - How the Cat works: 
           - Components: technical/how-the-cat-works.md
+          - The Cat Bootstrap: technical/flows/cat-bootstrap.md
           - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
           - Plugins Lifecycle: technical/flows/plugins-lifecycle.md
       - Basics:

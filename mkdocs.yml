@@ -24,6 +24,9 @@ plugins:
           options:
             docstring_style: numpy
 
+hooks:
+  - mkdocs/hooks/drawio_file.py
+
 nav:
   - Hello, dear: index.md
   - Conceptual:

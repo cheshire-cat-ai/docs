@@ -39,9 +39,7 @@ and [Typescript](https://www.npmjs.com/package/ccat-api), that allow exploiting 
             baseUrl: 'localhost'
         })
         
-        cat.send('Hello my friend!!', {
-				user_id: "user05"
-			});
+        cat.send('Hello my friend!!', 'user05');
         ```   
 
 

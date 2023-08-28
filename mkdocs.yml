@@ -66,7 +66,11 @@ nav:
           - Tools: technical/plugins/tools.md
           - Hooks: technical/plugins/hooks.md
           - Dependencies: technical/plugins/dependencies.md
-      - Advanced: technical/advanced.md
+      - Advanced:
+          - Api Authentication: technical/advanced/api_auth.md
+          - Memory Backup: technical/advanced/memory_backup.md
+          - User System: technical/advanced/user_system.md
+          - Tests: technical/advanced/tests.md
       - Tutorials:
           - Installation: technical/tutorials/installation.md
       - Python Reference: technical/API_Documentation/

@@ -69,12 +69,17 @@ def plugin_settings_schema():
 
 Now go to the admin in `Plugins` page and click the cog near the activation toggle:
 
-![Open settings](../../../assets/img/admin_screenshots/plugin_settings/settings.png)
+![Open settings](../../assets/img/admin_screenshots/plugin_settings/settings.png)
 
 A side panel will open, where you and your plugin's users can choose settings in a comfy way.
 
-![Form part 1](../../../assets/img/admin_screenshots/plugin_settings/form1.png)
-![Form part 2](../../../assets/img/admin_screenshots/plugin_settings/form2.png)
+<figure markdown>
+  ![Form part 1](../../assets/img/admin_screenshots/plugin_settings/form1.png){ width="500" }
+</figure>
+
+<figure markdown>
+  ![Form part 2](../../assets/img/admin_screenshots/plugin_settings/form2.png){ width="500" }
+</figure>
 
 ## Access settings from within your plugin
 

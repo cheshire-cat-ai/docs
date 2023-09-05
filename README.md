@@ -36,6 +36,7 @@ Install dependencies:
 All the diagrams under the "How the Cat works" menu are created using draw.io, sketch using the draw.io library [drawio-cheshire-cat-library](drawio-cheshire-cat-library.xml).  
 The preview export to SVG and the complete diagram URL are, for now, still done manually.  
 Before exporting the URL, remember that the selected tab during the export will become the initial page when the link is opened, remember that the visible layers will be the default visible layers (the hooks have to be visible by default). Also, make sure to uncheck the "Edit" and "Tags" options.
+Run action.
 
 ### 🏗️ Build
 

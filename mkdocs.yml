@@ -31,27 +31,37 @@ nav:
   - Hello, dear: index.md
   - Conceptual:
       - The Cheshire Cat:
-          - The Mad Hatter: conceptual/cheshire_cat/mad_hatter.md
+          - Overview: conceptual/cheshire_cat/overview.md
+          - Memories:
+            - Episodic Memory: conceptual/memory/long_term_memory.md
+            - Declarative Memory: conceptual/memory/long_term_memory.md
           - The Rabbit Hole: conceptual/cheshire_cat/rabbit_hole.md
+          - Plugins:
+            - Tools: technical/plugins/tools.md
+            - Hooks: technical/plugins/hooks.md
+      -  AI Conceptual:
+          - Prompts:
+              - HyDE prompt: conceptual/prompts/hyde.md
+              - Main Prompt: conceptual/prompts/main_prompt.md
+              - Instruction Prompt: conceptual/prompts/instructions.md
+              - Summarization Prompt: conceptual/prompts/summarization.md
+              - Language Models: conceptual/llm.md
+  - Technical:
+      - Guides:
+          - Installation and first configuration: technical/getting-started.md
+          - How to write a tool: technical/getting-started.md
+          - How to write a hook: technical/getting-started.md
+          - How to debug with VS Code: technical/getting-started.md
+      - How the Cat works: 
           - The Agent: conceptual/cheshire_cat/agent.md
-      - Memory:
+          - The Mad Hatter: conceptual/cheshire_cat/mad_hatter.md
+          - Working Memory: conceptual/memory/working_memory.md
           - Vector Memory: conceptual/memory/vector_memory.md
           - Long Term Memory: conceptual/memory/long_term_memory.md
-          - Working Memory: conceptual/memory/working_memory.md
-      - Prompts:
-          - HyDE prompt: conceptual/prompts/hyde.md
-          - Main Prompt: conceptual/prompts/main_prompt.md
-          - Instruction Prompt: conceptual/prompts/instructions.md
-          - Summarization Prompt: conceptual/prompts/summarization.md
-      - Language Models: conceptual/llm.md
-      - Plugins: conceptual/plugins.md
-  - Technical:
-      - Getting Started: technical/getting-started.md
-      - How the Cat works: 
-          - Components: technical/how-the-cat-works.md
-          - The Cat Bootstrap: technical/flows/cat-bootstrap.md
-          - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
-          - Plugins Lifecycle: technical/flows/plugins-lifecycle.md
+          - Visual Diagrams:
+            - The Cat Bootstrap: technical/flows/cat-bootstrap.md
+            - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
+            - Plugins Lifecycle: technical/flows/plugins-lifecycle.md
       - Basics:
           - The Cat Core: technical/basics/cat-core.md
           - Admin Interface:
@@ -78,6 +88,9 @@ nav:
       - HTTP Reference: technical/http_reference.md
 
   - FAQ: faq.md
+  - Hidden:
+      - Components: technical/how-the-cat-works.md
+      - Plugins: conceptual/plugins.md
 
 theme:
   name: material

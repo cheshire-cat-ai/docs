@@ -77,7 +77,7 @@ nav:
       - Advanced:
           - User System: technical/advanced/user_system.md
           - Memory Backup: technical/advanced/memory_backup.md
-          - Tests: technical/advanced/tests.md
+          - Automatic Tests: technical/advanced/tests.md
 
   - LLM Concepts:
       - Language Models: conceptual/llm.md

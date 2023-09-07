@@ -40,7 +40,7 @@ nav:
       - Writing the first Hook: quickstart/writing-first-hook.md
       
   - How the Cat works: 
-      - The Core: conceptual/cheshire_cat/agent.md
+      - The Core: conceptual/cheshire_cat/core.md
       - The Agent: conceptual/cheshire_cat/agent.md
       - The Prompts:
           - Main Prompt: conceptual/prompts/main_prompt.md
@@ -85,9 +85,13 @@ nav:
       - Prompt: llm-concepts/prompt.md
       - (Vector Memory): technical/flows/chatting-with-the-cat.md
 
+  - Use Cases: 
+    - scenario 1: xxx
+    - scenario 2: xxx
+
   - Guides:
     - How to update the Cat Core: guides/update-the-core.md
-    - How to debug with VS Code: technical/getting-started.md
+    - How to debug with VS Code: technical/xxx.md
 
   - Resources:
     - Videos:

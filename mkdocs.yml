@@ -42,12 +42,12 @@ nav:
   - How the Cat works: 
       - The Core: conceptual/cheshire_cat/agent.md
       - The Agent: conceptual/cheshire_cat/agent.md
-      - Prompts:
+      - The Prompts:
           - Main Prompt: conceptual/prompts/main_prompt.md
           - Instruction Prompt: conceptual/prompts/instructions.md
           - Summarization Prompt: conceptual/prompts/summarization.md
-      - Long Term Memory: conceptual/memory/long_term_memory.md
-      - Working Memory: conceptual/memory/working_memory.md
+      - The Long Term Memory: conceptual/memory/long_term_memory.md
+      - The Working Memory: conceptual/memory/working_memory.md
       - The Rabbit Hole: conceptual/cheshire_cat/rabbit_hole.md
       - The Mad Hatter: conceptual/cheshire_cat/mad_hatter.md
 

@@ -13,10 +13,10 @@ Text documents can be loaded as well. These documents are also saved in a local 
 The component responsible for document ingestion is the `Rabbit Hole`.
 
 ## Performing Actions
-The Cheshire Cat isn`t limited to just answering questions; it can also perform actions. You can write Python functions called `tools` and have the LLM execute this code. The capabilities of the Python code are only limited by your imagination.
+The Cheshire Cat isn't limited to just answering questions; it can also perform actions. You can write Python functions called `tools` and have the LLM execute this code. The capabilities of the Python code are only limited by your imagination.
 
 ## Extending the Core
-Additionally, it`s possible to customize the Cheshire Cat`s core. In the main process flows, there are predefined adaptation points called `hooks`. You can write Python functions that can be attached onto these `hooks`. The attached code will be invoked during the flow`s execution and can modify the Cheshire Cat`s internal behavior, all without directly modifying the core of the Cheshire Cat.
+Additionally, it's possible to customize the Cheshire Cat's core. In the main process flows, there are predefined adaptation points called `hooks`. You can write Python functions that can be attached onto these `hooks`. The attached code will be invoked during the flow`s execution and can modify the Cheshire Cat's internal behavior, all without directly modifying the core of the Cheshire Cat.
 
 `Tools` and `Hooks` are packaged into `Plugins` that can be installed by placing files in a specific folder or through a the Admin Portal. The component responsible for managing plugins is the `Mad Hatter`.
 

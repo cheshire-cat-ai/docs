@@ -67,12 +67,12 @@ nav:
           - Dependencies: technical/plugins/dependencies.md
       - Python Reference: technical/API_Documentation/
       - API Reference:
-          - Endpoints: technical/basics/cat-core.md
+          - API Endpoints: technical/basics/cat-core.md
+          - API Authentication: technical/advanced/api_auth.md
           - API Reference: technical/http_reference.md
       - Advanced:
-          - API Authentication: technical/advanced/api_auth.md
-          - Memory Backup: technical/advanced/memory_backup.md
           - User System: technical/advanced/user_system.md
+          - Memory Backup: technical/advanced/memory_backup.md
           - Tests: technical/advanced/tests.md
           - Visual Diagrams:
               - The Cat Bootstrap: technical/flows/cat-bootstrap.md
@@ -81,7 +81,7 @@ nav:
   - LLM Concepts:
       - Language Models: conceptual/llm.md
       - Language Model Chains: https://docs.langchain.com/docs/components/chains/llm-chain
-      - Prompt: technical/flows/cat-bootstrap.md
+      - Prompt: llm-concepts/prompt.md
       - (Vector Memory): technical/flows/chatting-with-the-cat.md
   - Guides:
     - How to update the Cat Core: guides/update-the-core.md

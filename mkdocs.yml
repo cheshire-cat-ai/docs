@@ -70,26 +70,30 @@ nav:
           - API Endpoints: technical/basics/cat-core.md
           - API Authentication: technical/advanced/api_auth.md
           - API Reference: technical/http_reference.md
+      - Core Process Diagrams:
+          - The Cat Bootstrap: technical/flows/cat-bootstrap.md
+          - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
+          - Plugins Lifecycle: technical/flows/plugins-lifecycle.md
       - Advanced:
           - User System: technical/advanced/user_system.md
           - Memory Backup: technical/advanced/memory_backup.md
           - Tests: technical/advanced/tests.md
-          - Visual Diagrams:
-              - The Cat Bootstrap: technical/flows/cat-bootstrap.md
-              - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
-              - Plugins Lifecycle: technical/flows/plugins-lifecycle.md
+
   - LLM Concepts:
       - Language Models: conceptual/llm.md
       - Language Model Chains: https://docs.langchain.com/docs/components/chains/llm-chain
       - Prompt: llm-concepts/prompt.md
       - (Vector Memory): technical/flows/chatting-with-the-cat.md
+
   - Guides:
     - How to update the Cat Core: guides/update-the-core.md
     - How to debug with VS Code: technical/getting-started.md
+
   - Resources:
     - Videos:
       - Installation: resources/video-installation.md
     - Events: xxx
+
   - FAQ: faq.md
 
 theme:

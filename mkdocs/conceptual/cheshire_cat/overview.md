@@ -1,26 +1,24 @@
 # Overview
 
-Lo stregatto è un micro framework di AI pronto all'uso, una volta installato ed eseguita la configurazione iniziale per il collegamento ad un LLM, può essere interrogato tramite delle API. Le API restituiscono la risposta data da l'LLM.  
+The Cheshire Cat is a ready-to-use AI micro-framework. Once installed and configured to connect to a Language Model (LLM), it can be queried through APIs. These APIs return responses provided by the LLM.
 
-Ma questo è solo l'inizio.
+But this is just the beginning.
 
-## Storico conversazioni precedenti
-Le conversazioni intercorse vengono salvate in un database locale chiamato `episodic memory`, quando viene fatta una domanda la risposta viene data considerando anche le passate conversazioni.
+## Previous Conversation History
+All previous conversations are stored in a local database called `episodic memory`. When a question is asked, the response takes into account past conversations.
 
-## Caricare di Documenti
-Si possono caricare documenti testuali, anche questi documenti vengono salvati in un database locale chiamato `declarative memory`, le risposte verranno date considerando anche le informazioni presenti in questo documenti.
-I documenti possono venire caricati sia tramite API ma anche tramite GUI.
+## Document Loading
+Text documents can be loaded as well. These documents are also saved in a local database called `declarative memory`. Responses will consider the information within these documents. Documents can be uploaded through APIs or a Admin Portal.
 
-Il componente che si occupa dell'ingestion dei documenti è il `Rabbit Hole`.
+The component responsible for document ingestion is the `Rabbit Hole`.
 
-## Eseguire azioni
-Ma lo stregatto non è in grado solo di rispondere a domande, può anche eseguire azioni, è possibile scrivere funzioni Python chiamate `tools` e fare in modo che l'LLM esegua questo codice, cosa il codice Python può fare è limitato solo dalla fantasia.
+## Performing Actions
+The Cheshire Cat isn`t limited to just answering questions; it can also perform actions. You can write Python functions called `tools` and have the LLM execute this code. The capabilities of the Python code are only limited by your imagination.
 
-## Ampliare il core
-E' inoltre possibile adattare il core dello stregatto, nei principali flussi di processo sono definiti dei punti di adattamento chiamati `hooks`, è possibile scrivere function Python agganciabili a questi `hook`, il codice agganciato verrà richiamato durante l'esecuzione del flusso e potrà modificare il funzionamento interno dello stregatto, tutto questo senza dover modificare direttamente il core lo stregatto.
+## Extending the Core
+Additionally, it`s possible to customize the Cheshire Cat`s core. In the main process flows, there are predefined adaptation points called `hooks`. You can write Python functions that can be attached onto these `hooks`. The attached code will be invoked during the flow`s execution and can modify the Cheshire Cat`s internal behavior, all without directly modifying the core of the Cheshire Cat.
 
-`Tools` e `Hooks` vengono pacchettizzati in `plugin` che possono essere installati posizionando i file in una determinata cartella o tramite GUI.
-Il componente che si occupa di gestire i plugin è il Mad Hatter.
+`Tools` and `Hooks` are packaged into `Plugins` that can be installed by placing files in a specific folder or through a the Admin Portal. The component responsible for managing plugins is the `Mad Hatter`.
 
-## Admin portal
-Completano il framework il portale web utilizzabile da utenti Admin, tramite questo portale è possibile configurare le impostazioni del framework, installare plugin, caricare documenti, ed è anche possibile utilizzarlo come strumento di playground, è possibile chattare con lo stregatto ed interrogare le memorie.
+## Admin Portal
+Completing the framework is a web portal for Admin users. Through this portal, you can configure framework settings, install plugins, upload documents, and use it as a playground tool. You can chat with the Cheshire Cat, analyze its responses, and directly query its memories.

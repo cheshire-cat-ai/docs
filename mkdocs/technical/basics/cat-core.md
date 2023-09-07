@@ -1,7 +1,7 @@
 
-# &#129728; The Cat Core
+# &#129728; API Endpoints
 
-The core functionalities of The Cheshire Cat resides in the `/core` folder. The core exposes all of its APIs via the address `localhost:1865/`.
+The core exposes all of its APIs via the address `localhost:1865/`.
 The program has several endpoints that can be accessed via this address. All of these endpoints are thoroughly documented and can be easily tested using Swagger (available at `localhost:1865/docs`) or ReDoc (available at `localhost:1865/redoc`).
 
 Some of these endpoints include:

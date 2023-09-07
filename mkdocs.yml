@@ -29,68 +29,60 @@ hooks:
 
 nav:
   - Hello, dear: index.md
-  - Conceptual:
-      - The Cheshire Cat:
-          - Overview: conceptual/cheshire_cat/overview.md
-          - Memories:
-            - Episodic Memory: conceptual/memory/long_term_memory.md
-            - Declarative Memory: conceptual/memory/long_term_memory.md
-          - The Rabbit Hole: conceptual/cheshire_cat/rabbit_hole.md
-          - Plugins:
-            - Tools: technical/plugins/tools.md
-            - Hooks: technical/plugins/hooks.md
-      -  AI Conceptual:
-          - Prompts:
-              - HyDE prompt: conceptual/prompts/hyde.md
-              - Main Prompt: conceptual/prompts/main_prompt.md
-              - Instruction Prompt: conceptual/prompts/instructions.md
-              - Summarization Prompt: conceptual/prompts/summarization.md
-              - Language Models: conceptual/llm.md
-  - Technical:
-      - Guides:
-          - Installation and first configuration: technical/getting-started.md
-          - How to write a tool: technical/getting-started.md
-          - How to write a hook: technical/getting-started.md
-          - How to debug with VS Code: technical/getting-started.md
-      - How the Cat works: 
-          - The Agent: conceptual/cheshire_cat/agent.md
-          - The Mad Hatter: conceptual/cheshire_cat/mad_hatter.md
-          - Working Memory: conceptual/memory/working_memory.md
-          - Vector Memory: conceptual/memory/vector_memory.md
-          - Long Term Memory: conceptual/memory/long_term_memory.md
-          - Visual Diagrams:
-            - The Cat Bootstrap: technical/flows/cat-bootstrap.md
-            - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
-            - Plugins Lifecycle: technical/flows/plugins-lifecycle.md
-      - Basics:
-          - The Cat Core: technical/basics/cat-core.md
-          - Admin Interface:
-              - Home: technical/basics/admin/admin-interface.md
-              - Memory: technical/basics/admin/memory.md
-              - Plugins: technical/basics/admin/plugins.md
-              - Settings: technical/basics/admin/settings.md
-              - Docs: technical/basics/admin/docs.md
-          - Main endpoints: technical/basics/interacting.md
+
+  - Quickstart:
+      - Overview: conceptual/cheshire_cat/overview.md
+      - Installation and First configuration: quickstart/installation-configuration.md
+      - Play with the Cat: quickstart/play-with-the-cat.md
+      - Interact using API: quickstart/interact-using-api.md
+      - Upload a Document: quickstart/upload-document.md
+      - Writing the first Tool: quickstart/writing-first-tool.md
+      - Writing the first Hook: quickstart/writing-first-hook.md
+      
+  - How the Cat works: 
+      - The Core: conceptual/cheshire_cat/agent.md
+      - The Agent: conceptual/cheshire_cat/agent.md
+      - Long Term Memory: conceptual/memory/long_term_memory.md
+      - Working Memory: conceptual/memory/working_memory.md
+      - The Rabbit Hole: conceptual/cheshire_cat/rabbit_hole.md
+      - The Mad Hatter: conceptual/cheshire_cat/mad_hatter.md
+
+  - Admin Portal:
+      - Home: technical/basics/admin/admin-interface.md
+      - Memory: technical/basics/admin/memory.md
+      - Plugins: technical/basics/admin/plugins.md
+      - Settings: technical/basics/admin/settings.md
+      - Docs: technical/basics/admin/docs.md
+
+  - Developers:
       - Plugins:
-          - How to write a plugin: technical/plugins/plugins.md
+          - Plugin: technical/plugins/plugins.md
           - Tools: technical/plugins/tools.md
           - Hooks: technical/plugins/hooks.md
           - Settings: technical/plugins/settings.md
           - Dependencies: technical/plugins/dependencies.md
+      - Python Reference: technical/API_Documentation/
+      - API Reference:
+          - Endpoints: technical/basics/cat-core.md
+          - API Reference: technical/http_reference.md
       - Advanced:
-          - Api Authentication: technical/advanced/api_auth.md
+          - API Authentication: technical/advanced/api_auth.md
           - Memory Backup: technical/advanced/memory_backup.md
           - User System: technical/advanced/user_system.md
           - Tests: technical/advanced/tests.md
-      - Tutorials:
-          - Installation: technical/tutorials/installation.md
-      - Python Reference: technical/API_Documentation/
-      - HTTP Reference: technical/http_reference.md
-
+          - Visual Diagrams:
+              - The Cat Bootstrap: technical/flows/cat-bootstrap.md
+              - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
+              - Plugins Lifecycle: technical/flows/plugins-lifecycle.md
+  - LLM Concepts:
+      - Prompt: technical/flows/cat-bootstrap.md
+      - (Vector Memory): technical/flows/chatting-with-the-cat.md
+  - Guides:
+    - How to update the Cat Core: quickstart/update-the-core.md
+    - How to debug with VS Code: technical/getting-started.md
+  - Resources:
+    - Videos: xxx
   - FAQ: faq.md
-  - Hidden:
-      - Components: technical/how-the-cat-works.md
-      - Plugins: conceptual/plugins.md
 
 theme:
   name: material
@@ -114,10 +106,11 @@ theme:
     #text: Old Standard TT
     text: Ubuntu
   features:
-    - navigation.sections
+    # - navigation.sections
     - navigation.indexes
     - navigation.footer
     - navigation.top
+    # - navigation.tabs
     - content.code.copy
     - content.code.annotate
     - search.suggest

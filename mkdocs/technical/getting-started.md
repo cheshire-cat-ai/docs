@@ -1,6 +1,6 @@
-# &#128640; Getting started
+# &#128640; Installation and First configuration
 
-## Quickstart
+## Prerequisites
 
 To run the Cheshire Cat, you need to have `docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker-compose` ([instructions](https://docs.docker.com/compose/install/)) installed on your system.
 
@@ -25,16 +25,18 @@ docker-compose up
 ```
 
 The first time you run the `docker-compose up` command it will take several minutes as docker images occupy some GBs.  
-Meet the Cat at `localhost:1865/admin` in your browser :)
 
-### Next steps
+When finished the Cat will be live and running!
+
+### First configuration
+
+The Cat is not a LLM, it use a LLM so when you run the Cat for the first time, you need to configure the LLM and the encoder you choose to used.
 
 - Create and API key on the language model provider website, most people use [chatGPT](https://platform.openai.com/docs/models/gpt-3-5):
     - visit your OpenAI [personal account](https://platform.openai.com/account/api-keys)
     - create an API key with `+ Create new secret key` and copy it
-- Go back to the Cat in your browser at `localhost:1865/admin`
+- Open the Cat admin portal in your browser at `localhost:1865/admin`
     - Configure a LLM in the `Settings` tab and paste your API key (as shown in the video below)
-    - Start chatting!
 - You can also interact via REST API and try out the endpoints on `localhost:1865/docs`
 
 

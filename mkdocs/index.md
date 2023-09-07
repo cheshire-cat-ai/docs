@@ -29,13 +29,13 @@ If you want to build your custom AI architecture, the Cat can help you!
 
 For a quick onboarding we suggest you this learning journey:  
 
-1 - read `Quickstart -> Overview`, this is an introduction to the main concepts behind the Cat  
+1 - Start by reading `Quickstart -> Overview`, this is an introduction to the main concepts behind the Cat  
 
-2 - continue with the next steps under `Quickstart`, these are hands-on tutorials, you will have the first contact using the Cat, you will discover how to install, configure, interact, write you first nice `tool` and `hook`  
+2 - Next, continue with the subsequent steps under `Quickstart`, these are hands-on tutorials, you will have the first contact using the Cat, you will discover how to install, configure, interact, write you first useful `tool` and setup `hooks`  
 
-3 - enhance your knowledge of the Cat with the `How the Cat works`, this sections contains a deep concepts (se sei a digiuno di concetti di LLM AI quali il prompt e xxx ti consigliamo di sbirciare prima la sezione `LLM Concepts`)  
+3 - Further enhance your understanding of the Cat with the `How the Cat works`, this sections delves into deeper concepts (If you are new to concepts of LLM AI, such as prompts and xxx, we recommend checking out the "LLM Concepts" section first)  
 
-Now go! frase incitante...
+Now, go and create your first invaluable Cat-powered product!
 
 
 | Get in touch with us!                                                                                   |                                                                                                                                |

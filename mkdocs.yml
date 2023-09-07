@@ -1,4 +1,4 @@
-site_name: Cheshire Cat Docs
+site_name: The Cheshire Cat
 repo_url: https://github.com/cheshire-cat-ai/core
 
 docs_dir: mkdocs
@@ -82,6 +82,7 @@ nav:
     - How to debug with VS Code: technical/getting-started.md
   - Resources:
     - Videos: xxx
+    - Events: xxx
   - FAQ: faq.md
 
 theme:

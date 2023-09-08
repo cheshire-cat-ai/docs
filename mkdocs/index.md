@@ -7,6 +7,7 @@
 The Cheshire Cat is an open-source framework that allows you to develop intelligent agents on top of many
 [Large Language Models](conceptual/llm.md) (LLM).
 You can develop your custom AI architecture to assist you in a wide range of tasks.
+
 It's API first based, can be integrated with your already existing product.
 
 The Cheshire Cat embeds a [long-term memory](conceptual/memory/long_term_memory.md) system to save the user's input locally

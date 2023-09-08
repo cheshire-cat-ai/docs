@@ -50,7 +50,7 @@ suffix = """
 
 The purpose of this component is to gather few variables, that are:
 
-- episodic_memory: the document retrieved from the episodic memory;
+- episodic_memory: the things the user said in the past from the episodic memory;
 - declarative_memory: the document retrieved from the declarative memory;
 - chat_history: the recent conversation between the user and the Cat (i.e. the last three turns of conversation);
 - input: the user's message

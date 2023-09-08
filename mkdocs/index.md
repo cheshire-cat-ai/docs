@@ -12,7 +12,6 @@ The Cheshire Cat embeds a [long-term memory](conceptual/memory/long_term_memory.
 and it answers knowing the context of previous conversations.
 You can also feed text documents in the Cat's memory system to enrich the agent's contextual information and ask it to
 retrieve them further in the conversation.
-The Cat currently supports `.txt`, `.pdf` and `.md` files.
 
 If you want the Cat to solve tailored tasks you can extend its capabilities writing Python [plugins](technical/plugins/plugins.md)
 to execute custom functions or call external services (e.g. APIs and other models).

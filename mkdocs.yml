@@ -75,8 +75,7 @@ nav:
           - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
           - Plugins Lifecycle: technical/flows/plugins-lifecycle.md
       - Advanced:
-          - User System: technical/advanced/user_system.md
-          - Memory Backup: technical/advanced/memory_backup.md
+          - User Management: technical/advanced/user_system.md
           - Automatic Tests: technical/advanced/tests.md
 
   - LLM Concepts:
@@ -86,12 +85,13 @@ nav:
       - (Vector Memory): technical/flows/chatting-with-the-cat.md
 
   - Use Cases: 
-    - scenario 1: xxx
-    - scenario 2: xxx
+    - Cat has Main product: use-cases/main-product.md
+    - Cat has sidecar of your product: use-cases/side-car.md
 
   - Guides:
     - How to update the Cat Core: guides/update-the-core.md
     - How to debug with VS Code: technical/xxx.md
+    - How to backup the Long Term Memory: technical/advanced/memory_backup.md
 
   - Resources:
     - Videos:

@@ -6,7 +6,7 @@ To run the Cheshire Cat, you need to have `docker` ([instructions](https://docs.
 
 The Cat is not a LLM, it uses a LLM. So when you run the Cat for the first time, you need to configure the LLM and the encoder you choose to use.  
 You need an API key for the chosen LLM, most people use [chatGPT](https://platform.openai.com/docs/models/gpt-3-5), you can request an API key on the provider's website (fare riferimento a possibili costi?):  
-    - visit your OpenAI [personal account](https://platform.openai.com/account/api-keys)  
+    - visit your OpenAI [API Keys](https://platform.openai.com/account/api-keys) page  
     - create an API key with `+ Create new secret key` and copy it
 
 ## Setup

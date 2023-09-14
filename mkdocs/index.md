@@ -8,14 +8,16 @@ The Cheshire Cat is an open-source framework that allows you to develop intellig
 [Large Language Models](conceptual/llm.md) (LLM).
 You can develop your custom AI architecture to assist you in a wide range of tasks.
 
-It's API first based, can be integrated with your already existing product.
+_TODO explain the main process of conversation between the Cat and the user_
 
-The Cheshire Cat embeds a [long-term memory](conceptual/memory/long_term_memory.md) system to save the user's input locally
+It is an API-first framework, making it seamlessly integrable with your pre-existing product.
+
+The Cheshire Cat embeds a long-term memory system to save the user's input locally
 and it answers knowing the context of previous conversations.
 You can also feed text documents in the Cat's memory system to enrich the agent's contextual information and ask it to
 retrieve them further in the conversation.
 
-If you want the Cat to solve tailored tasks you can extend its capabilities writing Python [plugins](technical/plugins/plugins.md)
+If you want the Cat to solve tailored tasks you can extend its capabilities writing Python plugins
 to execute custom functions or call external services (e.g. APIs and other models).
 
 If you want to build your custom AI architecture, the Cat can help you!
@@ -24,7 +26,7 @@ If you want to build your custom AI architecture, the Cat can help you!
 |-----------------------------------------------------------------|-----------------------------------------------------------------|
 | &#129520; API first framework                                   | &#128220; Can ingest documents                                 |
 | &#127757; Language model agnostic                               | &#128024; Long term memory                                     |
-| &#128640; Extendable via [plugins](technical/plugins/plugins.md) in Python | 	&#128011; 100% [dockerized](https://docs.docker.com/get-docker/) |
+| &#128640; Extendable via plugins in Python | 	&#128011; 100% [dockerized](https://docs.docker.com/get-docker/) |
 
 ## Get started now!
 
@@ -34,7 +36,7 @@ For a quick onboarding we suggest you this learning journey:
 
 2 - Next, continue with the subsequent steps under `Quickstart`, these are hands-on tutorials, you will have the first contact using the Cat, you will discover how to install, configure, interact, write you first useful `tool` and setup `hooks`  
 
-3 - Further enhance your understanding of the Cat with the `How the Cat works`, this sections delves into deeper concepts (If you are new to concepts of LLM AI, such as prompts and xxx, we recommend checking out the "LLM Concepts" section first)  
+3 - Further enhance your understanding of the Cat with the `How the Cat works`, this sections delves into deeper concepts (If you are new to concepts of LLM AI, such as `prompts` and `language model chains`, we recommend checking out the "LLM Concepts" section first)  
 
 Now, go and create your first invaluable Cat-powered product!
 

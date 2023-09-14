@@ -36,8 +36,9 @@ nav:
       - Play with the Cat: quickstart/play-with-the-cat.md
       - Interact using API: quickstart/interact-using-api.md
       - Upload a Document: quickstart/upload-document.md
-      - Writing the first Tool: quickstart/writing-first-tool.md
-      - Writing the first Hook: quickstart/writing-first-hook.md
+      - Prepare the first Plugin: quickstart/prepare-plugin.md
+      - Writing a Tool: quickstart/writing-first-tool.md
+      - Writing a Hook: quickstart/writing-first-hook.md
       
   - How the Cat works: 
       - The Core: conceptual/cheshire_cat/core.md
@@ -46,20 +47,24 @@ nav:
           - Main Prompt: conceptual/prompts/main_prompt.md
           - Instruction Prompt: conceptual/prompts/instructions.md
           - Summarization Prompt: conceptual/prompts/summarization.md
-      - The Long Term Memory: conceptual/memory/long_term_memory.md
+      - The Long Term Memory:
+          - Introduction: conceptual/memory/long_term_memory.md
+          - Episodic Memory: conceptual/memory/episodic_memory.md
+          - Declarative Memory: conceptual/memory/declarative_memory.md
+          - Procedural Memory: conceptual/memory/procedural_memory.md
       - The Working Memory: conceptual/memory/working_memory.md
       - The Rabbit Hole: conceptual/cheshire_cat/rabbit_hole.md
       - The Mad Hatter: conceptual/cheshire_cat/mad_hatter.md
 
   - Admin Portal:
       - Home: technical/basics/admin/admin-interface.md
-      - Memory: technical/basics/admin/memory.md
+      - Long Term Memory: technical/basics/admin/memory.md
       - Plugins: technical/basics/admin/plugins.md
       - Settings: technical/basics/admin/settings.md
       - Docs: technical/basics/admin/docs.md
 
   - Developers:
-      - Plugins:
+      - Developing Plugins:
           - Plugin: technical/plugins/plugins.md
           - Tools: technical/plugins/tools.md
           - Hooks: technical/plugins/hooks.md
@@ -82,7 +87,7 @@ nav:
       - Language Models: conceptual/llm.md
       - Language Model Chains: https://docs.langchain.com/docs/components/chains/llm-chain
       - Prompt: llm-concepts/prompt.md
-      - (Vector Memory): technical/flows/chatting-with-the-cat.md
+      - (Vector Memory): llm-concepts/vector-memory.md
 
   - Use Cases: 
     - Cat has Main product: use-cases/main-product.md

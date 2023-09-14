@@ -1,46 +1,14 @@
 # Long Term Memory
 
-The Cat's Long Term Memory (LTM) is made of three components:
+The Cat has memory that persist across restarts, this memory is implemented using a [vector database](vector_memory.md).
+The name of this memory is `Long Term Memory` (LTM), it is made of three components:
 
-- *episodic memory*, i.e. the context of things the user said in the past;
-- *declarative memory*, i.e. the context of documents uploaded to the Cat;
-- *procedural memory*, i.e. the set of python functions that defines what the Cat is able to do.
+- [*Episodic Memory*](episodic_memory.md), contains an extract of things the user said in the past;
+- [*Declarative Memory*](declarative_memory.md), contains an extract of documents uploaded to the Cat;
+- [*Procedural Memory*](procedural_memory.md), contains the set of Python functions that defines what the Cat is able to do.
 
-These are nothing but three [collections](vector_memory.md) in the vector database, where text memories and tools (i.e. Python functions) are stored in the form of vectors.
+During conversation between the Cat and the user, the memories are accessed by the Cat to retrieve relevant context for passing to the LLM and are updated when the LLM responds (details of the read and write flow of the Long Term Memory can be found in this [diagram](../../../technical/flows/chatting-with-the-cat/)).
 
-You can interact with the LTM using the memory page.
+The retrieved relevant context is used to make up the [Main prompt](../prompts/main_prompt.md) and the Instruction prompt.
 
-By default, the Cat queries the LTM to retrieve the relevant context that is used to make up the [Main prompt](../prompts/main_prompt.md) and the Instruction prompt.
-
-## Long Term Memory flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
-
-!!! note "Developer documentation"
-    [Long Term Memory hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/flow.md#at.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_memories)
-
-```mermaid
-flowchart LR
-    subgraph LTM ["#128024;Long Term Memory"]
-            direction TB
-            C[(Episodic)];
-            D[(Declarative)];
-            P[(Procedural)]
-    end
-    H["#129693;"] %% before_cat_recalls_memories
-    H1["#129693;"] %% before_cat_recalls_episodic_memories
-    H2["#129693;"] %% before_cat_recalls_declarative_memories
-    H3["#129693;"] %% before_cat_recalls_procedural_memories
-    E["#129693;"] %% after_cat_recalls_memories
-    A[Query] --> H 
-    H["#129693;"] --> H1
-    H --> H2
-    H --> H3
-    H1 --> C
-    H2 --> D
-    H3 --> P
-    C --> E
-    D --> E
-    P --> E
-    E --> wm["#9881;#128024;Working Memory"]
-```
-
-Nodes with the &#129693; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.
+You can interact with the LTM using the [memory](../../technical/basics/admin/memory.md) page of the Admin Portal.

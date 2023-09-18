@@ -10,8 +10,6 @@ You can develop your custom AI architecture to assist you in a wide range of tas
 
 _TODO explain the main process of conversation between the Cat and the user_
 
-It is an API-first framework, making it seamlessly integrable with your pre-existing product.
-
 The Cheshire Cat embeds a long-term memory system to save the user's input locally
 and it answers knowing the context of previous conversations.
 You can also feed text documents in the Cat's memory system to enrich the agent's contextual information and ask it to
@@ -19,6 +17,8 @@ retrieve them further in the conversation.
 
 If you want the Cat to solve tailored tasks you can extend its capabilities writing Python plugins
 to execute custom functions or call external services (e.g. APIs and other models).
+
+It is an API-first framework, making it seamlessly integrable with your pre-existing product.
 
 If you want to build your custom AI architecture, the Cat can help you!
 

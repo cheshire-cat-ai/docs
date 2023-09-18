@@ -35,7 +35,7 @@ The Cat is not a LLM, it use a LLM so when you run the Cat for the first time, y
 - Create and API key on the language model provider website, most people use [chatGPT](https://platform.openai.com/docs/models/gpt-3-5):
     - visit your OpenAI [personal account](https://platform.openai.com/account/api-keys)
     - create an API key with `+ Create new secret key` and copy it
-- Open the Cat admin portal in your browser at `localhost:1865/admin`
+- Open the Cat Admin Portal in your browser at `localhost:1865/admin`
     - Configure a LLM in the `Settings` tab and paste your API key (as shown in the video below)
 - You can also interact via REST API and try out the endpoints on `localhost:1865/docs`
 

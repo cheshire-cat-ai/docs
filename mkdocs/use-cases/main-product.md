@@ -1,6 +1,6 @@
 # The Cat has main product
 
-You don't already have a product, add your UI and your plugins and distribute directly the Cat:
+You don't already have a product. Green components are the components within your responsibility, including the UI used by the end user and plugins:
 
 
 ![Alt text](main-product.png)

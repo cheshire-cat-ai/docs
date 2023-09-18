@@ -31,7 +31,7 @@ nav:
   - Hello, dear: index.md
 
   - Quickstart:
-      - Overview: conceptual/cheshire_cat/overview.md
+      - Overview: quickstart/overview.md
       - Installation and First configuration: quickstart/installation-configuration.md
       - Play with the Cat: quickstart/play-with-the-cat.md
       - Interact using API: quickstart/interact-using-api.md
@@ -75,6 +75,8 @@ nav:
           - API Endpoints: technical/basics/cat-core.md
           - API Authentication: technical/advanced/api_auth.md
           - API Reference: technical/http_reference.md
+      - Client Libraries:
+          - NodeJS: technical/clientlib/nodejs
       - Core Process Diagrams:
           - The Cat Bootstrap: technical/flows/cat-bootstrap.md
           - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
@@ -87,6 +89,7 @@ nav:
       - Language Models: conceptual/llm.md
       - Language Model Chains: https://docs.langchain.com/docs/components/chains/llm-chain
       - Prompt: llm-concepts/prompt.md
+      - Encoder: llm-concepts/encoder.md
       - (Vector Memory): llm-concepts/vector-memory.md
 
   - Use Cases: 

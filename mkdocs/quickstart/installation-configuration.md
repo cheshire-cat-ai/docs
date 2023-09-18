@@ -36,7 +36,7 @@ When finished the Cat will be live and running!
 
 ## First configuration of the LLM
 
-- Open the Cat admin portal in your browser at `localhost:1865/admin`
+- Open the Cat Admin Portal in your browser at `localhost:1865/admin`
 - Configure a LLM in the `Settings` tab and paste your API key ([video](../assets/vid/setup.mp4))
 
 ## Stopping the Cat
@@ -46,3 +46,6 @@ When you're done using the Cat, stop the terminal by clicking on it and press `C
 ```bash
 docker-compose down
 ```
+
+## Next step
+In the next step you will learn how to play with the Cat

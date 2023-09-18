@@ -8,8 +8,6 @@ The Cheshire Cat is an open-source framework that allows you to develop intellig
 [Large Language Models](conceptual/llm.md) (LLM).
 You can develop your custom AI architecture to assist you in a wide range of tasks.
 
-_TODO explain the main process of conversation between the Cat and the user_
-
 The Cheshire Cat embeds a long-term memory system to save the user's input locally
 and it answers knowing the context of previous conversations.
 You can also feed text documents in the Cat's memory system to enrich the agent's contextual information and ask it to
@@ -27,6 +25,14 @@ If you want to build your custom AI architecture, the Cat can help you!
 | &#129520; API first framework                                   | &#128220; Can ingest documents                                 |
 | &#127757; Language model agnostic                               | &#128024; Long term memory                                     |
 | &#128640; Extendable via plugins in Python | 	&#128011; 100% [dockerized](https://docs.docker.com/get-docker/) |
+
+## Just an example, try it out now!
+We have a Discord server, we use the Cat to support you, you can try the Cat here.
+
+Connect to [:fontawesome-brands-discord: Discord Server](https://discord.com/channels/1092359754917089350/1092360285056159814), ask to @Cheshire Cat AI `blablabla` and now tell to the Cat that you like it (what can we do? put a +1 somewhere? github star?).
+
+We uploaded this documentation link to the Cat, instructed to +1 when someone send a kudos to it and instructed to response only to documentation related questions.  
+_(If you want to know how is implemented look at this `use case`)_
 
 ## Get started now!
 

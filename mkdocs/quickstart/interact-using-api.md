@@ -1,9 +1,9 @@
-# Installation and First configuration
+# Interact using API
 
 The Cat is an API-first framework, you can chat with it using the WebSocket protocol.
 
 
-Here is an example of how to use it, run it and ask for the time again:
+Here is an example of how to use it, run it and ask "what do you know about socks?" again:
 
 !!! example
 
@@ -33,5 +33,9 @@ Here is an example of how to use it, run it and ask for the time again:
         asyncio.get_event_loop().run_until_complete(cat_chat())
         ```
 
+The output in the terminal should looks like:
+
+![Alt text](../assets/img/quickstart/interact-using-api/shell-output.png)
+
 ## Next Step
-In the next step you will learn how load a text document in the `Long Term Memory`
+In the next step you will learn how load a text document in the documents memory.

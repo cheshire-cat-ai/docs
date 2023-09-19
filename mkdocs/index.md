@@ -26,13 +26,15 @@ If you want to build your custom AI architecture, the Cat can help you!
 | &#127757; Language model agnostic                               | &#128024; Long term memory                                     |
 | &#128640; Extendable via plugins in Python | 	&#128011; 100% [dockerized](https://docs.docker.com/get-docker/) |
 
-## Just an example, try it out now!
-We have a Discord server, we use the Cat to support you, you can try the Cat here.
+## Try it out now!
 
-Connect to [:fontawesome-brands-discord: Discord Server](https://discord.com/channels/1092359754917089350/1092360285056159814), ask to @Cheshire Cat AI `blablabla` and now tell to the Cat that you like it (what can we do? put a +1 somewhere? github star?).
+We have a Discord server, and we use the Cat as our assistant to provide support. You can give the Cat a try by connecting to the [:fontawesome-brands-discord: Discord Server](https://discord.com/channels/1092359754917089350/1092360285056159814), mentioning @Cheshire Cat AI with 'blablabla,' and now, let the Cat know that we appreciate it. 
 
-We uploaded this documentation link to the Cat, instructed to +1 when someone send a kudos to it and instructed to response only to documentation related questions.  
-_(If you want to know how is implemented look at this `use case`)_
+_if you're curious about how it's implemented, check out this [use case]()_
+
+TODO: creare un canale specifico in discord così monitoriamo i passaggi?
+
+TODO: What can we do? Can we give it a +1 somewhere, a GitHub star? something using a tool
 
 ## Get started now!
 
@@ -40,9 +42,10 @@ For a quick onboarding we suggest you this learning journey:
 
 1 - Start by reading `Quickstart -> Overview`, this is an introduction to the main concepts behind the Cat  
 
-2 - Next, continue with the subsequent steps under `Quickstart`, these are hands-on tutorials, you will have the first contact using the Cat, you will discover how to install, configure, interact, write you first useful `tool` and setup `hooks`  
+2 - Next, continue with the subsequent steps under `Quickstart`, these are hands-on tutorials, you will have the first contact using the Cat, you will discover how to install, configure, interact, write you first useful `Tool` and setup `Hooks`  
 
-3 - Further enhance your understanding of the Cat with the `How the Cat works`, this sections delves into deeper concepts (If you are new to concepts of LLM AI, such as `prompts` and `language model chains`, we recommend checking out the "LLM Concepts" section first)  
+3 - Further enhance your understanding of the Cat with the `How the Cat works`, this sections delves into deeper concepts  
+(_If you are new to LLM AI concepts, such as `Prompts` and `Language model chains`, we recommend checking out the "LLM Concepts" section first_) 
 
 Now, go and create your first invaluable Cat-powered product!
 

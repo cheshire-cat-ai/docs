@@ -2,12 +2,16 @@
 
 ## Prerequisites
 
-To run the Cheshire Cat, you need to have `docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker-compose` ([instructions](https://docs.docker.com/compose/install/)) already installed on your system.
+To run the Cheshire Cat, you need to have `Docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker-compose` ([instructions](https://docs.docker.com/compose/install/)) already installed on your system.
 
 The Cat is not a LLM, it uses a LLM. So when you run the Cat for the first time, you need to configure the LLM and the encoder you choose to use.  
-You need an API key for the chosen LLM, most people use [chatGPT](https://platform.openai.com/docs/models/gpt-3-5), you can request an API key on the provider's website (fare riferimento a possibili costi?):  
+Most people use [ChatGPT](https://platform.openai.com/docs/models/gpt-3-5), it's quite cheap and enough powerful, we will use `ChatGPT` during the next steps.
+
+You need an API key for use `ChatGPT`, you can request an API key on the provider's website:  
     - visit your OpenAI [API Keys](https://platform.openai.com/account/api-keys) page  
     - create an API key with `+ Create new secret key` and copy it
+
+TODO: _(fare riferimento al link con il pricing?)_
 
 ## Setup
 
@@ -30,22 +34,18 @@ cd cheshire-cat
 docker-compose up
 ```
 
-The first time you run the `docker-compose up` command it will take several minutes as docker images occupy some GBs.  
+The first time you run the `docker-compose up` command it will take several minutes as the Docker Cat image will be build.
 
 When finished the Cat will be live and running!
 
 ## First configuration of the LLM
 
-- Open the Cat Admin Portal in your browser at `localhost:1865/admin`
-- Configure a LLM in the `Settings` tab and paste your API key ([video](../assets/vid/setup.mp4))
+- Open the Admin Portal in your browser at [`localhost:1865/admin`](http://localhost:1865/admin){:target="_blank"}
+- Configure the LLM in the `Settings` tab and paste your API key ([video](../assets/vid/setup.mp4))
 
-## Stopping the Cat
 
-When you're done using the Cat, stop the terminal by clicking on it and press `CTRL + c`.  Then launch the command:
-
-```bash
-docker-compose down
-```
+TODO: update the video  
+TODO: configure both, LLM and encoder?
 
 ## Next step
 In the next step you will learn how to play with the Cat

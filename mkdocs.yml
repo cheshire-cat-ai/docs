@@ -39,6 +39,7 @@ nav:
       - Prepare the first Plugin: quickstart/prepare-plugin.md
       - Writing a Tool: quickstart/writing-first-tool.md
       - Writing a Hook: quickstart/writing-first-hook.md
+      - Stopping the Cat: quickstart/stopping-the-cat.md
       
   - How the Cat works: 
       - The Core: conceptual/cheshire_cat/core.md

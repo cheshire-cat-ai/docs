@@ -7,11 +7,11 @@ The Cat's knowledge about socks is quite basic; we will upload more specific kno
 
 Go to the Admin Portal at `localhost:1865/admin` on the `Home` tab, click on `Upload url` and use this url `https://en.wikipedia.org/wiki/N%C3%A5lebinding`:
 
-![Alt text](../assets/img/quickstart/upload-url.png)
+![Alt text](../assets/img/quickstart/upload-document/upload-url.png)
 
 After you receive notification of the finished read, the Cat can answer with more detailed answers:
 
-![Alt text](../assets/img/quickstart/cat-answers.png)
+![Alt text](../assets/img/quickstart/upload-document/cat-answers.png)
 
 ## Next Step
 In the next step you will learn how to prepare an empty Plugin

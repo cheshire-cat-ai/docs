@@ -40,12 +40,13 @@ TODO: What can we do? Can we give it a +1 somewhere, a GitHub star? something us
 
 For a quick onboarding we suggest you this learning journey:  
 
-1 - Start by reading `Quickstart -> Introduction`, this is an overview to the main concepts behind the Cat  
+1. Start by reading `Quickstart -> Introduction`, this is an overview to the main concepts behind the Cat  
 
-2 - Next, continue with the subsequent steps under `Quickstart`, these are hands-on tutorials, you will have the first contact using the Cat, you will discover how to install, configure, interact, write you first useful `Tool` and setup `Hooks`  
+2. Next, continue with the subsequent steps under `Quickstart`, these are hands-on tutorials, you will have the first contact using the Cat, you will discover how to install, configure, interact, write you first useful `Tool` and setup `Hooks`  
 
-3 - Further enhance your understanding of the Cat with the `How the Cat works`, this sections delves into deeper concepts  
-(_If you are new to LLM AI concepts, such as `Prompts` and `Language model chains`, we recommend checking out the "LLM Concepts" section first_) 
+3. Further enhance your understanding of the Cat with the `How the Cat works`, this sections delves into deeper concepts, if you are new to LLM AI concepts, such as `Prompts` and `Language model chains`, we recommend checking out the `LLM Concepts` before reading this section
+
+4. Last but not least, in the `Developers` section, you can find all the necessary Cat references
 
 Now, go and create your first invaluable Cat-powered product!
 

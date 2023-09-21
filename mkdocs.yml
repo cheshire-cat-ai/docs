@@ -65,16 +65,16 @@ nav:
       - Docs: technical/basics/admin/docs.md
 
   - Developers:
+      - API:
+          - API Endpoints: technical/basics/cat-core.md
+          - API Authentication: technical/advanced/api_auth.md
+          - API Reference: technical/http_reference.md
       - Plugins Reference:
           - Plugin: technical/plugins/plugins.md
           - Tools: technical/plugins/tools.md
           - Hooks: technical/plugins/hooks.md
           - Settings: technical/plugins/settings.md
           - Dependencies: technical/plugins/dependencies.md
-      - API:
-          - API Endpoints: technical/basics/cat-core.md
-          - API Authentication: technical/advanced/api_auth.md
-          - API Reference: technical/http_reference.md
       - Python Reference: technical/API_Documentation/
       - Client Libraries:
           - Python: technical/clientlib/clientlib-python

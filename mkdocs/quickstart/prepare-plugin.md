@@ -2,7 +2,7 @@
 
 Plugins are packages of `Tools` and `Hooks`, you don't distribute a `Tool` or a `Hook` directly, you will distribute a Plugin containing them.
 
-In this step we will use a GitHub template to prepare a empty Plugin and in the next steps we will insert a `Tool` and a `Hook` inside.
+In this step we will use a GitHub template to prepare an empty Plugin and in the next steps we will insert a `Tool` and a `Hook` inside.
 
 Navigate to the [plugin-template](https://github.com/cheshire-cat-ai/plugin-template){:target="_blank"} GitHub repository, click on `Use this template` and then `Create a new repository`:
 

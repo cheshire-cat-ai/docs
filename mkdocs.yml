@@ -36,9 +36,9 @@ nav:
       - Play with the Cat: quickstart/play-with-the-cat.md
       - Interact using API: quickstart/interact-using-api.md
       - Upload a Document: quickstart/upload-document.md
-      - Prepare the first Plugin: quickstart/prepare-plugin.md
-      - Writing a Tool: quickstart/writing-first-tool.md
-      - Writing a Hook: quickstart/writing-first-hook.md
+      - Prepare a Plugin: quickstart/prepare-plugin.md
+      - Writing a Tool: quickstart/writing-tool.md
+      - Writing a Hook: quickstart/writing-hook.md
       - Stopping the Cat: quickstart/stopping-the-cat.md
       
   - How the Cat works: 
@@ -77,7 +77,8 @@ nav:
           - API Authentication: technical/advanced/api_auth.md
           - API Reference: technical/http_reference.md
       - Client Libraries:
-          - NodeJS: technical/clientlib/nodejs
+          - Python: technical/clientlib/clientlib-python
+          - NodeJS: technical/clientlib/clientlib-nodejs
       - Core Process Diagrams:
           - The Cat Bootstrap: technical/flows/cat-bootstrap.md
           - Chatting with the Cat: technical/flows/chatting-with-the-cat.md

@@ -1,6 +1,6 @@
 # &#128640; Update the Cat Core
 
-If you want to update it run the following:
+If you want to update the Cat core run the following:
 
 - Enter the folder where you cloned the repository
 

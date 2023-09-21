@@ -1,3 +1,0 @@
-# Play with the Cat
-
-Utilizzo Admin Portal...

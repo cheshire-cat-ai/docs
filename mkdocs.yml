@@ -37,8 +37,8 @@ nav:
       - Interact using API: quickstart/interact-using-api.md
       - Upload a Document: quickstart/upload-document.md
       - Prepare a Plugin: quickstart/prepare-plugin.md
-      - Writing a Tool: quickstart/writing-tool.md
-      - Writing a Hook: quickstart/writing-hook.md
+      - Writing the first Tool: quickstart/writing-tool.md
+      - Writing the first Hook: quickstart/writing-hook.md
       - Stopping the Cat: quickstart/stopping-the-cat.md
       
   - How the Cat works: 

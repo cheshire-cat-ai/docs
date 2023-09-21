@@ -2,6 +2,7 @@
 
 Tools are Python functions called by the LLM to execute actions. They are composed of two parts: the first part contains instructions to the LLM that explain when and how to call them, while the second part contains the actual code to execute.
 
+## Creating the Tool
 Now let’s get down to business. A real socks salesman offers a quantity of socks, with many colors and corresponding price. Let’s say a customer wants to know the price for socks of a specific color. We could write a tool to answer the question, copy and past this source code inside the file `poetic_sock_seller.py`:
 
 ```python
@@ -21,6 +22,7 @@ def socks_prices(color, cat):
         return f"{prices[color]} €" 
 ```
 
+## Testing the Tool
 Now let’s ask for our favorite socks color:
 
 ![Alt text](../assets/img/quickstart/write-tool/ask-price-socks.png)
@@ -29,7 +31,7 @@ Now let’s ask for our favorite socks color:
 By clicking on the question mark next to the answer, you can understand what prompted the Cat to provide the response; in this case, you can see that our tool "socks_prices" was used:
 
 ![Alt text](../assets/img/quickstart/write-tool/why-the-response.png)
-![Alt text](image.png)
+
 ## Explaining the code step by step
 ```python
 from cat.mad_hatter.decorators import tool

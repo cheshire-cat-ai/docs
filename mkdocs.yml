@@ -65,13 +65,12 @@ nav:
       - Docs: technical/basics/admin/docs.md
 
   - Developers:
-      - Developing Plugins:
+      - Plugins Reference:
           - Plugin: technical/plugins/plugins.md
           - Tools: technical/plugins/tools.md
           - Hooks: technical/plugins/hooks.md
           - Settings: technical/plugins/settings.md
           - Dependencies: technical/plugins/dependencies.md
-      - Python Reference: technical/API_Documentation/
       - API:
           - API Endpoints: technical/basics/cat-core.md
           - API Authentication: technical/advanced/api_auth.md
@@ -79,6 +78,7 @@ nav:
       - Client Libraries:
           - Python: technical/clientlib/clientlib-python
           - TypeScript: technical/clientlib/clientlib-typescript
+      - Python Reference: technical/API_Documentation/
       - Core Process Diagrams:
           - The Cat Bootstrap: technical/flows/cat-bootstrap.md
           - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
@@ -100,7 +100,7 @@ nav:
 
   - Guides:
     - How to update the Cat Core: guides/update-the-core.md
-    - How to debug with VS Code: technical/xxx.md
+    - How to debug with Visual Studio Code: guides/debug-vscode.md
     - How to backup the Long Term Memory: technical/advanced/memory_backup.md
 
   - Resources:

@@ -31,7 +31,7 @@ nav:
   - Hello, dear: index.md
 
   - Quickstart:
-      - Overview: quickstart/overview.md
+      - Introduction: quickstart/introduction.md
       - Installation and First configuration: quickstart/installation-configuration.md
       - Play with the Cat: quickstart/play-with-the-cat.md
       - Interact using API: quickstart/interact-using-api.md

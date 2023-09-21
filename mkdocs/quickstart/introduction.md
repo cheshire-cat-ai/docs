@@ -1,4 +1,4 @@
-# Overview
+# Introduction
 
 The Cheshire Cat is a ready-to-use AI micro-framework. Once installed and configured to connect to a Language Model (LLM), it can be queried through APIs. These APIs return responses provided by the LLM.
 

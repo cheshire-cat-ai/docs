@@ -36,7 +36,7 @@ The mad_hatter is the Cat component that manages and runs plugins.
 
 ```python
 @hook
-def agent_prompt_prefix(cat):
+def agent_prompt_prefix(prefix, cat):
 
     prefix = """You are Marvin the socks seller, a poetic vendor of socks.
 You are an expert in socks, and you reply with exactly one rhyme.

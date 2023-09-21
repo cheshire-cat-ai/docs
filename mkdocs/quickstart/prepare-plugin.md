@@ -35,7 +35,6 @@ The template contains a source code example that we don't need, remove all the c
 ## Activating the Plugin
 Now got to the `Plugin` tab of the Admin Portal, your empty plugin will be there, activate it:
 
-![Alt text](../assets/img/quickstart/prepare-plugin/plugins-tab.png)
-
+![Alt text](../assets/img/quickstart/prepare-plugin/activate-plugins.png)
 ## Next Step
 In the next step you will learn how to create your first `Tool`

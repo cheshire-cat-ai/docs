@@ -72,13 +72,13 @@ nav:
           - Settings: technical/plugins/settings.md
           - Dependencies: technical/plugins/dependencies.md
       - Python Reference: technical/API_Documentation/
-      - API Reference:
+      - API:
           - API Endpoints: technical/basics/cat-core.md
           - API Authentication: technical/advanced/api_auth.md
           - API Reference: technical/http_reference.md
       - Client Libraries:
           - Python: technical/clientlib/clientlib-python
-          - NodeJS: technical/clientlib/clientlib-nodejs
+          - TypeScript: technical/clientlib/clientlib-typescript
       - Core Process Diagrams:
           - The Cat Bootstrap: technical/flows/cat-bootstrap.md
           - Chatting with the Cat: technical/flows/chatting-with-the-cat.md

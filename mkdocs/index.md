@@ -40,7 +40,7 @@ TODO: What can we do? Can we give it a +1 somewhere, a GitHub star? something us
 
 For a quick onboarding we suggest you this learning journey:  
 
-1 - Start by reading `Quickstart -> Overview`, this is an introduction to the main concepts behind the Cat  
+1 - Start by reading `Quickstart -> Introduction`, this is an overview to the main concepts behind the Cat  
 
 2 - Next, continue with the subsequent steps under `Quickstart`, these are hands-on tutorials, you will have the first contact using the Cat, you will discover how to install, configure, interact, write you first useful `Tool` and setup `Hooks`  
 

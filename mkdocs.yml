@@ -76,9 +76,11 @@ nav:
           - Settings: technical/plugins/settings.md
           - Dependencies: technical/plugins/dependencies.md
       - Python Reference: technical/API_Documentation/
+      - Debugging: 
+          - Visual Studio Code: technical/debugging/vscode.md
       - Client Libraries:
-          - Python: technical/clientlib/clientlib-python
-          - TypeScript: technical/clientlib/clientlib-typescript
+          - Python: technical/clientlib/clientlib-python.md
+          - TypeScript: technical/clientlib/clientlib-typescript.md
       - Core Process Diagrams:
           - The Cat Bootstrap: technical/flows/cat-bootstrap.md
           - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
@@ -88,25 +90,26 @@ nav:
           - Automatic Tests: technical/advanced/tests.md
 
   - LLM Concepts:
-      - Language Models: conceptual/llm.md
-      - Language Model Chains: https://docs.langchain.com/docs/components/chains/llm-chain
+      - Language Models: llm-concepts/llm.md
+      - Language Model Chains: llm-concepts/llm-chain.md
       - Prompt: llm-concepts/prompt.md
       - Encoder: llm-concepts/encoder.md
-      - (Vector Memory): llm-concepts/vector-memory.md
+      - Vector Memory: llm-concepts/vector-memory.md
 
   - Use Cases: 
-    - Cat has Main product: use-cases/main-product.md
-    - Cat has sidecar of your product: use-cases/side-car.md
+    - Cat as Main product: use-cases/main-product.md
+    - Cat as Sidecar of your product: use-cases/side-car.md
+    - Cat as Discord BOT: use-cases/discord-bot.md
 
   - Guides:
     - How to update the Cat Core: guides/update-the-core.md
-    - How to debug with Visual Studio Code: guides/debug-vscode.md
     - How to backup the Long Term Memory: technical/advanced/memory_backup.md
 
   - Resources:
     - Videos:
       - Installation: resources/video-installation.md
-    - Events: xxx
+    - Tutorials: resources/tutorials.md
+    - Events: resources/events.md
 
   - FAQ: faq.md
 

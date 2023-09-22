@@ -8,7 +8,7 @@ Now let’s get down to business. A real socks salesman offers a quantity of soc
 ```python
 from cat.mad_hatter.decorators import tool
 
-@tool()
+@tool
 def socks_prices(color, cat):
     """How much do socks cost? Input is the sock color."""
     prices = {
@@ -40,7 +40,7 @@ from cat.mad_hatter.decorators import tool
 Let’s import from the Cat the tool decorator. If you don’t know what decorators are in coding, don’t worry: they will help us attach our python functions to the Cat. The mad_hatter is the Cat component that manages and runs plugins.
 
 ```python
-@tool()
+@tool
 def socks_prices(color, cat):
     """How much do socks cost? Input is the sock color."""
 ```

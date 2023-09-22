@@ -11,8 +11,6 @@ You need an API key for use `ChatGPT`, you can request an API key on the provide
     - visit your OpenAI [API Keys](https://platform.openai.com/account/api-keys) page  
     - create an API key with `+ Create new secret key` and copy it
 
-TODO: _(fare riferimento al link con il pricing?)_
-
 ## Setup
 
 - Clone the repository on your machine
@@ -45,7 +43,6 @@ When finished the Cat will be live and running!
 
 
 TODO: update the video  
-TODO: configure both, LLM and encoder?
 
 ## Next step
 In the next step you will learn how to play with the Cat

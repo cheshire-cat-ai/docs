@@ -64,6 +64,10 @@ nav:
       - Settings: technical/basics/admin/settings.md
       - Docs: technical/basics/admin/docs.md
 
+  - Plugins Registry:
+      - Installing a Plugin: plugins-registry/installing-plugin.md
+      - Publishing a Plugin: plugins-registry/publishing-plugin.md
+
   - Developers:
       - API:
           - API Endpoints: technical/basics/cat-core.md

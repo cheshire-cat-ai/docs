@@ -16,6 +16,8 @@ retrieve them further in the conversation.
 If you want the Cat to solve tailored tasks you can extend its capabilities writing Python plugins
 to execute custom functions or call external services (e.g. APIs and other models).
 
+Furthermore, the Cat boasts a rapidly growing ecosystem of ready-to-use plugins that can be easily installed with just a click.
+
 It is an API-first framework, making it seamlessly integrable with your pre-existing product.
 
 If you want to build your custom AI architecture, the Cat can help you!
@@ -59,6 +61,10 @@ Now, go and create your first invaluable Cat-powered product!
     "Then it doesn't matter which way you go," said the Cat.
 
     (Alice's Adventures in Wonderland - Lewis Carroll)
+
+__License__
+
+[GNU General Public License v3.0](https://raw.githubusercontent.com/cheshire-cat-ai/core/main/LICENSE)
 
 __Credits__
 

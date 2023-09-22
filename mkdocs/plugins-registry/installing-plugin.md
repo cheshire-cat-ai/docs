@@ -1,0 +1,1 @@
+# Installing a Plugin from the Registry

@@ -20,8 +20,11 @@ Additionally, it's possible to customize the Cheshire Cat's core. In the main pr
 
 `Tools` and `Hooks` are packaged into `Plugins` that can be installed by placing files in a specific folder or through a the Admin Portal. The component responsible for managing plugins is the `Mad Hatter`.
 
+## Sharing Plugins
+If desired, you can publish the `Plugins` you create on a public registry, enabling others to install them with just a single click from the Admin Portal.
+
 ## Admin Portal
-Completing the framework is a web portal for Admin users. Through this portal, the admin can configure framework settings, install plugins, upload documents, and use it as a playground tool. You can chat with the Cheshire Cat, analyze its responses, and directly query its memories.
+Completing the framework is a web portal for Admin users. Through this portal, the admin can configure framework settings, install plugins from public registry, upload documents, and use it as a playground tool. You can chat with the Cheshire Cat, analyze its responses, and directly query its memories.
 
 ## Next step
 In the next step you will learn how install, set the LLM and the basics of all of this stuff.

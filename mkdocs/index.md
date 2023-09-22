@@ -30,7 +30,7 @@ If you want to build your custom AI architecture, the Cat can help you!
 
 ## Try it out now!
 
-We have a Discord server, and we use the Cat as our assistant to provide support. You can give the Cat a try by connecting to the [:fontawesome-brands-discord: Discord Server](https://discord.com/channels/1092359754917089350/1092360285056159814), mentioning `@Cheshire Cat AI` while asking something about the documentation, such as "How can I enhance the Cat?" 
+We have a Discord server, and we use the Cat as our assistant to provide support. You can give the Cat a try by connecting to the [:fontawesome-brands-discord: Discord Server](https://discord.com/channels/1092359754917089350/1092360285056159814), mentioning `@Cheshire Cat AI` while asking something about the documentation, such as "Can I extend the Cat with plugins?" 
 
 _if you're curious about how it's implemented, check out the [Discord use case](use-cases/discord-bot.md)_
 

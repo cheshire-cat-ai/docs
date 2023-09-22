@@ -77,5 +77,9 @@ What is indeed interesting, is that in a tool you can connect your AI to any ser
 
 When changes to the plugin's source code are detected, the Cat is restarted. Feel free to make changes within the code and observe the results.
 
+## Debugging
+
+Sometimes debugging can be necessary. Please refer to the `Developers -> Debugging` section for more information.
+
 ## Next Step
 In the next step you will learn how to create your first `Hook`

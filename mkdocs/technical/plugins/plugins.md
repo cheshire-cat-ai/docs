@@ -29,7 +29,7 @@ Now let's start `mypluginfile.py` with a little import:
 from cat.mad_hatter.decorators import tool, hook
 ```
 
-You are now ready to change the Cat's behavior using Hooks and Tools.
+You are now ready to change the Cat's behavior using Tools and Hooks.
 
 ## &#129520; Tools
 

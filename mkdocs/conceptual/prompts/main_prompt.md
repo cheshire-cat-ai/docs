@@ -55,40 +55,6 @@ The purpose of this component is to gather few variables, that are:
 - chat_history: the recent conversation between the user and the Cat (i.e. the last three turns of conversation);
 - input: the user's message
 
-## Main Prompt flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
-
-!!! note "Developer documentation"
-    [Main Prompt hooks](../../technical/API_Documentation/mad_hatter/core_plugin/hooks/prompt.md#cat.mad_hatter.core_plugin.hooks.prompt.agent_prompt_instructions)
-
-```mermaid
-flowchart LR
-    subgraph MP ["Main Prompt"]
-%%        direction LR
-        Prefix["#129693;Prefix"];
-        Instructions["#129693;Instructions"];
-        Suffix["#129693;Suffix"];    
-    end
-    subgraph CAT ["#128049;Cheshire Cat"]
-        HyDE
-        subgraph LTM ["#128024;Long Term Memory"]
-%%        direction
-        C[(Episodic)];
-        D[(Declarative)];
-    end
-    subgraph Agent ["#129302;Agent"]
-        A[Agent Scratchpad];
-    end
-    end
-    
-    U["#128100;User"] -->|sends message|HyDE ---> LTM["#128024;Long Term Memory"];
-    C --> E["#129693;"] ----> Prefix;
-    D --> E["#129693;"] --> Prefix;
-    A --> Suffix;
-    MP -..->|fed back to|CAT -...-> Answer
-```
-
-Nodes with the &#129693; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.
-
 ## References
 
 [^1]: Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive nlp tasks. Advances in Neural Information Processing Systems, 33, 9459-9474.

@@ -1,4 +1,4 @@
-site_name: Cheshire Cat Docs
+site_name: The Cheshire Cat
 repo_url: https://github.com/cheshire-cat-ai/core
 
 docs_dir: mkdocs
@@ -29,54 +29,94 @@ hooks:
 
 nav:
   - Hello, dear: index.md
-  - Conceptual:
-      - The Cheshire Cat:
-          - The Mad Hatter: conceptual/cheshire_cat/mad_hatter.md
-          - The Rabbit Hole: conceptual/cheshire_cat/rabbit_hole.md
-          - The Agent: conceptual/cheshire_cat/agent.md
-      - Memory:
-          - Vector Memory: conceptual/memory/vector_memory.md
-          - Long Term Memory: conceptual/memory/long_term_memory.md
-          - Working Memory: conceptual/memory/working_memory.md
-      - Prompts:
-          - HyDE prompt: conceptual/prompts/hyde.md
+
+  - Quickstart:
+      - Introduction: quickstart/introduction.md
+      - Installation and First configuration: quickstart/installation-configuration.md
+      - Play with the Cat: quickstart/play-with-the-cat.md
+      - Interact using API: quickstart/interact-using-api.md
+      - Upload a Document: quickstart/upload-document.md
+      - Prepare a Plugin: quickstart/prepare-plugin.md
+      - Writing the first Tool: quickstart/writing-tool.md
+      - Writing the first Hook: quickstart/writing-hook.md
+      - Stopping the Cat: quickstart/stopping-the-cat.md
+      
+  - How the Cat works: 
+      - The Core: conceptual/cheshire_cat/core.md
+      - The Agent: conceptual/cheshire_cat/agent.md
+      - The Prompts:
           - Main Prompt: conceptual/prompts/main_prompt.md
           - Instruction Prompt: conceptual/prompts/instructions.md
           - Summarization Prompt: conceptual/prompts/summarization.md
-      - Language Models: conceptual/llm.md
-      - Plugins: conceptual/plugins.md
-  - Technical:
-      - Getting Started: technical/getting-started.md
-      - How the Cat works: 
-          - Components: technical/how-the-cat-works.md
-          - The Cat Bootstrap: technical/flows/cat-bootstrap.md
-          - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
-          - Plugins Lifecycle: technical/flows/plugins-lifecycle.md
-      - Basics:
-          - The Cat Core: technical/basics/cat-core.md
-          - Admin Interface:
-              - Home: technical/basics/admin/admin-interface.md
-              - Memory: technical/basics/admin/memory.md
-              - Plugins: technical/basics/admin/plugins.md
-              - Settings: technical/basics/admin/settings.md
-              - Docs: technical/basics/admin/docs.md
-          - Main endpoints: technical/basics/interacting.md
-      - Plugins:
-          - How to write a plugin: technical/plugins/plugins.md
+      - The Long Term Memory:
+          - Introduction: conceptual/memory/long_term_memory.md
+          - Episodic Memory: conceptual/memory/episodic_memory.md
+          - Declarative Memory: conceptual/memory/declarative_memory.md
+          - Procedural Memory: conceptual/memory/procedural_memory.md
+      - The Working Memory: conceptual/memory/working_memory.md
+      - The Rabbit Hole: conceptual/cheshire_cat/rabbit_hole.md
+      - The Mad Hatter: conceptual/cheshire_cat/mad_hatter.md
+
+  - Admin Portal:
+      - Home: technical/basics/admin/admin-interface.md
+      - Long Term Memory: technical/basics/admin/memory.md
+      - Plugins: technical/basics/admin/plugins.md
+      - Settings: technical/basics/admin/settings.md
+      - Docs: technical/basics/admin/docs.md
+
+  - Plugins Registry:
+      - Installing a Plugin: plugins-registry/installing-plugin.md
+      - Publishing a Plugin: plugins-registry/publishing-plugin.md
+
+  - Developers:
+      - API:
+          - API Endpoints: technical/basics/cat-core.md
+          - API Authentication: technical/advanced/api_auth.md
+          - API Reference: technical/http_reference.md
+      - Plugins Reference:
+          - Plugin: technical/plugins/plugins.md
           - Tools: technical/plugins/tools.md
           - Hooks: technical/plugins/hooks.md
           - Settings: technical/plugins/settings.md
           - Dependencies: technical/plugins/dependencies.md
-      - Advanced:
-          - Api Authentication: technical/advanced/api_auth.md
-          - Memory Backup: technical/advanced/memory_backup.md
-          - User System: technical/advanced/user_system.md
-          - Tests: technical/advanced/tests.md
-      - Tutorials:
-          - Installation: technical/tutorials/installation.md
       - Python Reference: technical/API_Documentation/
-      - HTTP Reference: technical/http_reference.md
+      - Debugging: 
+          - Visual Studio Code: technical/debugging/vscode.md
+      - Client Libraries:
+          - Python: technical/clientlib/clientlib-python.md
+          - TypeScript: technical/clientlib/clientlib-typescript.md
+      - Core Process Diagrams:
+          - The Cat Bootstrap: technical/flows/cat-bootstrap.md
+          - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
+          - Plugins Lifecycle: technical/flows/plugins-lifecycle.md
+      - Advanced:
+          - User Management: technical/advanced/user_system.md
+          - Automatic Tests: technical/advanced/tests.md
 
+  - LLM Concepts:
+      - Language Models: llm-concepts/llm.md
+      - Language Model Chains: llm-concepts/llm-chain.md
+      - Prompt: llm-concepts/prompt.md
+      - Encoder: llm-concepts/encoder.md
+      - Vector Memory: llm-concepts/vector-memory.md
+
+  - Use Cases: 
+    - Cat as Main product: use-cases/main-product.md
+    - Cat as Sidecar of your product: use-cases/side-car.md
+    - Cat as Discord BOT: use-cases/discord-bot.md
+
+
+  - Guides:
+    - How to update the Cat Core: guides/update-the-core.md
+    - How to backup the Long Term Memory: technical/advanced/memory_backup.md
+
+  - Resources:
+    - Videos:
+      - Installation: resources/video-installation.md
+    - Tutorials: resources/tutorials.md
+    - Events: resources/events.md
+
+  - Made with the Cat: made-with-the-cat.md
   - FAQ: faq.md
 
 theme:
@@ -101,10 +141,11 @@ theme:
     #text: Old Standard TT
     text: Ubuntu
   features:
-    - navigation.sections
+    # - navigation.sections
     - navigation.indexes
     - navigation.footer
     - navigation.top
+    # - navigation.tabs
     - content.code.copy
     - content.code.annotate
     - search.suggest

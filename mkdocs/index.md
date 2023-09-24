@@ -13,8 +13,8 @@ and it answers knowing the context of previous conversations.
 You can also feed text documents in the Cat's memory system to enrich the agent's contextual information and ask it to
 retrieve them further in the conversation.
 
-If you want the Cat to solve tailored tasks you can extend its capabilities writing Python plugins
-to execute custom functions or call external services (e.g. APIs and other models).
+If you want the Cat to solve tailored tasks, you can extend its capabilities writing Python plugins
+to execute custom functions or call external services (e.g., APIs and other models).
 
 Furthermore, the Cat boasts a rapidly growing ecosystem of ready-to-use plugins that can be easily installed with just a click.
 
@@ -36,15 +36,15 @@ _if you're curious about how it's implemented, check out the [Discord use case](
 
 ## Get started now!
 
-For a quick onboarding we suggest you this learning journey:  
+For a quick onboarding, we suggest this learning journey to you:  
 
-1. Start by reading `Quickstart -> Introduction`, this is an overview to the main concepts behind the Cat  
+1. Start by reading `Quickstart -> Introduction`. This is an overview of the main concepts behind the Cat.  
 
-2. Next, continue with the subsequent steps under `Quickstart`, these are hands-on tutorials, you will have the first contact using the Cat, you will discover how to install, configure, interact, write you first useful `Tool` and setup `Hooks`  
+2. Next, continue with the subsequent steps under `Quickstart`. These are hands-on tutorials. You will have the first contact using the Cat and you will discover how to install, configure, interact, write your first useful `Tool` and setup `Hooks`.  
 
-3. Further enhance your understanding of the Cat with the `How the Cat works`, this sections delves into deeper concepts, if you are new to LLM AI concepts, such as `Prompts` and `Language model chains`, we recommend checking out the `LLM Concepts` before reading this section
+3. Further, enhance your understanding of the Cat with the `How the Cat works`. This section delves into deeper concepts. If you are new to LLM AI concepts, e.g. `Prompts` and `Language model chains`, we recommend checking out the `LLM Concepts` before reading this section.
 
-4. Last but not least, in the `Developers` section, you can find all the necessary Cat references
+4. Last but not least, in the `Developers` section, you can find all the necessary Cat references.
 
 Now, go and create your first invaluable Cat-powered product!
 

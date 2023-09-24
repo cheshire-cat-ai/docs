@@ -32,11 +32,11 @@ nav:
 
   - Quickstart:
       - Introduction: quickstart/introduction.md
-      - Installation and First configuration: quickstart/installation-configuration.md
-      - Play with the Cat: quickstart/play-with-the-cat.md
-      - Interact using API: quickstart/interact-using-api.md
-      - Upload a Document: quickstart/upload-document.md
-      - Prepare a Plugin: quickstart/prepare-plugin.md
+      - Installation and First Configuration: quickstart/installation-configuration.md
+      - Playing with the Cat: quickstart/play-with-the-cat.md
+      - Interacting using APIs: quickstart/interact-using-api.md
+      - Uploading a Document: quickstart/upload-document.md
+      - Preparing a Plugin: quickstart/prepare-plugin.md
       - Writing the first Tool: quickstart/writing-tool.md
       - Writing the first Hook: quickstart/writing-hook.md
       - Stopping the Cat: quickstart/stopping-the-cat.md

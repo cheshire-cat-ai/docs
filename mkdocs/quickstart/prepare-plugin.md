@@ -1,11 +1,12 @@
-# Prepare a Plugin
+# Preparing a Plugin
 
-Plugins are packages of `Tools` and `Hooks`, you don't distribute a `Tool` or a `Hook` directly, you will distribute a Plugin containing them.
+Plugins are packages of `Tools` and `Hooks`.
+You don't distribute a `Tool` or a `Hook` directly, you will distribute a Plugin containing them.
 
 ## Creating the new plugin
-In this step we will use a GitHub template to prepare an empty Plugin and in the next steps we will insert a `Tool` and a `Hook` inside.
+In this step, we will use a GitHub template to prepare an empty Plugin and develop a `Tool` and a `Hook`.
 
-Navigate to the [plugin-template](https://github.com/cheshire-cat-ai/plugin-template){:target="_blank"} GitHub repository, click on `Use this template` and then `Create a new repository`:
+Navigate to the [plugin-template](https://github.com/cheshire-cat-ai/plugin-template){:target="_blank"} GitHub repository, click on `Use this template` and, then, `Create a new repository`:
 
 ![Alt text](../assets/img/quickstart/prepare-plugin/create-from-template.png)
 
@@ -14,7 +15,8 @@ Choose `poetic_sock_seller` as repository name and then click on `Create reposit
 ![Alt text](../assets/img/quickstart/prepare-plugin/repo-name.png)
 
 ## Cloning the Plugin
-Now that you set up the remote repository on GitHub, you need to set up the code locally. Hence, clone the repository directly in the Cat’s plugins folder on your machine:
+Now that you set up the remote repository on GitHub, you need to set up the code locally.
+Hence, clone the repository directly in the Cat’s plugins folder on your machine:
 
 ``` shell
 cd core/cat/plugins
@@ -27,14 +29,17 @@ cd poetic_sock_seller
 python setup.py
 ```
 
-The script will prompt you to write the name of your plugin, `Poetic Sock Seller`, the output in the terminal should looks like:
+The script will prompt you to write the name of your plugin, `Poetic Sock Seller`.
+The output in the terminal should look like:
 >![Alt text](../assets/img/quickstart/prepare-plugin/shell-setup.png)
 
-The template contains a source code example that we don't need, remove all the code inside the the file `poetic_sock_seller.py`
+The template contains a source code example that we don't need: remove all the code inside the file `poetic_sock_seller.py`
 
 ## Activating the Plugin
-Now got to the `Plugin` tab of the Admin Portal, your empty plugin will be there, activate it:
+Now, go to the `Plugin` tab of the Admin Portal.
+Your empty plugin will be there, activate it:
 
 ![Alt text](../assets/img/quickstart/prepare-plugin/activate-plugins.png)
+
 ## Next Step
-In the next step you will learn how to create your first `Tool`
+In the next step, you will learn how to create your first `Tool`.

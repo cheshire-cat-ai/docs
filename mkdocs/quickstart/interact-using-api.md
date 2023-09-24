@@ -51,8 +51,10 @@ Cheshire Cat: {
 ```
 
 ## Client Libraries
-This example explains the low-level use of the Cat APIs. However, there are more convenient and ready-made libraries available for various languages. Take a look at the `Developers -> Client Libraries` section.
+This example explains the low-level use of the Cat APIs.
+However, there are more convenient and ready-made libraries available for various languages.
+Take a look at the `Developers -> Client Libraries` section.
 
 
 ## Next Step
-In the next step you will learn how load a text document in the documents memory.
+In the next step, you will learn how to load a text document in the vector memory.

@@ -1,6 +1,7 @@
 # Upload a Document
 
-Documents can be uploaded via the Admin Portal (and it's also possible through APIs). Uploaded documents will be considered by the Cat to prepare the answer to your question.
+Documents can be uploaded via the Admin Portal (and it's also using APIs).
+The Cat will consider uploaded documents to generate the answer to your question.
 These documents are saved in a local database called `declarative memory`.
 
 ## Improve the Cat knowledge
@@ -14,15 +15,16 @@ You receive notification of the finished read:
 
 ![Alt text](../assets/img/quickstart/upload-document/finish-notification.png)
 
-## Trying the new knowledge
+## Trying new knowledge
 The Cat can answer with more detailed answers:
 
 ![Alt text](../assets/img/quickstart/upload-document/cat-answers.png)
 
 ## Why the response?
-By clicking on the question mark next to the answer, you can understand what prompted the Cat to provide the response; in this case, you can see that knowledge from the documents knowledge (`declarative memory`) was used:
+By clicking on the question mark next to the answer, you can understand what prompted the Cat to provide the response.
+In this case, you can see that it used the knowledge coming from the documents (`declarative memory`):
 
 ![Alt text](../assets/img/quickstart/upload-document/why-response.png)
 
 ## Next Step
-In the next step you will learn how to prepare an empty Plugin
+In the next step, you will learn how to prepare an empty Plugin.

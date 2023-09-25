@@ -29,7 +29,7 @@ The `plugin.json` file contains plugin's title and description, and is useful in
 }
 ```
 
-The file `poetic_sock_seller.py` will contain `Tools` and `Hooks` source code and can be left completely empty for this step.
+The `poetic_sock_seller.py` file will contain `Tools` and `Hooks` source code and can be left completely empty for this step.
 
 ## Activating the Plugin
 Now, go to the `Plugin` tab of the Admin Portal.

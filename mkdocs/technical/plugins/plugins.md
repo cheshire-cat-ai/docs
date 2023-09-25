@@ -2,7 +2,7 @@
 
 To write a plugin just create a new folder in `core/cat/plugins/`, in this example will be "myplugin".
 
-You need two python files to your plugin folder:
+You need two files to your plugin folder:
 
     ├── core
     │   ├── cat

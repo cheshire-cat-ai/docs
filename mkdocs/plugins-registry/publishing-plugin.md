@@ -16,7 +16,7 @@ Click on the colorful "Use this template" button at the top and choose to create
 $ python setup.py
 ```
 
-To learn more about how to work with the plugin template, read [this dedicated page](/quickstart/prepare-plugin/).
+To learn more about how to work with the plugin template, read [this dedicated page](plugin-from-template.md).
 
 ### &#128230; Release Creation
 

@@ -3,7 +3,8 @@
 If your plugin requires additional python packages, add a `requirements.txt` file to your plugin.
 The file should contain *only* additional dependencies.  
 
-The Cat will install your dependencies on top of the default ones, as soon as you rebuild the docker image.
+The Cat will install your dependencies on top of the default ones, as soon as you install a plugin from the admin.
+If you are coding a plugin from inside the `cat/plugins` folder, to install dependencies you need to stop and restart the Cat.
 
 ## Example
 
@@ -16,4 +17,16 @@ Insert a `requirements.txt` file in your plugin root folder:
 pycrypto>=2.6.1
 ```
 
-To make changes effective, stop the Cat and run the [update instructions](../getting-started.md#update).
+Stop the terminal with `CTRL + C`, then
+
+```bash
+docker compose down
+```
+
+And to see dependencies installed,
+
+```bash
+docker compose up
+```
+
+To make changes permanent and avoid dependencies installation at every startup, stop the Cat and rebuild the docker image as explained in the [update instructions](../getting-started.md#update).

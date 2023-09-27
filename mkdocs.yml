@@ -67,6 +67,7 @@ nav:
   - Plugins Registry:
       - Installing a Plugin: plugins-registry/installing-plugin.md
       - Publishing a Plugin: plugins-registry/publishing-plugin.md
+      - Using the Plugin Template: plugins-registry/plugin-from-template.md
 
   - Developers:
       - API:

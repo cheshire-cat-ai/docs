@@ -48,4 +48,4 @@ Once finished, the Cat will be living and running!
 TODO: update the video  
 
 ## Next step
-In the next step, you will learn how to play with the Cat.
+In the [next step](./play-with-the-cat.md), you will learn how to play with the Cat.

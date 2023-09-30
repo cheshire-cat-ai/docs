@@ -95,4 +95,4 @@ Sometimes debugging can be necessary.
 Please refer to the `Developers -> Debugging` section for more information.
 
 ## Next Step
-In the next step, you will learn how to create your first `Hook`.
+In the [next step](./writing-hook.md), you will learn how to create your first `Hook`.

@@ -38,4 +38,4 @@ Your empty plugin will be there, activate it:
 ![Alt text](../assets/img/quickstart/prepare-plugin/activate-plugins.png)
 
 ## Next Step
-In the next step, you will learn how to create your first `Tool`.
+In the [next step](./writing-tool.md), you will learn how to create your first `Tool`.

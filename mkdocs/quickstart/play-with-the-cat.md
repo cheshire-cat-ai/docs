@@ -20,4 +20,4 @@ Afterward, we will expand this general knowledge with more specific information.
 You have learned how to use the playground to test your AI via the Admin Portal.
 
 ## Next Step
-In the next step, you will learn how to interact with the Cat by API.
+In the [next step](./interact-using-api.md), you will learn how to interact with the Cat by API.

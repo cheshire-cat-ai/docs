@@ -94,5 +94,8 @@ Feel free to make changes within the code and observe the results.
 Sometimes debugging can be necessary.
 Please refer to the `Developers -> Debugging` section for more information.
 
+#### More Info
+[Developers → Plugins Reference → Tools](../technical/plugins/tools.md)
+
 ## Next Step
 In the [next step](./writing-hook.md), you will learn how to create your first `Hook`.

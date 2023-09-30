@@ -51,5 +51,8 @@ It takes `cat` as an argument and is decorated with `@hook`.
 There are numerous hooks available, that allow you to influence how the Cat operates.
 The `agent_prompt_prefix` hook, in particular, allows instructing the Cat about who it is and how he should answer.
 
+#### More Info
+[Developers → Plugins Reference → Hooks](../technical/plugins/hooks.md)
+
 ## Next Step
 In the [next step](./stopping-the-cat.md), you will learn how to `stop the cat`.

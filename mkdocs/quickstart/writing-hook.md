@@ -52,4 +52,4 @@ There are numerous hooks available, that allow you to influence how the Cat oper
 The `agent_prompt_prefix` hook, in particular, allows instructing the Cat about who it is and how he should answer.
 
 ## Next Step
-In the next step, you will learn how to `stop the cat`.
+In the [next step](./stopping-the-cat.md), you will learn how to `stop the cat`.

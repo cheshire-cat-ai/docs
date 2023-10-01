@@ -57,4 +57,4 @@ Take a look at the `Developers -> Client Libraries` section.
 
 
 ## Next Step
-In the next step, you will learn how to load a text document in the vector memory.
+In the [next step](./upload-document.md), you will learn how to load a text document in the vector memory.

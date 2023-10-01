@@ -19,5 +19,10 @@ Afterward, we will expand this general knowledge with more specific information.
 
 You have learned how to use the playground to test your AI via the Admin Portal.
 
+![Alt text](../assets/img/quickstart/play-with-the-cat/play-with-the-cat.png)
+
+#### More Info
+[Admin Portal → Home](../technical/basics/admin/admin-interface.md)
+
 ## Next Step
 In the [next step](./interact-using-api.md), you will learn how to interact with the Cat by API.

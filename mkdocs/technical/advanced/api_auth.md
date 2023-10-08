@@ -1,12 +1,12 @@
 #  &#128272; API Authentication
 
-In order to authenticate endpoints, it is necessary to include the `API_KEY=your-key-here` variable in the `.env` file. Multiple keys can be accepted by separating them with a pipe (`|`) as follows: `API_KEY=your-key-here|secondary_client_key`.
+By default, the core APIs don't require any authorization, if you set this parameter all endpoints will require an `access_token` header for authentication such as `access_token: your-key-here`. Failure to provide the correct access token will result in a 403 error.
 
-After configuration, all endpoints will require an `access_token` header for authentication, such as `access_token: your-key-here`. Failure to provide the correct access token will result in a 403 error.
+Multiple keys can be accepted by separating them with a pipe (`|`) as follows: `API_KEY=your-key-here|secondary_client_key`.
 
 !!! warning
 
-    This kind of athentication is weak and it's intended for machine to machine communication, please do not rely on it and enforce other kind of stronger authentication such as OAuth2 for the client side.
+    This kind of authentication is weak and it's intended for machine to machine communication, please do not rely on it and enforce other kind of stronger authentication such as OAuth2 for the client side.
 
 !!! example
     **Authenticated API call:**

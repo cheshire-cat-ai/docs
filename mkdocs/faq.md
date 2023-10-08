@@ -63,7 +63,7 @@ This is a matter with your docker installation or the user you run docker from.
 
 #### The Cat seems not to be working from inside a Virtual Machine
 
-In VirtualBox you can select Settings->Network, then choose NAT in the "Attached to" drop down menu. Select "Advanced" to configure the port forwarding rules. Assuming the guest IP of your VM is 10.0.2.15 (the default) and the ports configred in the .env files are the defaults, you have to set at least the following rule:
+In VirtualBox you can select Settings->Network, then choose NAT in the "Attached to" drop down menu. Select "Advanced" to configure the port forwarding rules. Assuming the guest IP of your VM is 10.0.2.15 (the default) and the ports configured in the .env files are the defaults, you have to set at least the following rule:
 
 | Rule name | Protocol | Host IP     | Host Port | Guest IP   | Guest Port |
 |-----------|----------|-------------|-----------|------------|------------|

@@ -94,6 +94,10 @@ nav:
           - User Management: technical/advanced/user_system.md
           - Automatic Tests: technical/advanced/tests.md
 
+  - Administrations:
+      - Architecture: administrators/architecture.md
+      - Environment Variables: administrators/env-variables.md
+
   - LLM Concepts:
       - Language Models: llm-concepts/llm.md
       - Language Model Chains: llm-concepts/llm-chain.md

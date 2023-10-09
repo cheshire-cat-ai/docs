@@ -86,6 +86,7 @@ nav:
       - Client Libraries:
           - Python: technical/clientlib/clientlib-python.md
           - TypeScript: technical/clientlib/clientlib-typescript.md
+          - PHP: technical/clientlib/clientlib-php.md
       - Core Process Diagrams:
           - The Cat Bootstrap: technical/flows/cat-bootstrap.md
           - Chatting with the Cat: technical/flows/chatting-with-the-cat.md

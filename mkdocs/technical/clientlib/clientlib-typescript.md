@@ -4,4 +4,4 @@ The Cheshire Cat provides a TypeScript API client that allows you to chat with t
 It can be used both in Browser and NodeJS environments.
 
 The package is public released on npm Registry:  
-[Cheshire Cat API Client](https://www.npmjs.com/package/ccat-api){:target="_blank"}
+[Cheshire Cat TypeScript API Client](https://www.npmjs.com/package/ccat-api){:target="_blank"}

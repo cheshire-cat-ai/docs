@@ -165,6 +165,9 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/bHX5sNFCYU
       name: The Cheshire Cat Discord Server
+      
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - pymdownx.highlight:

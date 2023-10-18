@@ -1,48 +1,57 @@
 # &#129693; Hooks
 
-Hooks are python functions that are called directly from the Cat at runtime.  
-They allow you to change how the Cat does things by changing prompt, memory, endpoints and much more.
+Hooks are Python functions that are called directly from the Cat at runtime, they allow you to change how the Cat internally works without directly modifying the Cat itself.
 
-Both Hooks and Tools are python functions, but they have strong differences:
+## How the Hooks work
+To create a hook, you first need to create a [plugin](plugins.md) that contains it. Once the plugin is created, you can insert hooks inside the plugin, a single plugin can contain multiple hooks.
 
-|                    | Hook                                                    | Tool                                                   |
-|--------------------|:--------------------------------------------------------|:--------------------------------------------|
-| Who invokes it     | The Cat                                                 | The LLM                                     |
-| What it does       | Changes flow of execution and how data is passed around | Is just a way to let the LLM use functions  |
-| Decorator          | `@hook`                                                 | `@tool`                                     |
+A hook is simply a Python function that uses the `@hook` decorator, the function's name determines when it will be called.
 
-## Available Hooks
+There are two kinds of hooks. The first type of hook receives only the Cat instance as a parameter, while the second type of hook receives both the Cat instance and the value determined by default Cat implementation.
 
-The positions of the available hooks are indicated in the process diagrams found under the menu `How the Cat works`, but not all of the hooks have been documented yet. ( [help needed! &#128568;](https://discord.com/channels/1092359754917089350/1092360068269359206){:target="_blank"} ).
+With the first type, you can perform actions at specific points in the Cat's execution flow. For example, you can use the `before_cat_bootstrap` hook to execute some operations before the Cat starts:
 
-At the moment you can hack around by exploring the available hooks in `core/cat/mad_hatter/core_plugin/hooks/`.
-All the hooks you find in there define default Cat's behaviour and are ready to be overridden by your plugins.
+```python
+from cat.mad_hatter.decorators import hook
 
-## Hooks used to generate a response
-When the cat receives a message, the \_\_call\_\_ method of the main class is called. To produce a response a process is started in which several hooks are available to modify the cat's behaviour, let's see what they are:
-
-```mermaid
-
-flowchart TD
-A["#128587;#8205;#9794;#65039; Message"] --> B["#129693; before_cat_reads_message"];
-
-subgraph sb[" "]
-B --> C["#129693; before_cat_recalls_memories"];
-C --> D["#129693; cat_recall_query"];
-D --> E["#129693; after_cat_recalled_memories"];
-E --> F["#129693; before_cat_sends_message"];
-end
-
-F --> H["#128570; Message"] 
+@hook(priority=1)
+def before_cat_bootstrap(cat):
+    # You can perform operations with the cat (modify working memory, access LLM, etc.)
+    do_my_thing()
 ```
 
-Each of these hooks can be modified to completely change the behaviour of the cat in different situations. For example, through _before_cat_recalls_memories_ it is possible to change the number of memories the cat will use to produce a response.
+You can use the second type of hook to modify the value determined by the default Cat implementation. For example, you can use the `before_cat_sends_message` hook to alter the message that the Cat will send to the user.
 
-## Examples
+```python
+from cat.mad_hatter.decorators import hook
 
-  1. How to change the prompt
-  2. How to change how memories are saved and recalled
-  3. How to access and use the working memory to share data around
+@hook(priority=1)
+def before_cat_sends_message(final_output, cat):
+    # You can perform operations with the cat (modify working memory, access LLM, etc.)
+    do_my_thing()
+    # You can return a new value that will be used instead of Cat calculated value
+    return final_output.upper()
+```
+
+*Some hooks receive more than one argument, the value determined by the Cat is always the first argument, all the other parameters are solely context parameters, which hooks cannot modify, the last parameter is always the Cat instance.*
+
+## Multiple Implementations
+Several plugins can implement the same hook. The argument `priority` of the `@hook` decorator allows you to set the priority of the hook, the default value is 1. 
+
+The Cat calls the implementations in order of priority. Hooks with a higher priority number will be called first. The following hooks will receive the value returned by the previous hook. In this way, hooks can be chained together to create complex behaviors.
+
+If two plugins have the same priority, the order in which they are called is not guaranteed.
+
+## Available Hooks
+You can view the list of available hooks by exploring the Cat source code under the folder `core/cat/mad_hatter/core_plugin/hooks`.
+All the hooks you find in there define default Cat's behavior and are ready to be overridden by your plugins.
+
+The process diagrams found under the menu `Developers → Core Process Diagrams` illustrate where the hooks are called during the Cat's execution flow.
+Not all of the hooks have been documented yet. ( [help needed! &#128568;](https://discord.com/channels/1092359754917089350/1092360068269359206){:target="_blank"} ).
+
+## More Examples
+
+TODO
 
 ## Hook search
 

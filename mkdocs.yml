@@ -73,7 +73,6 @@ nav:
       - API:
           - API Endpoints: technical/basics/cat-core.md
           - API Authentication: technical/advanced/api_auth.md
-          - API Reference: technical/http_reference.md
       - Plugins Reference:
           - Plugin: technical/plugins/plugins.md
           - Tools: technical/plugins/tools.md

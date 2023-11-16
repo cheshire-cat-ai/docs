@@ -53,7 +53,7 @@ Below is a list of the fields with a brief explanation.
 
 ## &#128064; Submit Your Plugin for Review
 
-The submission and review process is done through our GitHub repository [awesome-plugins](https://github.com/cheshire-cat-ai/awesome-plugins) and it's quite straightforward. All you need to do is fork the repository and then, after adding your plugin to the JSON file, submit a Pull Request to us.
+The submission and review process is done through our [plugins GitHub repository](https://github.com/cheshire-cat-ai/plugins) and it's quite straightforward. All you need to do is fork the repository and then, after adding your plugin to the JSON file, submit a Pull Request to us.
 
 The fields to add to the new object you'll be adding are as follows:
 
@@ -63,6 +63,17 @@ The fields to add to the new object you'll be adding are as follows:
 The review process may take a few days, so don't worry if some time passes before you see your plugin approved. This depends on the number of plugins in the queue and the availability of volunteers. We will strive to provide feedback as quickly as possible.
 
 The review is in place to prevent the publication of plugins containing malware, obvious security flaws, or of low quality and relevance. We will be diligent, but we ask for your understanding and request that you always submit tested plugins that do not jeopardize the security of our users.
+
+### &#9203; Registry Cache Expiry
+
+Upon successful submission, your plugin enters our registry cache, which updates periodically. However, it's important to note that this cache has a duration of 24 hours (1440 minutes) before it refreshes. During this time, newly submitted plugins might not immediately appear in the registry.
+Why the Wait?
+
+The caching mechanism optimizes the performance of our registry, efficiently managing and updating plugin listings.
+
+If, after patiently waiting within this 24-hour window, your plugin doesn't show up in the registry, then it's time to let us know. We're here to assist you! Reach out to our support team or report the issue via our [plugins GitHub repository](https://github.com/cheshire-cat-ai/plugins/issues). Please provide relevant details, including the submission date and any steps you've taken.
+
+Remember, our goal is to make your plugin available to our community seamlessly. Your cooperation and patience in allowing for the cache expiry are appreciated as we work to ensure a smooth plugin publishing process.
 
 
 ## &#128276; Stay Updated

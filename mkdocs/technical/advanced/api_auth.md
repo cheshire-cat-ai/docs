@@ -1,8 +1,6 @@
 #  &#128272; API Authentication
 
-By default, the core APIs don't require any authorization, if you set this parameter all endpoints will require an `access_token` header for authentication such as `access_token: your-key-here`. Failure to provide the correct access token will result in a 403 error.
-
-Multiple keys can be accepted by separating them with a pipe (`|`) as follows: `API_KEY=your-key-here|secondary_client_key`.
+By default, the core APIs don't require any authorization, if you set the environment parameter [`API_KEY`](https://cheshire-cat-ai.github.io/docs/administrators/env-variables/#api_key) all endpoints will require an `access_token` header for authentication. Failure to provide the correct access token will result in a 403 error.
 
 !!! warning
 

@@ -48,6 +48,7 @@ nav:
           - Main Prompt: conceptual/prompts/main_prompt.md
           - Instruction Prompt: conceptual/prompts/instructions.md
           - Summarization Prompt: conceptual/prompts/summarization.md
+      - The Vector Memory: conceptual/memory/vector_memory.md
       - The Long Term Memory:
           - Introduction: conceptual/memory/long_term_memory.md
           - Episodic Memory: conceptual/memory/episodic_memory.md

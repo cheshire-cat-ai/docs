@@ -1,7 +1,8 @@
 # Environment Variables
+The Core can be configured using environment variables, the values are read during Cat bootstrap.
 
-The Core can be customized using environment variables, the values are read during Cat bootstrap.
-To set an environment variable create the `.env` file in the Cat root folder.
+To set an environment variable, create a file with name `.env` at the same level of the `docker-compose.yml` file. The command `docker compose up` reads the `.env` file and sets the environment variable.
+
 The root folder contains the `.env.example`, you can use this file as a reference.
 
 ### CORE_HOST

@@ -55,6 +55,8 @@ The purpose of this component is to gather few variables, that are:
 - chat_history: the recent conversation between the user and the Cat (i.e. the last three turns of conversation);
 - input: the user's message
 
+![Schema of the Cheshire Cat prompt](../../assets/img/diagrams/prompt.jpg){width=600px}
+
 ## References
 
 [^1]: Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive nlp tasks. Advances in Neural Information Processing Systems, 33, 9459-9474.

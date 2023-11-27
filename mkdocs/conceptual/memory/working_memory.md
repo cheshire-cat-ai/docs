@@ -10,3 +10,5 @@ Moreover, the Working Memory collects the relevant context that is fetched from 
 Furthermore, the Cat embeds a simple user management system that allows to segregate contents bases on a `user_id`.  
 More in details, multiple Working Memories can be stored in a component called [Working Memory List](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/memory/working_memory/#cat.memory.working_memory.WorkingMemoryList).  
 By default, the Cat stores the content under the key `user`.
+
+![Schema of the Cheshire Cat memories](../../assets/img/diagrams/working-memory.jpg){width=600px}

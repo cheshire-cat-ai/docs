@@ -15,6 +15,9 @@ Tools are custom Python functions that are called by the [Tool Agent](cheshire_c
 They come with a rich docstring upon with the [Tool Agent](cheshire_cat/agent.md) chooses *whether* and *which* tool is the most suitable to fulfill the user's request.
 The list of available tools ends up in the [Instruction Prompt](prompts/instructions.md), that instructs the [Tool Agent](cheshire_cat/agent.md) on how to structure its reasoning.
 
+
+![Schema of the Cheshire Cat components](../../assets/img/diagrams/plugin2.jpg){width=300px}
+
 !!! note "Developer documentation"  
     - [How to write a plugin](../technical/plugins/plugins.md)
     - [Hooks](../technical/plugins/hooks.md)

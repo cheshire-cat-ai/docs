@@ -6,7 +6,7 @@ The embeddings are representations of text, image, sounds, ...
 
 ![word_embeddings](../assets/img/vector_memory/word_embeddings.png)
 
-As Vector Memory the Cheshire-Cat using [Qdrant])(https://qdrant.tech/), the VectorDBs offer also optimized methods for information retrieval usually based on [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity). From wikipedia 
+As Vector Memory the Cheshire-Cat using [Qdrant](https://qdrant.tech/), the VectorDBs offer also optimized methods for information retrieval usually based on [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity). From wikipedia 
 
 > *"Cosine similarity is a measure of similarity between two non-zero vectors defined in an inner product space. Cosine similarity is the cosine of the angle between the vectors; that is, it is the dot product of the vectors divided by the product of their lengths. It follows that the cosine similarity does not depend on the magnitudes of the vectors, but only on their angle."*
 

@@ -43,12 +43,17 @@ nav:
       
   - How the Cat works: 
       - The Core: conceptual/cheshire_cat/core.md
-      - The Agent: conceptual/cheshire_cat/agent.md
+      - The Agent: 
+          - Introduction: conceptual/cheshire_cat/agent.md
+          - Tool Chain: conceptual/cheshire_cat/tool_chain.md
+          - Memory Chain: conceptual/cheshire_cat/memory_chain.md
       - The Prompts:
           - Main Prompt: conceptual/prompts/main_prompt.md
           - Instruction Prompt: conceptual/prompts/instructions.md
           - Summarization Prompt: conceptual/prompts/summarization.md
-      - The Vector Memory: conceptual/memory/vector_memory.md
+      - The Vector Memory: 
+          - Vector Memory Collections: conceptual/memory/vector_memory.md
+          - HyDE: conceptual/prompts/hyde.md
       - The Long Term Memory:
           - Introduction: conceptual/memory/long_term_memory.md
           - Episodic Memory: conceptual/memory/episodic_memory.md

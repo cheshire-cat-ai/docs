@@ -5,4 +5,4 @@ You can interact with it either through its [endpoint](../../technical/basics/ba
 
 Currently supported file formats are: `.txt`, `.md`, `.pdf` or `.html` via web URL.
 
-![Schema of the Cheshire Cat components](../../assets/img/diagrams/rabbithole.jpg){width=500px}
+![Schema of the Cheshire Cat components](../../assets/img/diagrams/rabbithole.jpg){width=400px style="display: block; margin: 0 auto"}

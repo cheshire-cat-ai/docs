@@ -55,7 +55,7 @@ The purpose of this component is to gather few variables, that are:
 - chat_history: the recent conversation between the user and the Cat (i.e. the last three turns of conversation);
 - input: the user's message
 
-![Schema of the Cheshire Cat prompt](../../assets/img/diagrams/prompt.jpg){width=600px}
+![Schema of the Cheshire Cat prompt](../../assets/img/diagrams/prompt.jpg){width=400px style="display: block; margin: 0 auto"}
 
 ## References
 

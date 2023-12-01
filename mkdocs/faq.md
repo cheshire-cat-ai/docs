@@ -110,10 +110,14 @@ Unfortunately you need to pay to use OpenAI models, but they are quite cheap.
 
 Running a LLM (Large Language Model) locally requires high end hardware and technical skills.
 If you don't know what you are doing, we suggest you start using the Cat with ChatGPT.  
-Afterwards you can experiment with [local models](https://github.com/cheshire-cat-ai/llama-local) or by setting up a cloud endpoint. The Cat offers you several ways to use an LLM.
+Afterwards you can experiment with [local models]([https://github.com/cheshire-cat-ai/llama-local](https://github.com/cheshire-cat-ai/local-cat)) or by setting up a cloud endpoint. The Cat offers you several ways to use an LLM.
 
 #### Can I know in advance how much money I will spend?
 
 That depends on the vendors pricing, how many documents you upload in the Cat memory and how much you chat. 
 We suggest you start with light usage and small documents, and check how the billing is growing in your LLM vendor's website. 
 In our experience LLM cloud usage is cheap, and it will probably be even cheaper in the next months and years.
+
+#### Is my GPU powerful enought to run a local model?
+
+That strongly depends on the size of the model you want to run. Try using [this application](https://huggingface.co/spaces/Vokturz/can-it-run-llm) from HuggingFace to get an idea of which model and the amount of quantization your hardware can handle. 

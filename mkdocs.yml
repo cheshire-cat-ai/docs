@@ -50,7 +50,6 @@ nav:
       - The Prompts:
           - Main Prompt: conceptual/prompts/main_prompt.md
           - Instruction Prompt: conceptual/prompts/instructions.md
-          - Summarization Prompt: conceptual/prompts/summarization.md
       - The Vector Memory: 
           - Vector Memory Collections: conceptual/memory/vector_memory.md
           - HyDE: conceptual/prompts/hyde.md

@@ -52,7 +52,6 @@ nav:
           - Instruction Prompt: conceptual/prompts/instructions.md
       - The Vector Memory: 
           - Vector Memory Collections: conceptual/memory/vector_memory.md
-          - HyDE: conceptual/prompts/hyde.md
       - The Long Term Memory:
           - Introduction: conceptual/memory/long_term_memory.md
           - Episodic Memory: conceptual/memory/episodic_memory.md

@@ -106,7 +106,7 @@ nav:
 
   - LLM Concepts:
       - Language Models: llm-concepts/llm.md
-      - Language Model Chains: llm-concepts/llm-chain.md
+      - Retrieval-Augmented Generation: llm-concepts/rag.md
       - Prompt: llm-concepts/prompt.md
       - Encoder: llm-concepts/encoder.md
       - Vector Memory: llm-concepts/vector-memory.md

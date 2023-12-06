@@ -47,13 +47,22 @@ You can delete the `long_term_memory` folder and restart the Cat!
 
 Please check if you have a valid credit card connected or if you have used up all the credits of your OpenAI trial period.
 
-#### Everything works in localhost but not on another server or needs an auth_key never configured
+#### Everything works in localhost but not on another server
 
 You should configure ports in the `.env` file. Change according to your preferred host and ports:
 
 ```text
 # Decide host and port for your Cat. Default will be localhost:1865
 CORE_HOST=anotherhost.com
+CORE_PORT=9000
+```
+
+#### Why the admin panel is asking for an auth key?
+You are probably accessing the admin from outside (maybe you host the cat in a server, or you are accessing the admin in your phone).
+Change according to your machine ip address and ports:
+```env
+# Decide host and port for your Cat. Default will be localhost:1865
+CORE_HOST=anotherhost.com 
 CORE_PORT=9000
 ```
 

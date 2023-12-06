@@ -83,34 +83,27 @@ A side panel will open, where you and your plugin's users can choose settings in
 
 ## Access settings from within your plugin
 
-Obviously you need easy access to settings in your plugin code.
-First of all, note that the cat will by default save and load settings from a `settings.json` file which will automatically be created in the root folder of your plugin.
+Obviously, you need easy access to settings in your plugin code.
+First of all, note that the cat will, by default,
+save and load settings from a `settings.json` file which will automatically be created in the root folder of your plugin.
 
-So to access the settings you can do one of several things:
+So to access the settings, you can load them via `mad_hatter`.
+More in detail, from within a hook or a tool, you have access to the `cat` instance, hance, do the following:
 
-1. load them via `mad_hatter`:
+ ```python
+settings = cat.mad_hatter.get_plugin.load_settings()
+ ```
 
-    From within a hook or a tool, you have access to the `cat` instance:
+Similarly, you can programmatically save your settings as follows:
 
-    ```python
-    settings = cat.mad_hatter.plugins["my_plugin_name"].load_settings()
-    ```
+ ```python
+settings = cat.mad_hatter.get_plugin.save_settings(settings)
+ ```
 
-    Please note, your plugin "name" coincides with the plugin folder name :)
-
-2. load `settings.json` manually
-
-    ```python
-    import json
-
-    with open("cat/plugins/my_plugin_name/settings.json", "r") as json_file:
-        settings = json.load(json_file)
-    ```
-
-3. we plan for the future to have a set of easy to use functions to avoid writing the folder name.
-
+where `settings` is a dictionary, a JSON schema or a Pydantic `BaseModel` describing your plugin's settings.
 
 ## Advanced settings save / load
+
 
 If you need even more customization for your settings you can totally override how they are saved and loaded.
 Take a look at the `save_settings` and `load_settings` functions (always to be decorated with `@plugin`).  

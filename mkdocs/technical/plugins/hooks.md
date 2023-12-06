@@ -52,7 +52,36 @@ Not all of the hooks have been documented yet. ( [help needed! &#128568;](https:
 ## More Examples
 
 TODO
+## Hook List
 
+### Agent Hooks
+  - before_agent_starts
+  - agent_fast_reply
+  - agent_allowed_tools
+  - #### Prompt Hooks:
+     - agent_prompt_prefix
+     - agent_prompt_instructions
+     - agent_prompt_suffix
+
+
+
+### Execution pipeline Hooks
+- before_cat_bootstrap
+- after_cat_bootstrap
+- before_cat_reads_message
+- cat_recall_query
+- before_cat_recalls_memories
+- before_cat_recalls_episodic_memories
+- before_cat_recalls_declarative_memories
+- before_cat_recalls_procedural_memories
+- after_cat_recalls_memories
+- before_cat_sends_message
+### Rabbit Hole Hooks
+- rabbithole_instantiates_parsers
+- before_rabbithole_insert_memory
+- before_rabbithole_splits_text
+- after_rabbithole_splitted_text
+- before_rabbithole_stores_documents
 ## Hook search
 
 TODO

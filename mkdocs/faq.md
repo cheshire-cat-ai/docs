@@ -31,7 +31,7 @@ Please check our documentation for more details about how the Cat works for you.
 
 #### Can I talk to the Cat in a language different from English?
 
-Of course you can: just change the prompts in the Plugin folder accordingly, and take care not to mix languages to get best results.
+Of course, you can: just change the prompts in the Plugin folder accordingly, and take care not to mix languages to get best results.
 
 #### How can I know where the Cat gets the answers? I'd like to know if it's using the files I uploaded or if it's querying the configured LLM.
 
@@ -47,7 +47,7 @@ You can delete the `long_term_memory` folder and restart the Cat!
 
 Please check if you have a valid credit card connected or if you have used up all the credits of your OpenAI trial period.
 
-#### Everything works in localhost but not on another server
+#### Everything works in localhost but not on another server or needs an auth_key never configured
 
 You should configure ports in the `.env` file. Change according to your preferred host and ports:
 
@@ -63,13 +63,13 @@ This is a matter with your docker installation or the user you run docker from.
 
 #### The Cat seems not to be working from inside a Virtual Machine
 
-In VirtualBox you can select Settings->Network, then choose NAT in the "Attached to" drop down menu. Select "Advanced" to configure the port forwarding rules. Assuming the guest IP of your VM is 10.0.2.15 (the default) and the ports configured in the .env files are the defaults, you have to set at least the following rule:
+In VirtualBox, you can select Settings->Network, then choose NAT in the "Attached to" drop down menu. Select "Advanced" to configure the port forwarding rules. Assuming the guest IP of your VM is 10.0.2.15 (the default) and the ports configured in the .env files are the defaults, you have to set at least the following rule:
 
 | Rule name | Protocol | Host IP     | Host Port | Guest IP   | Guest Port |
 |-----------|----------|-------------|-----------|------------|------------|
 | Rule 1    | TCP      | 127.0.0.1   | 1865      | 10.0.2.15  | 1865       |
 
-If you want to work on the documentation of the Cat, you also have to add one rule for port 8000 which is used by `mkdocs`, and to configure `mkdocs` itself to respond to all requests (not only localhost as per the default).  
+If you want to work on the documentation of the Cat, you also have to add one rule for port 8000 which is used by `mkdocs`, and to configure `mkdocs` itself to respond to all requests (not only localhost as per the default).
 
 ## Customization
 
@@ -78,7 +78,7 @@ If you want to work on the documentation of the Cat, you also have to add one ru
 Plugins are any license you wish, you can also sell them.
 The Cat core is GPL3, meaning you are free to fork and go on your own, but you are forced to open source changes to the core.
 
-#### Port 1865 is allowed by my operating system and/or firewall
+#### Port 1865 is not allowed by my operating system and/or firewall
 
 Change the port as you wish in the `.env` file.
 
@@ -96,28 +96,31 @@ Keys are store in a JSON file, `core/metadata.json`.
 
 #### Will OpenAI see my documents and conversations?
 
-If you are using the Cat with an OpenAI LLM, all your conversations and documents will indeed take a trip into OpenAI servers, because the models are there. 
-We advise to avoid uploading sensitive documents while using an external LLM. 
+If you are using the Cat with an OpenAI LLM, all your conversations and documents will indeed take a trip into OpenAI servers, because the models are there.
+We advise to avoid uploading sensitive documents while using an external LLM.
 If you want to use the Cat in total security and privacy, use a local LLM or a cloud LLM in your control.
 
 ## Spending
 
+#### I have chatgpt subscription, can I use the cat?
+[Chat-gpt subscription is different from OpenAI API](https://community.openai.com/t/difference-between-monthly-plan-and-tokens/415257)
+
 #### Is there a free way to use OpenAI services?
 
-Unfortunately you need to pay to use OpenAI models, but they are quite cheap.
+Unfortunately you need to pay to use OpenAI models, but they are [quite cheap](https://openai.com/pricing).
 
 #### Can I run local models like LLAMA to avoid spending?
 
-Running a LLM (Large Language Model) locally requires high end hardware and technical skills.
+Running a LLM (Large Language Model) locally requires high-end hardware and technical skills.
 If you don't know what you are doing, we suggest you start using the Cat with ChatGPT.  
-Afterwards you can experiment with [local models]([https://github.com/cheshire-cat-ai/llama-local](https://github.com/cheshire-cat-ai/local-cat)) or by setting up a cloud endpoint. The Cat offers you several ways to use an LLM.
+Afterwards you can experiment with [local models](https://github.com/cheshire-cat-ai/local-cat) or by setting up a cloud endpoint. The Cat offers you several ways to use an LLM.
 
 #### Can I know in advance how much money I will spend?
 
-That depends on the vendors pricing, how many documents you upload in the Cat memory and how much you chat. 
-We suggest you start with light usage and small documents, and check how the billing is growing in your LLM vendor's website. 
+That depends on the vendors pricing, how many documents you upload in the Cat memory and how much you chat.
+We suggest you start with light usage and small documents, and check how the billing is growing in your LLM vendor's website.
 In our experience LLM cloud usage is cheap, and it will probably be even cheaper in the next months and years.
 
-#### Is my GPU powerful enought to run a local model?
+#### Is my GPU powerful enough to run a local model?
 
 That strongly depends on the size of the model you want to run. Try using [this application](https://huggingface.co/spaces/Vokturz/can-it-run-llm) from HuggingFace to get an idea of which model and the amount of quantization your hardware can handle. 

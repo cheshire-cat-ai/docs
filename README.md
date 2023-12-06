@@ -25,11 +25,11 @@ We invite you to read the documentation for the [MkDocs Material theme](https://
 
 Install dependencies:  
 
-`$ pip install -r requirements.txt`
+`pip install -r requirements.txt`
 
 ### 🛠️ Develop
 
-`$ mkdocs serve` or `$ python -m mkdocs serve` will launch a local, non static, instance of the documentation website.
+`mkdocs serve` or `python -m mkdocs serve` will launch a local, non static, instance of the documentation website.
 
 ### 🖌️ Diagrams
 
@@ -42,4 +42,4 @@ Run action.
 
 The build stage is automated using GitHub action, you don't need to do it in order to contribute. However, if you want to have a static copy of the documentation on your local machine you are free to do it.  
 
-`$ mkdocs build` or `$ python -m mkdocs build` will create the actual docs static website in a folder named `/docs`. 
+`mkdocs build` or `python -m mkdocs build` will create the actual docs static website in a folder named `/docs`. 

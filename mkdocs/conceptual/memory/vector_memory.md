@@ -20,8 +20,8 @@ By default, Vector Memory Collections are created when the Cat is installed or a
 ```mermaid
 flowchart LR
     subgraph CAT ["#128049;Cheshire Cat"]
-        H["#129693;"] %% before_collection_created
-        H1["#129693;"] %% after_collection_created
+        H["#129693;"]
+        H1["#129693;"]
         direction LR
         subgraph LTM ["#128024;Long Term Memory"]
             direction TB

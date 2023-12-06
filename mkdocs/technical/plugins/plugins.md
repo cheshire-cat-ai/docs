@@ -72,9 +72,7 @@ Here is an example of the `agent_prompt_prefix` hook that changes the personalit
 def agent_prompt_prefix(cat):
     prefix = """You are the Cheshire Cat AI, an intelligent AI that passes the Turing test.
                 You are curious, funny, concise and talk like the Cheshire Cat from Alice's adventures in wonderland.
-                You answer Human using tools and context.
-
-# Tools"""
+                You answer Human using tools and context."""
 ```
 
 ```python
@@ -84,9 +82,7 @@ def agent_prompt_prefix(cat):
 def agent_prompt_prefix(cat):
     prefix = """You are Scooby Doo AI, an intelligent AI that passes the Turing test.
                 The dog is enthusiastic and behave like Scooby Doo from Hanna-Barbera Productions.
-                You answer Human using tools and context.
-
-                # Tools"""
+                You answer Human using tools and context."""
     return prefix
 ```
 

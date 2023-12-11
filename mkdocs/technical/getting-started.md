@@ -30,7 +30,7 @@ When finished the Cat will be live and running!
 
 ### First configuration
 
-The Cat is not a LLM, it use a LLM so when you run the Cat for the first time, you need to configure the LLM and the encoder you choose to used.
+The Cat is not a LLM, it use a LLM so when you run the Cat for the first time, you need to configure the LLM and the embedder you choose to used.
 
 - Create and API key on the language model provider website, most people use [chatGPT](https://platform.openai.com/docs/models/gpt-3-5):
     - visit your OpenAI [personal account](https://platform.openai.com/account/api-keys)

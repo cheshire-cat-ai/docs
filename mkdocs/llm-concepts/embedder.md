@@ -1,4 +1,4 @@
-# Encoder
+# Embedder (or encoder)
 
 This type of Language Model takes a string as input and returns a vector as output. This is known as an *embedding*.
 Namely, this is a condensed representation of the input content.  

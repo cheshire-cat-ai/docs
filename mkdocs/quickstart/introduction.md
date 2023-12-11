@@ -34,7 +34,7 @@ without directly modifying the core of the Cheshire Cat.
 The `Mad Hatter` is the component that manages plugins.
 
 ## Sharing Plugins
-If desired, you can publish your `Plugins` on a public registry.
+If desired, you can publish your `Plugins` on the public registry.
 Other users will be able to install them with just a single click from the Admin Portal.
 
 ## Admin Portal
@@ -49,6 +49,6 @@ In the next step, you will learn how to install the Cat, set the LLM and the bas
 We will be transforming the Cat into a sock seller.
 More in detail, we will upload some knowledge (documents) about socks knitting.
 Also, the Cat will be able to tell the price of socks according to the requested color (using a `Tool`).
-In the end, we will transform the sock seller into a poetic socks seller, changing it personality (using a `Hook`). 
+In the end, we will transform the sock seller into a poetic socks seller, changing its personality (using a `Hook`). 
 
 The example is light and fun, it should give you an idea of what is possible.

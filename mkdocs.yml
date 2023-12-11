@@ -106,7 +106,7 @@ nav:
       - Language Models: llm-concepts/llm.md
       - Retrieval-Augmented Generation: llm-concepts/rag.md
       - Prompt: llm-concepts/prompt.md
-      - Encoder: llm-concepts/encoder.md
+      - Embedder: llm-concepts/embedder.md
       - Vector Memory: llm-concepts/vector-memory.md
 
   - Use Cases: 

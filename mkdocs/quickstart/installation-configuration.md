@@ -5,7 +5,7 @@
 To run the Cheshire Cat, you need to have `Docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker-compose` ([instructions](https://docs.docker.com/compose/install/)) already installed on your system.
 
 The Cat is not a LLM, it uses a LLM.
-Hence, when you run the Cat for the first time, you need to configure the LLM and the encoder.  
+Hence, when you run the Cat for the first time, you need to configure the LLM and the embedder.  
 Most people use [ChatGPT](https://platform.openai.com/docs/models/gpt-3-5), it's quite cheap and powerful enough.
 We will do the same during the next steps.
 

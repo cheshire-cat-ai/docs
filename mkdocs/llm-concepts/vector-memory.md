@@ -16,7 +16,7 @@ As Vector Memory the Cheshire-Cat using [Qdrant](https://qdrant.tech/), the Vect
 
 Semantic search seeks to improve search accuracy by understanding the content of the search query. The idea is to create an high-dimensional semantic space and at search time to find the nearest point (documents) to our questions.
 
-To create the vectors you must use an [encoder](https://cheshire-cat-ai.github.io/docs/llm-concepts/encoder/), the vector are stored on the vector memory, when a query is done the encoder calculates its embedding, the VectorDB calculates the cosine similaity between query and stored points and the K nearest are returned.
+To create the vectors you must use an [embedder](./embedder.md). The vectors are stored in the vector memory; when a query is done the embedder calculates its embedding, the VectorDB calculates the cosine similaity between query and stored points and the K nearest are returned.
 
 ![semantic_search](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/SemanticSearch.png)
 

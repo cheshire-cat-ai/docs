@@ -90,15 +90,15 @@ save and load settings from a `settings.json` file which will automatically be c
 So to access the settings, you can load them via `mad_hatter`.
 More in detail, from within a hook or a tool, you have access to the `cat` instance, hance, do the following:
 
- ```python
-settings = cat.mad_hatter.get_plugin.load_settings()
- ```
+```python
+settings = cat.mad_hatter.get_plugin().load_settings()
+```
 
 Similarly, you can programmatically save your settings as follows:
 
- ```python
-settings = cat.mad_hatter.get_plugin.save_settings(settings)
- ```
+```python
+settings = cat.mad_hatter.get_plugin().save_settings(settings)
+```
 
 where `settings` is a dictionary, a JSON schema or a Pydantic `BaseModel` describing your plugin's settings.
 

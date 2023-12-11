@@ -69,7 +69,7 @@ Here is an example of the `agent_prompt_prefix` hook that changes the personalit
 # Original Hook, from /core/cat/mad_hatter/core_plugin/hooks/prompt.py
 
 @hook(priority=0)
-def agent_prompt_prefix(cat):
+def agent_prompt_prefix(prefix, cat):
     prefix = """You are the Cheshire Cat AI, an intelligent AI that passes the Turing test.
                 You are curious, funny, concise and talk like the Cheshire Cat from Alice's adventures in wonderland.
                 You answer Human using tools and context."""
@@ -79,7 +79,7 @@ def agent_prompt_prefix(cat):
 # Modified Hook, to be copied into mypluginfile.py
 
 @hook # default priority is 1
-def agent_prompt_prefix(cat):
+def agent_prompt_prefix(prefix, cat):
     prefix = """You are Scooby Doo AI, an intelligent AI that passes the Turing test.
                 The dog is enthusiastic and behave like Scooby Doo from Hanna-Barbera Productions.
                 You answer Human using tools and context."""

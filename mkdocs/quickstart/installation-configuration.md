@@ -15,20 +15,31 @@ To use `ChatGPT`, you need an API key. You can request one on the provider's web
 
 ## Setup
 
-- Clone the repository on your machine
+Create a folder on your machine, and inside it create a file named `compose.yml`.
+Copy/paste the following inside:
 
-```bash
-git clone https://github.com/cheshire-cat-ai/core.git cheshire-cat
+```yaml
+version: '3.7'
+
+services:
+
+  cheshire-cat-core:
+    image: ghcr.io/cheshire-cat-ai/core:latest
+    container_name: cheshire_cat_core
+    ports:
+      - ${CORE_PORT:-1865}:80
+    environment:
+      - PYTHONUNBUFFERED=1
+      - WATCHFILES_FORCE_POLLING=true
+    volumes:
+      - ./static:/app/cat/static
+      - ./plugins:/app/cat/plugins
+      - ./data:/app/cat/data
 ```
 
 ## Starting the Cat
-- Enter the created folder
-
-```bash
-cd cheshire-cat
-```
     
-- Run docker containers
+- Open a terminal inside the same folder and run:
 
 ```bash
 docker compose up

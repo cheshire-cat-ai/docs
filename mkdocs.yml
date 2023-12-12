@@ -101,6 +101,7 @@ nav:
   - Administrations:
       - Architecture: administrators/architecture.md
       - Environment Variables: administrators/env-variables.md
+      - Backup the Long Term Memory: technical/advanced/memory_backup.md
 
   - LLM Concepts:
       - Language Models: llm-concepts/llm.md
@@ -113,11 +114,6 @@ nav:
     - Cat as Main product: use-cases/main-product.md
     - Cat as Sidecar of your product: use-cases/side-car.md
     - Cat as Discord BOT: use-cases/discord-bot.md
-
-
-  - Guides:
-    - How to update the Cat Core: guides/update-the-core.md
-    - How to backup the Long Term Memory: technical/advanced/memory_backup.md
 
   - Resources:
     - Videos:

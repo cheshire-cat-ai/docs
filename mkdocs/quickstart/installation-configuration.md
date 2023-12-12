@@ -46,9 +46,14 @@ docker compose up
 ```
 
 The first time you run the `docker compose up` command,
-it will take several minutes to build the Docker Cat image.
+it will take several minutes to pull the Docker Cat image.
 
-Once finished, the Cat will be living and running!
+You will see three new folders:
+
+ - `data`: where long term memory and settings are stored
+ - `plugins`: where you can install and develop plugins
+ - `static`: folder to serve static files from 
+
 
 ## First configuration of the LLM
 

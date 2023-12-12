@@ -2,10 +2,10 @@
 
 ## Requirements
 
-To run the Cheshire Cat, you need to have `Docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker-compose` ([instructions](https://docs.docker.com/compose/install/)) already installed on your system.
+To run the Cheshire Cat, you need to have `Docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker compose` ([instructions](https://docs.docker.com/compose/install/)) already installed on your system.
 
 The Cat is not a LLM, it uses a LLM.
-Hence, when you run the Cat for the first time, you need to configure the LLM and the encoder.  
+Hence, when you run the Cat for the first time, you need to configure the LLM and the embedder.  
 Most people use [ChatGPT](https://platform.openai.com/docs/models/gpt-3-5), it's quite cheap and powerful enough.
 We will do the same during the next steps.
 
@@ -15,29 +15,45 @@ To use `ChatGPT`, you need an API key. You can request one on the provider's web
 
 ## Setup
 
-- Clone the repository on your machine
+Create a folder on your machine, and inside it create a file named `compose.yml`.
+Copy/paste the following inside:
 
-```bash
-git clone https://github.com/cheshire-cat-ai/core.git cheshire-cat
+```yaml
+version: '3.7'
+
+services:
+
+  cheshire-cat-core:
+    image: ghcr.io/cheshire-cat-ai/core:latest
+    container_name: cheshire_cat_core
+    ports:
+      - ${CORE_PORT:-1865}:80
+    environment:
+      - PYTHONUNBUFFERED=1
+      - WATCHFILES_FORCE_POLLING=true
+    volumes:
+      - ./static:/app/cat/static
+      - ./plugins:/app/cat/plugins
+      - ./data:/app/cat/data
 ```
 
 ## Starting the Cat
-- Enter the created folder
-
-```bash
-cd cheshire-cat
-```
     
-- Run docker containers
+- Open a terminal inside the same folder and run:
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
-The first time you run the `docker-compose up` command,
-it will take several minutes to build the Docker Cat image.
+The first time you run the `docker compose up` command,
+it will take several minutes to pull the Docker Cat image.
 
-Once finished, the Cat will be living and running!
+You will see three new folders:
+
+ - `data`: where long term memory and settings are stored
+ - `plugins`: where you can install and develop plugins
+ - `static`: folder to serve static files from 
+
 
 ## First configuration of the LLM
 

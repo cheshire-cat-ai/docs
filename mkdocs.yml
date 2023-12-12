@@ -66,7 +66,6 @@ nav:
       - Long Term Memory: technical/basics/admin/memory.md
       - Plugins: technical/basics/admin/plugins.md
       - Settings: technical/basics/admin/settings.md
-      - Docs: technical/basics/admin/docs.md
 
   - Plugins Registry:
       - Installing a Plugin: plugins-registry/installing-plugin.md
@@ -74,7 +73,7 @@ nav:
       - Using the Plugin Template: plugins-registry/plugin-from-template.md
 
   - Developers:
-      - API:
+      - REST API:
           - API Reference: technical/basics/cat-core.md
           - API Authentication: technical/advanced/api_auth.md
       - Plugins Reference:
@@ -97,27 +96,24 @@ nav:
       - Advanced:
           - User Management: technical/advanced/user_system.md
           - Automatic Tests: technical/advanced/tests.md
+          - Contributing: technical/advanced/contributing.md
 
   - Administrations:
       - Architecture: administrators/architecture.md
       - Environment Variables: administrators/env-variables.md
+      - Backup the Long Term Memory: technical/advanced/memory_backup.md
 
   - LLM Concepts:
       - Language Models: llm-concepts/llm.md
       - Retrieval-Augmented Generation: llm-concepts/rag.md
       - Prompt: llm-concepts/prompt.md
-      - Encoder: llm-concepts/encoder.md
+      - Embedder: llm-concepts/embedder.md
       - Vector Memory: llm-concepts/vector-memory.md
 
   - Use Cases: 
     - Cat as Main product: use-cases/main-product.md
     - Cat as Sidecar of your product: use-cases/side-car.md
     - Cat as Discord BOT: use-cases/discord-bot.md
-
-
-  - Guides:
-    - How to update the Cat Core: guides/update-the-core.md
-    - How to backup the Long Term Memory: technical/advanced/memory_backup.md
 
   - Resources:
     - Videos:

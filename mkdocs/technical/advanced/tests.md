@@ -1,7 +1,7 @@
 # &#128300; Testing
 
 To run tests, start the Cat as usual.  
-Tests will run on the same containers you already launched, but with mock databases and plugin folder.
+Tests will run on the same container you already launched, but with mock databases and plugin folder.
 End to end (e2e) tests are found in `tests/routes`, while all the other folders contain unit tests and mocks / utilities.
 
 ## Run all tests

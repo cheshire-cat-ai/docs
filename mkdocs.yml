@@ -66,7 +66,6 @@ nav:
       - Long Term Memory: technical/basics/admin/memory.md
       - Plugins: technical/basics/admin/plugins.md
       - Settings: technical/basics/admin/settings.md
-      - Docs: technical/basics/admin/docs.md
 
   - Plugins Registry:
       - Installing a Plugin: plugins-registry/installing-plugin.md

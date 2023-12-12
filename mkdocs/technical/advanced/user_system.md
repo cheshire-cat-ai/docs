@@ -5,9 +5,8 @@ The user system affects only the [working memory](../../conceptual/memory/workin
 the [episodic memory](../../conceptual/memory/long_term_memory.md).
 The other memories are shared among users.
 
-More in details, the websocket client sends the current `user_id` in the JSON message sent to the Cat.
-The Cat uses such `user_id` to [retrieve the user's working memory](https://github.com/cheshire-cat-ai/core/blob/5b84b1d600ba9e8600413ff27c033c6d8ed5d0ca/core/cat/looking_glass/cheshire_cat.py#L332)
-and to store the user's conversation [using the `user_id` as a metadatum](https://github.com/cheshire-cat-ai/core/blob/5b84b1d600ba9e8600413ff27c033c6d8ed5d0ca/core/cat/looking_glass/cheshire_cat.py#L149).
+More in details, the websocket client indicates the current `user_id` by calling the `ws://localhost:1865/ws/{user_id}` endpoint.
+The Cat uses such `user_id` to retrieve the user's working memory and to store the user's conversation (using the `user_id` as a metadatum).
 
 !!! Note
     Please, note that the user management system works only when using a custom client.

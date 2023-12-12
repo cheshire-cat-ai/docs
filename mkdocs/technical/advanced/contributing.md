@@ -67,18 +67,6 @@ docker rmi -f $(docker images -f "dangling=true" -q)
 docker compose up
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## Your First Code Contribution
 
 1. Checkout the `develop` branch (`git checkout -b develop` and then `git pull origin develop`)

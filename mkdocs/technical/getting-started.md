@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-To run the Cheshire Cat, you need to have `docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker-compose` ([instructions](https://docs.docker.com/compose/install/)) installed on your system.
+To run the Cheshire Cat, you need to have `docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker compose` ([instructions](https://docs.docker.com/compose/install/)) installed on your system.
 
 ### Setup
 
@@ -21,10 +21,10 @@ cd cheshire-cat
 - Run docker containers
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
-The first time you run the `docker-compose up` command it will take several minutes as docker images occupy some GBs.  
+The first time you run the `docker compose up` command it will take several minutes as docker images occupy some GBs.  
 
 When finished the Cat will be live and running!
 
@@ -47,7 +47,7 @@ The Cat is not a LLM, it use a LLM so when you run the Cat for the first time, y
 When you're done using the Cat, stop the terminal by clicking on it and press `CTRL + c`.  Then launch the command:
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ## Update
@@ -69,7 +69,7 @@ git pull
 -  Build again the docker containers
 
 ```bash
-docker-compose build --no-cache
+docker compose build --no-cache
 ```
 
 -  Remove dangling images (optional)
@@ -81,5 +81,5 @@ docker rmi -f $(docker images -f "dangling=true" -q)
 - Run docker containers
 
 ```bash
-docker-compose up
+docker compose up
 ```

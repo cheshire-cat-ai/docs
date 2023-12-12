@@ -2,7 +2,7 @@
 
 ## Requirements
 
-To run the Cheshire Cat, you need to have `Docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker-compose` ([instructions](https://docs.docker.com/compose/install/)) already installed on your system.
+To run the Cheshire Cat, you need to have `Docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker compose` ([instructions](https://docs.docker.com/compose/install/)) already installed on your system.
 
 The Cat is not a LLM, it uses a LLM.
 Hence, when you run the Cat for the first time, you need to configure the LLM and the embedder.  
@@ -31,10 +31,10 @@ cd cheshire-cat
 - Run docker containers
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
-The first time you run the `docker-compose up` command,
+The first time you run the `docker compose up` command,
 it will take several minutes to build the Docker Cat image.
 
 Once finished, the Cat will be living and running!

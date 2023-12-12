@@ -17,7 +17,7 @@ git pull
 -  Build again the docker containers
 
 ```bash
-docker-compose build --no-cache
+docker compose build --no-cache
 ```
 
 -  Remove dangling images (optional)
@@ -29,5 +29,5 @@ docker rmi -f $(docker images -f "dangling=true" -q)
 - Run docker containers
 
 ```bash
-docker-compose up
+docker compose up
 ```

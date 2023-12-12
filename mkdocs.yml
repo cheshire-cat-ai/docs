@@ -73,7 +73,7 @@ nav:
       - Using the Plugin Template: plugins-registry/plugin-from-template.md
 
   - Developers:
-      - API:
+      - REST API:
           - API Reference: technical/basics/cat-core.md
           - API Authentication: technical/advanced/api_auth.md
       - Plugins Reference:
@@ -96,6 +96,7 @@ nav:
       - Advanced:
           - User Management: technical/advanced/user_system.md
           - Automatic Tests: technical/advanced/tests.md
+          - Contributing: technical/advanced/contributing.md
 
   - Administrations:
       - Architecture: administrators/architecture.md

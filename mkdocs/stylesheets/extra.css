@@ -1,3 +1,27 @@
-body[data-md-color-scheme="default"] .md-header__button.md-logo img {
+body[data-md-color-scheme="slate"] .md-header__button.md-logo img {
   filter: invert(100%);
 }
+
+/* Custom color scheme named "custom" */
+[data-md-color-scheme="custom"] {
+  /* Normal font color */
+  --md-primary-fg-color: #F6F2EC;
+
+  /* Background color */
+  --md-background-primary: #F6F2EC;
+  background-color: #F6F2EC;
+
+  /* Link color */
+  --md-link-color: #FCC263;
+}
+
+[data-md-color-scheme="custom"] .md-nav--secondary .md-nav__title,
+[data-md-color-scheme="custom"] .md-nav--primary .md-nav__title {
+  background: #F6F2EC;
+  box-shadow: none;
+}
+
+[data-md-color-scheme="custom"] .md-header {
+  color: black;
+}
+

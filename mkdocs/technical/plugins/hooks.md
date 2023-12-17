@@ -68,9 +68,9 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
     
     </div>
     
-    1. ### Input arguments
-    2. ### Input arguments
-    3. ### Input arguments  
+    1. **Input arguments**  
+    2. **Input arguments**  
+    3. **Input arguments**    
         `user_message_json`, i.e. the JSON message sent via WebSocket done like this:  
         ```JSON
         {
@@ -95,13 +95,13 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             - [Python reference]()
 
-    4. ### Input arguments
-    5. ### Input arguments
-    6. ### Input arguments
-    7 .### Input arguments
-    8. ### Input arguments
-    9. ### Input arguments
-    10. ### Input arguments
+    4. **Input arguments**  
+    5. **Input arguments**  
+    6. **Input arguments**  
+    7 .**Input arguments**  
+    8. **Input arguments**  
+    9. **Input arguments**  
+    10. **Input arguments**  
 
 === "&#129302; Agent"
     
@@ -118,12 +118,12 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     </div>
 
-    11. ### **Input arguments**  
-    12. ### **Input arguments**  
-    13. ### **Input arguments**  
-    14. ### **Input arguments**  
-    15. ### **Input arguments**
-    16. ### **Input arguments**  
+    11. **Input arguments**    
+    12. **Input arguments**    
+    13. **Input arguments**    
+    14. **Input arguments**    
+    15. **Input arguments**  
+    16. **Input arguments**    
 
 === "&#128048; Rabbit Hole"
     
@@ -139,8 +139,8 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     </div>
 
-    17. ### **Input arguments**
-    18. ### **Input arguments**
-    19. ### **Input arguments**
-    20. ### **Input arguments**  
-    21. ### **Input arguments**  
+    17. **Input arguments**  
+    18. **Input arguments**  
+    19. **Input arguments**  
+    20. **Input arguments**    
+    21. **Input arguments**    

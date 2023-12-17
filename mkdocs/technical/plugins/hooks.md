@@ -46,42 +46,99 @@ If two plugins have the same priority, the order in which they are called is not
 You can view the list of available hooks by exploring the Cat source code under the folder `core/cat/mad_hatter/core_plugin/hooks`.
 All the hooks you find in there define default Cat's behavior and are ready to be overridden by your plugins.
 
-The process diagrams found under the menu `Developers → Core Process Diagrams` illustrate where the hooks are called during the Cat's execution flow.
-Not all of the hooks have been documented yet. ( [help needed! &#128568;](https://discord.com/channels/1092359754917089350/1092360068269359206){:target="_blank"} ).
+The process diagrams found under the menu `Developers → Core Process Diagrams` illustrates where the hooks are called during the Cat's execution flow.
+Not all the hooks have been documented yet. ( [help needed! &#128568;](https://discord.com/channels/1092359754917089350/1092360068269359206){:target="_blank"} ).
 
-## More Examples
+=== "&#127754; Flow"
 
-TODO
-## Hook List
+    <div class="annotate" mardown>
 
-### Agent Hooks
-  - before_agent_starts
-  - agent_fast_reply
-  - agent_allowed_tools
-  - #### Prompt Hooks:
-     - agent_prompt_prefix
-     - agent_prompt_instructions
-     - agent_prompt_suffix
+    | Name                                          | Description                                                      |
+    | :-------------------------------------------- | :--------------------------------------------------------------- |
+    | Before Cat bootstrap                          | Intervene before the Cat's instantiate its components            |
+    | After Cat bootstrap                           | Intervene after the Cat's instantiated its components            |
+    | Before Cat reads message (1)                  | Intervene as soon as a WebSocket message is received             |
+    | Cat recall query (2)                          | Intervene before the recall query is embedded                    |
+    | Before  Cat recalls memories (3)              | Intervene before the Cat searches into the specific memories     |
+    | Before  Cat recalls episodic memories (4)     | Intervene before the Cat searches in previous users' messages    |
+    | Before  Cat recalls declarative memories (5)  | Intervene before the Cat searches in the documents               |
+    | Before  Cat recalls procedural memories (6)   | Intervene before the Cat searches among the action it knows      |
+    | After  Cat recalls memories (7)               | Intervene after the Cat's recalled the content from the memories |
+    | Before  Cat sends message (8)                 | Intervene before the Cat sends its answer via WebSocket          |
+    
+    </div>
 
+    1. ### **Input arguments**  
+        `user_message_json`, i.e. the JSON message sent via WebSocket done like this:  
+        ```JSON
+        {
+            "text": # user's message here
+        }
+        ```
 
+        ??? example
 
-### Execution pipeline Hooks
-- before_cat_bootstrap
-- after_cat_bootstrap
-- before_cat_reads_message
-- cat_recall_query
-- before_cat_recalls_memories
-- before_cat_recalls_episodic_memories
-- before_cat_recalls_declarative_memories
-- before_cat_recalls_procedural_memories
-- after_cat_recalls_memories
-- before_cat_sends_message
-### Rabbit Hole Hooks
-- rabbithole_instantiates_parsers
-- before_rabbithole_insert_memory
-- before_rabbithole_splits_text
-- after_rabbithole_splitted_text
-- before_rabbithole_stores_documents
-## Hook search
+            ```python
+            from cat.mad_hatter.decorators import hook
 
-TODO
+            @hook  # default priority = 1 
+            def before_cat_reads_message(user_message_json, cat):
+                user_message_json["text"] = "The original message has been replaced"
+                cat.working_memory["hacked"] = True
+
+                return user_message_json
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+
+    2. **Input**
+    3. **Input**
+    4. **Input**
+    5. **Input**
+    6. **Input**
+    7. **Input**
+    8. **Input**
+
+=== "&#129302; Agent"
+    
+    <div class="annotate" mardown>
+
+    | Name                         | Description                                             |
+    | :--------------------------- | :------------------------------------------------------ |
+    | Before agent starts (9)      | Intervene before the agent starts                                                |
+    | Agent fast reply (10)         | Shorten the pipeline and returns an answer right after the agent execution       |
+    | Agent prompt prefix (11)      | Intervene while the agent manager formats the Cat's personality                  |
+    | Agent prompt suffix (12)      | Intervene while the agent manager formats the prompt suffix with the memories and the conversation history |
+    | Agent allowed tools (13)      | Intervene before the recalled tools are provided to the agent                    |
+    | Agent prompt instructions (14)| Intervent while the agent manager formats the reasoning prompt                   |
+
+    </div>
+    
+    9. **Input**
+    10. **Input**
+    11. **Input**
+    12. **Input**
+    13. **Input**
+    14. **Input**
+
+=== "&#128048; Rabbit Hole"
+    
+    <div class="annotate" mardown>
+
+    | Name                                      | Description                                                    |
+    | :---------------------------------------- | :------------------------------------------------------------- |
+    | Rabbit Hole instantiates parsers (15)      | Intervene before the files' parsers are instiated              |
+    | Before Rabbit Hole insert memory (16)      | Intervene before the Rabbit Hole insert a document in the declarative memory |
+    | Before Rabbit Hole splits text (17)        | Intervene before the uploaded document is split into chunks    |
+    | After Rabbit Hole splitted text (18)       | Intervene after the Rabbit Hole's split the document in chunks |
+    | Before Rabbit Hole stores documents (19)   | Intervene before the Rabbit Hole starts the ingestion pipeline |
+
+    </div>
+
+    15. **Input**
+    16. **Input**
+    17. **Input**
+    18. **Input**
+    19. **Input**

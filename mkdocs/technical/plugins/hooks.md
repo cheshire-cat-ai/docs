@@ -100,8 +100,8 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
     6. ### Input arguments
     7 .### Input arguments
     8. ### Input arguments
-    9.
-    10.
+    9. ### Input arguments
+    10. ### Input arguments
 
 === "&#129302; Agent"
     

@@ -55,20 +55,22 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     | Name                                          | Description                                                      |
     | :-------------------------------------------- | :--------------------------------------------------------------- |
-    | Before Cat bootstrap                          | Intervene before the Cat's instantiate its components            |
-    | After Cat bootstrap                           | Intervene after the Cat's instantiated its components            |
-    | Before Cat reads message (1)                  | Intervene as soon as a WebSocket message is received             |
-    | Cat recall query (2)                          | Intervene before the recall query is embedded                    |
-    | Before  Cat recalls memories (3)              | Intervene before the Cat searches into the specific memories     |
-    | Before  Cat recalls episodic memories (4)     | Intervene before the Cat searches in previous users' messages    |
-    | Before  Cat recalls declarative memories (5)  | Intervene before the Cat searches in the documents               |
-    | Before  Cat recalls procedural memories (6)   | Intervene before the Cat searches among the action it knows      |
-    | After  Cat recalls memories (7)               | Intervene after the Cat's recalled the content from the memories |
-    | Before  Cat sends message (8)                 | Intervene before the Cat sends its answer via WebSocket          |
+    | Before Cat bootstrap (1)                      | Intervene before the Cat's instantiate its components            |
+    | After Cat bootstrap (2)                       | Intervene after the Cat's instantiated its components            |
+    | Before Cat reads message (3)                  | Intervene as soon as a WebSocket message is received             |
+    | Cat recall query (4)                          | Intervene before the recall query is embedded                    |
+    | Before  Cat recalls memories (5)              | Intervene before the Cat searches into the specific memories     |
+    | Before  Cat recalls episodic memories (6)     | Intervene before the Cat searches in previous users' messages    |
+    | Before  Cat recalls declarative memories (7)  | Intervene before the Cat searches in the documents               |
+    | Before  Cat recalls procedural memories (8)   | Intervene before the Cat searches among the action it knows      |
+    | After  Cat recalls memories (9)               | Intervene after the Cat's recalled the content from the memories |
+    | Before  Cat sends message (10)                | Intervene before the Cat sends its answer via WebSocket          |
     
     </div>
-
-    1. ### **Input arguments**  
+    
+    1. ### Input arguments
+    2. ### Input arguments
+    3. ### Input arguments  
         `user_message_json`, i.e. the JSON message sent via WebSocket done like this:  
         ```JSON
         {
@@ -93,35 +95,35 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             - [Python reference]()
 
-    2. **Input**
-    3. **Input**
-    4. **Input**
-    5. **Input**
-    6. **Input**
-    7. **Input**
-    8. **Input**
+    4. ### Input arguments
+    5. ### Input arguments
+    6. ### Input arguments
+    7 .### Input arguments
+    8. ### Input arguments
+    9.
+    10.
 
 === "&#129302; Agent"
     
     <div class="annotate" mardown>
 
-    | Name                         | Description                                             |
-    | :--------------------------- | :------------------------------------------------------ |
-    | Before agent starts (9)      | Intervene before the agent starts                                                |
-    | Agent fast reply (10)         | Shorten the pipeline and returns an answer right after the agent execution       |
-    | Agent prompt prefix (11)      | Intervene while the agent manager formats the Cat's personality                  |
-    | Agent prompt suffix (12)      | Intervene while the agent manager formats the prompt suffix with the memories and the conversation history |
-    | Agent allowed tools (13)      | Intervene before the recalled tools are provided to the agent                    |
-    | Agent prompt instructions (14)| Intervent while the agent manager formats the reasoning prompt                   |
+    | Name                          | Description                                             |
+    | :---------------------------- | :------------------------------------------------------ |
+    | Before agent starts (11)      | Intervene before the agent starts                                                |
+    | Agent fast reply (12)         | Shorten the pipeline and returns an answer right after the agent execution       |
+    | Agent prompt prefix (13)      | Intervene while the agent manager formats the Cat's personality                  |
+    | Agent prompt suffix (14)      | Intervene while the agent manager formats the prompt suffix with the memories and the conversation history |
+    | Agent allowed tools (15)      | Intervene before the recalled tools are provided to the agent                    |
+    | Agent prompt instructions (16)| Intervent while the agent manager formats the reasoning prompt                   |
 
     </div>
-    
-    9. **Input**
-    10. **Input**
-    11. **Input**
-    12. **Input**
-    13. **Input**
-    14. **Input**
+
+    11. ### **Input arguments**  
+    12. ### **Input arguments**  
+    13. ### **Input arguments**  
+    14. ### **Input arguments**  
+    15. ### **Input arguments**
+    16. ### **Input arguments**  
 
 === "&#128048; Rabbit Hole"
     
@@ -129,16 +131,16 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     | Name                                      | Description                                                    |
     | :---------------------------------------- | :------------------------------------------------------------- |
-    | Rabbit Hole instantiates parsers (15)      | Intervene before the files' parsers are instiated              |
-    | Before Rabbit Hole insert memory (16)      | Intervene before the Rabbit Hole insert a document in the declarative memory |
-    | Before Rabbit Hole splits text (17)        | Intervene before the uploaded document is split into chunks    |
-    | After Rabbit Hole splitted text (18)       | Intervene after the Rabbit Hole's split the document in chunks |
-    | Before Rabbit Hole stores documents (19)   | Intervene before the Rabbit Hole starts the ingestion pipeline |
+    | Rabbit Hole instantiates parsers (17)      | Intervene before the files' parsers are instiated              |
+    | Before Rabbit Hole insert memory (18)      | Intervene before the Rabbit Hole insert a document in the declarative memory |
+    | Before Rabbit Hole splits text (19)        | Intervene before the uploaded document is split into chunks    |
+    | After Rabbit Hole splitted text (20)       | Intervene after the Rabbit Hole's split the document in chunks |
+    | Before Rabbit Hole stores documents (21)   | Intervene before the Rabbit Hole starts the ingestion pipeline |
 
     </div>
 
-    15. **Input**
-    16. **Input**
-    17. **Input**
-    18. **Input**
-    19. **Input**
+    17. ### **Input arguments**
+    18. ### **Input arguments**
+    19. ### **Input arguments**
+    20. ### **Input arguments**  
+    21. ### **Input arguments**  

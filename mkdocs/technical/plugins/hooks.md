@@ -177,7 +177,70 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [Python reference]()
 
     6. **Input arguments**  
+        `episodic_recall_config`: dictionary with the recall configuration for the episodic memory. Default is:
+        
+        ```python
+        {
+            "embedding": recall_query_embedding,  # embedding of the recall query
+            "k": 3,  # number of memories to retrieve
+            "threshold": 0.7,  # similarity threshold to retrieve memories
+            "metadata": {"source": self.user_id},  # dictionary of metadata to filter memories, by default it filters for user id
+        }
+        ```
+
+        ??? example
+        
+            ```python
+            from cat.mad_hatter.decorators import hook
+    
+            @hook   # default priority = 1
+            def before_cat_recalls_episodic_memories(episodic_recall_config, cat):
+                # increase the number of recalled memories
+                episodic_recall_config["k"] = 6
+
+                return episodic_recall_config
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+            - [C.A.T. plugin]()
+
     7 .**Input arguments**  
+        `declarative_recall_config`: dictionary with the recall configuration for the declarative memory. Default is:
+        
+        ```python
+        {
+            "embedding": recall_query_embedding,  # embedding of the recall query
+            "k": 3,  # number of memories to retrieve
+            "threshold": 0.7,  # similarity threshold to retrieve memories
+            "metadata": None,  # dictionary of metadata to filter memories
+        }
+        ```
+
+        ??? example
+        
+            ```python
+            from cat.mad_hatter.decorators import hook
+    
+            @hook   # default priority = 1
+            def before_cat_recalls_declarative_memories(declarative_recall_config, cat):
+                # increase the threshold for a more accurate recall
+                declarative_recall_config["threshold"] = 0.8
+
+                # filter memories using custom metadata. 
+                # N.B. you must add the metadata when uploading the document! 
+                declarative_recall_config["metadata"] = {"topic": "cats"}
+
+                return declarative_recall_config
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+            - [RabbitHole segmentation plugin]()
+            - [C.A.T. plugin]()
+
     8. **Input arguments**  
     9. **Input arguments**  
     10. **Input arguments**  

@@ -135,8 +135,10 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     4. **Input arguments**  
         `user_message`: a string with the user's message that will be used to query the vector memories. E.g.:
+
         ```python
         user_message = "What is the recipe for carbonara?"
+        ```
 
         ??? example
             

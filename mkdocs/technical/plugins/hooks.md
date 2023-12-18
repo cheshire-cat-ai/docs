@@ -148,7 +148,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             @hook   # default priority = 1
             def cat_recall_query(user_message, cat):
                 # Ask the LLM to generate an answer for the question
-                new_query = cat.llm(f"If the input is a question, generate a plausible answer")
+                new_query = cat.llm(f"If the input is a question, generate a plausible answer. Input --> {user_message}")
 
                 # Replace the original message and use the answer as a query
                 return new_query

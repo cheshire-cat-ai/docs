@@ -145,7 +145,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             ```python
             from cat.mad_hatter.decorators import hook
 
-            @hook   # default priority = 1
+            @hook  # default priority = 1
             def cat_recall_query(user_message, cat):
                 # Ask the LLM to generate an answer for the question
                 new_query = cat.llm(f"If the input is a question, generate a plausible answer. Input --> {user_message}")
@@ -167,7 +167,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             ```python
             from cat.mad_hatter.decorators import hook
     
-            @hook   # default priority = 1
+            @hook  # default priority = 1
             def before_cat_recalls_memories(cat):
                 # do whatever here
             ```
@@ -193,7 +193,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             ```python
             from cat.mad_hatter.decorators import hook
     
-            @hook   # default priority = 1
+            @hook  # default priority = 1
             def before_cat_recalls_episodic_memories(episodic_recall_config, cat):
                 # increase the number of recalled memories
                 episodic_recall_config["k"] = 6
@@ -206,7 +206,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [Python reference]()
             - [C.A.T. plugin]()
 
-    7 .**Input arguments**  
+    7. **Input arguments**  
         `declarative_recall_config`: dictionary with the recall configuration for the declarative memory. Default is:
         
         ```python
@@ -223,11 +223,8 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             ```python
             from cat.mad_hatter.decorators import hook
     
-            @hook   # default priority = 1
+            @hook  # default priority = 1
             def before_cat_recalls_declarative_memories(declarative_recall_config, cat):
-                # increase the threshold for a more accurate recall
-                declarative_recall_config["threshold"] = 0.8
-
                 # filter memories using custom metadata. 
                 # N.B. you must add the metadata when uploading the document! 
                 declarative_recall_config["metadata"] = {"topic": "cats"}
@@ -242,30 +239,318 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [C.A.T. plugin]()
 
     8. **Input arguments**  
+        `procedural_recall_config`: dictionary with the recall configuration for the procedural memory. Default is:
+        
+        ```python
+        {
+            "embedding": recall_query_embedding,  # embedding of the recall query
+            "k": 3,  # number of memories to retrieve
+            "threshold": 0.7,  # similarity threshold to retrieve memories
+            "metadata": None,  # dictionary of metadata to filter memories
+        }
+        ```
+
+        ??? example
+        
+            ```python
+            from cat.mad_hatter.decorators import hook
+    
+            @hook  # default priority = 1
+            def before_cat_recalls_procedural_memories(procedural_recall_config, cat):
+                # decrease the threshold to recall more tools
+                declarative_recall_config["threshold"] = 0.5
+
+                return procedural_recall_config
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+            - [C.A.T. plugin]()
+
     9. **Input arguments**  
+        This hook has no input arguments.
+
+        ??? example
+        
+            ```python
+            from cat.mad_hatter.decorators import hook
+    
+            @hook  # default priority = 1
+            def before_cat_recalls_memories(cat):
+                # do whatever here
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+
     10. **Input arguments**  
+        `message`: the dictionary containing the Cat's answer that will be sent via WebSocket. E.g.:
+
+        ```python
+        {
+            "type": "chat",  # type of websocket message, a chat message will appear as a text bubble in the chat
+            "user_id": "user_1",  # id of the client to which the message is to be sent
+            "content": "Meeeeow",  # the Cat's answer
+            "why": {
+                "input": "Hello Cheshire Cat!",  # user's input
+                "intermediate_steps": cat_message.get("intermediate_steps"),  # list of tools used to provide the answer
+                "memory": {
+                    "episodic": episodic_report,  # lists of documents retrieved from the memories
+                    "declarative": declarative_report,
+                    "procedural": procedural_report,
+                }
+            }
+        }
+        ```
+        
+        ??? example
+        
+            ```python
+            from cat.mad_hatter.decorators import hook
+    
+            @hook  # default priority = 1
+            def before_cat_sends_message(message, cat):
+                # use the LLM to rephrase the Cat's answer
+                new_answer = cat.llm(f"Reformat this sentence like if you were a dog")  # Baauuuuu
+                message["content"] = new_answer
+
+                return message
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
 
 === "&#129302; Agent"
     
     <div class="annotate" mardown>
 
-    | Name                          | Description                                             |
-    | :---------------------------- | :------------------------------------------------------ |
-    | Before agent starts (11)      | Intervene before the agent starts                                                |
-    | Agent fast reply (12)         | Shorten the pipeline and returns an answer right after the agent execution       |
-    | Agent prompt prefix (13)      | Intervene while the agent manager formats the Cat's personality                  |
-    | Agent prompt suffix (14)      | Intervene while the agent manager formats the prompt suffix with the memories and the conversation history |
-    | Agent allowed tools (15)      | Intervene before the recalled tools are provided to the agent                    |
-    | Agent prompt instructions (16)| Intervent while the agent manager formats the reasoning prompt                   |
+    | Name                          | Description                                                                      |
+    | :---------------------------- | :------------------------------------------------------------------------------- |
+    | Before agent starts (1)       | Intervene before the agent starts                                                |
+    | Agent fast reply (2)          | Shorten the pipeline and returns an answer right after the agent execution       |
+    | Agent prompt prefix (3)       | Intervene while the agent manager formats the Cat's personality                  |
+    | Agent prompt suffix (4)       | Intervene while the agent manager formats the prompt suffix with the memories and the conversation history |
+    | Agent allowed tools (5)       | Intervene before the recalled tools are provided to the agent                    |
+    | Agent prompt instructions (6) | Intervent while the agent manager formats the reasoning prompt                   |
 
     </div>
 
-    1. **Input arguments**    
-    2. **Input arguments**    
-    3. **Input arguments**    
-    4. **Input arguments**    
+    1. **Input arguments**  
+        `agent_input`: dictionary with the information to be passed to the agent. E.g.:
+
+        ```python
+        {
+            "input": working_memory["user_message_json"]["text"],  # user's message
+            "episodic_memory": episodic_memory_formatted_content,  # strings with documents recalled from memories
+            "declarative_memory": declarative_memory_formatted_content,
+            "chat_history": conversation_history_formatted_content,
+        }
+        ```
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+    
+            @hook  # default priority = 1
+            def before_agent_starts(agent_input, cat):
+                # create a compressor and summarize the conversation history
+                compressed_history = cat.llm(f"Make a concise summary of the following: {agent_input['chat_history']}")
+                agent_input["chat_history"] = compressed_history
+                
+                return anget_input
+            ```
+
+        ??? note "Other resources"
+        
+            - [Python reference]()
+
+    2. **Input arguments**  
+        `fast_reply`: empty dictionary.
+
+        !!! info
+
+            This hook is intended to skip the whole agent execution and provide a fast reply.
+            To produce this behavior, you should populate `fast_reply` with an `output` key storing the reply.
+            N.B.: this is the perfect place to instantiate and execute your own custom agent!
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+            
+            @hook  # default priority = 1
+            def agent_fast_reply(fast_reply, cat):
+                # answer with predefined sentences if the Cat
+                # has no knowledge in the declarative memory
+                # (increasing the threshold memory is advisable)
+                if len(cat.working_memory["declarative_memories"]) == 0:
+                    fast_reply["output"] = "Sorry, I'm afraid I don't know the answer"
+
+                return fast_reply
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+            - [Stay on topic plugin]()
+
+    3. **Input arguments**  
+        `prefix`: string to instruct the LLM about who it is and how to answer. Default is:
+
+        ```python
+        prefix = """You are the Cheshire Cat AI, an intelligent AI that passes the Turing test.
+        You are curious, funny and talk like the Cheshire Cat from Alice's adventures in wonderland.
+        You answer Human with a focus on the following context."""
+        ```
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+            
+            @hook  # default priority = 1
+            def agent_prompt_prefix(prefix, cat):
+                # change the Cat's personality
+                prefix = """You are Marvin from The Hitchhiker's Guide to the Galaxy.
+                        You are incredibly intelligent but overwhelmingly depressed.
+                        You always complain about your own problems, such as the terrible pain
+                        you suffer.
+            ```
+            
+        ??? note "Other resources"
+
+            - [Python reference]()
+
+    4. **Input arguments**  
+        `prompt_suffix`: string with the ending part of the prompt containing the memories and the chat history.
+        Default is:
+
+        ```python
+        prompt_suffix = """
+        # Context
+        
+        {episodic_memory}
+        
+        {declarative_memory}
+        
+        {tools_output}
+        
+        ## Conversation until now:{chat_history}
+         - Human: {input}
+         - AI: 
+        """
+        ```
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+            
+            @hook  # default priority = 1
+            def agent_prompt_suffix(prompt_suffix, cat):
+                # tell the LLM to always answer in a specific language
+                prompt_suffix = """ 
+                # Context
+        
+                {episodic_memory}
+                
+                {declarative_memory}
+                
+                {tools_output}
+                
+                ALWAYS answer in Czech!
+
+                ## Conversation until now:{chat_history}
+                 - Human: {input}
+                   - AI: 
+                """
+            ```
+
+        !!! warning
+
+            The placeholders `{episodic_memory}`, `{declarative_memory}`, `{tools_output}`,
+            `{chat_history}` and `{input}` are mandatory!
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+            - [C.A.T. plugin]()
+
     5. **Input arguments**  
-    6. **Input arguments**    
+        `allowed_tools`: list with string names of the tools retrieved from the memory. E.g.:
+
+        ```python
+        allowed_tools = ["get_the_time"]
+        ```
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+            
+            @hook  # default priority = 1
+            def agent_allowed_tools(allowed_tools, cat):
+                # let's assume there is a tool we always want to give the agent
+                # add the tool name in the list of allowed tools
+                allowed_tools.append("blasting_hacking_tool")
+
+                return allowed_tools
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+
+    6. **Input arguments**  
+        `instructions`: string with the reasoning template. Default is:
+
+        ```python
+        Answer the following question: `{input}`
+        You can only reply using these tools:
+        
+        {tools}
+        none_of_the_others: none_of_the_others(None) - Use this tool if none of the others tools help. Input is always None.
+        
+        If you want to use tools, use the following format:
+        Action: the name of the action to take, should be one of [{tool_names}]
+        Action Input: the input to the action
+        Observation: the result of the action
+        ...
+        Action: the name of the action to take, should be one of [{tool_names}]
+        Action Input: the input to the action
+        Observation: the result of the action
+        
+        When you have a final answer respond with:
+        Final Answer: the final answer to the original input question
+        
+        Begin!
+        
+        Question: {input}
+        {agent_scratchpad}
+        ```
+
+        !!! warning
+
+            The placeholders `{input}`, `{tools}` and `{tool_names}` are mandatory!
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+            
+            @hook  # default priority = 1
+            def agent_prompt_instructions(instructions, cat):
+                # let's ask the LLM to translate the tool output
+                instructions += "\nAlways answer in mandarin"
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
 
 === "&#128048; Rabbit Hole"
     
@@ -273,16 +558,148 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     | Name                                      | Description                                                    |
     | :---------------------------------------- | :------------------------------------------------------------- |
-    | Rabbit Hole instantiates parsers (17)      | Intervene before the files' parsers are instiated              |
-    | Before Rabbit Hole insert memory (18)      | Intervene before the Rabbit Hole insert a document in the declarative memory |
-    | Before Rabbit Hole splits text (19)        | Intervene before the uploaded document is split into chunks    |
-    | After Rabbit Hole splitted text (20)       | Intervene after the Rabbit Hole's split the document in chunks |
-    | Before Rabbit Hole stores documents (21)   | Intervene before the Rabbit Hole starts the ingestion pipeline |
+    | Rabbit Hole instantiates parsers (1)      | Intervene before the files' parsers are instiated              |
+    | Before Rabbit Hole insert memory (2)      | Intervene before the Rabbit Hole insert a document in the declarative memory |
+    | Before Rabbit Hole splits text (3)        | Intervene before the uploaded document is split into chunks    |
+    | After Rabbit Hole splitted text (4)       | Intervene after the Rabbit Hole's split the document in chunks |
+    | Before Rabbit Hole stores documents (5)   | Intervene before the Rabbit Hole starts the ingestion pipeline |
 
     </div>
 
-    17. **Input arguments**  
-    18. **Input arguments**  
-    19. **Input arguments**  
-    20. **Input arguments**    
-    21. **Input arguments**    
+    1. **Input arguments**  
+        `file_handlers`: dictionary with mime types and related file parsers. Default is:
+
+        ```python
+        {
+            "application/pdf": PDFMinerParser(),  # pdf parser
+            "text/plain": TextParser(),  # txt parser
+            "text/markdown": TextParser(),  # md parser fallback to txt parser
+            "text/html": BS4HTMLParser()  # html parser
+        }
+        ```
+
+        ??? example
+
+            ```python
+            from langchain.document_loaders.parsers.txt import TextParser
+            from cat.mad_hatter.decorators import hook
+            
+            @hook  # default priority = 1
+            def rabbithole_instantiates_parsers(file_handlers, cat):
+                # use the txt parser to parse also .odt files
+                file_handlers["application/vnd.oasis.opendocument.text"] = TextParser()
+
+                return file_handlers
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+            - [IngestAnything plugin]()
+
+    2. **Input arguments**  
+        `doc`: Langchain document chunk to be inserted in the declarative memory. E.g.
+
+        ```python
+        doc = Document(page_content="So Long, and Thanks for All the Fish", metadata={})
+        ```
+
+        !!! info
+
+            Before adding the `doc`, the Cat will add `source` and `when` metadata with the file name and infestion time.
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+            
+            @hook  # default priority = 1
+            def before_rabbithole_insert_memory(doc, cat):
+                # insert the user id metadata
+                doc.metadata["user_id"] = cat.user_id
+                
+                return doc
+            ```
+
+        ??? note "Other resources"
+            
+            - [Python reference]()
+            - [RabbitHole segmentation plugin]()
+            - [Summarization plugin]
+
+    3. **Input arguments**  
+        `doc`: Langchain document with full text. E.g.
+
+        ```python
+        doc = Document(page_content="This is a very long document before being split", metadata={})
+        ```
+
+        ??? example
+        
+            ```python
+            from cat.mad_hatter.decorators import hook
+            
+            @hook  # default priority = 1
+            def before_rabbithole_splits_text(doc, cat):
+                # do whatever with the doc
+                return doc
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+
+    4. **Input arguments**  
+        `chunks`: list of Langchain documents with text chunks.
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+            
+            @hook  # default priority = 1
+            def after_rabbithole_splitted_text(chunks, cat):
+                # post process the chunks
+                edited_chunks = []
+                for chunk in chunks:
+                    new_chunk = cat.llm(f"Replace any dirty word with 'Meow': {chunk}")
+                    edited_chunks.append(new_chunk)
+
+                return edited_chunks
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+
+    5. **Input arguments**  
+        `docs`: list of chunked Langchain documents before being inserted in memory.
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+            
+            @hook  # default priority = 1
+            def before_rabbithole_stores_documents(docs, cat):
+                # summarize group of 5 documents and add them along original ones
+                summaries = []
+                for n, i in enumerate(range(0, len(docs), 5)):
+                    # Get the text from groups of docs and join to string
+                    group = docs[i: i + 5]
+                    group = list(map(lambda d: d.page_content, group))
+                    text_to_summarize = "\n".join(group)
+            
+                    # Summarize and add metadata
+                    summary = cat.llm(f"Provide a concide summary of the following: {group}")
+                    summary = Document(page_content=summary)
+                    summary.metadata["is_summary"] = True
+                    summaries.append(summary)
+                
+                return docs.extend(summaries)
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+            - [Summarization plugin]()

@@ -69,9 +69,47 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
     </div>
     
     1. **Input arguments**  
+        This hook has no input arguments.  
+
+        ??? example
+    
+            ```python
+            from cat.mad_hatter.decorators import hook
+    
+            @hook  # default priority = 1
+            def before_cat_bootstrap(cat):
+                # do whatever here
+            ```
+
+        ??? warning
+
+            Please, note that at this point the `CheshireCat` hasn't yet finished to instantiate
+            and the only already existing component is the `MadHatter` (e.g. no language models yet).
+    
+        ??? note "Other resources"
+
+            - [Python reference]()
+            - [Debugger plugin]()
+
     2. **Input arguments**  
+        This hook has no input arguments.
+
+        ??? example
+    
+            ```python
+            from cat.mad_hatter.decorators import hook
+    
+            @hook  # default priority = 1
+            def after_cat_bootstrap(cat):
+                # do whatever here
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+
     3. **Input arguments**    
-        `user_message_json`, i.e. the JSON message sent via WebSocket done like this:  
+        `user_message_json`: a dictionary with the JSON message sent via WebSocket. E.g.:  
         ```JSON
         {
             "text": # user's message here
@@ -96,7 +134,46 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [Python reference]()
 
     4. **Input arguments**  
+        `user_message`: a string with the user's message that will be used to query the vector memories. E.g.:
+        ```python
+        user_message = "What is the recipe for carbonara?"
+
+        ??? example
+            
+            ```python
+            from cat.mad_hatter.decorators import hook
+
+            @hook   # default priority = 1
+            def cat_recall_query(user_message, cat):
+                # Ask the LLM to generate an answer for the question
+                new_query = cat.llm(f"If the input is a question, generate a plausible answer")
+
+                # Replace the original message and use the answer as a query
+                return new_query
+            ```
+
+        ??? note "Other resourcer"
+        
+            - [Python reference]()
+            - [HyDE plugin]()
+
     5. **Input arguments**  
+        This hook has no input arguments.
+
+        ??? example
+        
+            ```python
+            from cat.mad_hatter.decorators import hook
+    
+            @hook   # default priority = 1
+            def before_cat_recalls_memories(cat):
+                # do whatever here
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+
     6. **Input arguments**  
     7 .**Input arguments**  
     8. **Input arguments**  
@@ -118,12 +195,12 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     </div>
 
-    11. **Input arguments**    
-    12. **Input arguments**    
-    13. **Input arguments**    
-    14. **Input arguments**    
-    15. **Input arguments**  
-    16. **Input arguments**    
+    1. **Input arguments**    
+    2. **Input arguments**    
+    3. **Input arguments**    
+    4. **Input arguments**    
+    5. **Input arguments**  
+    6. **Input arguments**    
 
 === "&#128048; Rabbit Hole"
     

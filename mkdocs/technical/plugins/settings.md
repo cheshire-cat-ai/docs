@@ -58,10 +58,10 @@ class DemoSettings(BaseModel):
     optional_enum: NameSelect = NameSelect.b
 
 
-# Give your settings schema to the Cat.
+# Give your settings model to the Cat.
 @plugin
-def settings_schema():   
-    return DemoSettings.model_json_schema()
+def settings_model():
+    return DemoSettings
 
 ```
 

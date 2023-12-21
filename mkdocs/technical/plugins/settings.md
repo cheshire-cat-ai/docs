@@ -61,7 +61,7 @@ class DemoSettings(BaseModel):
 # Give your settings schema to the Cat.
 @plugin
 def settings_schema():   
-    return DemoSettings.schema()
+    return DemoSettings.model_json_schema()
 
 ```
 

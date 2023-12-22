@@ -7,6 +7,9 @@ It is possible to easily define settings for your plugin, so the Cat can show th
 
 By defining the `settings_schema` function and decorating it with `@plugin` you can tell the Cat how your settings are named, what is their type and (if any) their default values.  
 The function must return a [JSON Schema](https://json-schema.org/) for the settings. You can code the schema manually, load it from disk, or obtain it from a [pydantic](https://docs.pydantic.dev/latest/usage/json_schema/) class (recommended approach).
+
+The easiest approach is to define the `settings_model` function in favor of `settings_schema`, decorating it with `@plugin`, so to get the plugin settings as a [Pydantic Model](https://docs.pydantic.dev/latest/concepts/models/).
+
 Here is an example with all supported types, with and without a default value:
 
 ```python

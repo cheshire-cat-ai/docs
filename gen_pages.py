@@ -2,12 +2,24 @@
 
 from pathlib import Path
 import os
+import fnmatch
 import mkdocs_gen_files
+
+KEEP_PAGES = [
+    "cheshire_cat", "stray_cat", "agent", "flow",
+    "prompt", "rabbithole", "settings", "mad_hatter",
+    "plugin", "vector_memory", "vector_memory_collection",
+    "working_memory", "log", "rabbit_hole", "utils"
+]
 
 nav = mkdocs_gen_files.Nav()
 
 core_code_dir = 'cat'
 for path in sorted(Path(core_code_dir).rglob("*.py")):
+
+    for page in KEEP_PAGES:
+        if not fnmatch.fnmatch(str(path), f"{page}.py"):
+            continue
     
     module_path = path.relative_to(core_code_dir).with_suffix("")
     doc_path = path.relative_to(core_code_dir).with_suffix(".md")

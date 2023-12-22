@@ -26,6 +26,50 @@ If you want to build your custom AI architecture, the Cat can help you!
 | &#127757; Language model agnostic                               | &#128024; Long term memory                                     |
 | &#128640; Extendable via plugins in Python | 	&#128011; 100% [dockerized](https://docs.docker.com/get-docker/) |
 
+
+<div class="grid cards" markdown>
+
+-   &#127939; __Onboarding__
+
+    ---
+
+    Take your first step with hands-on examples!
+
+    [:octicons-arrow-right-24: Get started](quickstart/introduction.md)
+
+-   &#129693; __Hooks__
+
+    ---
+
+    Explore all the available hooks to customize the Cat!
+
+    [:octicons-arrow-right-24: Available Hooks](technical/plugins/hooks.md#available-hooks)
+
+[//]: # (-   :material-format-font:{ .lg .middle } __Made to measure__)
+
+[//]: # ()
+[//]: # (    ---)
+
+[//]: # ()
+[//]: # (    Change the colors, fonts, language, icons, logo and more with a few lines)
+
+[//]: # ()
+[//]: # (    [:octicons-arrow-right-24: Customization]&#40;#&#41;)
+
+[//]: # ()
+[//]: # (-   :material-scale-balance:{ .lg .middle } __Open Source, MIT__)
+
+[//]: # ()
+[//]: # (    ---)
+
+[//]: # ()
+[//]: # (    Material for MkDocs is licensed under MIT and available on [GitHub])
+
+[//]: # ()
+[//]: # (    [:octicons-arrow-right-24: License]&#40;#&#41;)
+
+</div>
+
 ## Try it out now!
 
 We have a Discord server, and we use the Cat as our assistant to provide support. You can give the Cat a try by connecting to the [:fontawesome-brands-discord: Discord Server](https://discord.com/channels/1092359754917089350/1092360285056159814), mentioning `@Cheshire Cat AI` while asking something about the documentation, such as "Can I extend the Cat with plugins?" 

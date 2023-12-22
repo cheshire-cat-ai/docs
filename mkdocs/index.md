@@ -28,38 +28,44 @@ If you want to build your custom AI architecture, the Cat can help you!
 
 <div class="grid cards" markdown>
 
--   :material-clock-fast:{ .lg .middle } __Set up in 5 minutes__
+-   &#127939; __Onboarding__
 
     ---
 
-    Install [`mkdocs-material`](#) with [`pip`](#) and get up
-    and running in minutes
+    Take your first step with hands-on examples!
 
-    [:octicons-arrow-right-24: Getting started](#)
+    [:octicons-arrow-right-24: Get started](quickstart/introduction.md)
 
--   :fontawesome-brands-markdown:{ .lg .middle } __It's just Markdown__
-
-    ---
-
-    Focus on your content and generate a responsive and searchable static site
-
-    [:octicons-arrow-right-24: Reference](#)
-
--   :material-format-font:{ .lg .middle } __Made to measure__
+-   &#129693; __Hooks__
 
     ---
 
-    Change the colors, fonts, language, icons, logo and more with a few lines
+    Explore all the available hooks to customize the Cat!
 
-    [:octicons-arrow-right-24: Customization](#)
+    [:octicons-arrow-right-24: Available Hooks](technical/plugins/hooks.md#available-hooks)
 
--   :material-scale-balance:{ .lg .middle } __Open Source, MIT__
+[//]: # (-   :material-format-font:{ .lg .middle } __Made to measure__)
 
-    ---
+[//]: # ()
+[//]: # (    ---)
 
-    Material for MkDocs is licensed under MIT and available on [GitHub]
+[//]: # ()
+[//]: # (    Change the colors, fonts, language, icons, logo and more with a few lines)
 
-    [:octicons-arrow-right-24: License](#)
+[//]: # ()
+[//]: # (    [:octicons-arrow-right-24: Customization]&#40;#&#41;)
+
+[//]: # ()
+[//]: # (-   :material-scale-balance:{ .lg .middle } __Open Source, MIT__)
+
+[//]: # ()
+[//]: # (    ---)
+
+[//]: # ()
+[//]: # (    Material for MkDocs is licensed under MIT and available on [GitHub])
+
+[//]: # ()
+[//]: # (    [:octicons-arrow-right-24: License]&#40;#&#41;)
 
 </div>
 

@@ -26,6 +26,7 @@ If you want to build your custom AI architecture, the Cat can help you!
 | &#127757; Language model agnostic                               | &#128024; Long term memory                                     |
 | &#128640; Extendable via plugins in Python | 	&#128011; 100% [dockerized](https://docs.docker.com/get-docker/) |
 
+
 <div class="grid cards" markdown>
 
 -   &#127939; __Onboarding__

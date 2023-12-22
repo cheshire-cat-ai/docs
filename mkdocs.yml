@@ -58,9 +58,9 @@ nav:
   - Framework:
       - LLM Concepts:
           - Language Models: llm-concepts/llm.md
-          - Language Model Chains: llm-concepts/llm-chain.md
+          - Retrieval Augmented Generation: llm-concepts/rag.md
           - Prompt: llm-concepts/prompt.md
-          - Encoder: llm-concepts/encoder.md
+          - Encoder: llm-concepts/embedder.md
           - Vector Memory: llm-concepts/vector-memory.md
       - Cat Components:
         - The Core: conceptual/cheshire_cat/core.md

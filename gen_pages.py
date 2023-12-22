@@ -9,17 +9,20 @@ KEEP_PAGES = [
     "cheshire_cat", "stray_cat", "agent", "flow",
     "prompt", "rabbithole", "settings", "mad_hatter",
     "plugin", "vector_memory", "vector_memory_collection",
-    "working_memory", "log", "rabbit_hole", "utils"
+    "working_memory", "log", "rabbit_hole", "utils",  # "__init__"
 ]
 
 nav = mkdocs_gen_files.Nav()
 
 core_code_dir = 'cat'
-for path in sorted(Path(core_code_dir).rglob("*.py")):
 
-    for page in KEEP_PAGES:
-        if not fnmatch.fnmatch(str(path), f"{page}.py"):
-            continue
+all_paths = []
+for path in sorted(Path(core_code_dir).rglob("*.py")):
+    all_paths.append(path)
+
+paths = [p for p in all_paths for k in KEEP_PAGES if fnmatch.fnmatch(str(p), f"*{k}.py")]
+
+for path in paths:
     
     module_path = path.relative_to(core_code_dir).with_suffix("")
     doc_path = path.relative_to(core_code_dir).with_suffix(".md")

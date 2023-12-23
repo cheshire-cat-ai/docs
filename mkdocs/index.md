@@ -2,30 +2,16 @@
 
 ## What is this?
 
-The Cheshire Cat is an open-source framework that allows you to develop intelligent agents on top of many
-[Large Language Models](conceptual/llm.md) (LLM).
-You can develop your custom AI architecture to assist you in a wide range of tasks.
+The Cheshire Cat is an open-source, hackable and production-ready framework that allows developing intelligent personal 
+AI assistants agents on top of [Large Language Models](conceptual/llm.md) (LLM).
 
-The Cheshire Cat embeds a long-term memory system to save the user's input locally
-and it answers knowing the context of previous conversations.
-You can also feed text documents in the Cat's memory system to enrich the agent's contextual information and ask it to
-retrieve them further in the conversation.
-
-If you want the Cat to solve tailored tasks, you can extend its capabilities writing Python plugins
-to execute custom functions or call external services (e.g., APIs and other models).
-
-Furthermore, the Cat boasts a rapidly growing ecosystem of ready-to-use plugins that can be easily installed with just a click.
-
-It is an API-first framework, making it seamlessly integrable with your pre-existing product.
-
-If you want to build your custom AI architecture, the Cat can help you!
-
-| Cheshire Cat Features                                           |                                                                 |
-|-----------------------------------------------------------------|-----------------------------------------------------------------|
-| &#129520; API first framework                                   | &#128220; Can ingest documents                                 |
-| &#127757; Language model agnostic                               | &#128024; Long term memory                                     |
+| Cheshire Cat Features                      |                                                                   |
+|--------------------------------------------|-------------------------------------------------------------------|
+| &#129520; API first framework              | &#128220; Can ingest documents                                    |
+| &#127757; Language model agnostic          | &#128024; Local Long term memory                                  |
 | &#128640; Extendable via plugins in Python | 	&#128011; 100% [dockerized](https://docs.docker.com/get-docker/) |
 
+## Quick links
 
 <div class="grid cards" markdown>
 
@@ -35,7 +21,15 @@ If you want to build your custom AI architecture, the Cat can help you!
 
     Take your first step with hands-on examples!
 
-    [:octicons-arrow-right-24: Get started](quickstart/introduction.md)
+    [:octicons-arrow-right-24: Get started now](quickstart/introduction.md)
+
+- &#128268; __Plugins__
+
+    ---
+
+    Dive into advanced concepts to develop and publish your plugin!
+
+    [:octicons-arrow-right-24: Plugin documentation](technical/plugins/plugins.md)
 
 -   &#129693; __Hooks__
 
@@ -45,55 +39,25 @@ If you want to build your custom AI architecture, the Cat can help you!
 
     [:octicons-arrow-right-24: Available Hooks](technical/plugins/hooks.md#available-hooks)
 
-[//]: # (-   :material-format-font:{ .lg .middle } __Made to measure__)
+-   &#128640; __Deploy__
 
-[//]: # ()
-[//]: # (    ---)
+    ---
 
-[//]: # ()
-[//]: # (    Change the colors, fonts, language, icons, logo and more with a few lines)
+    Ready-to-use setup to deploy your assistant!
 
-[//]: # ()
-[//]: # (    [:octicons-arrow-right-24: Customization]&#40;#&#41;)
-
-[//]: # ()
-[//]: # (-   :material-scale-balance:{ .lg .middle } __Open Source, MIT__)
-
-[//]: # ()
-[//]: # (    ---)
-
-[//]: # ()
-[//]: # (    Material for MkDocs is licensed under MIT and available on [GitHub])
-
-[//]: # ()
-[//]: # (    [:octicons-arrow-right-24: License]&#40;#&#41;)
+    :octicons-arrow-right-24: Coming soon...
 
 </div>
 
-## Try it out now!
+## Get in touch with us! 
 
-We have a Discord server, and we use the Cat as our assistant to provide support. You can give the Cat a try by connecting to the [:fontawesome-brands-discord: Discord Server](https://discord.com/channels/1092359754917089350/1092360285056159814), mentioning `@Cheshire Cat AI` while asking something about the documentation, such as "Can I extend the Cat with plugins?" 
+[:fontawesome-brands-discord: Discord](https://discord.gg/bHX5sNFCYU){ .md-button .md-button--primary } &#128072;
+Join our Discord community where you can
+connect with other developers and ask for support to the contributors or directly to the Cat &#128570;
+mentioning `@Cheshire Cat AI`.
 
-_if you're curious about how it's implemented, check out the [Discord use case](use-cases/discord-bot.md)_
+**Remember to give the project a star! &#11088; and thanks! &#128591;**
 
-## Get started now!
-
-For a quick onboarding, we suggest this learning journey to you:  
-
-1. Start by reading `Quickstart -> Introduction`. This is an overview of the main concepts behind the Cat.  
-
-2. Next, continue with the subsequent steps under `Quickstart`. These are hands-on tutorials. You will have the first contact using the Cat and you will discover how to install, configure, interact, write your first useful `Tool` and setup `Hooks`.  
-
-3. Further, enhance your understanding of the Cat with the `How the Cat works`. This section delves into deeper concepts. If you are new to LLM AI concepts, e.g. `Prompts` and `Language model chains`, we recommend checking out the `LLM Concepts` before reading this section.
-
-4. Last but not least, in the `Developers` section, you can find all the necessary Cat references.
-
-Now, go and create your first invaluable Cat-powered product!
-
-
-| Get in touch with us!                                                                                   |                                                                                                                                |
-|---------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| [:fontawesome-brands-discord: Discord](https://discord.gg/bHX5sNFCYU){ .md-button .md-button--primary } | &#128072; **Join our Discord server and** &#128071; <br/> **don't forget to give the project a star! &#11088; Thanks again!&#128591;** |
 
 ![Wikipedia picture of the Cheshire Cat](assets/img/cheshire-cat-tree-shade.jpg)
 

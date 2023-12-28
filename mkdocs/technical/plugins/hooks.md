@@ -703,3 +703,81 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.before_rabbithole_stores_documents)
             - [Summarization plugin](https://github.com/Furrmidable-Crew/ccat_summarization)
+
+=== "&#128268; Plugin"
+    
+    <div class="annotate" mardown>
+
+    | Name                | Description                                        |
+    | :-------------------| :------------------------------------------------- |
+    | Activated (1)       | Intervene when a plugin is enabled                 |
+    | Deactivated (2)     | Intervene when a plugin is disabled                |
+    | Settings schema (3) | Override how the plugin's settings are retrieved   |
+    | Load settings (4)   | Override how the plugin's settings are loaded      |
+    | Save settings (5)   | Override how the plugin's settings are saved       |
+
+    </div>
+
+    1. **Input arguments**  
+        `plugin`: the `Plugin` object of your plugin with the following properties:
+        
+        ```python
+        plugin.path = # the path of your plugin 
+        plugin.id = # the name of your plugin
+        ```
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import plugin
+            from cat.looking_glass.cheshire_cat import CheshireCat
+
+            ccat = CheshireCat()
+
+            @plugin
+            def activated(plugin):
+                # Upload an url in the memory when the plugin is activated
+                url = "https://cheshire-cat-ai.github.io/docs/technical/plugins/hooks/"
+                ccat.rabbit_hole.ingest_file(stray=ccat, file=url)
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.activated)
+            - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
+
+    2. **Input arguments**  
+        `plugin`: the `Plugin` object of your plugin with the following properties:
+        
+        ```python
+        plugin.path = # the path of your plugin 
+        plugin.id = # the name of your plugin
+        ```
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import plugin
+            from cat.looking_glass.cheshire_cat import CheshireCat
+
+            ccat = CheshireCat()
+
+            @plugin
+            def deactivated(plugin):
+                # Scroll the declarative memory to clean from memories
+                # with metadata on plugin deactivation
+                declarative_memory = ccat.memory.vectors.declarative
+
+                response = declarative_memory.delete_points_by_metadata_filter(
+                    self, metadata={"source": "best_plugin"}
+                ):
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.deactivated)
+            - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
+
+    3. **Input arguments**  
+    4. **Input arguments**  
+    5. **Input arguments**  

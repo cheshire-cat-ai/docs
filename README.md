@@ -13,6 +13,44 @@
 
 There is a [dedicated channel for Docs on our official Discord](https://discord.com/channels/1092359754917089350/1092360068269359206), don't be shy and contact us there if you need help!
 
+### &#129693; Hooks documentation
+
+To help documenting the [hooks table](./mkdocs/technical/plugins/hooks.md#available-hooks), ensure these elements are not missing:
+
+1. Annotation number with bold heading
+2. Input arguments description with code snippet
+3. collapsible snippet example (`??? example`)
+4. *optional*: any other warning box/additional info for tips, tricks and discouraged behaviors
+5. collapsible note section with title: `??? note "Other resources"` --> in this section please include the link to the hook Python reference in the documentation and any other useful links to other doc's pages.
+
+Example:
+```python
+1. **Input arguments**
+        `user_message_json`, i.e. the JSON message sent via WebSocket done like this:
+        ```JSON
+        {
+            "text": # user's message here
+        }
+        ```
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+
+            @hook  # default priority = 1
+            def before_cat_reads_message(user_message_json, cat):
+                user_message_json["text"] = "The original message has been replaced"
+                cat.working_memory["hacked"] = True
+
+                return user_message_json
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+```
+
 ## 🤹 Manage the tecnology [mkdocs] 
 
 To modify the behavior of MkDocs and its plugins, everything you need is within the `mkdocs.yml` file.  

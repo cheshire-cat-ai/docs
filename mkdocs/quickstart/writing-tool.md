@@ -82,7 +82,7 @@ Going back to the tool actual code:
 Not much to say here: we just check if the color is present in the dictionary and output the price.
 What is indeed interesting is that, in a tool, you can connect your AI to any service, database, file, device, or whatever you need.
 Imagine turning on and off the light in your room, searching an e-commerce or writing an email.
-The only limit is your fantasy 🙂.
+The only limit is your fantasy &#128512;.
 
 ## WatchFiles detected changes... reloading...
 

@@ -103,7 +103,7 @@ Similarly, you can programmatically save your settings as follows:
 settings = cat.mad_hatter.get_plugin().save_settings(settings)
 ```
 
-where `settings` is a dictionary, a JSON schema or a Pydantic `BaseModel` describing your plugin's settings.
+where `settings` is a dictionary describing your plugin's settings.
 
 ## Advanced settings save / load
 

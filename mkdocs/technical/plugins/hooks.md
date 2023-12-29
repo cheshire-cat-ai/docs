@@ -713,8 +713,9 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
     | Activated (1)       | Intervene when a plugin is enabled                 |
     | Deactivated (2)     | Intervene when a plugin is disabled                |
     | Settings schema (3) | Override how the plugin's settings are retrieved   |
-    | Load settings (4)   | Override how the plugin's settings are loaded      |
-    | Save settings (5)   | Override how the plugin's settings are saved       |
+    | Settings model (4)  | Override how the plugin's settings are retrieved   |
+    | Load settings (5)   | Override how the plugin's settings are loaded      |
+    | Save settings (6)   | Override how the plugin's settings are saved       |
 
     </div>
 
@@ -770,7 +771,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
                 response = declarative_memory.delete_points_by_metadata_filter(
                     self, metadata={"source": "best_plugin"}
-                ):
+                )
             ```
 
         ??? note "Other resources"
@@ -779,5 +780,151 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
 
     3. **Input arguments**  
+        This hook has no input arguments.
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import plugin
+            from pydantic import BaseModel, Field
+
+            # define your plugin settings model
+            class MySettings(BaseModel):
+            text_field: str = Field(
+                title="Your field title",
+                description="Your field description",
+                default="""default value""",
+                extra={"type": "Text"}
+            )
+            bool_field: bool = Field(
+            default=True,
+            title="Your field title",
+            )
+            int_field: int = 3
+
+            # get your plugin settings schema
+            @plugin
+            def settings_schema():
+                return MySettings.model_json_schema()
+
+            # load your plugin settings
+            settings = ccat.mad_hatter.get_plugin().load_settings()
+            # access settings
+            text_field = settings["text_field"]
+            bool_field = settings["bool_field"]
+            int_field = settings["int_field"]
+            ```
+
+        ??? warning
+
+            Note that `settings["field_name"]` works if you have a `settings.json` file in your plugin folder,
+            otherwise you get `KeyError`.
+
+            You can solve that by:
+
+            1. creating a default `settings.json` file
+            2. using a `try-catch` block when accessing plugin settings
+
+            Soon, `settings.json` will be created by the cat core for the *settings fields* with default values only.
+    
+        ??? note "Other resources"
+
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.settings_schema)
+            - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
+
     4. **Input arguments**  
+        This hook has no input arguments.
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import plugin
+            from pydantic import BaseModel, Field
+
+            # define your plugin settings model
+            class MySettings(BaseModel):
+            text_field: str = Field(
+                title="Your field title",
+                description="Your field description",
+                default="""default value""",
+                extra={"type": "Text"}
+            )
+            bool_field: bool = Field(
+            default=True,
+            title="Your field title",
+            )
+            int_field: int = 3
+
+            # get your plugin settings Pydantic model
+            @plugin
+            def settings_model():
+                return MySettings
+
+            # load your plugin settings
+            settings = ccat.mad_hatter.get_plugin().load_settings()
+            # access settings
+            text_field = settings["text_field"]
+            bool_field = settings["bool_field"]
+            int_field = settings["int_field"]
+            ```
+
+        ??? warning
+
+            Note that `settings_model` is preferred to `settings_schema`.
+
+            Consider that `settings["field_name"]` works if you have a `settings.json` file in your plugin folder,
+            otherwise you get `KeyError`.
+
+            You can solve that by:
+
+            1. creating a default `settings.json` file
+            2. using a `try-catch` block when accessing plugin settings
+
+            Soon, `settings.json` will be created by the cat core for the *settings fields* with default values only.
+
+        ??? note "Other resources"
+
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.settings_model)
+            - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
+
     5. **Input arguments**  
+        This hook has no input arguments.
+
+        ??? example
+
+            ```python
+            @plugin
+            def load_settings():
+                return MySettings
+            ```
+
+        ??? warning
+
+            Useful to load settings via API and do custom stuff.
+
+        ??? note "Other resources"
+
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.load_settings)
+            - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
+
+    6. **Input arguments**  
+        `settings`: the settings `Dict` to be saved
+
+        ??? example
+
+            ```python
+            @plugin
+            def save_settings():
+                return MySettings
+            ```
+
+        ??? warning
+
+            Useful to load settings via API and do custom stuff.
+
+        ??? note "Other resources"
+
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.save_settings)
+            - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
+
+> **_NOTE:_**  Any function in a plugin decorated by `@plugin` and named properly (among the list of available overrides, **Plugin** tab in the table above) is used to override plugin behaviour. These are not hooks because they are not piped, they are *specific* for every plugin.

@@ -914,8 +914,8 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             ```python
             @plugin
-            def save_settings():
-                return MySettings
+            def save_settings(settings):
+                return settings
             ```
 
         ??? warning

@@ -15,13 +15,13 @@ There is a [dedicated channel for Docs on our official Discord](https://discord.
 
 ### &#129693; Hooks documentation
 
-To help documenting the [hooks table](./mkdocs/technical/plugins/hooks.md#available-hooks), ensure these elements are not missing:
+To help documenting the [hooks table](./mkdocs/technical/plugins/hooks.md#available-hooks), ensure these elements are not missing and please keep the order:
 
 1. Annotation number with bold heading
-2. Input arguments description with code snippet
-3. collapsible snippet example (`??? example`)
-4. *optional*: any other warning box/additional info for tips, tricks and discouraged behaviors
-5. collapsible note section with title: `??? note "Other resources"` --> in this section please include the link to the hook Python reference in the documentation and any other useful links to other doc's pages.
+2. *Input arguments* description with *code snippet* example
+3. *optional*: any other **non collapsible** `warning` box/additional `info` for tips, tricks and discouraged behaviors (`!!! info`/`!!! warning`)
+4. **collapsible** snippet example (`??? example`)
+5. **collapsible** note section with title: `??? note "Other resources"` --> in this section please include the link to the hook Python reference in the documentation and any other useful links to other doc's pages.
 
 Example:
 ```python
@@ -32,6 +32,9 @@ Example:
             "text": # user's message here
         }
         ```
+
+        !!! info
+            Hook the incoming user message JSON dictionary
 
         ??? example
 

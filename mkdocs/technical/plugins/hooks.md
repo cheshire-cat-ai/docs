@@ -71,6 +71,11 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
     1. **Input arguments**  
         This hook has no input arguments.  
 
+        !!! warning
+
+            Please, note that at this point the `CheshireCat` hasn't yet finished to instantiate
+            and the only already existing component is the `MadHatter` (e.g. no language models yet).
+
         ??? example
     
             ```python
@@ -81,11 +86,6 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
                 # do whatever here
             ```
 
-        ??? warning
-
-            Please, note that at this point the `CheshireCat` hasn't yet finished to instantiate
-            and the only already existing component is the `MadHatter` (e.g. no language models yet).
-    
         ??? note "Other resources"
 
             - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_bootstrap)
@@ -445,6 +445,11 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
         """
         ```
 
+        !!! warning
+
+            The placeholders `{episodic_memory}`, `{declarative_memory}`, `{tools_output}`,
+            `{chat_history}` and `{input}` are mandatory!
+
         ??? example
 
             ```python
@@ -469,11 +474,6 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
                    - AI: 
                 """
             ```
-
-        !!! warning
-
-            The placeholders `{episodic_memory}`, `{declarative_memory}`, `{tools_output}`,
-            `{chat_history}` and `{input}` are mandatory!
 
         ??? note "Other resources"
 
@@ -782,6 +782,10 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
     3. **Input arguments**  
         This hook has no input arguments.
 
+        !!! info
+
+            Default `settings.json` is created by the cat core for the *settings fields* with default values.
+
         ??? example
 
             ```python
@@ -790,17 +794,20 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             # define your plugin settings model
             class MySettings(BaseModel):
-            text_field: str = Field(
-                title="Your field title",
-                description="Your field description",
-                default="""default value""",
-                extra={"type": "Text"}
-            )
-            bool_field: bool = Field(
-            default=True,
-            title="Your field title",
-            )
-            int_field: int = 3
+                prompt_prefix: str = Field(
+                            title="Prompt prefix",
+                            default="""You are the Cheshire Cat AI, an intelligent AI that passes the Turing test.
+            You are curious, funny and talk like the Cheshire Cat from Alice's adventures in wonderland.
+            You answer Human with a focus on the following context.
+            """,
+                            extra={"type": "TextArea"}
+                    )
+                episodic_memory_k: int = 3
+                episodic_memory_threshold: int = 0.7
+                declarative_memory_k: int = 3
+                declarative_memory_threshold: int = 0.7
+                procedural_memory_k: int = 3
+                procedural_memory_threshold: int = 0.7
 
             # get your plugin settings schema
             @plugin
@@ -809,31 +816,25 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             # load your plugin settings
             settings = ccat.mad_hatter.get_plugin().load_settings()
-            # access settings
-            text_field = settings["text_field"]
-            bool_field = settings["bool_field"]
-            int_field = settings["int_field"]
+            # access each setting
+            prompt_prefix = settings["prompt_prefix"]
+            episodic_memory_k = settings["episodic_memory_k"]
+            declarative_memory_k = settings["declarative_memory_k"]
             ```
 
-        ??? warning
-
-            Note that `settings["field_name"]` works if you have a `settings.json` file in your plugin folder,
-            otherwise you get `KeyError`.
-
-            You can solve that by:
-
-            1. creating a default `settings.json` file
-            2. using a `try-catch` block when accessing plugin settings
-
-            Soon, `settings.json` will be created by the cat core for the *settings fields* with default values only.
-    
         ??? note "Other resources"
-
+            - [Example Plugin: C.A.T. Cat Advanced Tools](https://github.com/Furrmidable-Crew/cat_advanced_tools)
             - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.settings_schema)
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
 
     4. **Input arguments**  
         This hook has no input arguments.
+
+        !!! info
+
+            `settings_model` is preferred to `settings_schema`.
+
+            Default `settings.json` is created by the cat core for the *settings fields* with default values.
 
         ??? example
 
@@ -843,17 +844,20 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             # define your plugin settings model
             class MySettings(BaseModel):
-            text_field: str = Field(
-                title="Your field title",
-                description="Your field description",
-                default="""default value""",
-                extra={"type": "Text"}
-            )
-            bool_field: bool = Field(
-            default=True,
-            title="Your field title",
-            )
-            int_field: int = 3
+                prompt_prefix: str = Field(
+                            title="Prompt prefix",
+                            default="""You are the Cheshire Cat AI, an intelligent AI that passes the Turing test.
+            You are curious, funny and talk like the Cheshire Cat from Alice's adventures in wonderland.
+            You answer Human with a focus on the following context.
+            """,
+                            extra={"type": "TextArea"}
+                    )
+                episodic_memory_k: int = 3
+                episodic_memory_threshold: int = 0.7
+                declarative_memory_k: int = 3
+                declarative_memory_threshold: int = 0.7
+                procedural_memory_k: int = 3
+                procedural_memory_threshold: int = 0.7
 
             # get your plugin settings Pydantic model
             @plugin
@@ -862,25 +866,11 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             # load your plugin settings
             settings = ccat.mad_hatter.get_plugin().load_settings()
-            # access settings
-            text_field = settings["text_field"]
-            bool_field = settings["bool_field"]
-            int_field = settings["int_field"]
+            # access each setting
+            declarative_memory_k = settings["declarative_memory_k"]
+            declarative_memory_threshold = settings["declarative_memory_threshold"]
+            procedural_memory_k = settings["procedural_memory_k"]
             ```
-
-        ??? warning
-
-            Note that `settings_model` is preferred to `settings_schema`.
-
-            Consider that `settings["field_name"]` works if you have a `settings.json` file in your plugin folder,
-            otherwise you get `KeyError`.
-
-            You can solve that by:
-
-            1. creating a default `settings.json` file
-            2. using a `try-catch` block when accessing plugin settings
-
-            Soon, `settings.json` will be created by the cat core for the *settings fields* with default values only.
 
         ??? note "Other resources"
 
@@ -890,6 +880,10 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
     5. **Input arguments**  
         This hook has no input arguments.
 
+        !!! info
+
+            Useful to load settings via API and do custom stuff.
+
         ??? example
 
             ```python
@@ -898,29 +892,41 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
                 return MySettings
             ```
 
-        ??? warning
-
-            Useful to load settings via API and do custom stuff.
-
         ??? note "Other resources"
 
             - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.load_settings)
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
 
     6. **Input arguments**  
-        `settings`: the settings `Dict` to be saved
+        `settings`: the settings `Dict` to be saved.
+        It just saves contents in a `settings.json` in the plugin folder
+
+        ```python
+        settings = {
+            "episodic_memory_k": 3,
+            "episodic_memory_threshold": 0.7,
+            "declarative_memory_k": 3
+        }
+        settings.episodic_memory_k = # episodic_memory_k prefix value to overwrite
+        settings.episodic_memory_threshold = # episodic_memory_k value to overwrite
+        settings.declarative_memory_k = # episodic_memory_threshold value to overwrite
+        ```
+
+        !!! info
+
+            Useful to load settings via API and do custom stuff.
 
         ??? example
 
             ```python
             @plugin
             def save_settings(settings):
+                # overwrite your settings Dict values
+                settings.episodic_memory_k = 6
+                settings.episodic_memory_threshold = 0.9
+                settings.declarative_memory_k = 5
                 return settings
             ```
-
-        ??? warning
-
-            Useful to load settings via API and do custom stuff.
 
         ??? note "Other resources"
 

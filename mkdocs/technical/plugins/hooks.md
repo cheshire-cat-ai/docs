@@ -933,7 +933,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.save_settings)
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
 
-=== "&#128268; Factory"
+=== "&#127981; Factory"
 
     <div class="annotate" mardown>
 

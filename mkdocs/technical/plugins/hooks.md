@@ -933,4 +933,95 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.save_settings)
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
 
+=== "&#127981; Factory"
+
+    <div class="annotate" mardown>
+
+    | Name                              | Description                                         |
+    | :---------------------------------| :---------------------------------------------------|
+    | Factory Allowed LLMs (1)          | Intervene before cat retrive llm settings           |
+    | Factory Allowed Embedders (2)     | Intervene before cat retrive embedder settings      |
+    
+    </div>
+
+    1. **Input arguments**  
+        `allowed`: List of LLMSettings classes
+
+        !!! info
+
+            Useful to extend or restrict support of llms.
+
+        ??? example
+
+            ```python
+            from cat.factory.llm import LLMSettings
+            from langchain_mistralai.chat_models import ChatMistralAI
+
+            class MistralAIConfig(LLMSettings):
+                """The configuration for the MistralAI plugin."""
+                mistral_api_key: Optional[SecretStr]
+                model: str = "mistral-small"
+                max_tokens: Optional[int] = 4096
+                top_p: float = 1
+                
+                _pyclass: Type = ChatMistralAI
+            
+                model_config = ConfigDict(
+                    json_schema_extra={
+                        "humanReadableName": "MistralAI",
+                        "description": "Configuration for MistralAI",
+                        "link": "https://www.together.ai",
+                    }
+                )
+
+
+            @hook
+            def factory_allowed_llms(allowed, cat) -> List:
+            allowed.append(MistralAIConfig)
+            return allowed
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+            - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/core_plugin/hooks/language.py#L7)
+    
+    2. **Input arguments**  
+        `allowed`: List of LLMSettings classes
+
+        !!! info
+
+            Useful to extend or restrict support of embedders.
+
+        ??? example
+
+            ```python
+            from cat.factory.embedder import EmbedderSettings
+            from langchain.embeddings import JinaEmbeddings
+
+            class JinaEmbedderConfig(EmbedderSettings):
+                jina_api_key: str
+                model_name: str='jina-embeddings-v2-base-en'
+                _pyclass: Type = JinaEmbeddings
+                
+                model_config = ConfigDict(
+                    json_schema_extra = {
+                        "humanReadableName": "Jina embedder",
+                        "description": "Jina embedder",
+                        "link": "https://jina.ai/embeddings/",
+                    }
+                )
+
+            @hook
+            def factory_allowed_embedders(allowed, cat) -> List:
+            allowed.append(JinaEmbedderConfig)
+            return allowed
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference]()
+            - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/core_plugin/hooks/language.py#L23)
+
+
 > **_NOTE:_**  Any function in a plugin decorated by `@plugin` and named properly (among the list of available overrides, **Plugin** tab in the table above) is used to override plugin behaviour. These are not hooks because they are not piped, they are *specific* for every plugin.

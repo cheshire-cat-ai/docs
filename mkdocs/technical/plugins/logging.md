@@ -24,7 +24,7 @@ from cat.log import log
 and then used as easy as:
 ```
 log.error("A simple text here")
-log.info(f"Value of $var is {$var}")
+log.info(f"Value of user message is {user_message_json["text"]}")
 log.critical(variable_value)
 ```
 Take a look [here](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/log/) if you want to better understand how the log system is implemented.

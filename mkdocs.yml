@@ -92,6 +92,7 @@ nav:
         - Python: technical/clientlib/clientlib-python.md
         - TypeScript: technical/clientlib/clientlib-typescript.md
         - PHP: technical/clientlib/clientlib-php.md
+        - Ruby: technical/clientlib/clientlib-ruby.md
     - Administrations:
         - Architecture: administrators/architecture.md
         - Environment Variables: administrators/env-variables.md

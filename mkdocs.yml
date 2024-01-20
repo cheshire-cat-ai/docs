@@ -46,6 +46,7 @@ nav:
     - Plugin: technical/plugins/plugins.md
     - Tools: technical/plugins/tools.md
     - Hooks: technical/plugins/hooks.md
+    - Logging: technical/plugins/logging.md
     - Settings: technical/plugins/settings.md
     - Dependencies: technical/plugins/dependencies.md
     - Python Reference: technical/API_Documentation/

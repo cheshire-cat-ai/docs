@@ -46,7 +46,7 @@ docker compose up
 ```
 
 The first time you run the `docker compose up` command,
-it will take several minutes to pull the Docker Cat image.
+it will take several minutes to pull the Docker Cat image depending on network connection.
 
 You will see three new folders:
 
@@ -54,14 +54,24 @@ You will see three new folders:
  - `plugins`: where you can install and develop plugins
  - `static`: folder to serve static files from 
 
+## Useful commands
+
+To start the container in background mode, use the `--detach` or `-d` flag to the command, as:
+```
+docker compose up -d
+```
+In this way the terminal won't be locked by the docker compose execution.
+
+To check the logs do the following:
+
+```
+docker compose logs -f
+```
 
 ## First configuration of the LLM
 
 - Open the Admin Portal in your browser at [`localhost:1865/admin`](http://localhost:1865/admin){:target="_blank"}
 - Configure the LLM in the `Settings` tab and paste your API key ([video](../assets/vid/setup.mp4))
-
-
-TODO: update the video  
 
 ## Next step
 In the [next step](./play-with-the-cat.md), you will learn how to play with the Cat.

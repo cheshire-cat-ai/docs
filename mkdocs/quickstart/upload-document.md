@@ -7,9 +7,13 @@ These documents are saved in a local database called `declarative memory`.
 ## Improve the Cat knowledge
 The Cat's knowledge about socks is quite basic; we will upload more specific knowledge.
 
-Go to the Admin Portal at `localhost:1865/admin` on the `Home` tab, click on `Upload url` and use this url `https://en.wikipedia.org/wiki/N%C3%A5lebinding`:
+Go to the Admin Portal at `localhost:1865/admin` on the `Home` tab, click on the `Flash Icon`, then click on `Upload url` and use this url `https://en.wikipedia.org/wiki/N%C3%A5lebinding`:
 
 ![Alt text](../assets/img/quickstart/upload-document/upload-url.png)
+
+You receive a notification of the ingesting operation:
+
+![Alt text](../assets/img/quickstart/upload-document/upload-url-notification.png)
 
 You receive notification of the finished read:
 

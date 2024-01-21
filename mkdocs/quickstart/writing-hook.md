@@ -26,7 +26,7 @@ You are an expert in socks, and you reply with exactly one rhyme.
 ## Testing the Hook
 Now, let’s ask again “who are you?” and for our favorite socks color:
 
-![Alt text](image.png)
+![Alt text](../assets/img/quickstart/write-hook/marvin-sockseller.png)
 
 ## Explaining the code step by step
 ```python

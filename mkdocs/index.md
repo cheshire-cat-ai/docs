@@ -1,15 +1,19 @@
 # &#128075; Hello, dear!
+```
+"Every adventure requires a first step".
+(Alice's Adventures in Wonderland - Lewis Carroll)
+```
 
-## What is this?
+## Features
 
 The Cheshire Cat is an open-source, hackable and production-ready framework that allows developing intelligent personal 
-AI assistants agents on top of [Large Language Models](conceptual/llm.md) (LLM).
+AI assistant agents on top of [Large Language Models](conceptual/llm.md) (LLM).
 
-| Cheshire Cat Features                      |                                                                   |
-|--------------------------------------------|-------------------------------------------------------------------|
-| &#129520; API first framework              | &#128220; Can ingest documents                                    |
-| &#127757; Language model agnostic          | &#128024; Local Long term memory                                  |
-| &#128640; Extendable via plugins in Python | 	&#128011; 100% [dockerized](https://docs.docker.com/get-docker/) |
+| Cheshire Cat Features                                                                  |                                                                                   |
+|----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| &#129520; API first framework [Explore](technical/clientlib/clientlib-python.md)       | &#128220; Can ingest documents [Explore](quickstart/upload-document.md)           |
+| &#127757; Language model agnostic                                                      | &#128024; Local Long term memory [Explore](conceptual/memory/long_term_memory.md) |
+| &#128640; Extendable via plugins in Python [Explore](technical/plugins/plugins.md)     | 	&#128011; 100% [dockerized](https://docs.docker.com/get-docker/)                 |
 
 ## Quick links
 

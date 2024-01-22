@@ -8,7 +8,7 @@ Installing plugins from our registry is a seamless process that enhances your Ch
 2. **Plugins Tab**: Click on the "Plugins" tab within the dashboard.
 3. **Search and Filter**: Use the search or filter options to locate your desired plugin.
 4. **Installation**: Once you've found the plugin, click the "Install" button.
-5. **Wait for Completion**: Allow the installation process to complete. Although our dashboard doesn't feature an automatic refresh mechanism, wait for a few seconds and manually refresh your browser page.
+5. **Wait for Completion**: The admin will show a loading spinner until the plugin installation is not completed.
 
 
 ![Admin plugin install from registry](../assets/img/admin_screenshots/install-plugin-from-registry.gif)
@@ -27,5 +27,5 @@ Manual installation grants users more control over the process and facilitates t
 
 After installing a plugin, consider these steps:
 
-- **Refresh**: Manually refresh the page in your browser after a few moments. This ensures any freshly installed plugins display accurately within the dashboard.
+- **Refresh**: The admin refreshes automatically after the installation but if for some reason the plugin does not show, refresh the page or check cat logs for any errors;
 - **Settings Configuration**: If the newly installed plugin requires setup or configuration, look for the cog icon associated with the plugin. Click on it to access and adjust the plugin's settings according to your preferences.

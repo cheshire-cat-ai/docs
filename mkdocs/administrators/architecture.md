@@ -18,7 +18,7 @@ The local Cat core path `./core` is mounted to the image `cheshire_cat_core`, by
 As default the Admin Portal connect to the core using `localhost` and port `1678`, these values can be customized using [environment variables](env-variables.md#core_host). This port is the only one exposed by the `cheshire_cat_core` image.
 
 ## Logging
-All the log messages are printed on the standard output and log level can be configured with [`LOG_LEVEL`](env-variables.md#log_level) environment variables.
+All the log messages are printed on the standard output and log level can be configured with [`LOG_LEVEL`](env-variables.md#log_level) environment variables. You can check logging system documentation [here](../technical/plugins/logging.md).
 
 ## Configuration
 Some options of the Core can be customized using [environment variables](env-variables.md).

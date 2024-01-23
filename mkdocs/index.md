@@ -123,7 +123,3 @@ mentioning `@Cheshire Cat AI`.
 __License__
 
 [GNU General Public License v3.0](https://raw.githubusercontent.com/cheshire-cat-ai/core/main/LICENSE)
-
-__Credits__
-
-Documentation images were generated with MidJourney, prompted by [Edgars Romanovskis](https://www.linkedin.com/in/edgars-romanovskis-b28826259/)

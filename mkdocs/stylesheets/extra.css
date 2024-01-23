@@ -16,7 +16,8 @@ body[data-md-color-scheme="slate"] .md-header__button.md-logo img {
 }
 
 [data-md-color-scheme="custom"] .md-nav--secondary .md-nav__title,
-[data-md-color-scheme="custom"] .md-nav--primary .md-nav__title {
+[data-md-color-scheme="custom"] .md-nav--primary .md-nav__title,
+[data-md-color-scheme="custom"] .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
   background: #F6F2EC;
   box-shadow: none;
 }

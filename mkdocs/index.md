@@ -4,17 +4,6 @@
 (Alice's Adventures in Wonderland - Lewis Carroll)
 ```
 
-## Features
-
-The Cheshire Cat is an open-source, hackable and production-ready framework that allows developing intelligent personal 
-AI assistant agents on top of [Large Language Models](conceptual/llm.md) (LLM).
-
-| Cheshire Cat Features                                                                  |                                                                                   |
-|----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| &#129520; API first framework [Explore](technical/clientlib/clientlib-python.md)       | &#128220; Can ingest documents [Explore](quickstart/upload-document.md)           |
-| &#127757; Language model agnostic                                                      | &#128024; Local Long term memory [Explore](conceptual/memory/long_term_memory.md) |
-| &#128640; Extendable via plugins in Python [Explore](technical/plugins/plugins.md)     | 	&#128011; 100% [dockerized](https://docs.docker.com/get-docker/)                 |
-
 ## Quick links
 
 <div class="grid cards" markdown>
@@ -53,6 +42,65 @@ AI assistant agents on top of [Large Language Models](conceptual/llm.md) (LLM).
 
 </div>
 
+
+## Cheshire Cat Features
+
+The Cheshire Cat is an open-source, hackable and production-ready framework that allows developing intelligent personal 
+AI assistant agents on top of [Large Language Models](conceptual/llm.md) (LLM).
+
+<div class="grid cards" markdown>
+
+-   &#129520; __API first framework__
+
+    ---
+
+    Chat with the Cat and interact with its endpoints!
+
+    [:octicons-arrow-right-24: Python API](technical/clientlib/clientlib-python.md)
+
+-   &#128640; __Extendable via plugins in Python__
+
+    ---
+
+    Write your first plugin, your imagination is the limit!
+
+    [:octicons-arrow-right-24: Write your first plugin](quickstart/prepare-plugin.md)
+
+-   &#127757; __Language model agnostic__
+
+    ---
+
+    Easily choose from a plenty of models to use!
+
+    :octicons-arrow-right-24: Tutorials coming soon...
+
+
+-   &#128220; __Can ingest documents__
+
+    ---
+
+    Ground the model based on your knowledge base!
+
+    [:octicons-arrow-right-24: Retrieval Augmented Generation](llm-concepts/rag.md)
+
+-   &#128024; __Local Long term memory__
+
+    ---
+
+    Make use of a persistent memory across restarts!
+
+    [:octicons-arrow-right-24: Cat's Long Term Memory](conceptual/memory/long_term_memory.md)
+
+-   &#128011; __100% dockerized__
+
+    ---
+
+    Setup the Cat in the blink of an eye with the pre-built docker image!
+
+    [:octicons-arrow-right-24: Installation](quickstart/installation-configuration.md)
+
+</div>
+
 ## Get in touch with us! 
 
 [:fontawesome-brands-discord: Discord](https://discord.gg/bHX5sNFCYU){ .md-button .md-button--primary } &#128072;
@@ -75,7 +123,3 @@ mentioning `@Cheshire Cat AI`.
 __License__
 
 [GNU General Public License v3.0](https://raw.githubusercontent.com/cheshire-cat-ai/core/main/LICENSE)
-
-__Credits__
-
-Documentation images were generated with MidJourney, prompted by [Edgars Romanovskis](https://www.linkedin.com/in/edgars-romanovskis-b28826259/)

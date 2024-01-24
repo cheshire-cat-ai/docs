@@ -21,7 +21,7 @@ By default, the core APIs are exposed using the HTTP/WS protocol, set this param
 Default value: `false`
 
 ### QDRANT_HOST
-The host on which Qdrant is running. Cat provides a ready-to-use Docker image for Qdrant. If you want to use an external instance of Qdrant, use this parameter to specify the host where it is running.
+The host on which Qdrant is running. Cat provides a ready-to-use Docker image for Qdrant. If you want to use an external instance of Qdrant, use this parameter to specify the host where it is running. You can also optionally specify the protocol to use in the URL to make a secure connection (for example https://example.com).
 
 Default value: `localhost`
 
@@ -29,6 +29,11 @@ Default value: `localhost`
 The port on which Qdrant is running. Cat provides a ready-to-use Docker image for Qdrant. If you want to use an external instance of Qdrant, use this parameter to specify the port where it is running.
 
 Default value: `6333`
+
+### QDRANT_API_KEY
+This is used to set the Qdrant Api Key in the client connection statement. It should be configured if an Api Key is set up on the Qdrant Server.
+
+Default value: `[empty]`
 
 ### API_KEY
 By default, the core APIs don't require any authorization, if you set this parameter all endpoints will require an `access_token` header for authentication such as `access_token: your-key-here`. Failure to provide the correct access token will result in a 403 error.

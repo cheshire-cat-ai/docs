@@ -17,6 +17,12 @@ Decision is up to you.
 Well, the local memory is safe and under your control, although embeddings and prompts are shared with your configured LLM, meaning you need to check how safe is the LLM.
 We plan to adopt local LLMs, at which point all your data will be under your control.
 
+#### What is the difference between Langchain and the Cat?
+
+[The Cheshire Cat](https://cheshirecat.ai/) is a production-ready AI framework, it means that with almost no effort you can setup an intelligent agent ready to help both you and your customers.
+
+On the other hand, [Langchain](https://github.com/langchain-ai/langchain) is a framework for developing applications powered by language models. It offers tons of composable tools and integrations to this purpose and the Cheshire Cat makes use of some of them to manage chains, agents, llm/embedder. You can take an in depth look at our [core](https://github.com/cheshire-cat-ai/core) if you are purr-ious about it.
+
 ## Basic Info
 
 #### Can I insert a long article into the chat?

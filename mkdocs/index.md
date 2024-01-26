@@ -101,10 +101,6 @@ AI assistant agents on top of [Large Language Models](conceptual/llm.md) (LLM).
 
 </div>
 
-## Contribute the Documentation
-
-Good documentation is *key* to a good software and at Cheshire Cat AI we are always looking for great community members that are willing to improve it with their writing skills. Please, if you would like to contribute, check our [guidelines](https://github.com/cheshire-cat-ai/docs#-how-to-contribute-documentation) about documentation contribution and remember to always have fun whatever you decide to contribute to, meow.
-
 ## Get in touch with us! 
 
 [:fontawesome-brands-discord: Discord](https://discord.gg/bHX5sNFCYU){ .md-button .md-button--primary } &#128072;

@@ -101,7 +101,9 @@ Remember that:
 
 - the layers visible during the save of the draw.io files, will be the default visible layers when the diagram is opened
   
-- by default, the hooks shapes have to be visible.
+- by default, the hooks shapes have to be visible
+  
+- the folder `mkdocs/assets/img/diagrams` contains the svg files used in the main diagram pages, in case you change the diagrams remember to update them. 
 
 ### 🏗️ Build
 

@@ -103,7 +103,7 @@ nav:
         - Cat as Sidecar of your product: use-cases/side-car.md
         - Cat as Discord BOT: use-cases/discord-bot.md
     - Guides:
-      - How to update the Cat Core: guides/update-the-core.md
+#      - How to update the Cat Core: guides/update-the-core.md
       - How to backup the Long Term Memory: technical/advanced/memory_backup.md
 
   - FAQ: faq.md

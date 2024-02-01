@@ -78,16 +78,30 @@ Install dependencies:
 
 ### 🖌️ Diagrams
 
-All the diagrams under the "How the Cat works" menu are created using draw.io, sketch using the draw.io library [drawio-cheshire-cat-library](drawio-cheshire-cat-library.xml).  
-The preview export to SVG and the complete diagram URL are, at the moment, still done manually.  
-Before exporting the URL, remember that:
+All the diagrams under the "Framework/Technical Diagrams" section have been created using draw.io.
+The file [drawio-cheshire-cat-library](drawio-cheshire-cat-library.xml) is a draw.io library, it contains some custom Cat shapes, this library has been created to speed up the sketching, you can use it opening the file with draw.io.
+You can refer to the draw.io files with the extension `.drawio`, directly from the markdown files like this:
+```
+# &#128572; The Cat Bootstrap
 
-- the selected tab during the export will become the initial page when the link is opened
+This interactive diagram, zoomable with a click, depicts the internal process involved during bootstrap of the Cat:
 
-- the visible layers will be the default visible layers (the hooks have to be visible by default).
+![](../../assets/diagrams/cat-bootstrap.drawio)
+```
 
-Also, make sure to uncheck the "Edit" and "Tags" options.
-Run action.
+In the `mkdocs.yml` there is defined the hook `drawio_file.py`, this mkdocs plugin converts the drawio files during the build time:
+```
+hooks:
+  - mkdocs/hooks/drawio_file.py
+```
+  
+Remember that:
+
+- the tab selected during the save of the draw.io file, will become the initial page when the diagram is opened
+
+- the layers visible during the save of the draw.io files, will be the default visible layers when the diagram is opened
+  
+- by default, the hooks shapes have to be visible.
 
 ### 🏗️ Build
 

@@ -1,0 +1,33 @@
+{
+  "documented": [
+    "factory_allowed_llms",
+    "factory_allowed_embedders",
+    "before_cat_bootstrap",
+    "after_cat_bootstrap",
+    "before_cat_reads_message",
+    "cat_recall_query",
+    "before_cat_recalls_memories",
+    "before_cat_recalls_episodic_memories",
+    "before_cat_recalls_declarative_memories",
+    "before_cat_recalls_procedural_memories",
+    "after_cat_recalls_memories",
+    "before_cat_sends_message",
+    "before_agent_starts",
+    "agent_fast_reply",
+    "agent_allowed_tools",
+    "agent_prompt_prefix",
+    "agent_prompt_instructions",
+    "agent_prompt_suffix",
+    "rabbithole_instantiates_parsers",
+    "before_rabbithole_insert_memory",
+    "before_rabbithole_splits_text",
+    "after_rabbithole_splitted_text",
+    "before_rabbithole_stores_documents",
+    "settings_schema",
+    "settings_model",
+    "load_settings",
+    "save_settings",
+    "activated",
+    "deactivated"
+  ]
+}

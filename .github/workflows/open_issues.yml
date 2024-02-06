@@ -31,4 +31,4 @@ jobs:
         python ./auto_issue/open_issues.py \
           --paths ./core/core/cat/mad_hatter/core_plugin/hooks \
           --paths ./core/core/cat/mad_hatter/core_plugin/plugin_events.py \
-          --token ${{ secrets.TOKEN }}
+          --token ${{ github.token }}

@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - feature/auto_issue
 
 jobs:
   build:
@@ -26,10 +25,6 @@ jobs:
         ref: main
         # Relative path under $GITHUB_WORKSPACE to place the repository
         path: core
-
-#    - name: Install core dependencies 🏗️
-#      run: |
-#        pip install core/core/
 
     - name: Look for new hooks 👀
       run: |

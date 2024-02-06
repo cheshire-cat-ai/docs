@@ -5,7 +5,7 @@ import json
 import argparse
 import requests
 
-URL = "https://api.github.com/repos/nicola-corbellini/docs/import/issues"
+URL = "https://api.github.com/repos/cheshire-cat-ai/docs/import/issues"
 
 
 def list_functions_from_ast(module_path):

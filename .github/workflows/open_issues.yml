@@ -29,7 +29,7 @@ jobs:
 
     - name: Install core dependencies 🏗️
       run: |
-        ls core |
+        ls core
 #        pip install core/
 
     - name: Look for new hooks 👀

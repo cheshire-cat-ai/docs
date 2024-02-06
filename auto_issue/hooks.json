@@ -1,6 +1,6 @@
 {
   "documented": [
-    "factory_allowed_llms",
+
     "factory_allowed_embedders",
     "before_cat_bootstrap",
     "after_cat_bootstrap",

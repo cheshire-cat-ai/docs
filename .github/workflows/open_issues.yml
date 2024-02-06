@@ -4,11 +4,6 @@ on:
   push:
     branches:
       - main
-      - feature/auto_issue
-
-permissions:
-  id-token: write # This is required for requesting the JWT
-  issues: write
 
 jobs:
   build:
@@ -36,4 +31,4 @@ jobs:
         python ./auto_issue/open_issues.py \
           --paths ./core/core/cat/mad_hatter/core_plugin/hooks \
           --paths ./core/core/cat/mad_hatter/core_plugin/plugin_events.py \
-          --token ${{ secrets.GITHUB_TOKEN }}
+          --token ${{ secrets.CCAT_DOCS_TOKEN }}

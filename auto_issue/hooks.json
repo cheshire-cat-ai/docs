@@ -28,6 +28,6 @@
     "load_settings",
     "save_settings",
     "activated",
-    "deactivated"
+    "deactivated",
   ]
 }

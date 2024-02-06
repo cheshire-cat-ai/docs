@@ -40,6 +40,7 @@ def open_issue(functions):
                 hooks["documented"].append(func)
             else:
                 print(f"Hook {func} unsuccessful")
+                print(response.json())
 
 
 if __name__ == "__main__":

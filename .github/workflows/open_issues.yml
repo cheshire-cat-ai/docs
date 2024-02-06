@@ -27,9 +27,9 @@ jobs:
         # Relative path under $GITHUB_WORKSPACE to place the repository
         path: core
 
-    - name: Install core dependencies 🏗️
-      run: |
-        pip install core/core/
+#    - name: Install core dependencies 🏗️
+#      run: |
+#        pip install core/core/
 
     - name: Look for new hooks 👀
       run: |

@@ -2,10 +2,8 @@ import os
 import ast
 import glob
 import json
-import inspect
 import argparse
 import requests
-import importlib.util
 
 URL = "https://api.github.com/repos/nicola-corbellini/docs/import/issues"
 
@@ -16,21 +14,6 @@ def list_functions_from_ast(module_path):
 
     # Extract function names from the AST
     functions = [node.name for node in ast.walk(tree) if isinstance(node, ast.FunctionDef)]
-
-    return functions
-
-
-def list_functions(module_path):
-    # Load the module from the specified path
-    spec = importlib.util.spec_from_file_location("module_name", module_path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-
-    # Get all members (functions, classes, etc.) of the module
-    members = inspect.getmembers(module)
-
-    # Filter out only functions
-    functions = [member[0] for member in members if inspect.isfunction(member[1])]
 
     return functions
 
@@ -46,17 +29,17 @@ def open_issue(functions):
             data = {
                 "issue": {
                     "title": title,
-                    "body": ""
+                    "body": f"Add hook `{func}` to the table"
                 }
             }
             payload = json.dumps(data)
             response = requests.post(
                 url=URL, headers=headers, data=payload
             )
-            if not response.status_code == 202:
-                print(f"Hook {func} unsuccessful")
-            else:
+            if response.status_code == 202:
                 hooks["documented"].append(func)
+            else:
+                print(f"Hook {func} unsuccessful")
 
 
 if __name__ == "__main__":
@@ -68,7 +51,7 @@ if __name__ == "__main__":
 
     headers = {
         "Authorization": f"token {args.token}",
-        "Accept": "application/vdn.github.golden-comet-preview+json"
+        "Accept": "application/json"
     }
 
     for path in args.paths:

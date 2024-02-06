@@ -29,7 +29,8 @@ jobs:
 
     - name: Install core dependencies 🏗️
       run: |
-        pip install core/
+        ls core |
+#        pip install core/
 
     - name: Look for new hooks 👀
       run: python ./auto_issue/open_issues.py

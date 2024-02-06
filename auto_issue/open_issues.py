@@ -1,4 +1,5 @@
 import os
+import ast
 import glob
 import json
 import inspect
@@ -6,7 +7,17 @@ import argparse
 import requests
 import importlib.util
 
-URL = "https://api.github.com/repos/cheshire-cat-ai/docs/import/issues"
+URL = "https://api.github.com/repos/nicola-corbellini/docs/import/issues"
+
+
+def list_functions_from_ast(module_path):
+    with open(module_path, 'r') as file:
+        tree = ast.parse(file.read(), filename=module_path)
+
+    # Extract function names from the AST
+    functions = [node.name for node in ast.walk(tree) if isinstance(node, ast.FunctionDef)]
+
+    return functions
 
 
 def list_functions(module_path):
@@ -30,6 +41,7 @@ def open_issue(functions):
 
     for func in functions:
         if func not in hooks["documented"]:
+            print(f"Opening issue for {func}")
             title = f"Add hook `{func}` to hooks' table"
             data = {
                 "issue": {
@@ -43,6 +55,8 @@ def open_issue(functions):
             )
             if not response.status_code == 202:
                 print(f"Hook {func} unsuccessful")
+            else:
+                hooks["documented"].append(func)
 
 
 if __name__ == "__main__":
@@ -60,8 +74,8 @@ if __name__ == "__main__":
     for path in args.paths:
         if os.path.isdir(path):
             for module in glob.glob(os.path.join(path, "*.py")):
-                functions = list_functions(module)
+                functions = list_functions_from_ast(module)
                 open_issue(functions)
         else:
-            functions = list_functions(path)
+            functions = list_functions_from_ast(path)
             open_issue(functions)

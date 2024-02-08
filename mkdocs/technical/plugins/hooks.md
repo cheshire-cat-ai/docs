@@ -275,9 +275,9 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
         
             ```python
             from cat.mad_hatter.decorators import hook
-    
+
             @hook  # default priority = 1
-            def before_cat_recalls_memories(cat):
+            def after_cat_recalls_memories(cat):
                 # do whatever here
             ```
 

@@ -1,4 +1,4 @@
-#  &#128075; Hello, Dear!
+#  &#128075; Hello, Dear! 
 
 > Good documentation is *key* to a good software and at Cheshire Cat AI we are always looking for great community members that are willing to improve it with their writing skills. This README as well as all the documentation you can find about the [Cat](https://cheshire-cat-ai.github.io/docs/) is the result of an effort between our Core team and a great Community. Remember to always have fun whatever you decide to contribute to, meow.
 

@@ -361,7 +361,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
                 compressed_history = cat.llm(f"Make a concise summary of the following: {agent_input['chat_history']}")
                 agent_input["chat_history"] = compressed_history
                 
-                return anget_input
+                return agent_input
             ```
 
         ??? note "Other resources"

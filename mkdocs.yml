@@ -53,8 +53,8 @@ nav:
     - Registry:
       - Using the Plugin Template: plugins-registry/plugin-from-template.md
       - Publishing a Plugin: plugins-registry/publishing-plugin.md
-    # - Debugging:
-    #     - Visual Studio Code: technical/debugging/vscode.md
+    - Debugging:
+        - Visual Studio Code: technical/debugging/vscode.md
 
   - Framework:
       - LLM Concepts:

@@ -101,7 +101,7 @@ After the creation of the launch.json, Copy-Paste this config:
 
 To Connect the vscode debugger, ask the cat to help you on debugging ![ask help to debug](../../assets/img/vscode-debugger/image.png) and in the `Run and Debug` tab start the debugging by clicking the `Play button` ▶️ or Use the shortcut `F5`.
 
-![Enable The debugger](../../assets/img/vscode-debugger/rundebugger.png)
+![Enable The debugger](../../assets/img/vscode-debugger/run_debugger.png)
 
 You are ready to debug your plugin!
 

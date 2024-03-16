@@ -23,6 +23,21 @@ We plan to adopt local LLMs, at which point all your data will be under your con
 
 On the other hand, [Langchain](https://github.com/langchain-ai/langchain) is a framework for developing applications powered by language models. It offers tons of composable tools and integrations to this purpose and the Cheshire Cat makes use of some of them to manage chains, agents, llm/embedder. You can take an in depth look at our [core](https://github.com/cheshire-cat-ai/core) if you are purr-ious about it.
 
+#### I want to use the admin page for...
+
+The admin page is an administration/debugging panel. The only use case is to provide a more convinient way to interact with the cat...
+
+We provide a [widget](https://github.com/cheshire-cat-ai/widget-vue) to connect the cat to your product!
+
+You are free to modify the admin to adapt it on your product **however** you will need to respect the GPL3, meaning you are free to fork and go on your own, but you are forced to open source changes.
+
+#### Why the admin doesn't have authetification using email-password or google account??
+
+The admin page is an administration/debugging panel. 
+
+The only use case is to provide a more convinient way to interact with the cat with **basic** authentification through api_key.
+
+
 ## Basic Info
 
 #### Can I insert a long article into the chat?
@@ -53,28 +68,9 @@ You can delete the `long_term_memory` folder and restart the Cat!
 
 Please check if you have a valid credit card connected or if you have used up all the credits of your OpenAI trial period.
 
-#### Everything works in localhost but not on another server
-
-You should configure ports in the `.env` file. Change according to your preferred host and ports:
-
-```text
-# Decide host and port for your Cat. Default will be localhost:1865
-CORE_HOST=anotherhost.com
-CORE_PORT=9000
-```
-
-#### Why the admin panel is asking for an auth key?
-You are probably accessing the admin from outside (maybe you host the cat in a server, or you are accessing the admin in your phone).
-Change according to your machine ip address and ports:
-```env
-# Decide host and port for your Cat. Default will be localhost:1865
-CORE_HOST=anotherhost.com 
-CORE_PORT=9000
-```
-
 #### Docker has no permissions to write
 
-This is a matter with your docker installation or the user you run docker from.
+This is a matter with your docker installation or the user you run docker from. Usually you can resolve by using **sudo** command before calling any docker command!
 
 #### The Cat seems not to be working from inside a Virtual Machine
 
@@ -102,6 +98,9 @@ Change the port as you wish in the `.env` file.
 CORE_HOST=localhost
 CORE_PORT=9000
 ```
+
+#### Can i use different vector databases?
+At the moment, we don't provide any way to switch vector database 😿 but is planned for the future.
 
 ## Security
 

@@ -93,6 +93,7 @@ nav:
         - TypeScript: technical/clientlib/clientlib-typescript.md
         - PHP: technical/clientlib/clientlib-php.md
         - Ruby: technical/clientlib/clientlib-ruby.md
+        - C#: technical/clientlib/clientlib-csharp.md
     - Administrations:
         - Architecture: administrators/architecture.md
         - Environment Variables: administrators/env-variables.md

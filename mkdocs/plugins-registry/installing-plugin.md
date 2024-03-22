@@ -10,7 +10,6 @@ Installing plugins from our registry is a seamless process that enhances your Ch
 4. **Installation**: Once you've found the plugin, click the "Install" button.
 5. **Wait for Completion**: The admin will show a loading spinner until the plugin installation is not completed.
 
-
 ![Admin plugin install from registry](../assets/img/admin_screenshots/install-plugin-from-registry.gif)
 
 ## Manual Installation

@@ -68,7 +68,7 @@ Please check if you have a valid credit card connected or if you have used up al
 
 #### Docker has no permissions to write
 
-This is a matter with your docker installation or the user you run docker from. Usually you can resolve by using **sudo** command before calling any docker command!
+This is a matter with your docker installation or the user you run docker from. Usually you can resolve it by using **sudo** command before calling any docker command, but it's better to create a `docker` group on your Linux system and give [root-level privileges](https://docs.docker.com/engine/install/linux-postinstall/) to docker.
 
 #### The Cat seems not to be working from inside a Virtual Machine
 

@@ -113,7 +113,7 @@ If you are new in vscode debugging, check the [offical docs](https://code.visual
 
 This usually means that the debugger is not active, make sure to activate the debugger by asking the Cat.
 
-#### I cannot explore the code outside my plugin
+#### I cannot explore the code outside of my plugin
 
 By default, you can only explore your "own" code but you can disable this by setting the param `justMyCode` to false in the `launch.json` file.
 

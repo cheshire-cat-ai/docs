@@ -27,7 +27,7 @@ On the other hand, [Langchain](https://github.com/langchain-ai/langchain) is a f
 
 The admin page is an administration/debugging panel. The only use case is to provide a more convinient way to interact with the cat...
 
-We provide a [widget](https://github.com/cheshire-cat-ai/widget-vue) to connect the cat to your product!
+We provide a [widget](https://github.com/cheshire-cat-ai/widget-vue) to connect the Cat to your product.
 
 You are free to modify the admin to adapt it on your product **however** you will need to respect the GPL3, meaning you are free to fork and go on your own, but you are forced to open source changes.
 

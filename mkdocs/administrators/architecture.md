@@ -25,7 +25,7 @@ You can use the pre-compiled images present in the Repo's Docker Registry or bui
 
 2. To build it from scratch execute `docker compose build` in the repo folder just cloned.
 
-    This will build two Docker images are generated. The first one contains the Cat Core and Admin Portal.
+    This will generate two Docker images. The first one contains the Cat Core and Admin Portal.
     The container name of the core is `cheshire_cat_core`.
 
 The Cat core path `./core` is mounted into the image `cheshire_cat_core`, by default changes to files in this folder force a restart of the Core, this behavior can be disabled using the [`DEBUG`](env-variables.md/#debug) environment variable.
@@ -56,14 +56,17 @@ The cat is agnostic, meaning You can attach your preferred llm and embedder mode
 # Vector Memory
 
 ## What we use as vector memory?
-The Cat provides a connection to [qdrant](https://qdrant.tech/) through his Python client. 
+
+The Cat provides a connection to [qdrant](https://qdrant.tech/) through his Python client.
 By default the Core tries to connect to a Qdrant database, if the connection fails then it switches to the `local Qdrant database`.
 It is highly recommended to connect the Cat to a **Qdrant database** to increase performance and capacity!
 
 ## Qdrant Cloud or Self Hosting
+
 **Qdrant** provides to 2 paths:
 
 1. Self-host Qdrant by using docker, follows an example docker-compose:
+
    ```yml
    version: '3.7'
 
@@ -102,8 +105,9 @@ It is highly recommended to connect the Cat to a **Qdrant database** to increase
             - ./cat/long_term_memory/vector:/qdrant/storage
         restart: unless-stopped
    ```
-   
+
 2. Use Qdrant Cloud, by setting `QDRANT_HOST`, `QDRANT_PORT` and `QDRANT_API_KEY` Enviroment Variables. Follows an example of `.env` file:
+
     ```bash
         # Qdrant server
         QDRANT_HOST=<url of the cluster>
@@ -111,10 +115,8 @@ It is highly recommended to connect the Cat to a **Qdrant database** to increase
         QDRANT_API_KEY=<api-key>
     ```
 
-
-
 # Admin Portal
 
 ## Use case
-The Admin Portal is an administration/debugging panel to interact with the Cat by chatting, uploading files, exploring the memory, changing the LLM and Embedder Models while providing minimal authentication through an `api_key`.
 
+The Admin Portal is an administration/debugging panel to interact with the Cat by chatting, uploading files, exploring the memory, changing the LLM and Embedder Models while providing minimal authentication through an `api_key`.

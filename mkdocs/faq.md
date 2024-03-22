@@ -31,7 +31,7 @@ We provide a [widget](https://github.com/cheshire-cat-ai/widget-vue) to connect 
 
 You are free to modify the Admin to adapt it to your product, **however** you will need to respect the GPL3 Licence, meaning you are free to fork the codebase and go on your own, but you are forced to open source eventual changes.
 
-#### Why the admin doesn't have authetification using email-password or google account??
+#### Why the Admin does not provide Basic (username/password) or Third-party Authentication (such as OAuth)?
 
 The admin page is an administration/debugging panel. 
 

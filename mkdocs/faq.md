@@ -98,7 +98,7 @@ CORE_PORT=9000
 ```
 
 #### Can I use a different vector database than Qdrant?
-At the moment, we don't provide any way to switch vector database 😿 but is planned for the future.
+At the moment, we don't provide any way to switch the vector database 😿 but it is planned for the future.
 
 ## Security
 

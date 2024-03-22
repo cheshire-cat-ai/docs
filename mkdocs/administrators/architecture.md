@@ -44,7 +44,7 @@ Some options of the Core can be customized using [environment variables](env-var
 
 ## Compatible Models
 
-The cat is agnostic, meaning You can Attach your prefered llm and embedder model/provider. We provide by default the most used but you can increse the number of models/providers by [plugins](/technical/plugins/hooks/#__tabbed_1_5), here is a list of the most used:
+The cat is agnostic, meaning You can attach your preferred llm and embedder model/provider. The Cat supports the most used ones, but you can increase the number of models/providers by [plugins](/technical/plugins/hooks/#__tabbed_1_5), here is a list of the main ones:
 
 1. OpenAI and Azure OpenAI
 2. Cohere

@@ -60,7 +60,7 @@ The Cat provides a connection to [qdrant](https://qdrant.tech/) through his Pyth
 By default the Core tries to connect to a Qdrant database, if the connection fails then it switches to the `local Qdrant database`.
 It is highly recommended to connect the Cat to a **Qdrant database** to increase performance and capacity!
 
-## Cloud Use and Hosting
+## Qdrant Cloud or Self Hosting
 **Qdrant** provides to 2 paths:
 
 1. Host yourself by using docker, here an example using docker-compose:

@@ -33,9 +33,7 @@ You are free to modify the Admin to adapt it to your product, **however** you wi
 
 #### Why the Admin does not provide Basic (username/password) or Third-party Authentication (such as OAuth)?
 
-The admin page is an administration/debugging panel. 
-
-The only use case is to provide a more convinient way to interact with the cat with **basic** authentification through api_key.
+The only use case of the Admin is to provide a more friendly way to interact with the Cat with **basic** authentication through an  `api_key`.
 
 
 ## Basic Info

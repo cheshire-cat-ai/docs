@@ -56,9 +56,9 @@ The cat is agnostic, meaning You can attach your preferred llm and embedder mode
 # Vector Memory
 
 ## What we use as vector memory?
-The cat provide connection to [qdrant](https://qdrant.tech/) thought his python client. 
-By default the core try to connect to a qdrant database, if the connection don't go well than switch to the `local Qdrant database`.
-Is Highly recommended to connect the cat to a **qdrant database** to increase performance and capacity!
+The Cat provides a connection to [qdrant](https://qdrant.tech/) through his Python client. 
+By default the Core tries to connect to a Qdrant database, if the connection fails then it switches to the `local Qdrant database`.
+It is highly recommended to connect the Cat to a **Qdrant database** to increase performance and capacity!
 
 ## Cloud Use and Hosting
 **Qdrant** provides to 2 paths:

@@ -25,7 +25,7 @@ On the other hand, [Langchain](https://github.com/langchain-ai/langchain) is a f
 
 #### I want to use the admin page for...
 
-The admin page is an administration/debugging panel. The only use case is to provide a more convinient way to interact with the cat...
+The admin panel is meant to be an administration interface. It's purpose is to chat with the Cat only to debug/play with it, it is not intended to be a final widget chat used by eventual final users.
 
 We provide a [widget](https://github.com/cheshire-cat-ai/widget-vue) to connect the Cat to your product.
 

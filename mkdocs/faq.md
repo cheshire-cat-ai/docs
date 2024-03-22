@@ -29,7 +29,7 @@ The admin panel is meant to be an administration interface. It's purpose is to c
 
 We provide a [widget](https://github.com/cheshire-cat-ai/widget-vue) to connect the Cat to your product.
 
-You are free to modify the admin to adapt it on your product **however** you will need to respect the GPL3, meaning you are free to fork and go on your own, but you are forced to open source changes.
+You are free to modify the Admin to adapt it to your product, **however** you will need to respect the GPL3 Licence, meaning you are free to fork the codebase and go on your own, but you are forced to open source eventual changes.
 
 #### Why the admin doesn't have authetification using email-password or google account??
 

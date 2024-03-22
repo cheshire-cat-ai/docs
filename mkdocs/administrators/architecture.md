@@ -103,7 +103,7 @@ It is highly recommended to connect the Cat to a **Qdrant database** to increase
         restart: unless-stopped
    ```
    
-2. Use the cloud version, by setting `QDRANT_HOST`, `QDRANT_PORT` and `QDRANT_API_KEY` Enviroment Variables. Below an example of `.env` file:
+2. Use Qdrant Cloud, by setting `QDRANT_HOST`, `QDRANT_PORT` and `QDRANT_API_KEY` Enviroment Variables. Follows an example of `.env` file:
     ```bash
         # Qdrant server
         QDRANT_HOST=<url of the cluster>

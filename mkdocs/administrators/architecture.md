@@ -63,7 +63,7 @@ It is highly recommended to connect the Cat to a **Qdrant database** to increase
 ## Qdrant Cloud or Self Hosting
 **Qdrant** provides to 2 paths:
 
-1. Host yourself by using docker, here an example using docker-compose:
+1. Self-host Qdrant by using docker, follows an example docker-compose:
    ```yml
    version: '3.7'
 

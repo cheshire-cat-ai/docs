@@ -27,7 +27,7 @@ After the installation, you will need to expose a new port to the container:
 
 ## Configure vscode
 
-Ones you expose the port, will need to create a `launch.json` and you have 2 options:
+Once you have exposed the port, you will need to create a `launch.json` file having two different options:
 
    1. Use the `Run and Debug` tab to create it, selecting `Python Debugger` and then `Remote Attach` (Follow the prompts by answering with the default proposed).
    2. Create a folder in the root directory called `.vscode` and in the folder create the `launch.json`.

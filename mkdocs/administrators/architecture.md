@@ -116,5 +116,5 @@ It is highly recommended to connect the Cat to a **Qdrant database** to increase
 # Admin Portal
 
 ## Use case
-The admin portal is an administration/debugging pannel for interact with the cat by chatting, uploading files, seeing the memory and changing the LLM and embedder Models while providing minimal authentification through api_key.
+The Admin Portal is an administration/debugging panel to interact with the Cat by chatting, uploading files, exploring the memory, changing the LLM and Embedder Models while providing minimal authentication through an `api_key`.
 

@@ -28,7 +28,7 @@ You can use the pre-compiled images present in the Repo's Docker Registry or bui
     This will build two Docker images are generated. The first one contains the Cat Core and Admin Portal.
     The container name of the core is `cheshire_cat_core`.
 
-The Cat core path `./core` is mounted to the image `cheshire_cat_core`, by default changes to files in this folder force a restart of the Core, this behavior can be disable using the [`DEBUG`](env-variables.md/#debug) environment variables.
+The Cat core path `./core` is mounted into the image `cheshire_cat_core`, by default changes to files in this folder force a restart of the Core, this behavior can be disabled using the [`DEBUG`](env-variables.md/#debug) environment variable.
 
 ## Admin Portal
 

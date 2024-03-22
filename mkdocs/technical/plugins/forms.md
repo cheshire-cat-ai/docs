@@ -14,7 +14,7 @@ Imagine a scenario where you need to create an Order system for a pizzeria, usin
 
 How can I resolve this problem? Well, these type of information are **very specific**:
 
-- need **validators** (Phone numbers can be of different structure based on the country, the pizzeria has a menu of pizzas, you can deliver only in a certain area of the city)
+- need [**validators**](https://docs.pydantic.dev/latest/concepts/validators/#field-validators) (Phone numbers can be of different structure based on the country, the pizzeria has a menu of pizzas, you can deliver only in a certain area of the city)
 - **can be provided in different orders** (A user can give the address before the type of pizza!).
 
 This is where the forms comes handy!

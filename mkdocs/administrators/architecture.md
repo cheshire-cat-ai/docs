@@ -32,7 +32,7 @@ The Cat core path `./core` is mounted into the image `cheshire_cat_core`, by def
 
 ## Admin Portal
 
-As default the Admin Portal connect to the core using `localhost` and the port exposed to the container, this value can be customized using [environment variables](env-variables.md#core_host). The port is the only one exposed by the `cheshire_cat_core` image.
+The Admin Portal connects to the core using `localhost` through the port exposed when the container was created, this value can be customized using [environment variables](env-variables.md#core_host). This port is the only one exposed by the `cheshire_cat_core` image.
 
 ## Logging
 

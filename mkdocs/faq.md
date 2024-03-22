@@ -97,7 +97,7 @@ CORE_HOST=localhost
 CORE_PORT=9000
 ```
 
-#### Can i use different vector databases?
+#### Can I use a different vector database than Qdrant?
 At the moment, we don't provide any way to switch vector database 😿 but is planned for the future.
 
 ## Security

@@ -1,6 +1,6 @@
 # &#128640; Debug with Visual Studio Code
 
-The Plugin `Debug Server for VSCode` help you for debug with Visual Studio Code, install it from the [public plugins registry](../../plugins-registry/installing-plugin.md) or [download the zip file](https://github.com/sambarza/cc-vscode-debugpy) (and follow the [Manual Instruction](../../plugins-registry/installing-plugin.md/#manual-installation)).
+The `Debug Server for VSCode` plugin helps you to debug the Cat with Visual Studio Code, install it from the [public plugins registry](../../plugins-registry/installing-plugin.md) or [download the zip file](https://github.com/sambarza/cc-vscode-debugpy) (and follow the [Manual Instruction](../../plugins-registry/installing-plugin.md/#manual-installation)).
 
 ## Add a new port to the container
 

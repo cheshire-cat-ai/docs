@@ -107,7 +107,7 @@ You are ready to debug your plugin!
 
 If you are new in vscode debugging, check the [offical docs](https://code.visualstudio.com/Docs/editor/debugging) of Visual Studio Code
 
-## TroubleShooting
+## Troubleshooting
 
 #### I click the button but the i don't see the debugging bar / the breakpoints are not respected
 

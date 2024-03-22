@@ -109,7 +109,7 @@ If you are new in vscode debugging, check the [offical docs](https://code.visual
 
 ## Troubleshooting
 
-#### I click the button but the i don't see the debugging bar / the breakpoints are not respected
+#### I click the button but then I don't see the debugging bar / the breakpoints are not respected
 
 This usually means that the debugger is not active, make sure to active the debugger by asking the cat!
 

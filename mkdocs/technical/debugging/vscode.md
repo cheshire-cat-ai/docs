@@ -111,7 +111,7 @@ If you are new in vscode debugging, check the [offical docs](https://code.visual
 
 #### I click the button but then I don't see the debugging bar / the breakpoints are not respected
 
-This usually means that the debugger is not active, make sure to active the debugger by asking the cat!
+This usually means that the debugger is not active, make sure to activate the debugger by asking the Cat.
 
 #### I cannot explore the code outside my plugin
 

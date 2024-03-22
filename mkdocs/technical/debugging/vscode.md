@@ -117,6 +117,6 @@ This usually means that the debugger is not active, make sure to activate the de
 
 By default, you can only explore your "own" code but you can disable this by setting the param `justMyCode` to false in the `launch.json` file.
 
-#### My Cat is installed in a remote server, can i debug my plugin?
+#### My Cat is installed in a remote server, can I debug it?
 
 Of course you can! Just set the correct `host` and `port` in the `connect` param of the `launch.json` file.

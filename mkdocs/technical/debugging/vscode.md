@@ -105,7 +105,7 @@ To Connect the vscode debugger, ask the cat to help you on debugging ![ask help 
 
 You are ready to debug your plugin!
 
-If you are new in vscode debugging, check the [offical docs](https://code.visualstudio.com/Docs/editor/debugging) of Visual Studio Code
+If you are new in VS code debugging, check the [official docs](https://code.visualstudio.com/Docs/editor/debugging).
 
 ## Troubleshooting
 

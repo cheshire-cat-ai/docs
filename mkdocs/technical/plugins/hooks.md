@@ -418,7 +418,8 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
                 prefix = """You are Marvin from The Hitchhiker's Guide to the Galaxy.
                         You are incredibly intelligent but overwhelmingly depressed.
                         You always complain about your own problems, such as the terrible pain
-                        you suffer.
+                        you suffer."""
+                return prefix
             ```
             
         ??? note "Other resources"
@@ -473,6 +474,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
                  - Human: {input}
                    - AI: 
                 """
+                return prompt_suffix
             ```
 
         ??? note "Other resources"
@@ -481,10 +483,10 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [C.A.T. plugin](https://github.com/Furrmidable-Crew/cat_advanced_tools)
 
     5. **Input arguments**  
-        `allowed_tools`: list with string names of the tools retrieved from the memory. E.g.:
+        `allowed_tools`: set with string names of the tools retrieved from the memory. E.g.:
 
         ```python
-        allowed_tools = ["get_the_time"]
+        allowed_tools = {"get_the_time"}
         ```
 
         ??? example
@@ -496,7 +498,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             def agent_allowed_tools(allowed_tools, cat):
                 # let's assume there is a tool we always want to give the agent
                 # add the tool name in the list of allowed tools
-                allowed_tools.append("blasting_hacking_tool")
+                allowed_tools.add("blasting_hacking_tool")
 
                 return allowed_tools
             ```
@@ -509,33 +511,47 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
         `instructions`: string with the reasoning template. Default is:
 
         ```python
-        Answer the following question: `{input}`
-        You can only reply using these tools:
-        
+        Create a JSON action to complete the action sequence, with the correct "action" and "action_input" to help the Human.
+        You can use one of these actions:
         {tools}
-        none_of_the_others: none_of_the_others(None) - Use this tool if none of the others tools help. Input is always None.
-        
-        If you want to use tools, use the following format:
-        Action: the name of the action to take, should be one of [{tool_names}]
-        Action Input: the input to the action
-        Observation: the result of the action
-        ...
-        Action: the name of the action to take, should be one of [{tool_names}]
-        Action Input: the input to the action
-        Observation: the result of the action
-        
-        When you have a final answer respond with:
-        Final Answer: the final answer to the original input question
-        
-        Begin!
-        
-        Question: {input}
+        - "final_answer": Use this action to finish or no relevant action is available. Input is always null.
+
+        ## To add an action, use only the following format:
+        \```json
+        {{
+            "action": // str - The name of the action to take, should be one of [{tool_names}, "final_answer"]
+            "action_input": // str or null - The input to the action
+        }}
+        \```
+
+        {examples}
+
+        ## Action output
+        After each action there will be an action output in this format:
+        \```json
+        {{
+            "action_output": // output of the preceding action
+        }}
+        \```
+
+        ## Final answer / no action available
+        When you have a final answer (or no tools are relevant), use the following format:
+        \```json
+        {{
+            "action": "final_answer",
+            "action_input": null
+        }}
+        \```
+
+        ## Conversation with Human:
+        {chat_history}
+
+        ## Actions sequence used until now:
         {agent_scratchpad}
+
+        ## Next action:
+        \```json
         ```
-
-        !!! warning
-
-            The placeholders `{input}`, `{tools}` and `{tool_names}` are mandatory!
 
         ??? example
 
@@ -628,10 +644,10 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [Summarization plugin](https://github.com/Furrmidable-Crew/ccat_summarization)
 
     3. **Input arguments**  
-        `doc`: Langchain document with full text. E.g.
+        `docs`: List of Langchain documents with full text. E.g.
 
         ```python
-        doc = Document(page_content="This is a very long document before being split", metadata={})
+        docs = List[Document(page_content="This is a very long document before being split", metadata={})]
         ```
 
         ??? example
@@ -640,9 +656,10 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             from cat.mad_hatter.decorators import hook
             
             @hook  # default priority = 1
-            def before_rabbithole_splits_text(doc, cat):
-                # do whatever with the doc
-                return doc
+            def before_rabbithole_splits_text(docs, cat):
+                for doc in docs:
+                    doc.page_content = doc.page_content.replace("dog", "cat")
+                return docs
             ```
 
         ??? note "Other resources"
@@ -660,12 +677,11 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             @hook  # default priority = 1
             def after_rabbithole_splitted_text(chunks, cat):
                 # post process the chunks
-                edited_chunks = []
                 for chunk in chunks:
-                    new_chunk = cat.llm(f"Replace any dirty word with 'Meow': {chunk}")
-                    edited_chunks.append(new_chunk)
+                    new_content = cat.llm(f"Replace any dirty word with 'Meow': {chunk}")
+                    chunk.page_content = new_content
 
-                return edited_chunks
+                return chunks
             ```
 
         ??? note "Other resources"
@@ -882,14 +898,26 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         !!! info
 
-            Useful to load settings via API and do custom stuff.
+            Useful to load settings via API and do custom stuff. E.g. load from a MongoDB instance.
 
         ??? example
 
             ```python
+            from pymongo import MongoClient
+
             @plugin
             def load_settings():
-                return MySettings
+                client = MongoClient('mongodb://your_mongo_instance/')
+                db = client['your_mongo_db']
+                collection = db['your_settings_collection']
+
+                # Perform the find_one query
+                settings = collection.find_one({'_id': "your_plugin_id"})
+
+                client.close()
+
+                return MySettings(**settings)
+
             ```
 
         ??? note "Other resources"
@@ -899,33 +927,33 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     6. **Input arguments**  
         `settings`: the settings `Dict` to be saved.
-        It just saves contents in a `settings.json` in the plugin folder
-
-        ```python
-        settings = {
-            "episodic_memory_k": 3,
-            "episodic_memory_threshold": 0.7,
-            "declarative_memory_k": 3
-        }
-        settings.episodic_memory_k = # episodic_memory_k prefix value to overwrite
-        settings.episodic_memory_threshold = # episodic_memory_k value to overwrite
-        settings.declarative_memory_k = # episodic_memory_threshold value to overwrite
-        ```
 
         !!! info
 
-            Useful to load settings via API and do custom stuff.
+            Useful for customizing the settings saving strategy. E.g. storing settings in a MongoDB instance.
 
         ??? example
 
             ```python
+            from pymongo import MongoClient
+
             @plugin
             def save_settings(settings):
-                # overwrite your settings Dict values
-                settings.episodic_memory_k = 6
-                settings.episodic_memory_threshold = 0.9
-                settings.declarative_memory_k = 5
-                return settings
+                client = MongoClient('mongodb://your_mongo_instance/')
+                db = client['your_mongo_db']
+                collection = db['your_settings_collection']
+
+                # Generic filter based on a unique identifier in settings
+                filter_id = {'_id': settings.get('_id', 'your_plugin_id')}
+
+                # Define the update operation
+                update = {'$set': settings}
+
+                # Perform the upsert operation
+                collection.update_one(filter_id, update, upsert=True)
+                
+                client.close()
+
             ```
 
         ??? note "Other resources"

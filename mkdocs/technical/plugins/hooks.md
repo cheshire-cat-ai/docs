@@ -64,7 +64,8 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
     | Before  Cat recalls declarative memories (7)  | Intervene before the Cat searches in the documents               |
     | Before  Cat recalls procedural memories (8)   | Intervene before the Cat searches among the action it knows      |
     | After  Cat recalls memories (9)               | Intervene after the Cat's recalled the content from the memories |
-    | Before  Cat sends message (10)                | Intervene before the Cat sends its answer via WebSocket          |
+    | Before  Cat stores episodic memories (10)     | Intervene before the Cat stores episodic memories                |
+    | Before  Cat sends message (11)                | Intervene before the Cat sends its answer via WebSocket          |
     
     </div>
     
@@ -286,6 +287,34 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.after_cat_recalls_memories)
 
     10. **Input arguments**  
+        `doc`: Langchain Document to be inserted in memory. E.g.:
+
+        ```python
+        doc = Document(
+            page_content="So Long, and Thanks for All the Fish", metadata={
+                "source": "dolphin",
+                "when": 1716704294
+            }
+        )
+        ```
+        
+        ??? example
+        
+            ```python
+            from cat.mad_hatter.decorators import hook
+    
+            @hook  # default priority = 1
+            def before_cat_stores_episodic_memory(doc, cat):
+                if doc.metadata["source"] == "dolphin":
+                    doc.metadata["final_answer"] = 42
+                return doc
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_stores_episodic_memory)
+  
+    11. **Input arguments**  
         `message`: the dictionary containing the Cat's answer that will be sent via WebSocket. E.g.:
 
         ```python
@@ -579,6 +608,9 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
     | Before Rabbit Hole splits text (3)        | Intervene before the uploaded document is split into chunks    |
     | After Rabbit Hole splitted text (4)       | Intervene after the Rabbit Hole's split the document in chunks |
     | Before Rabbit Hole stores documents (5)   | Intervene before the Rabbit Hole starts the ingestion pipeline |
+    | After Rabbit Hole stores documents (6)    | Intervene after the Rabbit Hole ended the ingestion pipeline   |
+    | Rabbit Hole instantiates parsers (7)      | Hook the available parsers for ingesting files in the declarative memory   |
+    | Rabbit Hole instantiates splitter (8)     | Hook the splitter used to split text in chunks                 |
 
     </div>
 
@@ -719,6 +751,73 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.before_rabbithole_stores_documents)
             - [Summarization plugin](https://github.com/Furrmidable-Crew/ccat_summarization)
+  
+    6. **Input arguments**
+
+        `source`: the name of the ingested file/url <br />
+        `docs`: a list of Qdrant `PointStruct` just inserted into the vector database
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+            
+            @hook  # default priority = 1
+            def after_rabbithole_stored_documents(source, stored_points, cat):
+                # do whatever here
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.after_rabbithole_stored_documents)
+
+    7. **Input arguments**
+
+        `file_handlers`: dictionary in which keys are the supported mime types and values are the related parsers
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+            from langchain.document_loaders.parsers.language.language_parser import LanguageParser
+            from langchain.document_loaders.parsers.msword import MsWordParser
+            
+            @hook  # default priority = 1
+            def rabbithole_instantiates_parsers(file_handlers, cat):
+                new_handlers = {
+                    "text/x-python": LanguageParser(language="python"),
+                    "text/javascript": LanguageParser(language="js"),
+                    "application/vnd.openxmlformats-officedocument.wordprocessingml.document": MsWordParser(),
+                    "application/msword": MsWordParser(),
+                }
+                file_handlers = file_handlers | new_handlers
+                return file_handlers
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.rabbithole_instantiates_parsers)
+            - [IngestAnything Plugin](https://github.com/Furrmidable-Crew/IngestAnything)
+  
+    8. **Input arguments**
+
+        `text_splitter`: An instance of the Langchain TextSplitter subclass.
+
+        ??? example
+
+            ```python
+            from cat.mad_hatter.decorators import hook
+            
+            @hook  # default priority = 1
+            def rabbithole_instantiates_splitter(text_splitter, cat):
+                text_splitter._chunk_size = 64
+                text_splitter._chunk_overlap = 8
+                return text_splitter
+            ```
+
+        ??? note "Other resources"
+
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.rabbithole_instantiates_splitter)
 
 === "&#128268; Plugin"
     

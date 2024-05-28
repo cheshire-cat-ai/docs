@@ -7,7 +7,7 @@ Forms are Particular Tools useful for collecting user information during a conve
 
 Imagine a scenario where you need to create an Order system for a pizzeria, using only the conversation with the user. The user must provide three pieces of information:
 
-1. Type of pizza: must be a string from a predifined set.
+1. Type of pizza: must be a string from a predefined set.
 2. Phone number: must be 10 digits long and follow a specific dialing code.
 3. Address: must be a valid address in "Milano".
 

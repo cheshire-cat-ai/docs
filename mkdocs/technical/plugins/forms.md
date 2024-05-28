@@ -1,23 +1,22 @@
 # 📋 Forms
 
-Forms are Particular Tools useful to collect users' information during the given conversation!
-
+Forms are Particular Tools useful for collecting user information during a conversation!
 
 
 ## How the Forms work
 
-Imagine a scenario where you need to create an Order system for a pizzeria, using only the conversation of the user. The user must provide 3 information:
+Imagine a scenario where you need to create an Order system for a pizzeria, using only the conversation with the user. The user must provide three pieces of information:
 
-1. Type of pizza, must be a string in a restrictive set
-2. Phone number, must be 10 numbers long and restrictive to a specific dialling code
-3. Address, must be a valid address of "Milano"
+1. Type of pizza: must be a string from a predifined set.
+2. Phone number: must be 10 digits long and follow a specific dialing code.
+3. Address: must be a valid address in "Milano".
 
-How can I resolve this problem? Well, these type of information are **very specific**:
+How can we resolve this problem? Well, these types of information are **very specific** and they need:
 
-- need [**validators**](https://docs.pydantic.dev/latest/concepts/validators/#field-validators) (Phone numbers can be of different structure based on the country, the pizzeria has a menu of pizzas, you can deliver only in a certain area of the city)
-- **can be provided in different orders** (A user can give the address before the type of pizza!).
+- [**Validators:**](https://docs.pydantic.dev/latest/concepts/validators/#field-validators) We need validators to ensure the data is correct (e.g., phone numbers can vary by country, the pizzeria has a specific menu of pizzas, and delivery is restricted to certain areas of the city).
+- **Flexible Sequence**: The information can be provided in any order during the conversation (e.g., a user might give the address before mentioning the type of pizza).
 
-This is where the forms comes handy!
+This is where Forms come in handy!
 
 ## Implementation
 
@@ -44,101 +43,101 @@ class PizzaForm(CatForm): #(3)
     ask_confirm = True #(8)
 
     def submit(self, form_data): #(9)
-        
-        # do the actual order here!
-        # Fake call
-        out = request.post("https://fakecallpizza/order",{
-            "pizza_type": form_data.pizza_type,
-            "phone": form_data.phone,
-            "address": form_data.address
-        })
 
-        if(out.status_code != 201):
-            raise Exception()
+        # Fake API call to order the pizza
+        response = requests.post(
+            "https://fakecallpizza/order",
+            json={
+                "pizza_type": form_data["pizza_type"],
+                "phone": form_data["phone"],
+                "address": form_data["address"]
+            }
+        )
+        response.raise_for_status()
         
-        time = out.json()["estimatedTime"]
+        time = response.json()["estimated_time"]
 
-        # return to conversation
+        # Return a message to the conversation with the order details and estimated time
         return {
             "output": f"Pizza order on its way: {form_data}. Estimated time: {time}"
         }
 
 ```
 
-1. Pydantic class representing the information you need to retrive.
+1. Pydantic class representing the information you need to retrieve.
 2. Every class decorated with `@forms` is a Form.
 3. Every Form must inherit from `CatForm`.
 4. Description of the Form. <!-- , useful to the [tool chain](/conceptual/cheshire_cat/tool_chain/). Is necessary, as it will show up in the Tool chain prompt. It should describe what the form is useful for, so the LLM can select the tool and input it properly. -->
 5. Pydantic class name.
-6. Every Form must have a list of *start examples*, so the LLM can select the form properly. It's the same principal of tool's docstring.
-7. Every Form must have a list of *stop examples*, so the LLM can stop properly the form during the conversation.
-8. Every Form can ask the user confirmation of the data provided.
-9. Every Form must overload this method and the fuctionality is the same as tools: call database to collect the information, call the Order API, call another agent or LLM etc..
+6. Every Form must include a list of *start examples* to help the LLM identify and initiate the form correctly. This is similar to the principle of a tool's docstring.
+7. Every Form must include a list of *stop examples* to help the LLM know when to terminate the form during the conversation.
+8. A Form can request user confirmation for the data provided.
+9. Every Form must override this method to define its functionality, such as calling a database to collect information, using an Order API, interacting with another agent or LLM, etc.
 
-## Changing the "moves" of the Form
+## Changing the "actions" of the Form
 
-Forms are implemented as [FSM](https://en.wikipedia.org/wiki/Finite-state_machine) and you can change any move of the FSM by overloading the methods.
+Forms are implemented as [FSM](https://en.wikipedia.org/wiki/Finite-state_machine) and you can modify any transition of the FSM by overriding the methods.
 
 Here the diagram of the FSM:
 TODO
 
 ### State-transition function
 
-Each FSM has a State-Transition function that describes what is the next move to perform based on the given input. In the case of Form's implementation the input is the **User prompt** and the `def next(self)` method is State-Transition function.
+Each FSM has a State-Transition function that describes what is the next action to perform based on the given input. In the case of a Form's implementation, the input is the **User prompt** and the `def next(self)` method acts as the State-Transition function.
 
-The form has 4 states to be evaluated:
+The form evaluates four states:
 
 1. INCOMPLETE
 2. WAIT_CONFIRM
 3. CLOSED
 4. COMPLETE
 
-each state executes one or more Phases:
+Each state executes one or more phases:
 
-- User Stop Confirmation Phase
+- User Stop Form Phase
 - User Confirmation Phase
 - Updating Phase
 - Visualization Phase
 - Submit Phase
 
-You can change this state-transition by overloading the method `def next(self)` and accessing the state by `self._state`. The states are values from the `CatFormState` enum.
+You can modify this state-transition by overriding the `def next(self)` method and accessing the state via `self._state`. The states are values from the `CatFormState` enum.
 
-### User Stop Confirmation Phase
+### User Stop Form Phase
 
-The User Stop Confirmation phase is where the Form produces a prompt to ask the user his willingness to continue. You can change this phase by overloading the method `def check_exit_intent(self)`.
+The User Stop Form Phase is where the Form checks whether the user wants to exit the form. You can modify this phase by overriding the `def check_exit_intent(self)` method.
 
 ### User Confirmation Phase
 
-The User Confirmation Phase is where the Form produces a prompt to ask confirmation of the information provided by the user, if `ask_confirm` is true. You can change this phase by overloading the method `def confirm(self)`.
+The User Confirmation Phase is where the Form asks for confirmation of the information provided by the user if `ask_confirm` is set to true. You can modify this phase by overriding the `def confirm(self)` method.
 
 ### Updating Phase
 
-The Updating Phase is where the Form executes the Extraction Phase, Sanitization Phase and Validation Phase. You can change this phase by overloading the method `def update(self)`.
+The Updating Phase is where the Form performs the Extraction Phase, Sanitization Phase and Validation Phase. You can modify this phase by overriding the `def update(self)` method.
 
 #### Extraction Phase
 
-The Extraction Phase is where the Form extracts all possibile information from the user's prompt. You can change this phase by overloading the method `def extract(self)`.
+The Extraction Phase is where the Form extracts all possibile information from the user's prompt. You can modify this phase by overriding the `def extract(self)` method.
 
 #### Sanitization Phase
 
-The Sanitization Phase is where the information is sinitized from unwanted values (null, None, '', ' ', etc...). You can change this phase by overloading the method `def sanitize(self, model)`
+The Sanitization Phase is where the information is sanitized to remove unwanted values (null, None, '', ' ', etc...). You can modify this phase by overriding the `def sanitize(self, model)`method.
 
 #### Validation Phase
 
-The Validation Phase is where the Form attempts to construct the model, so pydantic can use the validators implemented and check each field. You can change this phase by overloading the method `def valdiate(self, model)`
+The Validation Phase is where the Form attempts to construct the model, allowing Pydantic to use the implemented validators and check each field. You can modify this phase by overriding the `def valdiate(self, model)` method.
 
 ### Visualization Phase
 
 The Visualization Phase is where the Form displays a message to the user, showing the model's status.
 
-By default the cat shows the forms like so ![display form](../../assets/img/technical/forms/how_is_display.png)
+By default the cat displays the forms like so ![display form](../../assets/img/technical/forms/how_is_display.png)
 
-When there is invalid info that was retrived from the conversation, the cat tells you exacly which and what issue ![display invalid info](../../assets/img/technical/forms/how_invalid_is_display.png)
+When there is invalid info retrieved from the conversation, the Cat specifies the issue ![display invalid info](../../assets/img/technical/forms/how_invalid_is_display.png)
 
-You can change this phase by overloading the method `def message(self)`:
+You can modify this phase by overriding the `def message(self)` method:
 
 ```python
-    #in the form you define 
+    # In the form you define 
     def message(self): #(1) 
         if self._state == CatFormState.CLOSED: #(2)
             return {
@@ -147,8 +146,8 @@ You can change this phase by overloading the method `def message(self)`:
         missing_fields: List[str] = self._missing_fields #(3)
         errors: List[str] = self._errors #(4)
         out: str = f"""
-        the missing information are: {missing_fields}.
-        this are the invalid ones: {errors}
+        The missing informations are: {missing_fields}.
+        These are the invalid ones: {errors}
         """
         if self._state == CatFormState.WAIT_CONFIRM:
             out += "\n --> Confirm? Yes or no?"
@@ -159,23 +158,24 @@ You can change this phase by overloading the method `def message(self)`:
 
 ```
 
-1. This method is useful to change the Form visualization.
+1. This method is useful for changing the Form visualization.
 2. Forms have states that can be checked.
 3. Forms can access the list of the missing fields.
-4. Forms can access the list of the invalid fields and the correlated errors.
+4. Forms can access the list of the invalid fields and the related errors.
 
 ### Final Phase: Submit
 
-The Submit Phase is where the Form conclude the journey by executing all defined instructions with the information gathered from the user's conversation.
-The method have two params:
+The Submit Phase is where the Form concludes the process by executing all defined instructions with the information gathered from the user's conversation.
+The method has two parameters:
 
-- **self** (You can access information about the form and the `StrayCat` instance)
-- **form_data** (The defined pydantic model)  
-And must return a Dict where the value of key `output` is a string that will be displayed in the chat.
+- **self**: Provides access  to information about the form and the `StrayCat` instance.
+- **form_data**: The defined Pydantic model formatted as a Python dictionary.
 
-If you need to use the Form in future conversations, you can retrive the model from the working memory by accessing the key `form`.
+The method must return a dictionary where the value of the `output` key is a string that will be displayed in the chat.
 
-Below an example:
+If you need to use the Form in future conversations, you can retrieve the model from the working memory by accessing the key `form`.
+
+Below is an example:
 
 ```python
     @hook  

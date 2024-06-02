@@ -540,47 +540,33 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
         `instructions`: string with the reasoning template. Default is:
 
         ```python
-        Create a JSON action to complete the action sequence, with the correct "action" and "action_input" to help the Human.
-        You can use one of these actions:
+        Answer the following question: `{input}`
+        You can only reply using these tools:
+        
         {tools}
-        - "final_answer": Use this action to finish or no relevant action is available. Input is always null.
-
-        ## To add an action, use only the following format:
-        \```json
-        {{
-            "action": // str - The name of the action to take, should be one of [{tool_names}, "final_answer"]
-            "action_input": // str or null - The input to the action
-        }}
-        \```
-
-        {examples}
-
-        ## Action output
-        After each action there will be an action output in this format:
-        \```json
-        {{
-            "action_output": // output of the preceding action
-        }}
-        \```
-
-        ## Final answer / no action available
-        When you have a final answer (or no tools are relevant), use the following format:
-        \```json
-        {{
-            "action": "final_answer",
-            "action_input": null
-        }}
-        \```
-
-        ## Conversation with Human:
-        {chat_history}
-
-        ## Actions sequence used until now:
+        none_of_the_others: none_of_the_others(None) - Use this tool if none of the others tools help. Input is always None.
+        
+        If you want to use tools, use the following format:
+        Action: the name of the action to take, should be one of [{tool_names}]
+        Action Input: the input to the action
+        Observation: the result of the action
+        ...
+        Action: the name of the action to take, should be one of [{tool_names}]
+        Action Input: the input to the action
+        Observation: the result of the action
+        
+        When you have a final answer respond with:
+        Final Answer: the final answer to the original input question
+        
+        Begin!
+        
+        Question: {input}
         {agent_scratchpad}
-
-        ## Next action:
-        \```json
         ```
+
+        !!! warning
+
+            The placeholders `{input}`, `{tools}` and `{tool_names}` are mandatory!
 
         ??? example
 

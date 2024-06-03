@@ -1,8 +1,8 @@
-#  &#128075; Hello, Dear! 
+# &#128075; Hello, Dear
 
 > Good documentation is *key* to a good software and at Cheshire Cat AI we are always looking for great community members that are willing to improve it with their writing skills. This README as well as all the documentation you can find about the [Cat](https://cheshire-cat-ai.github.io/docs/) is the result of an effort between our Core team and a great Community. Remember to always have fun whatever you decide to contribute to, meow.
 
-# 📚 How to Contribute Documentation
+## 📚 How to Contribute Documentation
 
 1. Fork the repository.
 2. Using Markdown syntax, edit or create new files for the documentation in the `/mkdocs` directory.
@@ -28,6 +28,7 @@ To help documenting the [hooks table](./mkdocs/technical/plugins/hooks.md#availa
 5. **collapsible** note section with title: `??? note "Other resources"` --> in this section please include the link to the hook Python reference in the documentation and any other useful links to other doc's pages.
 
 Example:
+
 ```python
 1. **Input arguments**
         `user_message_json`, i.e. the JSON message sent via WebSocket done like this:
@@ -81,7 +82,8 @@ Install dependencies:
 All the diagrams under the "Framework/Technical Diagrams" section have been created using draw.io.
 The file [drawio-cheshire-cat-library](drawio-cheshire-cat-library.xml) is a draw.io library, it contains some custom Cat shapes, this library has been created to speed up the sketching, you can use it opening the file with draw.io.
 You can refer to the draw.io files with the extension `.drawio`, directly from the markdown files like this:
-```
+
+```mk
 # &#128572; The Cat Bootstrap
 
 This interactive diagram, zoomable with a click, depicts the internal process involved during bootstrap of the Cat:
@@ -90,7 +92,8 @@ This interactive diagram, zoomable with a click, depicts the internal process in
 ```
 
 In the `mkdocs.yml` there is defined the hook `drawio_file.py`, this mkdocs plugin converts the drawio files during the build time:
-```
+
+```mk
 hooks:
   - mkdocs/hooks/drawio_file.py
 ```
@@ -103,10 +106,10 @@ Remember that:
   
 - by default, the hooks shapes have to be visible
   
-- the folder `mkdocs/assets/img/diagrams` contains the svg files used in the main diagram pages, in case you change the diagrams remember to update them. 
+- the folder `mkdocs/assets/img/diagrams` contains the svg files used in the main diagram pages, in case you change the diagrams remember to update them.
 
 ### 🏗️ Build
 
 The build stage is automated using GitHub action, you don't need to do it in order to contribute. However, if you want to have a static copy of the documentation on your local machine you are free to do it.  
 
-`mkdocs build` or `python -m mkdocs build` will create the actual docs static website in a folder named `/docs`. 
+`mkdocs build` or `python -m mkdocs build` will create the actual docs static website in a folder named `/docs`.

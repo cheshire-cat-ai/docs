@@ -110,4 +110,8 @@ Now we can write some code to control the conversation flow in a more granular a
 
 ```
 
-As you've noticed, this state machine is quite basic and does not include comprehensive features such as handling conversation exits. Additionally, strict control flow chatbot like this belong to an older generation of chatbot design. For a more dynamic and stateful approach you can check the [Conversational Form](https://github.com/CheshireCatAI/conversational-forms). Nevertheless, if you need a complete control on your conversation flow, you can extend this example by incorporating more dynamic steps, interactions with LLMs, etc.
+As you've noticed, this state machine is quite basic and does not include comprehensive features such as handling conversation exits. Additionally, strict control flow chatbot like this belong to an older generation of chatbot design. 
+
+For a more dynamic and stateful approach you can check the [Conversational Form](https://github.com/CheshireCatAI/conversational-forms). 
+
+Nevertheless, if you need complete control over your conversation flow, you can extend this example by incorporating more dynamic steps, interactions with LLMs, and other features.

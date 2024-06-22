@@ -125,7 +125,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             @hook  # default priority = 1 
             def before_cat_reads_message(user_message_json, cat):
                 user_message_json["text"] = "The original message has been replaced"
-                cat.working_memory["hacked"] = True
+                cat.working_memory.hacked = True
 
                 return user_message_json
             ```
@@ -372,7 +372,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ```python
         {
-            "input": working_memory["user_message_json"]["text"],  # user's message
+            "input": working_memory.user_message_json.text,  # user's message
             "episodic_memory": episodic_memory_formatted_content,  # strings with documents recalled from memories
             "declarative_memory": declarative_memory_formatted_content,
             "chat_history": conversation_history_formatted_content,
@@ -416,7 +416,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
                 # answer with predefined sentences if the Cat
                 # has no knowledge in the declarative memory
                 # (increasing the threshold memory is advisable)
-                if len(cat.working_memory["declarative_memories"]) == 0:
+                if len(cat.working_memory.declarative_memories) == 0:
                     fast_reply["output"] = "Sorry, I'm afraid I don't know the answer"
 
                 return fast_reply

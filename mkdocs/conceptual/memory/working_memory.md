@@ -33,6 +33,22 @@ The `working_memory` property returns an instance of the `WorkingMemory` class, 
 
 This flexibility allows you to access and set attributes using dot notation, creating and assigning arbitrary attributes on the fly. This makes the Working Memory highly adaptable for handling dynamic data structures.
 
+## Default Properties
+
+The Working Memory has some default properties used all around the framework that are initialized at different stages of the execution flow. 
+
+| Property               | Type                    | Description                                    | Initialization                                                           |
+|------------------------|-------------------------|------------------------------------------------|--------------------------------------------------------------------------|
+| `history`              | `List`                  | Stores the history of interactions.            | At the start of a conversation.                                          |
+| `user_message_json`    | `None` \| `UserMessage` | Holds the current user message in JSON format. | Whenever the Cat receives a message from a user.                         |
+| `active_form`          | `None` \| `CatForm`     | Tracks the active form being used.             | Upon a [form](../../technical/plugins/forms.md) instance initialization. |
+| `recall_query`         | `str`                   | Stores the query used for recalling memories.  | When the Agent recalls relevant memories.                                |
+| `episodic_memories`    | `List`                  | Contains recalled episodic memories.           | When the Agent recalls relevant memories.                                |
+| `declarative_memories` | `List`                  | Contains recalled declarative memories.        | When the Agent recalls relevant memories.                                |
+| `procedural_memories`  | `List`                  | Contains recalled procedural memories.         | When the Agent recalls relevant memories.                                |
+
+These properties are fundamental to the framework's functionality. However, they can be beneficial for various applications, such as performing specific checks on the chat history whenever a new message arrives or accessing the current message for additional processing. You can use them to suit your particular needs!
+
 ## Use the Working Memory as a State Machine
 
 One of the most powerful features of the Working Memory is its ability to function as a state machine.

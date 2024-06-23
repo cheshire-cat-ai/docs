@@ -1,10 +1,11 @@
 # Writing the first Tool
 
 Tools are Python functions called by the LLM to execute actions.
-They are made of two parts: the first one contains instructions that explain the LLM when and how to call function; 
+They are made of two parts: the first one contains instructions that explain the LLM when and how to call function;
 the second one contains the actual code to execute.
 
 ## Creating the Tool
+
 Now, let’s get down to business.
 A real socks sales representative offers a quantity of socks, with many colors and corresponding price.
 Let’s say a customer wants to know the price for socks of a specific color.
@@ -29,22 +30,25 @@ def socks_prices(color, cat):
 ```
 
 ## Testing the Tool
+
 Now, let’s ask for our favorite socks color:
 
 ![Alt text](../assets/img/quickstart/write-tool/ask-price-socks.png)
 
 ## Why the response?
+
 By clicking on the question mark next to the answer, you can understand what prompted the Cat to provide the response.
 In this case, you can see that our tool "socks_prices" was used:
 
 ![Alt text](../assets/img/quickstart/write-tool/why-the-response.png)
 
 ## Explaining the code step by step
+
 ```python
 from cat.mad_hatter.decorators import tool
 ```
 
-Let’s import the tool decorator from the Cat. 
+Let’s import the tool decorator from the Cat.
 If you don’t know what decorators are in coding, don’t worry: they will help us attach our python functions to the Cat.
 The `mad_hatter` is the Cat component that manages and runs plugins.
 
@@ -84,7 +88,7 @@ What is indeed interesting is that, in a tool, you can connect your AI to any se
 Imagine turning on and off the light in your room, searching an e-commerce or writing an email.
 The only limit is your fantasy &#128512;.
 
-## WatchFiles detected changes... reloading...
+## WatchFiles detected changes... reloading
 
 When changes to the plugin's source code are detected, the Cat automatically restarts.
 Feel free to make changes within the code and observe the results.
@@ -95,7 +99,9 @@ Sometimes debugging can be necessary.
 Please refer to the `Developers -> Debugging` section for more information.
 
 #### More Info
-[Developers → Plugins Reference → Tools](../technical/plugins/tools.md)
+
+[Developers → Plugins Reference → Tools](../plugins/tools.md)
 
 ## Next Step
+
 In the [next step](./writing-hook.md), you will learn how to create your first `Hook`.

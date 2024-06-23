@@ -83,4 +83,8 @@ This example explains the **Raw** use of the Cat APIs, however there are convini
 
 #### More Info
 
-[`Developers -> Client Libraries`](../production/clientlib/clientlib-python.md)
+[`Developers -> Client Libraries`](../technical/clientlib/clientlib-python.md)
+
+## Next Step
+
+In the [next step](./interact-using-api.md), you will learn how to interact with the Cat by API.

@@ -697,7 +697,7 @@
         <object label="Hooks" id="jU0hVc8ymb8lpnAGrUQL-4">
           <mxCell parent="aprpqYqw9mxhhdCfWdcv-0" />
         </object>
-        <UserObject label="🪝 before_cat_reads_message" link="https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_memories" linkTarget="_blank" id="4S7vYDjQBKPxBi01lkwd-0">
+        <UserObject label="🪝 before_cat_reads_message" link="https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_memories" linkTarget="_blank" id="4S7vYDjQBKPxBi01lkwd-0">
           <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;" parent="jU0hVc8ymb8lpnAGrUQL-4" vertex="1">
             <mxGeometry x="996" y="2050" width="190" height="22.36" as="geometry" />
           </mxCell>
@@ -900,7 +900,7 @@
         <object label="Hooks" id="Y1SyKjqbaBFUG4TqvNou-1">
           <mxCell parent="0" />
         </object>
-        <UserObject label="🪝 cat_recall_query" link="https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.cat_recall_query" linkTarget="_blank" id="Y1SyKjqbaBFUG4TqvNou-2">
+        <UserObject label="🪝 cat_recall_query" link="https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.cat_recall_query" linkTarget="_blank" id="Y1SyKjqbaBFUG4TqvNou-2">
           <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;fontColor=#82b365;sketch=1;curveFitting=1;jiggle=2;" parent="Y1SyKjqbaBFUG4TqvNou-1" vertex="1">
             <mxGeometry x="229" y="2013" width="130" height="20" as="geometry" />
           </mxCell>
@@ -917,7 +917,7 @@
         <mxCell id="QA0KCDbm8zemMBi31fde-13" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;Rules to recall from memories!&lt;br&gt;&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;The hooks return the values for maximum number (k) of items to retrieve from memory and the score threshold applied&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;to the query in the vector memory (items with score under threshold are not retrieved).&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;div&gt;It also returns the embedded query (embedding) and the conditions on recall (metadata)&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;gradientColor=#dfdc86;strokeColor=#d6b656;spacingTop=2;spacingLeft=4;spacing=2;align=left;fontSize=11;rounded=1;sketch=1;curveFitting=1;jiggle=2;" parent="Y1SyKjqbaBFUG4TqvNou-1" vertex="1">
           <mxGeometry x="-225" y="2049" width="199" height="203.36" as="geometry" />
         </mxCell>
-        <UserObject label="🪝 before_cat_recalls_memories" link="https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_memories" linkTarget="_blank" id="QA0KCDbm8zemMBi31fde-16">
+        <UserObject label="🪝 before_cat_recalls_memories" link="https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_memories" linkTarget="_blank" id="QA0KCDbm8zemMBi31fde-16">
           <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;" parent="Y1SyKjqbaBFUG4TqvNou-1" vertex="1">
             <mxGeometry x="434" y="2114" width="190" height="22.36" as="geometry" />
           </mxCell>
@@ -928,7 +928,7 @@
             <mxPoint x="97" y="2134" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <UserObject label="🪝 8. after_cat_recalls_memories" link="https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.after_cat_recalls_memories" linkTarget="_blank" id="QA0KCDbm8zemMBi31fde-18">
+        <UserObject label="🪝 8. after_cat_recalls_memories" link="https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.after_cat_recalls_memories" linkTarget="_blank" id="QA0KCDbm8zemMBi31fde-18">
           <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;" parent="Y1SyKjqbaBFUG4TqvNou-1" vertex="1">
             <mxGeometry x="955" y="2117" width="212" height="20" as="geometry" />
           </mxCell>
@@ -960,17 +960,17 @@
             <mxRectangle x="26" y="65" width="50" height="44" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <UserObject label="🪝 before_cat_recalls_episodic_memories" link="https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_episodic_memories" linkTarget="_blank" id="kxAho5TZxc4Di1LEgPyz-2">
+        <UserObject label="🪝 before_cat_recalls_episodic_memories" link="https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_episodic_memories" linkTarget="_blank" id="kxAho5TZxc4Di1LEgPyz-2">
           <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;" parent="Y1SyKjqbaBFUG4TqvNou-1" vertex="1">
             <mxGeometry x="116" y="2279" width="235" height="20" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="🪝 before_cat_recalls_procedural_memories" link="https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_episodic_memories#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_episodic_memories" linkTarget="_blank" id="kxAho5TZxc4Di1LEgPyz-3">
+        <UserObject label="🪝 before_cat_recalls_procedural_memories" link="https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_episodic_memories#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_episodic_memories" linkTarget="_blank" id="kxAho5TZxc4Di1LEgPyz-3">
           <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;" parent="Y1SyKjqbaBFUG4TqvNou-1" vertex="1">
             <mxGeometry x="715" y="2279" width="251" height="20" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="🪝 before_cat_recalls_declaritive_memories" link="https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_declarative_memories" linkTarget="_blank" id="kxAho5TZxc4Di1LEgPyz-4">
+        <UserObject label="🪝 before_cat_recalls_declaritive_memories" link="https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_declarative_memories" linkTarget="_blank" id="kxAho5TZxc4Di1LEgPyz-4">
           <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;" parent="Y1SyKjqbaBFUG4TqvNou-1" vertex="1">
             <mxGeometry x="416.5" y="2279" width="240" height="20" as="geometry" />
           </mxCell>
@@ -1671,7 +1671,7 @@
         <object label="Hooks" id="I3MyuciRIipGmwkpXR3--2">
           <mxCell style="" parent="mYRc7Y-7LVEX6wDy4Qgd-0" />
         </object>
-        <UserObject label="🪝 1.1. before_agent_starts" link="https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/agent/#cat.mad_hatter.core_plugin.hooks.agent.before_agent_starts" linkTarget="_blank" id="fW9WpQxdJE67AXc4x-1X-1">
+        <UserObject label="🪝 1.1. before_agent_starts" link="https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/agent/#cat.mad_hatter.core_plugin.hooks.agent.before_agent_starts" linkTarget="_blank" id="fW9WpQxdJE67AXc4x-1X-1">
           <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;fontColor=#82b365;sketch=1;curveFitting=1;jiggle=2;" parent="I3MyuciRIipGmwkpXR3--2" vertex="1">
             <mxGeometry x="1217" y="1938" width="156" height="20" as="geometry" />
           </mxCell>
@@ -1679,7 +1679,7 @@
         <mxCell id="16JrytdMZ7HbXB2ASG0R-12" value="&lt;h1 style=&quot;text-align: left; border-color: var(--border-color); font-size: 11px;&quot;&gt;What about fast reply?&lt;br&gt;&lt;/h1&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left; font-size: 11px;&quot;&gt;This hook allows to reply without executing the agent&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); text-align: left; font-size: 11px;&quot;&gt;(for example canned responses, out-of-topic barriers etc.)&lt;br&gt;&lt;/p&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fillColor=#fff2cc;gradientColor=#dfdc86;strokeColor=#d6b656;spacingTop=2;spacingLeft=4;spacing=2;fontColor=default;rounded=1;sketch=1;curveFitting=1;jiggle=2;" parent="I3MyuciRIipGmwkpXR3--2" vertex="1">
           <mxGeometry x="1308" y="1516" width="168" height="147" as="geometry" />
         </mxCell>
-        <UserObject label="🪝 agent_allowed_tools" link="https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/agent/#cat.mad_hatter.core_plugin.hooks.agent.agent_allowed_tools" linkTarget="_blank" id="16JrytdMZ7HbXB2ASG0R-13">
+        <UserObject label="🪝 agent_allowed_tools" link="https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/agent/#cat.mad_hatter.core_plugin.hooks.agent.agent_allowed_tools" linkTarget="_blank" id="16JrytdMZ7HbXB2ASG0R-13">
           <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;fontColor=#82b365;sketch=1;curveFitting=1;jiggle=2;" parent="I3MyuciRIipGmwkpXR3--2" vertex="1">
             <mxGeometry x="1409" y="1939" width="144" height="20" as="geometry" />
           </mxCell>
@@ -1697,12 +1697,12 @@
         <mxCell id="e7WAAPuUkh2TRtB1zbRy-2" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;strokeColor=#d6b655;strokeWidth=1;endFill=0;dashed=1;fillColor=none;noLabel=0;" parent="I3MyuciRIipGmwkpXR3--2" vertex="1">
           <mxGeometry x="1559" y="2183" width="217" height="121" as="geometry" />
         </mxCell>
-        <UserObject label="🪝 agent_prompt_prefix" link="https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/prompt/#cat.mad_hatter.core_plugin.hooks.prompt.agent_prompt_prefix" linkTarget="_blank" id="e7WAAPuUkh2TRtB1zbRy-3">
+        <UserObject label="🪝 agent_prompt_prefix" link="https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/prompt/#cat.mad_hatter.core_plugin.hooks.prompt.agent_prompt_prefix" linkTarget="_blank" id="e7WAAPuUkh2TRtB1zbRy-3">
           <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;fontColor=#82b365;sketch=1;curveFitting=1;jiggle=2;" parent="I3MyuciRIipGmwkpXR3--2" vertex="1">
             <mxGeometry x="1584" y="2213" width="166" height="20" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="🪝 agent_prompt_suffix" link="https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/prompt/#cat.mad_hatter.core_plugin.hooks.prompt.agent_prompt_suffix" linkTarget="_blank" id="e7WAAPuUkh2TRtB1zbRy-4">
+        <UserObject label="🪝 agent_prompt_suffix" link="https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/prompt/#cat.mad_hatter.core_plugin.hooks.prompt.agent_prompt_suffix" linkTarget="_blank" id="e7WAAPuUkh2TRtB1zbRy-4">
           <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;fontColor=#82b365;sketch=1;curveFitting=1;jiggle=2;" parent="I3MyuciRIipGmwkpXR3--2" vertex="1">
             <mxGeometry x="1583" y="2262" width="166" height="20" as="geometry" />
           </mxCell>
@@ -1880,7 +1880,7 @@
         <object label="Hooks" id="iGua0RoOu2tqFYtJr70q-86">
           <mxCell style="" parent="iGua0RoOu2tqFYtJr70q-0" />
         </object>
-        <UserObject label="🪝&amp;nbsp;before_cat_sends_message" link="https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.before_cat_sends_message" linkTarget="_blank" id="i92r7598okMUZQhBkLbW-0">
+        <UserObject label="🪝&amp;nbsp;before_cat_sends_message" link="https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/?h=before_cat_recalls_memories#cat.mad_hatter.core_plugin.hooks.flow.before_cat_sends_message" linkTarget="_blank" id="i92r7598okMUZQhBkLbW-0">
           <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;fontColor=#82b365;sketch=1;curveFitting=1;jiggle=2;" parent="iGua0RoOu2tqFYtJr70q-86" vertex="1">
             <mxGeometry x="674" y="1924" width="188" height="20" as="geometry" />
           </mxCell>

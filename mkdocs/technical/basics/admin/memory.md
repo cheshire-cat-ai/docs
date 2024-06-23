@@ -1,6 +1,6 @@
 # Memory
 
-The Memory page allows interacting with the Cat's [long term memory](../../../conceptual/memory/long_term_memory.md).
+The Memory page allows interacting with the Cat's [long term memory](../../../cat-components/memory/long_term_memory.md).
 Specifically, it is possible to query the vector collections and retrieve a custom number of similar memories,
 wipe the collections or delete individual memories.
 
@@ -10,8 +10,8 @@ In short,
 t-SNE embeds the memory points projecting them on a 2D plane such that similar points live close to each other.
 Namely, the most similar memories to the query are the closest points to the red one.  
 Reducing the dimensionality of memories is necessary
-since memories are stored in the [vector memory](../../../conceptual/memory/vector_memory.md) collections
-in the form of multidimensional [points](../../../conceptual/memory/vector_memory.md)
+since memories are stored in the [vector memory](../../../cat-components/memory/vector_memory.md) collections
+in the form of multidimensional [points](../../../cat-components/memory/vector_memory.md)
 (e.g. points with 1536 dimensions) and for this reason cannot be plotted.
 
 ![Memory page](../../../assets/img/admin_screenshots/memory.png)
@@ -35,7 +35,7 @@ Clicking on it opens a [side panel](#show-more-button) with detailed information
   ![Flash button](../../../assets/img/admin_screenshots/memory_details.png){ width="300" }
 </figure>
 
-1. **Embedder**: this tab tells what's the [embedder](../../../conceptual/llm.md#embedding-model) in use.
+1. **Embedder**: this tab tells what's the [embedder](../../../cat-components/llm.md#embedding-model) in use.
 2. **Memory buttons**: these buttons allow switching between the lists of every memory collection.
 3. **Memory item**: these elements give information about every the retrieved memories.
 In green there is the similarity score with the query; below the memory content;
@@ -53,4 +53,3 @@ In green there is the similarity score with the query; below the memory content;
 ## References
 
 [^1]: Van der Maaten, L., & Hinton, G. (2008). Visualizing data using t-SNE. Journal of machine learning research, 9(11).
-

@@ -19,7 +19,7 @@ There is a [dedicated channel for Docs on our official Discord](https://discord.
 
 ### &#129693; Hooks documentation
 
-To help documenting the [hooks table](./mkdocs/technical/plugins/hooks.md#available-hooks), ensure these elements are not missing and please keep the order:
+To help documenting the [hooks table](mkdocs/plugins/hooks.md#available-hooks), ensure these elements are not missing and please keep the order:
 
 1. Annotation number with bold heading
 2. *Input arguments* description with *code snippet* example

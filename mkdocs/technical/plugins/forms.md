@@ -173,12 +173,12 @@ The method has two parameters:
 
 The method must return a dictionary where the value of the `output` key is a string that will be displayed in the chat.
 
-If you need to use the Form in future conversations, you can retrieve the model from the working memory by accessing the `form` key.
+If you need to use the Form in future conversations, you can retrieve the active form from the working memory by accessing the `active_form` key.
 
 Here is an example:
 
 ```python
     @hook  
     def before_cat_sends_message(message, cat):
-        form_data = cat.working_memory["form"]
+        active_form = cat.working_memory.active_form
 ```

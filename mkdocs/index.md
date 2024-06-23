@@ -46,7 +46,7 @@
 ## Cheshire Cat Features
 
 The Cheshire Cat is an open-source, hackable and production-ready framework that allows developing intelligent personal
-AI assistant agents on top of [Large Language Models](framework/conceptual/llm.md) (LLM).
+AI assistant agents on top of [Large Language Models](framework/cat-components/llm.md) (LLM).
 
 <div class="grid cards" markdown>
 
@@ -88,7 +88,7 @@ AI assistant agents on top of [Large Language Models](framework/conceptual/llm.m
 
     Make use of a persistent memory across restarts!
 
-    [:octicons-arrow-right-24: Cat's Long Term Memory](framework/conceptual/memory/long_term_memory.md)
+    [:octicons-arrow-right-24: Cat's Long Term Memory](framework/cat-components/memory/long_term_memory.md)
 
 - &#128011; __100% dockerized__
 

@@ -246,7 +246,7 @@ def convert_currency(tool_input, cat): # (1)
 **Cat's answer**:
 > 7.5 euros is equal to 6.45 British Pounds.
 
-As you may see, the [Agent](../framework/conceptual/cheshire_cat/agent.md) correctly understands the desired output from the message
+As you may see, the [Agent](../framework/cat-components/cheshire_cat/agent.md) correctly understands the desired output from the message
 and passes it to the tool function as explained in the docstring. Then, it is up to us parse the two inputs correctly for our tool.
 
 ### External library & the cat parameter

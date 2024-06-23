@@ -20,7 +20,7 @@ plugins:
   - mkdocstrings:
       handlers:
         python:
-          paths: [mkdocs/technical/API_Documentation]
+          paths: [mkdocs/API_Documentation]
           options:
             docstring_style: numpy
 
@@ -65,24 +65,24 @@ nav:
           - Encoder: framework/llm-concepts/embedder.md
           - Vector Memory: framework/llm-concepts/vector-memory.md
       - Cat Components:
-        - The Core: framework/conceptual/cheshire_cat/core.md
+        - The Core: framework/cat-components/cheshire_cat/core.md
         - The Agent:
-            - Introduction: framework/conceptual/cheshire_cat/agent.md
-            - Tool Chain: framework/conceptual/cheshire_cat/tool_chain.md
-            - Memory Chain: framework/conceptual/cheshire_cat/memory_chain.md
+            - Introduction: framework/cat-components/cheshire_cat/agent.md
+            - Tool Chain: framework/cat-components/cheshire_cat/tool_chain.md
+            - Memory Chain: framework/cat-components/cheshire_cat/memory_chain.md
         - The Prompts:
-            - Main Prompt: framework/conceptual/prompts/main_prompt.md
-            - Instruction Prompt: framework/conceptual/prompts/instructions.md
+            - Main Prompt: framework/cat-components/prompts/main_prompt.md
+            - Instruction Prompt: framework/cat-components/prompts/instructions.md
         - The Vector Memory:
-            - Vector Memory Collections: framework/conceptual/memory/vector_memory.md
+            - Vector Memory Collections: framework/cat-components/memory/vector_memory.md
         - The Long Term Memory:
-            - Introduction: framework/conceptual/memory/long_term_memory.md
-            - Episodic Memory: framework/conceptual/memory/episodic_memory.md
-            - Declarative Memory: framework/conceptual/memory/declarative_memory.md
-            - Procedural Memory: framework/conceptual/memory/procedural_memory.md
-        - The Working Memory: framework/conceptual/memory/working_memory.md
-        - The Rabbit Hole: framework/conceptual/cheshire_cat/rabbit_hole.md
-        - The Mad Hatter: framework/conceptual/cheshire_cat/mad_hatter.md
+            - Introduction: framework/cat-components/memory/long_term_memory.md
+            - Episodic Memory: framework/cat-components/memory/episodic_memory.md
+            - Declarative Memory: framework/cat-components/memory/declarative_memory.md
+            - Procedural Memory: framework/cat-components/memory/procedural_memory.md
+        - The Working Memory: framework/cat-components/memory/working_memory.md
+        - The Rabbit Hole: framework/cat-components/cheshire_cat/rabbit_hole.md
+        - The Mad Hatter: framework/cat-components/cheshire_cat/mad_hatter.md
       - Technical Diagrams:
         - The Cat Bootstrap: framework/flows/cat-bootstrap.md
         - Chatting with the Cat: framework/flows/chatting-with-the-cat.md

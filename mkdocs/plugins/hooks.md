@@ -3,6 +3,7 @@
 Hooks are Python functions that are called directly from the Cat at runtime, they allow you to change how the Cat internally works without directly modifying the Cat itself.
 
 ## How the Hooks work
+
 To create a hook, you first need to create a [plugin](plugins.md) that contains it. Once the plugin is created, you can insert hooks inside the plugin, a single plugin can contain multiple hooks.
 
 A hook is simply a Python function that uses the `@hook` decorator, the function's name determines when it will be called.
@@ -36,13 +37,15 @@ def before_cat_sends_message(final_output, cat):
 *Some hooks receive more than one argument, the value determined by the Cat is always the first argument, all the other parameters are solely context parameters, which hooks cannot modify, the last parameter is always the Cat instance.*
 
 ## Multiple Implementations
-Several plugins can implement the same hook. The argument `priority` of the `@hook` decorator allows you to set the priority of the hook, the default value is 1. 
+
+Several plugins can implement the same hook. The argument `priority` of the `@hook` decorator allows you to set the priority of the hook, the default value is 1.
 
 The Cat calls the implementations in order of priority. Hooks with a higher priority number will be called first. The following hooks will receive the value returned by the previous hook. In this way, hooks can be chained together to create complex behaviors.
 
 If two plugins have the same priority, the order in which they are called is not guaranteed.
 
 ## Available Hooks
+
 You can view the list of available hooks by exploring the Cat source code under the folder `core/cat/mad_hatter/core_plugin/hooks`.
 All the hooks you find in there define default Cat's behavior and are ready to be overridden by your plugins.
 
@@ -89,7 +92,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_bootstrap)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_bootstrap)
             - [Debugger plugin](https://github.com/sambarza/cc-vscode-debugpy)
 
     2. **Input arguments**  
@@ -107,7 +110,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.after_cat_bootstrap)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.after_cat_bootstrap)
 
     3. **Input arguments**    
         `user_message_json`: a dictionary with the JSON message sent via WebSocket. E.g.:  
@@ -132,7 +135,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_reads_message)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_reads_message)
 
     4. **Input arguments**  
         `user_message`: a string with the user's message that will be used to query the vector memories. E.g.:
@@ -157,7 +160,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resourcer"
         
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.cat_recall_query)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.cat_recall_query)
             - [HyDE plugin](https://github.com/Furrmidable-Crew/ccat_hyde)
 
     5. **Input arguments**  
@@ -175,7 +178,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_memories)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_memories)
 
     6. **Input arguments**  
         `episodic_recall_config`: dictionary with the recall configuration for the episodic memory. Default is:
@@ -204,7 +207,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_episodic_memories)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_episodic_memories)
             - [C.A.T. plugin](https://github.com/Furrmidable-Crew/cat_advanced_tools)
 
     7. **Input arguments**  
@@ -235,7 +238,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_declarative_memories)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_declarative_memories)
             - [RabbitHole segmentation plugin](https://github.com/team-sviluppo/cc_rabbithole_segmentation)
             - [C.A.T. plugin](https://github.com/Furrmidable-Crew/cat_advanced_tools)
 
@@ -266,7 +269,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_procedural_memories)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_recalls_procedural_memories)
             - [C.A.T. plugin](https://github.com/Furrmidable-Crew/cat_advanced_tools)
 
     9. **Input arguments**  
@@ -284,7 +287,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.after_cat_recalls_memories)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.after_cat_recalls_memories)
 
     10. **Input arguments**  
         `doc`: Langchain Document to be inserted in memory. E.g.:
@@ -312,7 +315,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_stores_episodic_memory)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_stores_episodic_memory)
   
     11. **Input arguments**  
         `message`: the dictionary containing the Cat's answer that will be sent via WebSocket. E.g.:
@@ -350,10 +353,10 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_sends_message)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_sends_message)
 
 === "&#129302; Agent"
-    
+
     <div class="annotate" mardown>
 
     | Name                          | Description                                                                      |
@@ -395,7 +398,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
         
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/agent/#cat.mad_hatter.core_plugin.hooks.agent.before_agent_starts)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/agent/#cat.mad_hatter.core_plugin.hooks.agent.before_agent_starts)
 
     2. **Input arguments**  
         `fast_reply`: empty dictionary.
@@ -424,7 +427,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/agent/#cat.mad_hatter.core_plugin.hooks.agent.agent_fast_reply)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/agent/#cat.mad_hatter.core_plugin.hooks.agent.agent_fast_reply)
             - [Stay on topic plugin](https://github.com/Furrmidable-Crew/stay_on_topic)
 
     3. **Input arguments**  
@@ -453,7 +456,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/prompt/#cat.mad_hatter.core_plugin.hooks.prompt.agent_prompt_prefix)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/prompt/#cat.mad_hatter.core_plugin.hooks.prompt.agent_prompt_prefix)
 
     4. **Input arguments**  
         `prompt_suffix`: string with the ending part of the prompt containing the memories and the chat history.
@@ -508,7 +511,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/prompt/#cat.mad_hatter.core_plugin.hooks.prompt.agent_prompt_suffix)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/prompt/#cat.mad_hatter.core_plugin.hooks.prompt.agent_prompt_suffix)
             - [C.A.T. plugin](https://github.com/Furrmidable-Crew/cat_advanced_tools)
 
     5. **Input arguments**  
@@ -534,7 +537,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/agent/#cat.mad_hatter.core_plugin.hooks.agent.agent_allowed_tools)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/agent/#cat.mad_hatter.core_plugin.hooks.agent.agent_allowed_tools)
 
     6. **Input arguments**  
         `instructions`: string with the reasoning template. Default is:
@@ -581,10 +584,10 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/prompt/#cat.mad_hatter.core_plugin.hooks.prompt.agent_prompt_instructions)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/prompt/#cat.mad_hatter.core_plugin.hooks.prompt.agent_prompt_instructions)
 
 === "&#128048; Rabbit Hole"
-    
+
     <div class="annotate" mardown>
 
     | Name                                      | Description                                                    |
@@ -628,7 +631,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.rabbithole_instantiates_parsers)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.rabbithole_instantiates_parsers)
             - [IngestAnything plugin](https://github.com/Furrmidable-Crew/IngestAnything)
 
     2. **Input arguments**  
@@ -657,7 +660,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
             
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.before_rabbithole_insert_memory)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.before_rabbithole_insert_memory)
             - [RabbitHole segmentation plugin](https://github.com/team-sviluppo/cc_rabbithole_segmentation)
             - [Summarization plugin](https://github.com/Furrmidable-Crew/ccat_summarization)
 
@@ -682,7 +685,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.before_rabbithole_splits_text)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.before_rabbithole_splits_text)
 
     4. **Input arguments**  
         `chunks`: list of Langchain documents with text chunks.
@@ -704,7 +707,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.after_rabbithole_splitted_text)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.after_rabbithole_splitted_text)
 
     5. **Input arguments**  
         `docs`: list of chunked Langchain documents before being inserted in memory.
@@ -735,7 +738,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.before_rabbithole_stores_documents)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.before_rabbithole_stores_documents)
             - [Summarization plugin](https://github.com/Furrmidable-Crew/ccat_summarization)
   
     6. **Input arguments**
@@ -755,7 +758,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.after_rabbithole_stored_documents)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.after_rabbithole_stored_documents)
 
     7. **Input arguments**
 
@@ -782,7 +785,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.rabbithole_instantiates_parsers)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.rabbithole_instantiates_parsers)
             - [IngestAnything Plugin](https://github.com/Furrmidable-Crew/IngestAnything)
   
     8. **Input arguments**
@@ -803,10 +806,10 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.rabbithole_instantiates_splitter)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.rabbithole_instantiates_splitter)
 
 === "&#128268; Plugin"
-    
+
     <div class="annotate" mardown>
 
     | Name                | Description                                        |
@@ -845,7 +848,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.activated)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.activated)
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
 
     2. **Input arguments**  
@@ -877,7 +880,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.deactivated)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.deactivated)
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
 
     3. **Input arguments**  
@@ -925,7 +928,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
             - [Example Plugin: C.A.T. Cat Advanced Tools](https://github.com/Furrmidable-Crew/cat_advanced_tools)
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.settings_schema)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.settings_schema)
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
 
     4. **Input arguments**  
@@ -975,7 +978,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.settings_model)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.settings_model)
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
 
     5. **Input arguments**  
@@ -1007,7 +1010,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.load_settings)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.load_settings)
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
 
     6. **Input arguments**  
@@ -1043,7 +1046,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.save_settings)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/settings/#cat.mad_hatter.core_plugin.settings.save_settings)
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/plugin.py#L25)
 
 === "&#127981; Factory"
@@ -1136,5 +1139,4 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [Python reference]()
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/core_plugin/hooks/language.py#L23)
 
-
-> **_NOTE:_**  Any function in a plugin decorated by `@plugin` and named properly (among the list of available overrides, **Plugin** tab in the table above) is used to override plugin behaviour. These are not hooks because they are not piped, they are *specific* for every plugin.
+> ***NOTE:***  Any function in a plugin decorated by `@plugin` and named properly (among the list of available overrides, **Plugin** tab in the table above) is used to override plugin behaviour. These are not hooks because they are not piped, they are *specific* for every plugin.

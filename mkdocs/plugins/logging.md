@@ -17,17 +17,22 @@ Note that the logger is created by default with level `WARNING` (`LOG_LEVEL=${LO
 Logging messages which are less severe than *level* will be ignored; logging messages which have severity *level* or higher will be emitted to the console.
 
 ## How to
+
 The logging system can be imported like this
+
 ```
 from cat.log import log
 ```
+
 and then used as easy as:
+
 ```
 log.error("A simple text here")
 log.info(f"Value of user message is {user_message_json["text"]}")
 log.critical(variable_value)
 ```
-Take a look [here](https://cheshire-cat-ai.github.io/docs/technical/API_Documentation/log/) if you want to better understand how the log system is implemented.
+
+Take a look [here](https://cheshire-cat-ai.github.io/docs///API_Documentation/log/) if you want to better understand how the log system is implemented.
 
 ## Examples
 

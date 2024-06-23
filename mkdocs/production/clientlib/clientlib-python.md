@@ -13,7 +13,7 @@ To add the client to your project, install it with pip:
 pip install cheshire_cat_api
 ```
 
-Then, you can import the base class like this: 
+Then, you can import the base class like this:
 
 ```python
 import cheshire_cat_api as ccat
@@ -134,7 +134,7 @@ from cheshire_cat_api.models.body_upload_url import BodyUploadUrl
 # a URL requires structuring the body like this
 
 body_upload_url = BodyUploadUrl(
-    url="https://cheshire-cat-ai.github.io/docs/conceptual/cheshire_cat/rabbit_hole/"
+    url="https://cheshire-cat-ai.github.io/docs/cat-components/cheshire_cat/rabbit_hole/"
 )
 
 # then you can make the request as follows

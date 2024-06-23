@@ -1,6 +1,6 @@
 # Settings
 
-The settings page allows managing the settings of the [language models](../../../conceptual/llm.md) and other general settings.
+The settings page allows managing the settings of the [language models](../../../cat-components/llm.md) and other general settings.
 
 ![Settings](../../../assets/img/admin_screenshots/settings.png)
 

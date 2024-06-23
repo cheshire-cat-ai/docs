@@ -1,8 +1,8 @@
 # &#128101; User System
 
 The Cat provides a basic user management system that allows having separated memories for each user.
-The user system affects only the [working memory](../../framework/conceptual/memory/working_memory.md) and
-the [episodic memory](../../framework/conceptual/memory/long_term_memory.md).
+The user system affects only the [working memory](../../framework/cat-components/memory/working_memory.md) and
+the [episodic memory](../../framework/cat-components/memory/long_term_memory.md).
 The other memories are shared among users.
 
 More in details, the websocket client indicates the current `user_id` by calling the `ws://localhost:1865/ws/{user_id}` endpoint.

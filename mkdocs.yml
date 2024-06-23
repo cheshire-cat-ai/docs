@@ -20,7 +20,7 @@ plugins:
   - mkdocstrings:
       handlers:
         python:
-          paths: [mkdocs/technical/API_Documentation]
+          paths: [mkdocs/API_Documentation]
           options:
             docstring_style: numpy
 
@@ -36,77 +36,77 @@ nav:
       - Playing with the Cat: quickstart/play-with-the-cat.md
       # - Interacting using APIs: quickstart/interact-using-api.md
       - Uploading a Document: quickstart/upload-document.md
-      - Installing a Plugin: plugins-registry/installing-plugin.md
+      - Installing a Plugin: quickstart/installing-plugin.md
       - Creating a Plugin: quickstart/prepare-plugin.md
       - Writing the first Tool: quickstart/writing-tool.md
       - Writing the first Hook: quickstart/writing-hook.md
       - Stopping the Cat: quickstart/stopping-the-cat.md
 
   - Plugins:
-    - Plugin: technical/plugins/plugins.md
-    - Tools: technical/plugins/tools.md
-    - Hooks: technical/plugins/hooks.md
-    - Forms: technical/plugins/forms.md
-    - Logging: technical/plugins/logging.md
-    - Settings: technical/plugins/settings.md
-    - Dependencies: technical/plugins/dependencies.md
-    - Python Reference: technical/API_Documentation/
+    - Plugin: plugins/plugins.md
+    - Tools: plugins/tools.md
+    - Hooks: plugins/hooks.md
+    - Forms: plugins/forms.md
+    - Logging: plugins/logging.md
+    - Settings: plugins/settings.md
+    - Dependencies: plugins/dependencies.md
+    - Python Reference: API_Documentation/
     - Registry:
-      - Using the Plugin Template: plugins-registry/plugin-from-template.md
-      - Publishing a Plugin: plugins-registry/publishing-plugin.md
+      - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md
+      - Publishing a Plugin: plugins/plugins-registry/publishing-plugin.md
     - Debugging:
-        - Visual Studio Code: technical/debugging/vscode.md
+        - Visual Studio Code: plugins/debugging/vscode.md
 
   - Framework:
       - LLM Concepts:
-          - Language Models: llm-concepts/llm.md
-          - Retrieval Augmented Generation: llm-concepts/rag.md
-          - Prompt: llm-concepts/prompt.md
-          - Encoder: llm-concepts/embedder.md
-          - Vector Memory: llm-concepts/vector-memory.md
+          - Language Models: framework/llm-concepts/llm.md
+          - Retrieval Augmented Generation: framework/llm-concepts/rag.md
+          - Prompt: framework/llm-concepts/prompt.md
+          - Encoder: framework/llm-concepts/embedder.md
+          - Vector Memory: framework/llm-concepts/vector-memory.md
       - Cat Components:
-        - The Core: conceptual/cheshire_cat/core.md
+        - The Core: framework/cat-components/cheshire_cat/core.md
         - The Agent:
-            - Introduction: conceptual/cheshire_cat/agent.md
-            - Tool Chain: conceptual/cheshire_cat/tool_chain.md
-            - Memory Chain: conceptual/cheshire_cat/memory_chain.md
+            - Introduction: framework/cat-components/cheshire_cat/agent.md
+            - Tool Chain: framework/cat-components/cheshire_cat/tool_chain.md
+            - Memory Chain: framework/cat-components/cheshire_cat/memory_chain.md
         - The Prompts:
-            - Main Prompt: conceptual/prompts/main_prompt.md
-            - Instruction Prompt: conceptual/prompts/instructions.md
+            - Main Prompt: framework/cat-components/prompts/main_prompt.md
+            - Instruction Prompt: framework/cat-components/prompts/instructions.md
         - The Vector Memory:
-            - Vector Memory Collections: conceptual/memory/vector_memory.md
+            - Vector Memory Collections: framework/cat-components/memory/vector_memory.md
         - The Long Term Memory:
-            - Introduction: conceptual/memory/long_term_memory.md
-            - Episodic Memory: conceptual/memory/episodic_memory.md
-            - Declarative Memory: conceptual/memory/declarative_memory.md
-            - Procedural Memory: conceptual/memory/procedural_memory.md
-        - The Working Memory: conceptual/memory/working_memory.md
-        - The Rabbit Hole: conceptual/cheshire_cat/rabbit_hole.md
-        - The Mad Hatter: conceptual/cheshire_cat/mad_hatter.md
+            - Introduction: framework/cat-components/memory/long_term_memory.md
+            - Episodic Memory: framework/cat-components/memory/episodic_memory.md
+            - Declarative Memory: framework/cat-components/memory/declarative_memory.md
+            - Procedural Memory: framework/cat-components/memory/procedural_memory.md
+        - The Working Memory: framework/cat-components/memory/working_memory.md
+        - The Rabbit Hole: framework/cat-components/cheshire_cat/rabbit_hole.md
+        - The Mad Hatter: framework/cat-components/cheshire_cat/mad_hatter.md
       - Technical Diagrams:
-        - The Cat Bootstrap: technical/flows/cat-bootstrap.md
-        - Chatting with the Cat: technical/flows/chatting-with-the-cat.md
-        - Plugins Lifecycle: technical/flows/plugins-lifecycle.md
+        - The Cat Bootstrap: framework/flows/cat-bootstrap.md
+        - Chatting with the Cat: framework/flows/chatting-with-the-cat.md
+        - Plugins Lifecycle: framework/flows/plugins-lifecycle.md
 
   - Production:
     - Client Libraries:
-        - Python: technical/clientlib/clientlib-python.md
-        - TypeScript: technical/clientlib/clientlib-typescript.md
-        - PHP: technical/clientlib/clientlib-php.md
-        - Ruby: technical/clientlib/clientlib-ruby.md
-        - C#: technical/clientlib/clientlib-csharp.md
+        - Python: production/clientlib/clientlib-python.md
+        - TypeScript: production/clientlib/clientlib-typescript.md
+        - PHP: production/clientlib/clientlib-php.md
+        - Ruby: production/clientlib/clientlib-ruby.md
+        - C#: production/clientlib/clientlib-csharp.md
     - Administrations:
-        - Architecture: administrators/architecture.md
-        - Environment Variables: administrators/env-variables.md
-        - User Management: technical/advanced/user_system.md
-        - Automatic Tests: technical/advanced/tests.md
+        - Architecture: production/administrators/architecture.md
+        - Environment Variables: production/administrators/env-variables.md
+        - User Management: production/advanced/user_system.md
+        - Automatic Tests: production/advanced/tests.md
     - Use Cases:
-        - Cat as Main product: use-cases/main-product.md
-        - Cat as Sidecar of your product: use-cases/side-car.md
-        - Cat as Discord BOT: use-cases/discord-bot.md
+        - Cat as Main product: production/use-cases/main-product.md
+        - Cat as Sidecar of your product: production/use-cases/side-car.md
+        - Cat as Discord BOT: production/use-cases/discord-bot.md
     - Guides:
 #      - How to update the Cat Core: guides/update-the-core.md
-      - How to backup the Long Term Memory: technical/advanced/memory_backup.md
+      - How to backup the Long Term Memory: production/advanced/memory_backup.md
 
   - FAQ: faq.md
   # - Altro:

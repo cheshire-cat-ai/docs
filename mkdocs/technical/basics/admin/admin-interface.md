@@ -15,7 +15,7 @@
 The frontend interface of The Cheshire Cat can be accessed via `localhost:1865/admin`.
 This interface provides you with an easy-to-use chat
 that acts as a playground and can be used to interact with your application.
-The Cat core uses a static build of the admin, 
+The Cat core uses a static build of the admin,
 source code can be found [here](https://github.com/cheshire-cat-ai/admin-vue).
 
 The home page of the Admin interface is where it possible to chat with the Cat.
@@ -55,8 +55,8 @@ at the bottom left the source of the memory and on the bottom right the upload t
   ![Flash button](../../../assets/img/admin_screenshots/modal_home.png){ width="150" }
 </figure>
 
-1. **Prompt settings**: allows customizing the main prompt [prefix](../../../conceptual/prompts/main_prompt.md#prefix).
+1. **Prompt settings**: allows customizing the main prompt [prefix](../../../cat-components/prompts/main_prompt.md#prefix).
 2. **Upload memories**: allows uploading memories in the format of JSON files.
 3. **Upload url**: allows uploading a web page in memory providing an url.
 4. **Upload file**: allows uploading a file in memory. Supported formats are `.txt`, `.pdf` and `.md`.
-5. **Clear conversation**: clear the current conversation and delete the conversation history in the [working memory](../../../conceptual/memory/working_memory.md).
+5. **Clear conversation**: clear the current conversation and delete the conversation history in the [working memory](../../../cat-components/memory/working_memory.md).

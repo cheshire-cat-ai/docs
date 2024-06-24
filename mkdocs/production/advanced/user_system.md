@@ -40,3 +40,5 @@ and [Typescript](https://www.npmjs.com/package/ccat-api), that allow exploiting 
         
         cat.send('Hello my friend!!', 'user05');
         ```   
+
+TODO: Add hook example to retrive document only few users.

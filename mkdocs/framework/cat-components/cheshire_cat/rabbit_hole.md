@@ -6,3 +6,6 @@ You can interact with it either through its [endpoint](../../../technical/basics
 Currently supported file formats are: `.txt`, `.md`, `.pdf` or `.html` via web URL.
 
 ![Schema of the Cheshire Cat components](../../../assets/img/diagrams/rabbithole.jpg){width=400px style="display: block; margin: 0 auto"}
+
+TODO: Describe how customize ingestion using hooks.
+TODO: Link Rabbit Hole Ingestion Diagram.

@@ -27,7 +27,6 @@
 | widget-alpine | ![Image title](../assets/img/clientlib/Alpine.js.png){ width="40" } | [Cheshire Cat Alpine.JS Widget](https://github.com/cheshire-cat-ai/widget-alpine) |
 | Widget-Vue    | ![Image title](../assets/img/clientlib/Vue.js.png){ width="40" }    | [Cheshire Cat Vue Widget](https://github.com/cheshire-cat-ai/widget-vue)          |
 
-### Community
 
 ## Apps
 
@@ -35,4 +34,3 @@
 | -------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------- |
 | Meowgram | ![Image title](../assets/img/clientlib/2048px-Telegram_logo.png){ width="40" } | [Cheshire Cat Telegram](https://github.com/Pingdred/Meowgram) |
 |          | ![Image title](../assets/img/clientlib/discord.png){ width="40" }              | :construction_worker: Working in progress...                  |
-

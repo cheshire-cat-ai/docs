@@ -58,12 +58,6 @@ nav:
         - Visual Studio Code: plugins/debugging/vscode.md
 
   - Framework:
-      - LLM Concepts:
-          - Language Models: framework/llm-concepts/llm.md
-          - Retrieval Augmented Generation: framework/llm-concepts/rag.md
-          - Prompt: framework/llm-concepts/prompt.md
-          - Encoder: framework/llm-concepts/embedder.md
-          - Vector Memory: framework/llm-concepts/vector-memory.md
       - Cat Components:
         - The Core: framework/cat-components/cheshire_cat/core.md
         - The Agent:
@@ -90,24 +84,35 @@ nav:
 
   - Production:
     - Client Libraries:
-        - Python: production/clientlib/clientlib-python.md
-        - TypeScript: production/clientlib/clientlib-typescript.md
-        - PHP: production/clientlib/clientlib-php.md
-        - Ruby: production/clientlib/clientlib-ruby.md
-        - C#: production/clientlib/clientlib-csharp.md
+        - Official:
+          - Python: production/clientlib/official/clientlib-python.md
+          - TypeScript: production/clientlib/official/clientlib-typescript.md
+        - Community:
+          - PHP: production/clientlib/community/clientlib-php.md
+          - Ruby: production/clientlib/community/clientlib-ruby.md
+          - C#: production/clientlib/community/clientlib-csharp.md
+          - Golang: production/clientlib/community/clientlib-go.md
+          - Java: production/clientlib/community/clientlib-java.md
     - Administrations:
         - Architecture: production/administrators/architecture.md
         - Environment Variables: production/administrators/env-variables.md
         - User Management: production/advanced/user_system.md
         - Automatic Tests: production/advanced/tests.md
     - Use Cases:
-        - Cat as Main product: production/use-cases/main-product.md
-        - Cat as Sidecar of your product: production/use-cases/side-car.md
-        - Cat as Discord BOT: production/use-cases/discord-bot.md
+        - Setup your local jarvis:
+        - K8s:
+        - nginx:
     - Guides:
 #      - How to update the Cat Core: guides/update-the-core.md
       - How to backup the Long Term Memory: production/advanced/memory_backup.md
 
+  - Learn:
+    - LLM Concepts:
+          - Language Models: framework/llm-concepts/llm.md
+          - Retrieval Augmented Generation: framework/llm-concepts/rag.md
+          - Prompt: framework/llm-concepts/prompt.md
+          - Encoder: framework/llm-concepts/embedder.md
+          - Vector Memory: framework/llm-concepts/vector-memory.md
   - FAQ: faq.md
   # - Altro:
   #   - Resources:

@@ -83,25 +83,28 @@ nav:
         - Plugins Lifecycle: framework/flows/plugins-lifecycle.md
 
   - Production:
-    - Client Libraries:
-        - Official:
-          - Python: production/clientlib/official/clientlib-python.md
-          - TypeScript: production/clientlib/official/clientlib-typescript.md
-        - Community:
-          - PHP: production/clientlib/community/clientlib-php.md
-          - Ruby: production/clientlib/community/clientlib-ruby.md
-          - C#: production/clientlib/community/clientlib-csharp.md
-          - Golang: production/clientlib/community/clientlib-go.md
-          - Java: production/clientlib/community/clientlib-java.md
+    - Clients: production/clients.md
+      # - Libraries:
+      #     - Official:
+      #       - Python: production/clientlib/official/clientlib-python.md
+      #       - TypeScript: production/clientlib/official/clientlib-typescript.md
+      #     - Community:
+      #       - PHP: production/clientlib/community/clientlib-php.md
+      #       - Ruby: production/clientlib/community/clientlib-ruby.md
+      #       - C#: production/clientlib/community/clientlib-csharp.md
+      #       - Golang: production/clientlib/community/clientlib-go.md
+      #       - Java: production/clientlib/community/clientlib-java.md
+      # - Apps:
+      # - Widget:
     - Administrations:
         - Architecture: production/administrators/architecture.md
         - Environment Variables: production/administrators/env-variables.md
         - User Management: production/advanced/user_system.md
         - Automatic Tests: production/advanced/tests.md
-    - Use Cases:
-        - Setup your local jarvis:
-        - K8s:
-        - nginx:
+    # - Use Cases:
+    #     - Setup your local jarvis:
+    #     - K8s:
+    #     - nginx:
     - Guides:
 #      - How to update the Cat Core: guides/update-the-core.md
       - How to backup the Long Term Memory: production/advanced/memory_backup.md

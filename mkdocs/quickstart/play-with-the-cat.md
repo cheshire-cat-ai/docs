@@ -21,9 +21,7 @@ You have learned how to use the playground to test your AI via the Admin Portal.
 
 ![Alt text](../assets/img/quickstart/play-with-the-cat/play-with-the-cat.png)
 
-#### More Info
 
-[Admin Portal → Home](../technical/basics/admin/admin-interface.md)
 
 ## Chatting with the Cat: API interaction
 
@@ -83,4 +81,4 @@ This example explains the **Raw** use of the Cat APIs, however there are convini
 
 #### More Info
 
-[`Developers -> Client Libraries`](../production/clientlib/clientlib-python.md)
+[`Developers -> Client Libraries`](../production/clients.md)

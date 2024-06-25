@@ -92,9 +92,8 @@ nav:
         - Automatic Tests: production/advanced/tests.md
     - Use Cases:
         - Integrations: production/use-cases/integrations.md
-        #- Examples: production/use-cases/examples.md
+        - Examples: production/use-cases/examples.md
     - Guides:
-#      - How to update the Cat Core: guides/update-the-core.md
       - How to backup the Long Term Memory: production/advanced/memory_backup.md
 
 

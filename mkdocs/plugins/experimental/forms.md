@@ -129,9 +129,9 @@ The Validation Phase is when the Form attempts to construct the model, allowing 
 
 The Visualization Phase is when the Form shows the model's status to the user by displaying a message.
 
-By default the cat displays the forms like so ![display form](../assets/img/technical/forms/how_is_display.png)
+By default the cat displays the forms like so ![display form](../../assets/img/technical/forms/how_is_display.png)
 
-When there is invalid info retrieved from the conversation, the Cat specifies the issue ![display invalid info](../assets/img/technical/forms/how_invalid_is_display.png)
+When there is invalid info retrieved from the conversation, the Cat specifies the issue ![display invalid info](../../assets/img/technical/forms/how_invalid_is_display.png)
 
 You can modify this phase by overriding the `def message(self)` method:
 

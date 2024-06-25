@@ -14,6 +14,6 @@ During conversation between the Cat and the user, the memories are accessed by t
 
 The retrieved relevant context is used to make up the [Main prompt](../prompts/main_prompt.md) and the Instruction prompt.
 
-You can interact with the LTM using the [memory](../../../technical/basics/admin/memory.md) page of the Admin Portal.
+You can interact with the LTM using the **memory page** of the Admin Portal.
 
-Check about `long term memory` [backup](../../../technical/advanced/memory_backup.md) to prevent loosing `cat` memories.
+Check about `long term memory` [backup](../../../production/advanced/memory_backup.md) to prevent loosing `cat` memories.

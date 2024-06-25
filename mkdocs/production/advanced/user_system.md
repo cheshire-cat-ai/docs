@@ -10,7 +10,7 @@ The Cat uses such `user_id` to retrieve the user's working memory and to store t
 
 !!! Note
     Please, note that the user management system works only when using a custom client.
-    Its usage is not intended from the [admin](../../technical/basics/admin/admin-interface.md) interface,
+    Its usage is not intended from the **admin** interface,
     which, by default, uses `user_id = "user"`.
 
 ## Example
@@ -40,3 +40,5 @@ and [Typescript](https://www.npmjs.com/package/ccat-api), that allow exploiting 
         
         cat.send('Hello my friend!!', 'user05');
         ```   
+
+TODO: Add hook example to retrive document only few users.

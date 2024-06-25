@@ -46,3 +46,4 @@ cat/
 # Drawio temporary files
 .$drawio-cheshire-cat-library.xml.bkp
 mkdocs/assets/diagrams/.*
+mkdocs/API_Documentation

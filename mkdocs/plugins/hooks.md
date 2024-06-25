@@ -359,14 +359,14 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     <div class="annotate" mardown>
 
-    | Name                          | Description                                                                      |
-    | :---------------------------- | :------------------------------------------------------------------------------- |
-    | Before agent starts (1)       | Intervene before the agent starts                                                |
-    | Agent fast reply (2)          | Shorten the pipeline and returns an answer right after the agent execution       |
-    | Agent prompt prefix (3)       | Intervene while the agent manager formats the Cat's personality                  |
+    | Name                          | Description                                                                                                |
+    | :---------------------------- | :--------------------------------------------------------------------------------------------------------- |
+    | Before agent starts (1)       | Prepare the agent input before it starts                                                                   |
+    | Agent fast reply (2)          | Shorten the pipeline and returns an answer right after the agent execution                                 |
+    | Agent prompt prefix (3)       | Intervene while the agent manager formats the Cat's personality                                            |
     | Agent prompt suffix (4)       | Intervene while the agent manager formats the prompt suffix with the memories and the conversation history |
-    | Agent allowed tools (5)       | Intervene before the recalled tools are provided to the agent                    |
-    | Agent prompt instructions (6) | Intervent while the agent manager formats the reasoning prompt                   |
+    | Agent allowed tools (5)       | Intervene before the recalled tools are provided to the agent                                              |
+    | Agent prompt instructions (6) | Intervent while the agent manager formats the reasoning prompt                                             |
 
     </div>
 

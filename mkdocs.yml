@@ -46,11 +46,13 @@ nav:
     - Plugin: plugins/plugins.md
     - Tools: plugins/tools.md
     - Hooks: plugins/hooks.md
-    - Forms: plugins/forms.md
     - Logging: plugins/logging.md
     - Settings: plugins/settings.md
     - Dependencies: plugins/dependencies.md
+    - Examples: plugins/examples.md
     - Python Reference: API_Documentation/
+    - Experimental:
+      - Forms: plugins/experimental/forms.md
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md
       - Publishing a Plugin: plugins/plugins-registry/publishing-plugin.md

@@ -120,7 +120,7 @@ def upgrade_plugin(cat, plugin_id):
 
 @hook
 def after_cat_bootstrap(cat):
-    cat.white_rabbit.schedule_cron_job(patch_plugins, job_id="nightly_upgrade_plugins", hour=2, minute=0, cat=cat, plugin_id="your_fancy_plugin")
+    cat.white_rabbit.schedule_cron_job(upgrade_plugin, job_id="nightly_upgrade_plugins", hour=2, minute=0, cat=cat, plugin_id="your_fancy_plugin")
 
 ```
 

@@ -46,11 +46,13 @@ nav:
     - Plugin: plugins/plugins.md
     - Tools: plugins/tools.md
     - Hooks: plugins/hooks.md
-    - Forms: plugins/forms.md
     - Logging: plugins/logging.md
     - Settings: plugins/settings.md
     - Dependencies: plugins/dependencies.md
+    - Examples: plugins/examples.md
     - Python Reference: API_Documentation/
+    - Experimental:
+      - Forms: plugins/experimental/forms.md
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md
       - Publishing a Plugin: plugins/plugins-registry/publishing-plugin.md
@@ -58,12 +60,6 @@ nav:
         - Visual Studio Code: plugins/debugging/vscode.md
 
   - Framework:
-      - LLM Concepts:
-          - Language Models: framework/llm-concepts/llm.md
-          - Retrieval Augmented Generation: framework/llm-concepts/rag.md
-          - Prompt: framework/llm-concepts/prompt.md
-          - Encoder: framework/llm-concepts/embedder.md
-          - Vector Memory: framework/llm-concepts/vector-memory.md
       - Cat Components:
         - The Core: framework/cat-components/cheshire_cat/core.md
         - The Agent:
@@ -87,28 +83,35 @@ nav:
         - The Cat Bootstrap: framework/flows/cat-bootstrap.md
         - Chatting with the Cat: framework/flows/chatting-with-the-cat.md
         - Plugins Lifecycle: framework/flows/plugins-lifecycle.md
+        - Rabbit Hole Ingestion: framework/flows/rabbit-hole-ingestion.md
 
   - Production:
-    - Client Libraries:
-        - Python: production/clientlib/clientlib-python.md
-        - TypeScript: production/clientlib/clientlib-typescript.md
-        - PHP: production/clientlib/clientlib-php.md
-        - Ruby: production/clientlib/clientlib-ruby.md
-        - C#: production/clientlib/clientlib-csharp.md
+    - Clients: production/clients.md
     - Administrations:
         - Architecture: production/administrators/architecture.md
         - Environment Variables: production/administrators/env-variables.md
         - User Management: production/advanced/user_system.md
         - Automatic Tests: production/advanced/tests.md
     - Use Cases:
-        - Cat as Main product: production/use-cases/main-product.md
-        - Cat as Sidecar of your product: production/use-cases/side-car.md
-        - Cat as Discord BOT: production/use-cases/discord-bot.md
+        - Integrations: production/use-cases/integrations.md
+        - Examples: production/use-cases/examples.md
     - Guides:
-#      - How to update the Cat Core: guides/update-the-core.md
       - How to backup the Long Term Memory: production/advanced/memory_backup.md
 
-  - FAQ: faq.md
+
+  - FAQ:
+    - General: faq/general.md
+    - Basic Info: faq/basic_info.md
+    - Errors: faq/errors.md
+    - Customization: faq/customization.md
+    - Security & Spending: faq/security_and_spending.md
+    - Concepts:
+      - LLM Concepts:
+            - Language Models: framework/llm-concepts/llm.md
+            - Retrieval Augmented Generation: framework/llm-concepts/rag.md
+            - Prompt: framework/llm-concepts/prompt.md
+            - Encoder: framework/llm-concepts/embedder.md
+            - Vector Memory: framework/llm-concepts/vector-memory.md
   # - Altro:
   #   - Resources:
   #     - Videos:

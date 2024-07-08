@@ -41,7 +41,7 @@ The Working Memory has some default properties used all around the framework tha
 |------------------------|-------------------------|------------------------------------------------|--------------------------------------------------------------------------|
 | `history`              | `List`                  | Stores the history of interactions.            | At the start of a conversation.                                          |
 | `user_message_json`    | `None` \| `UserMessage` | Holds the current user message in JSON format. | Whenever the Cat receives a message from a user.                         |
-| `active_form`          | `None` \| `CatForm`     | Tracks the active form being used.             | Upon a [form](../../technical/plugins/forms.md) instance initialization. |
+| `active_form`          | `None` \| `CatForm`     | Tracks the active form being used.             | Upon a [form](../../../plugins/forms.md) instance initialization. |
 | `recall_query`         | `str`                   | Stores the query used for recalling memories.  | When the Agent recalls relevant memories.                                |
 | `episodic_memories`    | `List`                  | Contains recalled episodic memories.           | When the Agent recalls relevant memories.                                |
 | `declarative_memories` | `List`                  | Contains recalled declarative memories.        | When the Agent recalls relevant memories.                                |

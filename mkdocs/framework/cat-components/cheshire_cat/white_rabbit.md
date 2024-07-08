@@ -1,6 +1,6 @@
 # White Rabbit
 
-The White Rabbit is the Cat's built-in scheduler. It is built upon the APScheduler. It enables the scheduling of various type of jobs, including one-time, interval-based and cron jobs. It provides also the capability to handle job execution, pausing, resuming and canceling jobs.
+The White Rabbit is the Cat's built-in scheduler. It is built upon the [APScheduler](https://github.com/agronholm/apscheduler). It enables the scheduling of various type of jobs, including one-time, interval-based and cron jobs. It provides also the capability to manage job execution, pausing, resuming and canceling jobs.
 
 Currently, jobs are stored in memory, but future updates will support database storage for persistent job management.
 
@@ -94,7 +94,7 @@ def schedule_quote_scraper(interval, cat):
 
 ### Schedule a cron job
 
-The White Rabbit can also be accessed in hooks to complete generic tasks that are not strictly user-related. For example, it can be used to check for updates of plugins every night at 2:00 AM. You can pass extra arguments to your scheduled function using the `**kwargs` parameter. Please be aware that this is just a basic example. Do not use it in production.
+For a more detailed schedule you can leverage the `schedule_cron_job` method, passing a cron-like expression. For instance, it can be used to check for plugin updates every night at 2:00 AM. 
 
 ```python
 from cat.mad_hatter.decorators import hook
@@ -124,3 +124,4 @@ def after_cat_bootstrap(cat):
 
 ```
 
+In this example we showed how the White Rabbit can also be accessed in hooks (i.e. `after_cat_bootstrap`) to perform generic tasks that are not strictly user-related. You can pass extra arguments to your scheduled function using the `**kwargs` parameter. Please note that this is a basic example and should not be used in production.

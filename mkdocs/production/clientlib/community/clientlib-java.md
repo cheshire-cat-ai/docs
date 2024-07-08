@@ -1,3 +1,0 @@
-# &#128640; Client Library Java
-
-Work in progress... 

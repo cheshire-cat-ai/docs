@@ -79,6 +79,7 @@ nav:
         - The Working Memory: framework/cat-components/memory/working_memory.md
         - The Rabbit Hole: framework/cat-components/cheshire_cat/rabbit_hole.md
         - The Mad Hatter: framework/cat-components/cheshire_cat/mad_hatter.md
+        - The White Rabbit: framework/cat-components/cheshire_cat/white_rabbit.md
       - Technical Diagrams:
         - The Cat Bootstrap: framework/flows/cat-bootstrap.md
         - Chatting with the Cat: framework/flows/chatting-with-the-cat.md

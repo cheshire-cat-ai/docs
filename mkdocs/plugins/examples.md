@@ -1,6 +1,6 @@
 # Examples
 
-Here are listed a bunch of code-snippet
+Follows a bunch of code snippets
 
 ## RabbitHole
 

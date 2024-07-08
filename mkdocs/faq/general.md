@@ -12,7 +12,7 @@ Decision is up to you.
 
 #### Are text and documents sent to the Cat safe and not shared with anybody?
 
-Well, the local memory is safe and under your control, although embeddings and prompts are shared with your configured LLM, meaning you need to check how safe is the LLM.
+The local memory is safe and under your control, although embeddings and prompts are shared with your configured LLM, meaning you need to check how safe the LLM is.  
 We plan to adopt local LLMs, at which point all your data will be under your control.
 
 #### What is the difference between Langchain and the Cat?

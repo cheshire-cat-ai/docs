@@ -1,5 +1,9 @@
 # &#128640; Clients
 
+Below are listed the Official and Community Client Libraries, Widget-chats and Apps.
+
+You can check out the API documentation at `localhost:1865/docs` to learn more about Cheshire Cat's endpoints.
+
 ## Libraries
 
 ### Official

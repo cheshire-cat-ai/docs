@@ -56,7 +56,7 @@ AI assistant agents on top of [Large Language Models](framework/cat-components/l
 
     Chat with the Cat and interact with its endpoints!
 
-    [:octicons-arrow-right-24: Python API](production/clientlib/clientlib-python.md)
+    [:octicons-arrow-right-24: Python API](production/clients.md)
 
 - &#128640; __Extendable via plugins in Python__
 

@@ -72,7 +72,7 @@ AI assistant agents on top of [Large Language Models](framework/cat-components/l
 
     Easily choose from a plenty of models to use!
 
-    [:octicons-arrow-right-24: compatible-models](production/administrators/architecture#compatible-models)
+    [:octicons-arrow-right-24: compatible-models](production/administrators/architecture.md#compatible-models)
 
 - &#128220; __Can ingest documents__
 

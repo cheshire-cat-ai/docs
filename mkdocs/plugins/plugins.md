@@ -89,3 +89,58 @@ Please note that, in order to work as expected, the hook priority must be greate
 If you do not provide a priority, your hook will have `priority=1` and implicitly override the default one.
 
 More examples on hooks [here](hooks.md).
+
+
+
+
+## 📋 Forms
+
+A Form allows you to define a specific data structure, that the framework will try to automatically trigger and fullfill in a multi-turn dialogue.
+You can define custom:
+
+ - triggers
+ - fields
+ - validation
+ - submission callback
+ - how the Cat expresses missing or invalid fields
+
+The difference between a `@tool` and a `@form` is that the tool is one-shot, while the form allows for several and cumulative conversational turns.  
+Imagine a Cat `@form` as the common HTML `<form>`, but on a conversational level.
+
+Here is an example for a pizza order:
+
+```python
+from pydantic import BaseModel
+from cat.experimental.form import form, CatForm
+
+# data structure to fill up
+class PizzaOrder(BaseModel):
+    pizza_type: str
+    phone: int
+
+# forms let you control goal oriented conversations
+@form
+class PizzaForm(CatForm):
+    description = "Pizza Order"
+    model_class = PizzaOrder
+    start_examples = [
+        "order a pizza!",
+        "I want pizza"
+    ]
+    stop_examples = [
+        "stop pizza order",
+        "not hungry anymore",
+    ]
+    ask_confirm = True
+
+    def submit(self, form_data):
+        
+        # do the actual order here!
+
+        # return to convo
+        return {
+            "output": f"Pizza order on its way: {form_data}"
+        }
+```
+
+More examples on forms [here](forms.md).

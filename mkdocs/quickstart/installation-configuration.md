@@ -28,9 +28,6 @@ services:
     container_name: cheshire_cat_core
     ports:
       - ${CORE_PORT:-1865}:80
-    environment:
-      - PYTHONUNBUFFERED=1
-      - WATCHFILES_FORCE_POLLING=true
     volumes:
       - ./static:/app/cat/static
       - ./plugins:/app/cat/plugins
@@ -53,6 +50,10 @@ You will see three new folders:
  - `data`: where long term memory and settings are stored
  - `plugins`: where you can install and develop plugins
  - `static`: folder to serve static files from 
+
+## Stopping the Cat
+
+Stop the terminal with `CTRL + c` and run `docker compose down`.
 
 ## Useful commands
 

@@ -31,6 +31,6 @@ For instance, measuring the distance between two points can inform us about the 
 ## Language Models flow :material-information-outline:{ title="click on the nodes with hooks to see their documentation" }
 
 !!! note "Developer documentation"
-    [Language Models hooks](../../API_Documentation/mad_hatter/core_plugin/hooks/models.md)
+    [Language Models hooks](../../plugins/hooks.md#__tabbed_1_5)
 
 Nodes with the &#129693; point the execution places where there is an available [hook](../../plugins/plugins.md) to customize the execution pipeline.

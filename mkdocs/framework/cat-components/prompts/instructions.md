@@ -1,7 +1,7 @@
 # Instructions Prompt
 
-The Instruction Prompt explains the [Tool Agent](../cheshire_cat/agent.md#tool-chain) how to format its reasoning.  
-The [Tool Agent](../cheshire_cat/agent.md) uses a [chain](https://docs.langchain.com/docs/components/chains/llm-chain)
+The Instruction Prompt explains the [Tool Agent](../cheshire_cat/tool_chain.md) how to format its reasoning.  
+The [Tool Agent](../cheshire_cat/agent.md) uses a [chain](https://python.langchain.com/v0.2/docs/introduction/)
 to decide *when* and *which* [tool](../plugins.md) is the most appropriate to fulfill the user's needs.
 
 By default, it is set to Langchain [instructions format](https://api.python.langchain.com/en/latest/agents/langchain.agents.conversational.base.ConversationalAgent.html?highlight=prompt%20format_instruction)
@@ -24,3 +24,4 @@ AI: [your response here]"""
 ```
 
 where the placeholder `{tool_names}` is replaced with the list of Python [tools](../plugins.md) retrieved from the [procedural memory](../memory/long_term_memory.md).
+

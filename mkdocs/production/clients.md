@@ -2,7 +2,10 @@
 
 Below are listed the Official and Community Client Libraries, Widget-chats and Apps.
 
-You can check out the API documentation at `localhost:1865/docs` to learn more about Cheshire Cat's endpoints.
+You can check out the REST API playground directly on your installation, at [`localhost:1865/docs`](http://localhost:1865/docs).
+
+There are several client libraries that may help you to easily chat with the Cat and call its endpoints from another application.
+Below we list client libraries in many languages, web widgets and client apps.
 
 ## Libraries
 

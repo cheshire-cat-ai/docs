@@ -1,15 +1,14 @@
 # &#128268; How to write a plugin
 
-To write a plugin just create a new folder in `core/cat/plugins/`, in this example will be "myplugin".
+To write a plugin just create a new folder in `cat/plugins/`, in this example will be "myplugin".
 
 You need two files to your plugin folder:
 
-    ├── core
-    │   ├── cat
-    │   │   ├── plugins
-    |   |   |   ├── myplugin
-    |   |   |   |   ├ mypluginfile.py
-    |   |   |   |   ├ plugin.json
+    ├── cat/
+    │   ├── plugins/
+    |   |   ├── myplugin/
+    |   |   |   ├── mypluginfile.py
+    |   |   |   ├── plugin.json
 
 The `plugin.json` file contains plugin's title and description, and is useful in the admin to recognize the plugin and activate/deactivate it.
 If your plugin does not contain a `plugin.json` the cat will not block your plugin, but it is useful to have it.

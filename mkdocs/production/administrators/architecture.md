@@ -28,15 +28,15 @@ You can use the pre-compiled images present in the Repo's Docker Registry or bui
     This will generate two Docker images. The first one contains the Cat Core and Admin Portal.
     The container name of the core is `cheshire_cat_core`.
 
-The Cat core path `./core` is mounted into the image `cheshire_cat_core`, by default changes to files in this folder force a restart of the Core, this behavior can be disabled using the [`DEBUG`](env-variables.md/#debug) environment variable.
+The Cat core path `./core` is mounted into the image `cheshire_cat_core`, by default changes to files in this folder force a restart of the Core, this behavior can be disabled using the [`DEBUG`](env-variables.md/#ccat_debug) environment variable.
 
 ## Admin Portal
 
-The Admin Portal connects to the core using `localhost` through the port exposed when the container was created, this value can be customized using [environment variables](env-variables.md#core_host). This port is the only one exposed by the `cheshire_cat_core` image.
+The Admin Portal connects to the core using `localhost` through the port exposed when the container was created, this value can be customized using [environment variables](env-variables.md#ccat_core_host). This port is the only one exposed by the `cheshire_cat_core` image.
 
 ## Logging
 
-All the log messages are printed on the standard output and log level can be configured with [`LOG_LEVEL`](env-variables.md#log_level) environment variables. You can check logging system documentation [here](../../plugins/logging.md).
+All the log messages are printed on the standard output and log level can be configured with [`LOG_LEVEL`](env-variables.md#ccat_log_level) environment variables. You can check logging system documentation [here](../../plugins/logging.md).
 
 ## Configuration
 
@@ -65,55 +65,46 @@ It is highly recommended to connect the Cat to a **Qdrant database** to increase
 
 **Qdrant** provides to 2 paths:
 
-1. Self-host Qdrant by using docker, follows an example docker-compose:
+1. Self-host Qdrant by using docker, follows an example `compose.yml`:
 
-   ```yml
-   version: '3.7'
+```yaml
+version: '3.7'
 
-    services:
-    cheshire-cat-core:
-        image: ghcr.io/cheshire-cat-ai/core:1.5.1
-        container_name: cheshire_cat_core
-        depends_on:
-            - cheshire-cat-vector-memory
-        environment:
-            - PYTHONUNBUFFERED=1
-            - WATCHFILES_FORCE_POLLING=true
-            - CORE_HOST=${CORE_HOST:-localhost}
-            - CORE_PORT=${CORE_PORT:-1865}
-            - QDRANT_HOST=${QDRANT_HOST:-cheshire_cat_vector_memory}
-            - QDRANT_PORT=${QDRANT_PORT:-6333}
-            - CORE_USE_SECURE_PROTOCOLS=${CORE_USE_SECURE_PROTOCOLS:-}
-            - API_KEY=${API_KEY:-}
-            - LOG_LEVEL=${LOG_LEVEL:-WARNING}
-            - DEBUG=${DEBUG:-true}
-            - SAVE_MEMORY_SNAPSHOTS=${SAVE_MEMORY_SNAPSHOTS:-false}
-        ports:
-            - ${CORE_PORT:-1865}:80
-        volumes:
-            - ./cat/static:/app/cat/static
-            - ./cat/plugins:/app/cat/plugins
-            - ./cat/data:/app/cat/data
-        restart: unless-stopped
+services:
 
-    cheshire-cat-vector-memory:
-        image: qdrant/qdrant:v1.7.1
-        container_name: cheshire_cat_vector_memory
-        expose:
-            - 6333
-        volumes:
-            - ./cat/long_term_memory/vector:/qdrant/storage
-        restart: unless-stopped
-   ```
+	cheshire-cat-core:
+		image: ghcr.io/cheshire-cat-ai/core:latest
+		container_name: cheshire_cat_core
+		depends_on:
+			- cheshire-cat-vector-memory
+		env_file:
+			- .env
+		ports:
+			- ${CORE_PORT:-1865}:80
+		volumes:
+			- ./static:/app/cat/static
+			- ./plugins:/app/cat/plugins
+			- ./data:/app/cat/data
+		restart: unless-stopped
 
-2. Use Qdrant Cloud, by setting `QDRANT_HOST`, `QDRANT_PORT` and `QDRANT_API_KEY` Enviroment Variables. Follows an example of `.env` file:
+	cheshire-cat-vector-memory:
+		image: qdrant/qdrant:latest
+		container_name: cheshire_cat_vector_memory
+		expose:
+			- 6333
+		volumes:
+			- ./long_term_memory/vector:/qdrant/storage
+		restart: unless-stopped
+```
 
-    ```bash
-        # Qdrant server
-        QDRANT_HOST=<url of the cluster>
-        QDRANT_PORT=<port of the cluster, usually 6333>
-        QDRANT_API_KEY=<api-key>
-    ```
+2. Add this enviroment variables in your `.env` file:
+
+```bash
+# Qdrant server
+QDRANT_HOST=cheshire_cat_vector_memory # <url of the cluster>
+QDRANT_PORT=6333 # <port of the cluster, usually 6333>
+QDRANT_API_KEY="" # optional <api-key>
+```
 
 # Admin Portal
 

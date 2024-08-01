@@ -1,8 +1,6 @@
 # Logging System
 
-`LOG_LEVEL` environment variable is used to manage the logging level of the Cat.
-
-It can be set in the *docker-compose.yml* (`LOG_LEVEL=${LOG_LEVEL:-level}`) or in the *.env* file (`LOG_LEVEL=level`). Take a look at Cat's environment variables [here](https://cheshire-cat-ai.github.io/docs/administrators/env-variables/).
+The `CCAT_LOG_LEVEL` environment variable is used to manage the default logging level of the Cat. Take a look at Cat's environment variable [here](/production/administrators/env-variables/#ccat_log_level).
 
 The available values for *level* are:
 
@@ -12,21 +10,19 @@ The available values for *level* are:
 - **ERROR**
 - **CRITICAL**
 
-Note that the logger is created by default with level `WARNING` (`LOG_LEVEL=${LOG_LEVEL:-WARNING}`).
-
 Logging messages which are less severe than *level* will be ignored; logging messages which have severity *level* or higher will be emitted to the console.
 
 ## How to
 
 The logging system can be imported like this
 
-```
+```python
 from cat.log import log
 ```
 
 and then used as easy as:
 
-```
+```python
 log.error("A simple text here")
 log.info(f"Value of user message is {user_message_json["text"]}")
 log.critical(variable_value)
@@ -42,7 +38,7 @@ Follows an example of the console log for each log level.
 
 - what you write in the code:
 
-    ```
+    ```python
     log.debug(f'user message: {user_message_json["text"]}')
     ```
 
@@ -54,7 +50,7 @@ Follows an example of the console log for each log level.
 
 - what you write in the code:
 
-    ```
+    ```python
     log.info(f'user message: {user_message_json["text"]}')
     ```
 
@@ -66,7 +62,7 @@ Follows an example of the console log for each log level.
 
 - what you write in the code:
 
-    ```
+    ```python
     log.warning(f'user message: {user_message_json["text"]}')
     ```
 
@@ -78,7 +74,7 @@ Follows an example of the console log for each log level.
 
 - what you write in the code:
 
-    ```
+    ```python
     log.error(f'user message: {user_message_json["text"]}')
     ```
 
@@ -90,7 +86,7 @@ Follows an example of the console log for each log level.
 
 - what you write in the code:
 
-    ```
+    ```python
     log.critical(f'user message: {user_message_json["text"]}')
     ```
 

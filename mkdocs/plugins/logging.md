@@ -1,6 +1,6 @@
 # Logging System
 
-The `CCAT_LOG_LEVEL` environment variable is used to manage the default logging level of the Cat. Take a look at Cat's environment variable [here](/production/administrators/env-variables/#ccat_log_level).
+The `CCAT_LOG_LEVEL` environment variable is used to manage the default logging level of the Cat. Take a look at Cat's environment variable [here](./../production/administrators/env-variables.md#ccat_log_level).
 
 The available values for *level* are:
 
@@ -28,7 +28,7 @@ log.info(f"Value of user message is {user_message_json["text"]}")
 log.critical(variable_value)
 ```
 
-Take a look [here](https://cheshire-cat-ai.github.io/docs///API_Documentation/log/) if you want to better understand how the log system is implemented.
+Take a look [here](https://cheshire-cat-ai.github.io/docs/API_Documentation/log/) if you want to better understand how the log system is implemented.
 
 ## Examples
 

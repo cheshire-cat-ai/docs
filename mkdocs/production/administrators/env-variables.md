@@ -74,6 +74,32 @@ Default value: `cat/data/metadata.json`
 
 The name of the file that contains all the Cat settings.
 
+
+### CCAT_JWT_SECRET
+Default value: `secret`
+
+Secret for issueing and validating JWTs. Must be personalized along `CCAT_API_KEY` and `CCAT_APIKEY_WS` to make the installation secure.
+
+### CCAT_JWT_ALGORITHM
+Default value: `HS256`
+
+Algorithm to sign the JWT with `CCAT_JWT_SECRET`.
+
+### CCAT_JWT_EXPIRE_MINUTES
+Default value: `1440` 
+
+By default a JWT expires after 1 day.
+
+### CCAT_HTTPS_PROXY_MODE
+Default value: `false`
+
+Enable this variable if you are using a proxy like Nginx with SSL in front of the Cat, otherwise https will give redirection problems.
+
+### CCAT_CORS_FORWARDED_ALLOW_IPS
+Default value: `*`
+
+TODO: exaplin this env
+
 ### CCAT_SAVE_MEMORY_SNAPSHOTS
 Default value: `false`
 

@@ -1,9 +1,12 @@
 # Environment Variables
+
 The Core can be configured using environment variables, the values are read during Cat bootstrap.
+
+## How to set Environment Variables
 
 To set environment variables:
 
- - create a file named `.env` at the same level of the `compose.yml` file.
+ - Create a file named `.env` at the same level of the `compose.yml` file.
  - The root folder contains the `.env.example`, you can use this file as a reference.
  - Add to `compose.yml` the command to read the `.env`:
 
@@ -22,12 +25,15 @@ To set environment variables:
         - ./data:/app/cat/data
     ```
 
- - The command `docker compose up` will noe read the `.env` file and set the environment variable.
+ - The command `docker compose up` will now read the `.env` file and set the environment variables for the container.
+
+
+## Network
 
 ### CCAT_CORE_HOST
 Default value: `localhost`
 
-The host at which the Cat is running. The parameter is used by Admin Portal to determine the host to connect to.  
+The host at which the Cat is running. The variable is used by Admin Portal to determine the host to connect to.  
 If your installation has to be served on mywebsite.com, have in your `.env`: `CCAT_CORE_HOST=mywebsite.com`
 
 ### CCAT_CORE_PORT
@@ -40,6 +46,24 @@ Easter egg: `1865` is the year "Alice in Wonderland" was published.
 Default value: `false`
 
 By default, the core APIs are exposed using the HTTP/WS protocol, set this parameter to `true` if you expose the API using the HTTPS/WSS protocol, for example using NGIX in front of the Cat.
+
+### CCAT_CORS_ALLOWED_ORIGINS
+Default value: `*`
+
+By default, the core APIs can be consumed from all origins, using the parameter you can restrict which origins can consume the APIs.
+
+### CCAT_HTTPS_PROXY_MODE
+Default value: `false`
+
+Enable this variable if you are using a proxy like Nginx with SSL in front of the Cat, otherwise https will give redirection problems.
+
+### CCAT_CORS_FORWARDED_ALLOW_IPS
+Default value: `*`
+
+TODO: explain this env 'cause I'm cooked
+
+
+## Security
 
 ### CCAT_API_KEY
 Default value: `[empty]`
@@ -64,16 +88,6 @@ Example `ws://localhost:1865/ws/<user_id>/?token=<ccat_api_key_ws>`.
 
 Keep in mind that api keys are intended for machine-2-machine communication; If you are talking to the Cat from a browser, set the api keys to secure your installation, but only communicate with the Cat via JWT (TODO: insert JWT tutorial).
 
-### CCAT_CORS_ALLOWED_ORIGINS
-Default value: `*`
-
-By default, the core APIs can be consumed from all origins, using the parameter you can restrict which origins can consume the APIs.
-
-### CCAT_METADATA_FILE
-Default value: `cat/data/metadata.json`
-
-The name of the file that contains all the Cat settings.
-
 
 ### CCAT_JWT_SECRET
 Default value: `secret`
@@ -90,23 +104,10 @@ Default value: `1440`
 
 By default a JWT expires after 1 day.
 
-### CCAT_HTTPS_PROXY_MODE
-Default value: `false`
 
-Enable this variable if you are using a proxy like Nginx with SSL in front of the Cat, otherwise https will give redirection problems.
 
-### CCAT_CORS_FORWARDED_ALLOW_IPS
-Default value: `*`
 
-TODO: exaplin this env
-
-### CCAT_SAVE_MEMORY_SNAPSHOTS
-Default value: `false`
-
-Set to `ftrue` to turn on Vector Database snapshots, so when you change embedder an automatic backup will be saved on disk. Please note:
-
- - Snapshots are painfully slow.
- - We have not implemented a routine to reimport the snapshot.
+## Debug
 
 ### CCAT_DEBUG
 Default value: `true`
@@ -124,6 +125,8 @@ The log level, available levels are:
 - `ERROR`  
 - `CRITICAL`  
 
+## Vector DB
+
 ### CCAT_QDRANT_HOST
 Default value: `[empty]`
 
@@ -140,3 +143,20 @@ The port on which Qdrant is running, in case you use an external host or another
 Default value: `[empty]`
 
 This is used to set the Qdrant Api Key in the client connection statement. It should be configured if an Api Key is set up on the Qdrant Server, or if you are using the cloud version.
+
+### CCAT_SAVE_MEMORY_SNAPSHOTS
+Default value: `false`
+
+Set to `ftrue` to turn on Vector Database snapshots, so when you change embedder an automatic backup will be saved on disk. Please note:
+
+ - Snapshots are painfully slow.
+ - We have not implemented a routine to reimport the snapshot.
+
+
+## Others
+
+### CCAT_METADATA_FILE
+Default value: `cat/data/metadata.json`
+
+The name of the file that contains all the Cat settings.
+

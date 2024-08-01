@@ -36,7 +36,7 @@ The Admin Portal connects to the core using `localhost` through the port exposed
 
 ## Logging
 
-All the log messages are printed on the standard output and log level can be configured with [`LOG_LEVEL`](env-variables.md#ccat_log_level) environment variables. You can check logging system documentation [here](../../plugins/logging.md).
+All the log messages are printed on the standard output and log level can be configured with [`CCAT_LOG_LEVEL`](env-variables.md#ccat_log_level) environment variables. You can check logging system documentation [here](../../plugins/logging.md).
 
 ## Configuration
 

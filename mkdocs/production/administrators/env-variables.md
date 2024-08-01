@@ -1,53 +1,96 @@
 # Environment Variables
 The Core can be configured using environment variables, the values are read during Cat bootstrap.
 
-To set an environment variable, create a file with name `.env` at the same level of the `docker-compose.yml` file. The command `docker compose up` reads the `.env` file and sets the environment variable.
+To set environment variables:
 
-The root folder contains the `.env.example`, you can use this file as a reference.
+ - create a file named `.env` at the same level of the `compose.yml` file.
+ - The root folder contains the `.env.example`, you can use this file as a reference.
+ - Add to `compose.yml` the command to read the `.env`:
 
-### CORE_HOST
-The host at which the Cat is running. The parameter is used by Admin Portal to determine the host to connect to.
+    ```yml hl_lines="5 6"
+    services:
+      cheshire-cat-core:
+      image: ghcr.io/cheshire-cat-ai/core:latest
+      container_name: cheshire_cat_core
+      env_file:
+        - .env
+      ports:
+        - ${CORE_PORT:-1865}:80
+      volumes:
+        - ./static:/app/cat/static
+        - ./plugins:/app/cat/plugins
+        - ./data:/app/cat/data
+    ```
 
+ - The command `docker compose up` will noe read the `.env` file and set the environment variable.
+
+### CCAT_CORE_HOST
 Default value: `localhost`
 
-### CORE_PORT
-The port the Cat has to use. The parameter is used by Admin Portal to determine the port to connect to.
+The host at which the Cat is running. The parameter is used by Admin Portal to determine the host to connect to.  
+If your installation has to be served on mywebsite.com, have in your `.env`: `CCAT_CORE_HOST=mywebsite.com`
 
+### CCAT_CORE_PORT
 Default value: `1865`
 
-### CORE_USE_SECURE_PROTOCOLS
-By default, the core APIs are exposed using the HTTP/WS protocol, set this parameter to `true` if you expose the API using the HTTPS/WSS protocol, for example using NGIX in front of the Cat. The parameter is read by the Admin Portal to determine the protocol to use.
+The port the Cat has to listen to, for both admin and REST API.  
+Easter egg: `1865` is the year "Alice in Wonderland" was published.
 
+### CCAT_CORE_USE_SECURE_PROTOCOLS
 Default value: `false`
 
-### QDRANT_HOST
-The host on which Qdrant is running. Cat provides a ready-to-use Docker image for Qdrant. If you want to use an external instance of Qdrant, use this parameter to specify the host where it is running. You can also optionally specify the protocol to use in the URL to make a secure connection (for example https://example.com).
+By default, the core APIs are exposed using the HTTP/WS protocol, set this parameter to `true` if you expose the API using the HTTPS/WSS protocol, for example using NGIX in front of the Cat.
 
-Default value: `localhost`
-
-### QDRANT_PORT
-The port on which Qdrant is running. Cat provides a ready-to-use Docker image for Qdrant. If you want to use an external instance of Qdrant, use this parameter to specify the port where it is running.
-
-Default value: `6333`
-
-### QDRANT_API_KEY
-This is used to set the Qdrant Api Key in the client connection statement. It should be configured if an Api Key is set up on the Qdrant Server.
-
+### CCAT_API_KEY
 Default value: `[empty]`
 
-### API_KEY
-By default, the core APIs don't require any authorization, if you set this parameter all endpoints will require an `access_token` header for authentication such as `access_token: your-key-here`. Failure to provide the correct access token will result in a 403 error.
+By default, the core HTTP API does not require any authorization. If you set this variable all HTTP endpoints will require an `Authorization: Bearer <ccat_api_key>` header.  
+Failure to provide the correct key will result in a 403 error.  
+Websocket endpoints will remain open, unless you set `CCAT_API_KEY_WS` (see below).
 
-Multiple keys can be accepted by separating them with a pipe (`|`) as follows: `API_KEY=your-key-here|secondary_client_key`.
+If along the HTTP API call you want to communicate the endpoint also which user is making the request, use the `user_id: <my_user_id>` header.  
+If you don't, the Cat will assume `user_id: user`.
 
+Keep in mind that api keys are intended for machine-2-machine communication; If you are talking to the Cat from a browser, set the api keys to secure your installation, but only communicate with the Cat via JWT (TODO: insert JWT tutorial).
+
+### CCAT_API_KEY_WS
 Default value: `[empty]`
 
-### CORS_ALLOWED_ORIGINS
-By default, the core APIs can be consumed from all origins, using the parameter you can specify which origins can consume the APIs.
+By default, WebSocket endpoints are open to the public.
+If you want to lock them down, set this environment variable, e.g. `CCAT_API_KEY_WS=meows`.
 
+To pass the gate, call the WS endpoint using a `token` query parameter:  
+Example `ws://localhost:1865/ws/<user_id>/?token=<ccat_api_key_ws>`.
+
+Keep in mind that api keys are intended for machine-2-machine communication; If you are talking to the Cat from a browser, set the api keys to secure your installation, but only communicate with the Cat via JWT (TODO: insert JWT tutorial).
+
+### CCAT_CORS_ALLOWED_ORIGINS
 Default value: `*`
 
-### LOG_LEVEL
+By default, the core APIs can be consumed from all origins, using the parameter you can restrict which origins can consume the APIs.
+
+### CCAT_METADATA_FILE
+Default value: `cat/data/metadata.json`
+
+The name of the file that contains all the Cat settings.
+
+### CCAT_SAVE_MEMORY_SNAPSHOTS
+Default value: `false`
+
+Set to `ftrue` to turn on Vector Database snapshots, so when you change embedder an automatic backup will be saved on disk. Please note:
+
+ - Snapshots are painfully slow.
+ - We have not implemented a routine to reimport the snapshot.
+
+### CCAT_DEBUG
+Default value: `true`
+
+By default changes to files in the root folder of the Cat force a restart of the Core.  
+This is useful during the development of Plugins. This behavior can be switched off in production by setting to `false`.
+
+### CCAT_LOG_LEVEL
+Default value: `INFO`
+
 The log level, available levels are:  
 - `DEBUG`  
 - `INFO`  
@@ -55,19 +98,19 @@ The log level, available levels are:
 - `ERROR`  
 - `CRITICAL`  
 
-Default value: `WARNING`
+### CCAT_QDRANT_HOST
+Default value: `[empty]`
 
-### METADATA_FILE
-The name of the file that contains all the Cat settings.
+The host on which Qdrant is running. Cat provides a ready-to-use file based Qdrant, embedded in `cat/data/local_vector_memory`. If you want to use an external instance of Qdrant or a separated container in `compose.yml`, use this parameter to specify the host where it is running. You can also optionally specify the protocol to use in the URL to make a secure connection (for example `https://example.com`).
 
-Default value: `metadata.json`
+See the [`local-cat`](https://github.com/cheshire-cat-ai/local-cat) repo for an example usage of Qdrant as a container.
 
-### SAVE_MEMORY_SNAPSHOTS
-Set to `false` to turn off Vector Database snapshot.
+### CCAT_QDRANT_PORT
+Default value: `6333`
 
-Default value: `true`
+The port on which Qdrant is running, in case you use an external host or another container inside the `compose.yml`.
 
-### DEBUG
-By default, changes to files in the root folder of the Cat force a restart of the Core, this useful during the development of Plugins. This behavior can be switch off by setting this parameter to `false`.
+### CCAT_QDRANT_API_KEY
+Default value: `[empty]`
 
-Default value: `true`
+This is used to set the Qdrant Api Key in the client connection statement. It should be configured if an Api Key is set up on the Qdrant Server, or if you are using the cloud version.

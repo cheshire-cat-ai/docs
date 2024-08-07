@@ -61,6 +61,7 @@ nav:
   - Framework:
       - Cat Components:
         - The Core: framework/cat-components/cheshire_cat/core.md
+        - The Stray Cat: framework/cat-components/cheshire_cat/stray_cat.md
         - The Agent:
             - Introduction: framework/cat-components/cheshire_cat/agent.md
             - Tool Chain: framework/cat-components/cheshire_cat/tool_chain.md

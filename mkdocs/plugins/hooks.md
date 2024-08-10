@@ -1,6 +1,6 @@
 # &#129693; Hooks
 
-Hooks are Python functions that are called directly from the Cat at runtime, they allow you to change how the Cat internally works without directly modifying the Cat itself.
+Hooks are callback functions that are called from the Cat at runtime. They allow you to change how the Cat internally works and be notified about framework events.
 
 ## How the Hooks work
 
@@ -8,48 +8,154 @@ To create a hook, you first need to create a [plugin](plugins.md) that contains 
 
 A hook is simply a Python function that uses the `@hook` decorator, the function's name determines when it will be called.
 
-There are two kinds of hooks. The first type of hook receives only the Cat instance as a parameter, while the second type of hook receives both the Cat instance and the value determined by default Cat implementation.
+Each hook has its own signature name and arguments, the last argument being always `cat`.
+Have a look at the table with all the [available hooks](#available-hooks) and their [detailed reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/agent/).
 
-With the first type, you can perform actions at specific points in the Cat's execution flow. For example, you can use the `before_cat_bootstrap` hook to execute some operations before the Cat starts:
+### Hook arguments
+
+When considering hooks' arguments, remember:
+
+- `cat` will always be present, as it allows you to use the framework components. It will be always the last one. See [here](../framework/cat-components/cheshire_cat/stray_cat.md) for details and examples.
+    ```python
+    @hook
+    def hook_name(cat):
+        pass
+    ```
+- the first argument other than `cat`, if present, will be a variable that you can edit and return back to the framework. Every hook passes a different data structure, which you need to know and be able to edit and return.
+    ```python
+    @hook
+    def hook_name(data, cat):
+        # edit data and return it
+        data.answer = "42"
+        return data
+    ```
+    You are free to return nothing and use the hook as a simple event callback.
+    ```python
+    @hook
+    def hook_name(data, cat):
+        do_my_thing()
+    ```
+- other arguments may be passed, serving only as additional context.
+    ```python
+    @hook
+    def hook_name(data, context_a, context_b, ..., cat):
+        if context_a == "Caterpillar":
+            data.answer = "U R U"
+        return data
+    ```
+
+## Examples
+
+### Before cat bootstrap
+
+You can use the `before_cat_bootstrap` hook to execute some operations before the Cat starts:
 
 ```python
 from cat.mad_hatter.decorators import hook
 
-@hook(priority=1)
+@hook
 def before_cat_bootstrap(cat):
-    # You can perform operations with the cat (modify working memory, access LLM, etc.)
     do_my_thing()
 ```
 
-You can use the second type of hook to modify the value determined by the default Cat implementation. For example, you can use the `before_cat_sends_message` hook to alter the message that the Cat will send to the user.
+Notice in this hook there is only the `cat` argument, allowing you to use the llm and access other Cat components.  
+This is a pure event, with no additional arguments.
+
+### Before cat sends message
+
+You can use the `before_cat_sends_message` hook to alter the message that the Cat will send to the user.
+In this case you will receive both `final_output` and `cat` as arguments.
 
 ```python
 from cat.mad_hatter.decorators import hook
 
-@hook(priority=1)
+@hook
 def before_cat_sends_message(final_output, cat):
-    # You can perform operations with the cat (modify working memory, access LLM, etc.)
-    do_my_thing()
-    # You can return a new value that will be used instead of Cat calculated value
-    return final_output.upper()
+    # You can edit the final_output the Cat is about to send back to the user
+    final_output.content = final_output.content.upper()
+    return final_output
 ```
 
-*Some hooks receive more than one argument, the value determined by the Cat is always the first argument, all the other parameters are solely context parameters, which hooks cannot modify, the last parameter is always the Cat instance.*
 
-## Multiple Implementations
+## Hooks chaining and priority
 
 Several plugins can implement the same hook. The argument `priority` of the `@hook` decorator allows you to set the priority of the hook, the default value is 1.
 
-The Cat calls the implementations in order of priority. Hooks with a higher priority number will be called first. The following hooks will receive the value returned by the previous hook. In this way, hooks can be chained together to create complex behaviors.
+```python
+@hook(priority=1) # same as @hook without priority
+def hook_name(data, cat):
+    pass
+```
+
+The Cat calls hooks with the same name in order of `priority`. Hooks with a higher priority number will be called first. The following hook will receive the value returned by the previous hook. In this way, hooks can be chained together to create complex behaviors.
+
+```python
+# plugin A
+@hook(priority=5)
+def hook_name(data, cat):
+    data.content += "Hello"
+    return data
+```
+
+```python
+# plugin B
+@hook(priority=1)
+def hook_name(data, cat):
+    if "Hello" in data.content:
+        data.content += " world"
+    return data
+```
 
 If two plugins have the same priority, the order in which they are called is not guaranteed.
+
+## Custom hooks in plugins
+
+You can define your own hooks, so other plugins can listen and interact with them.
+
+```python
+# plugin cat_commerce
+@hook
+def hook_name(cat):    
+    default_order = [
+        "wool ball",
+        "catnip"
+    ]
+    chain_output = cat.mad_hatter.execute_hook(
+        "cat_commerce_order", default_order, cat=cat
+    )
+    do_my_thing(chain_output)
+```
+
+Other plugins may be able to edit or just track the event:
+
+```python
+# plugin B
+@hook
+def cat_commerce_order(order, cat):
+    if "catnip" in order:
+        order.append("free teacup")
+    return order
+```
+
+```python
+# plugin A
+@hook
+def cat_commerce_order(order, cat):
+    if len(order) > 1:
+        # updating working memory
+        cat.working_memory.bank_account = 0
+        # send websocket message
+        cat.send_ws_message("Cat is going broke")
+```
+
+You should be able to run your own hooks also in tools and forms. Not fully tested yet, let us know :)
 
 ## Available Hooks
 
 You can view the list of available hooks by exploring the Cat source code under the folder `core/cat/mad_hatter/core_plugin/hooks`.
 All the hooks you find in there define default Cat's behavior and are ready to be overridden by your plugins.
 
-The process diagrams found under the menu `Developers → Core Process Diagrams` illustrates where the hooks are called during the Cat's execution flow.
+The process diagrams found under the menu `Framework → Technical Diagrams` illustrate where the hooks are called during the Cat's execution flow.
 Not all the hooks have been documented yet. ( [help needed! &#128568;](https://discord.com/channels/1092359754917089350/1092360068269359206){:target="_blank"} ).
 
 === "&#127754; Flow"

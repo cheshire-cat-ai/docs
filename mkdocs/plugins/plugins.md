@@ -2,7 +2,7 @@
 
 To write a plugin just create a new folder in `cat/plugins/`, in this example will be "myplugin".
 
-You need two files to your plugin folder:
+You need two files into your plugin folder:
 
     ├── cat/
     │   ├── plugins/
@@ -145,7 +145,7 @@ class PizzaForm(CatForm):
 
 More examples on forms [here](forms.md).
 
-## &#128570 StrayCat
+## &#128570; StrayCat
 
 You surely noticed that tools, hooks and forms put at your disposal a variable called `cat`.  
 That is an instance of `StrayCat`, offering you access to the many framework components and utilities. Just to give an example, you can invoke the LLM directly using `cat.llm("write here a prompt")`.

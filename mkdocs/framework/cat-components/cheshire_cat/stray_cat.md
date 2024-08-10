@@ -1,10 +1,12 @@
 # Stray Cat
 
-The StrayCat class is a key component of the Cheshire Cat framework, serving as the primary entry point to all its features. This component handles user sessions, manages working memory, facilitates conversations, and provides essential methods for LLM interaction, WebSocket messaging, and more.
+What does the `cat` argument in hooks and tools do?
+
+`cat` is an instance of `StrayCat`, a key component of the Cheshire Cat framework, serving as the primary entry point to all its features. This component handles user sessions, manages working memory, facilitates conversations, and provides essential methods for LLM interaction, WebSocket messaging, and more.
 
 ## Main Entry Point to the Framework
 
-The StrayCat class is designed to be your primary interface for leveraging the full capabilities of the framework. By using this class, you can access various features and functionalities without the need to instantiate objects that have already been created as singletons. It also provides convenient shortcuts to access nested or user-related structures within the Cat, streamlining your development process.
+`cat` is designed to be your primary interface for leveraging the full capabilities of the framework. By using this object, you can access various features and functionalities without the need to import them. It also provides convenient shortcuts to access nested or user-related structures within the Cat, streamlining your development process.
 
 Whenever you see something like:
 

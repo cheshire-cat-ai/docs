@@ -1,16 +1,45 @@
 # &#129520; Tools
 
-A Tool is a python function that can be called directly from the language model.  
-By "called" we mean that the LLM has a description of the available Tools in the prompt, and (given the conversation context) it can generate as output something like:
+A Tool is a python function that can be chosen to be run directly from the Large Language Model. In other words: you declare a function, but the LLM decides when the function runs and what to pass as an input.
 
-> Thought: Do I need to use a Tool? Yes  
-> Action: search_ecommerce  
-> Action Input: "white sport shoes"
+## How tools work
 
-So your `search_ecommerce` Tool will be called and given the input string `"white sport shoes"`.
-The output of your Tool will go back to the LLM or directly to the user:
+Let's say in your plugin you declare this tool, as we saw in the [quickstart](../quickstart/writing-tool.md):
 
-> Observation: "Mike air Jordan shoes are available for 59.99€"
+```python
+from cat.mad_hatter.decorators import tool
+
+@tool
+def socks_prices(color, cat):
+    """How much do socks cost? Input is the sock color."""
+    prices = {
+        "black": 5,
+        "white": 10,
+        "pink": 50,
+    }
+    if color not in prices.keys():
+        return f"No {color} socks"
+    else:
+        return f"{prices[color]} €" 
+```
+
+When the user says in the chat something like:
+
+> How much for pink socks?
+
+The Cat will first of all retrieve available tools, and pass their descriptions to the LLM.  
+The LLM will choose, given the conversation context, if and which tool to run. LLM output in this case will be:
+
+```json
+{
+    "action": "socks_prices",
+    "action_input": "pink"
+}
+```
+
+This JSON, given in output from the LLM, is then used by the Cat to *actually* run the tool `socks_prices` passing `"pink"` as an argument.
+
+Tool output is then passed back to the agent or directly returned to the chat, depending if you used simply `@hook` or `@hook(return_direct=True)` as decorator.
 
 You can use Tools to:
 
@@ -19,82 +48,75 @@ You can use Tools to:
 - execute math calculations
 - run stuff in the terminal (danger zone)
 - keep track of specific information and do fancy stuff with it
+- interact with other Cat components like the llm, embedder, working memory, vector memory, white rabbit, rabbit hole etc.
 - your fantasy is the limit!
 
-Tools in the Cheshire Cat are inspired and extend [langchain Tools](https://python.langchain.com/en/latest/modules/agents/tools.html), an elegant Toolformer[^1] implementation.
+Tools in the Cheshire Cat are inspired and extend [langchain Tools](https://python.langchain.com/v0.2/docs/concepts/#tools), an elegant Toolformer[^1] implementation.
 
-## Default tool
+## Tool declaration
 
-The Cat comes already with a custom tool that allows to retrieve the time. You can find it in `core/cat/mad_hatter/core_plugin/tools.py`.  
-Let's take a look at it.
-
-#### Implementation
+The Cat comes already with a tool that allows to retrieve the time. You can find it in `cat/mad_hatter/core_plugin/tools.py`.  
+Let's take a look at it, line by line.
 
 ```python
-@tool # (1)
-def get_the_time(tool_input, cat): # (2)
-    """Replies to "what time is it", "get the clock" and similar questions. Input is always None..""" # (3)
-    return str(datetime.now()) # (4)
-
+@tool(
+    return_direct=False
+    examples=["what time is it", "get the time"]
+)
+def get_the_time(tool_input, cat):
+    """Useful to get the current time when asked. Input is always None."""
+    return f"The current time is {str(datetime.now())}"
 ```
 
-1. Python functions in a plugin only become tools if you use the `@tool` decorator
-2. Every `@tool` receives two arguments: a string representing the tool input, and the Cat instance.
-3. This doc string is necessary, as it will show up in the LLM prompt. It should describe what the tool is useful for and how to prepare inputs, so the LLM can select the tool and input it properly.
-4. Always return a string, which goes back to the prompt informing the LLM on the Tool's output.
+Please note:
 
-#### How it works
+- Python functions in a plugin only become tools if you use the `@tool` decorator.  
+You can simply use `@tool` or pass arguments.
+    
+    ```python
+    @tool(
+        # Choose whether tool output goes straight to the user,
+        #  or is reelaborated from the agent with another contextual prompt.
+        return_direct : bool = False
 
-**User's Input**:
+        # Examples of user sentences triggering the tool.
+        examples : List[str] = []
+    )
+    ```
+
+- Every `@tool` receives two arguments: a string representing the tool input, and a StrayCat instance.
+    ```python
+    def mytool(tool_input, cat):
+    ```
+    - The `tool_input` is a string, so if you asked in the docstring to produce an int or a dict, be sure to cast or parse the string.
+    - With `cat` you can access and use all the main framework components. This is powerful but requires some learning, see [here](../framework/cat-components/cheshire_cat/stray_cat.md).
+- The docstring is necessary, as it will show up in the LLM prompt. It should describe what the tool is useful for and how to prepare inputs, so the LLM can select the tool and input it properly.
+    ```python
+    """When to use the tool. Tool input description."""
+    ```
+- A tool always return a string, which goes back to the agent or directly back to the user chat. If you need to store additional information, store it in [`cat.working_memory`](../framework/cat-components/memory/working_memory.md).
+    ```python
+    return "Tool output"
+    ```
+
+## Tools debugging
+
+User's Input:
 > Can you tell me what time is it?
 
-**Cat's full prompt** (you can see this in the terminal logs):
-> Prompt after formatting:
->
-> This is a conversation between a human and an intelligent robot cat that passes the Turing test.  
-> The cat is curious and talks like the Cheshire Cat from Alice's adventures in wonderland.  
-> The cat replies are based on the Context provided below.
->
-> Context of things the Human said in the past:
->> I am the Cheshire Cat (2 minutes ago)
->
-> Context of documents containing relevant information:
->> I am the Cheshire Cat (extracted from cheshire-cat)
->
-> You can only reply using these tools:
->> get_the_time: get_the_time(tool_input) - Replies to "what time is it", "get the clock" and similar questions. Input is always None.  
->> Calculator: Useful for when you need to answer questions about math.
->
-> To use a tool, please use the following format:
->> **Thought**: Do I need to use a tool? Yes  
->> **Action**: the action to take, should be one of [get_the_time, Calculator]  
->> **Action Input**: the input to the action  
->> **Observation**: the result of the action  
->
-> When you have a response to say to the Human, or if you do not need to use a tool, you MUST use the format:
->> Thought: Do I need to use a tool? No  
->> AI: [your response here]
->
-> Conversation until now:
->> \- Human: Can you tell me what time is it?
->
-> What would the AI reply?
->> Answer concisely to the user needs as best you can, according to the provided recent conversation, context and tools.
-
-> **Thought**: Do I need to use a tool? Yes  
-> **Action**: get_the_time  
-> **Action Input**: None  
-> **Observation**: 2023-06-03 20:48:07.527033
-
-**Cat's answer**:
+Cat's answer:
 > The time is 2023-06-03 20:48:07.527033.
 
-## Your first Tool
+To see what happened step by step, you can do two things:
 
-A Tool is just a python function. In this example, we'll show how to create a tool to convert currencies.  
-To keep it simple, we'll not rely on any third party library and we'll just assume a fixed rate of change.  
+- inspect the terminal, where you will see colored conversation turns and prompts sent to the LLM with its replies.
+- inspect the websocket message sent back to you, under `message.why.model_interactions`.
 
-#### Implementation
+## Examples
+
+### Simple input
+
+A Tool is just a python function. In this example, we'll show how to create a tool to convert currencies. 
 
 Let's convert EUR to USD. In your `mypluginfile.py` create a new function with the `@tool` decorator:
 
@@ -123,29 +145,13 @@ def convert_currency(tool_input, cat): # (1)
 2. In the docstring we explicitly explain how the input should look like. In this way the LLM will be able to isolate it from our input sentence
 3. The input we receive is always a string, hence, we need to correctly parse it. In this case, we have to convert it to a floating number
 
-#### How it works
-
-**User's input**:
-> Can you convert 10.5 euro to dollars?
-
-**Cat's reasoning** (you can see this in the terminal logs):
-> **Thought**: Do I need to use a tool? Yes  
-> **Action**: convert_currency
-> **Action Input**: 10.5  
-> **Observation**: 11.235000000000001
-
-**Cat's answer**:
-> 10.5 euros is equivalent to 11.235000000000001 dollars.
-
 Writing as tool is as simple as this. The core aspect to remember are:
 
 1. the docstring from where the LLM understand how to use the tool and how the input should look like.
 2. the two input arguments, i.e. the first is the string the LLM take from the chat and the Cat instance;
 
-## More tools
-
 As seen, writing basic tools is as simple as writing pure Python functions.  
-However, tools can be very flexible. Here are some examples.
+However, tools can be very flexible. Here are some more examples.
 
 ### Return the output directly
 
@@ -153,8 +159,6 @@ The `@tool` decorator accepts an optional boolean argument that is `@tool(return
 This is set to `False` by default, which means the tool output is parsed again by the LLM.
 Specifically, the value the function returns is fed to the LLM that generate a new answer with it.
 When set to `True`, the returned value is printed in the chat as-is.  
-
-#### Implementation
 
 Let's give it a try with a modified version of the `convert_currency` tool:
 
@@ -181,23 +185,9 @@ def convert_currency(tool_input, cat):
     return direct_output
 ```
 
-#### How it works
-
-**User's input**:
-> Can you convert 10.5 euro to dollars?
-
-**Cat's reasoning** (from the terminal logs):
-> the reasoning is not displayed as the goal of the `return_direct=True` parameter is to skip those steps and return the output directly.
-
-**Cat's answer**:
-> Result of the conversion: 10.50 EUR -> 11.24 USD
-
 ### Complex input tools
 
-This sections re-proposes an explanation of langchain [multi-input tools](https://python.langchain.com/en/latest/modules/agents/tools/multi_input_tool.html).
-For example, we can make the `convert_currency` tool more flexible allowing the user to choose among a fixed set of currencies.
-
-#### Implementation
+We can make the `convert_currency` tool more flexible allowing the user to choose among a fixed set of currencies.
 
 ```python
 from cat.mad_hatter.decorators import tool
@@ -213,9 +203,11 @@ def convert_currency(tool_input, cat): # (1)
     eur, currency = tool_input.split("-") # (3)
     
     # Define fixed rates of change
-    rate_of_change = {"USD": 1.07,
-                      "GBP": 0.86,
-                      "JPY": 150.13}
+    rate_of_change = {
+        "USD": 1.07,
+        "GBP": 0.86,
+        "JPY": 150.13
+    }
     
     # Convert EUR to float
     eur = float(eur)
@@ -232,22 +224,7 @@ def convert_currency(tool_input, cat): # (1)
 2. Explain in detail how the inputs from the chat should look like. Here we want something like "3.25-JPY"
 3. The input is always a string, thus it's up to us correctly split and parse the input.
 
-#### How it works
-
-**User's input**:
-> Can you convert 7.5 euros to GBP?
-
-**Cat's reasoning** (from the terminal logs):
-> **Thought**: Do I need to use a tool? Yes  
-> **Action**: convert_currency  
-> **Action Input**: 7.5-GBP  
-> **Observation**: 6.45
-
-**Cat's answer**:
-> 7.5 euros is equal to 6.45 British Pounds.
-
-As you may see, the [Agent](../framework/cat-components/cheshire_cat/agent.md) correctly understands the desired output from the message
-and passes it to the tool function as explained in the docstring. Then, it is up to us parse the two inputs correctly for our tool.
+As you may see, the LLM correctly understands the desired output from the docstring. Then, it is up to us parse the two inputs correctly for our tool.
 
 ### External library & the cat parameter
 
@@ -255,8 +232,6 @@ Tools are extremely flexible as they allow to exploit the whole Python ecosystem
 Thus, you can update our tool making use of the [Currency Converter](https://github.com/alexprengere/currencyconverter) package.
 To deal with [dependencies](dependencies.md), you need write the 'currencyconverter' library in a `requirements.txt` inside the `myplugin` folder.  
 Moreover, here is an example of how you could use the `cat` parameter passed to the tool function.
-
-#### Implementation
 
 ```python
 from currency_converter import CurrencyConverter
@@ -282,7 +257,7 @@ def convert_currency(tool_input, cat):
     else:
         return "Something went wrong using the tool"
 
-    # Ask the Cat to convert the currency name into its symbol
+    # Use the LLM to convert the currency name into its symbol
     symbol = cat.llm(f"You will be given a currency code, translate the input in the corresponding currency symbol. \
                     Examples: \
                         euro -> € \
@@ -305,27 +280,6 @@ def convert_currency(tool_input, cat):
    A common scenario is that sometimes the Agent wraps the input around quotes and sometimes doesn't
    E.g. Action Input: 7.5-GBP vs Action Input: '7.5-GBP'
 2. the `cat` instance gives access to any method of the [Cheshire Cat](). In this example, we directly call the LLM using one-shot example to get a currency symbol.
-
-#### How it works
-
-The thoughts under the hood are identical to the previous example, as nothing changed in the underlying behavior, but we improved a little
-the quality of our tool code.
-> **Thought**: Do I need to use a tool? Yes  
-> **Action**: convert_currency  
-> **Action Input**: 67-JPY  
-> **Observation**: 67€ = 9846.99¥;
-
-TODO:
-
-- a better example?
-- show how tools are displayed in the prompt and how the LLM selects them
-- more examples with little variations
-  - the tool calls an external service
-  - the tool reads/writes a file
-  - the input string contains a dictionary (to be parsed with `json.loads`)
-  - the tool manages a conversational form
-  - show how you can access cat's functionality (memory, llm, embedder, rabbit_hole) from inside a tool
-  - what else? dunno
 
 ## References
 

@@ -1,5 +1,6 @@
-site_name: The Cheshire Cat
+site_name: Cheshire Cat AI docs
 repo_url: https://github.com/cheshire-cat-ai/core
+site_url: https://cheshire-cat-ai.github.io/docs/
 
 docs_dir: mkdocs
 site_dir: docs

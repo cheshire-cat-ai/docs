@@ -144,3 +144,11 @@ class PizzaForm(CatForm):
 ```
 
 More examples on forms [here](forms.md).
+
+## &#128570 StrayCat
+
+You surely noticed that tools, hooks and forms put at your disposal a variable called `cat`.  
+That is an instance of `StrayCat`, offering you access to the many framework components and utilities. Just to give an example, you can invoke the LLM directly using `cat.llm("write here a prompt")`.
+
+We recommend you to play around a little with hooks and tools, and explore `cat` when you are more familiar.
+See [examples](../framework/cat-components/cheshire_cat/stray_cat.md) on how to use `cat` in your plugins, and the full [`StrayCat` reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/).

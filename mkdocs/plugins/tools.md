@@ -37,9 +37,9 @@ The LLM will choose, given the conversation context, if and which tool to run. L
 }
 ```
 
-This JSON, given in output from the LLM, is then used by the Cat to *actually* run the tool `socks_prices` passing `"pink"` as an argument.
+This JSON, given as output from the LLM, is then used by the Cat to *actually* run the tool `socks_prices` passing `"pink"` as an argument.
 
-Tool output is then passed back to the agent or directly returned to the chat, depending if you used simply `@hook` or `@hook(return_direct=True)` as decorator.
+Tool output is then passed back to the agent or directly returned to the chat, depending if you used simply `@tool` or `@tool(return_direct=True)` as decorator.
 
 You can use Tools to:
 

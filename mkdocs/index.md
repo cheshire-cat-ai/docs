@@ -16,6 +16,7 @@
     Take your first step with hands-on examples!
 
     [:octicons-arrow-right-24: Get started now](quickstart/introduction.md)
+    [Get started now](quickstart/introduction.md){ .md-button .md-button--primary }
 
 - &#128268; __Plugins__
 
@@ -56,7 +57,7 @@ AI assistant agents on top of [Large Language Models](framework/cat-components/l
 
     Chat with the Cat and interact with its endpoints!
 
-    [:octicons-arrow-right-24: Python API](production/clients.md)
+    [:octicons-arrow-right-24: Python API](production/network/clients.md)
 
 - &#128640; __Extendable via plugins in Python__
 

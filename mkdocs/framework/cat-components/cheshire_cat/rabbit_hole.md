@@ -1,7 +1,7 @@
 # Rabbit Hole
 
 The Rabbit Hole is the Cat's component that takes care of ingesting documents and storing them in the [declarative memory](../memory/long_term_memory.md).
-You can interact with it either through its [endpoint](../../../production/clients.md), the GUI or a Python script.
+You can interact with it either through its [endpoint](../../../production/network/clients.md), the GUI or a Python script.
 
 Currently supported file formats are: `.txt`, `.md`, `.pdf` or `.html` via web URL. 
 

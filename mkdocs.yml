@@ -88,8 +88,10 @@ nav:
         - Rabbit Hole Ingestion: framework/flows/rabbit-hole-ingestion.md
 
   - Production:
-    - Endpoints: production/endpoints.md
-    - Clients: production/clients.md
+    - Network:
+      - WebSocket endpoints: production/network/ws-endpoints.md
+      - HTTP Endpoints: production/network/http-endpoints.md
+      - Clients: production/network/clients.md
     - Administrations:
         - Architecture: production/administrators/architecture.md
         - Environment Variables: production/administrators/env-variables.md

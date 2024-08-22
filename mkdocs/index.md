@@ -16,6 +16,7 @@
     Take your first step with hands-on examples!
 
     [:octicons-arrow-right-24: Get started now](quickstart/introduction.md)
+    [Get started now](quickstart/introduction.md){ .md-button .md-button--primary }
 
 - &#128268; __Plugins__
 

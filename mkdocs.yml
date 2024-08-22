@@ -95,8 +95,11 @@ nav:
     - Administrations:
         - Architecture: production/administrators/architecture.md
         - Environment Variables: production/administrators/env-variables.md
-        - User Management: production/advanced/user_system.md
         - Automatic Tests: production/advanced/tests.md
+    - Auth:
+        - Authentication: production/auth/authentication.md
+        - Authorization: production/auth/authorization.md
+        - User Management: production/auth/user-management.md
     - Use Cases:
         - Integrations: production/use-cases/integrations.md
         - Examples: production/use-cases/examples.md

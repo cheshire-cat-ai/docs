@@ -15,8 +15,7 @@
 
     Take your first step with hands-on examples!
 
-    [:octicons-arrow-right-24: Get started now](quickstart/introduction.md)
-    [Get started now](quickstart/introduction.md){ .md-button .md-button--primary }
+    [Get started now](quickstart/introduction.md){ .md-button }
 
 - &#128268; __Plugins__
 
@@ -24,7 +23,7 @@
 
     Dive into advanced concepts to develop and publish your plugin!
 
-    [:octicons-arrow-right-24: Plugin documentation](plugins/plugins.md)
+    [Plugin documentation](plugins/plugins.md){ .md-button }
 
 - &#129693; __Hooks__
 
@@ -32,7 +31,7 @@
 
     Explore all the available hooks to customize the Cat!
 
-    [:octicons-arrow-right-24: Available Hooks](plugins/hooks.md#available-hooks)
+    [Available Hooks](plugins/hooks.md#available-hooks){ .md-button }
 
 - &#128640; __Deploy__
 
@@ -40,7 +39,7 @@
 
     Ready-to-use setup to deploy your assistant!
 
-    :octicons-arrow-right-24: Coming soon...
+    [Docker Compose examples](production/administrators/docker-compose.md){ .md-button }
 
 </div>
 
@@ -73,7 +72,7 @@ AI assistant agents on top of [Large Language Models](framework/cat-components/l
 
     Easily choose from a plenty of models to use!
 
-    [:octicons-arrow-right-24: compatible-models](production/administrators/architecture.md#compatible-models)
+    [:octicons-arrow-right-24: compatible-models](production/administrators/docker-compose.md#compatible-models)
 
 - &#128220; __Can ingest documents__
 

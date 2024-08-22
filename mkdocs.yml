@@ -92,8 +92,8 @@ nav:
       - WebSocket endpoints: production/network/ws-endpoints.md
       - HTTP Endpoints: production/network/http-endpoints.md
       - Clients: production/network/clients.md
-    - Administrations:
-        - Architecture: production/administrators/architecture.md
+    - Administration:
+        - Docker Compose: production/administrators/docker-compose.md
         - Environment Variables: production/administrators/env-variables.md
         - User Management: production/advanced/user_system.md
         - Automatic Tests: production/advanced/tests.md

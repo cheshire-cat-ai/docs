@@ -46,22 +46,22 @@ services:
 	  - ./data:/app/cat/data
 	restart: unless-stopped
 
-	ollama:
-	  container_name: ollama_cat
-	  image: ollama/ollama:latest
-	  volumes:
-		- ./ollama:/root/.ollama
-	  expose:
-		- 11434
-	  environment:
-	    - gpus=all
-	  deploy:
-	    resources:
-	      reservations:
-	        devices:
-              - driver: nvidia
-                count: 1
-                capabilities: [gpu]
+  ollama:
+    container_name: ollama_cat
+	image: ollama/ollama:latest
+	volumes:
+	  - ./ollama:/root/.ollama
+	expose:
+	  - 11434
+	environment:
+      - gpus=all
+	deploy:
+	  resources:
+		reservations:
+		  devices:
+			- driver: nvidia
+			count: 1
+			capabilities: [gpu]
 ```
 
 ## Cat + Qdrant
@@ -106,4 +106,6 @@ QDRANT_PORT=6333 # <port of the cluster, usually 6333>
 QDRANT_API_KEY="" # optional <api-key>
 ```
 
+## Cat + Reverse proxy
 
+TODO

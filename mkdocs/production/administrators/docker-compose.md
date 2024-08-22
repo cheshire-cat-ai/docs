@@ -10,11 +10,11 @@ services:
     image: ghcr.io/cheshire-cat-ai/core:latest
     container_name: cheshire_cat_core
     ports:
-      - ${CORE_PORT:-1865}:80
+      - 1865:80
     volumes:
       - ./static:/app/cat/static
       - ./plugins:/app/cat/plugins
-	  - ./data:/app/cat/data
+      - ./data:/app/cat/data
 ```
 
 ## Cat + Ollama
@@ -34,34 +34,34 @@ If you want a setup Cat + Ollama, here an example `compose.yml`:
 ```yaml
 services:
   cheshire-cat-core:
-	image: ghcr.io/cheshire-cat-ai/core:latest
-	container_name: cheshire_cat_core
-	depends_on:
-	  - ollama
-	ports:
-	  - ${CORE_PORT:-1865}:80
-	volumes:
-	  - ./static:/app/cat/static
-	  - ./plugins:/app/cat/plugins
-	  - ./data:/app/cat/data
-	restart: unless-stopped
+    image: ghcr.io/cheshire-cat-ai/core:latest
+    container_name: cheshire_cat_core
+    depends_on:
+      - ollama
+    ports:
+	  - 1865:80
+    volumes:
+      - ./static:/app/cat/static
+      - ./plugins:/app/cat/plugins
+      - ./data:/app/cat/data
+    restart: unless-stopped
 
   ollama:
     container_name: ollama_cat
-	image: ollama/ollama:latest
-	volumes:
-	  - ./ollama:/root/.ollama
-	expose:
-	  - 11434
-	environment:
+    image: ollama/ollama:latest
+    volumes:
+      - ./ollama:/root/.ollama
+    expose:
+      - 11434
+    environment:
       - gpus=all
-	deploy:
-	  resources:
-		reservations:
-		  devices:
-			- driver: nvidia
-			count: 1
-			capabilities: [gpu]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
 ```
 
 ## Cat + Qdrant
@@ -76,24 +76,24 @@ services:
     image: ghcr.io/cheshire-cat-ai/core:latest
     container_name: cheshire_cat_core
     depends_on:
-	  - cheshire-cat-vector-memory
+      - cheshire-cat-vector-memory
     env_file:
-	  - .env
+      - .env
     ports:
-	  - ${CORE_PORT:-1865}:80
+      - 1865:80
     volumes:
-	  - ./static:/app/cat/static
-	  - ./plugins:/app/cat/plugins
-	  - ./data:/app/cat/data
+      - ./static:/app/cat/static
+      - ./plugins:/app/cat/plugins
+      - ./data:/app/cat/data
     restart: unless-stopped
 
   cheshire-cat-vector-memory:
     image: qdrant/qdrant:latest
     container_name: cheshire_cat_vector_memory
     expose:
-	  - 6333
+      - 6333
     volumes:
-	  - ./long_term_memory/vector:/qdrant/storage
+      - ./long_term_memory/vector:/qdrant/storage
     restart: unless-stopped
 ```
 

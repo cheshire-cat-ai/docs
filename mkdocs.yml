@@ -88,6 +88,7 @@ nav:
         - Rabbit Hole Ingestion: framework/flows/rabbit-hole-ingestion.md
 
   - Production:
+    - Endpoints: production/endpoints.md
     - Clients: production/clients.md
     - Administrations:
         - Architecture: production/administrators/architecture.md

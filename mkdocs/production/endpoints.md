@@ -1,6 +1,19 @@
 
 
-## &#128172; Interacting with the Cat
+## Websocket API
+
+While most network communication with LLMs is performed via HTTP, the Cat features full duplex communication:
+
+- two way communication: you send messages to the Cat, and the Cat can send messages to you
+
+## HTTP API
+
+You can play around with the HTTP endpoints directly on your installation, under [`localhost:1865/docs`](http://localhost:1865/docs).
+You will find there most of the documentation you need, alongside code snippets in various languages.
+
+## Examples
+
+### Interacting via WebSocket
 
 Example of how to implement a simple chat system using the websocket endpoint at `localhost:1865/ws/`.
 !!! info "Request JSON schema"
@@ -99,7 +112,7 @@ Example of how to implement a simple chat system using the websocket endpoint at
         cat_chat();
         ```
 
-## &#128007; Interacting with Rabbithole
+### Upload documents to the Rabbithole
 
 Example of how to send a text file (`.md`,`.pdf.`,`.txt`) to the Cat using the Rabbit Hole at `localhost:1865/rabbithole/`.
 

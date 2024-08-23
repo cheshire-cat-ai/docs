@@ -79,8 +79,8 @@ nav:
             - Procedural Memory: framework/cat-components/memory/procedural_memory.md
         - The Working Memory: framework/cat-components/memory/working_memory.md
         - The Rabbit Hole: framework/cat-components/cheshire_cat/rabbit_hole.md
-        - The Mad Hatter: framework/cat-components/cheshire_cat/mad_hatter.md
         - The White Rabbit: framework/cat-components/cheshire_cat/white_rabbit.md
+        - The Mad Hatter: framework/cat-components/cheshire_cat/mad_hatter.md
       - Technical Diagrams:
         - The Cat Bootstrap: framework/flows/cat-bootstrap.md
         - Chatting with the Cat: framework/flows/chatting-with-the-cat.md
@@ -88,14 +88,15 @@ nav:
         - Rabbit Hole Ingestion: framework/flows/rabbit-hole-ingestion.md
 
   - Production:
-    - Network:
-      - WebSocket endpoints: production/network/ws-endpoints.md
-      - HTTP Endpoints: production/network/http-endpoints.md
-      - Clients: production/network/clients.md
     - Administration:
         - Docker Compose: production/administrators/docker-compose.md
         - Environment Variables: production/administrators/env-variables.md
-        - Automatic Tests: production/advanced/tests.md
+        - Automatic Tests: production/administrators/tests.md
+        - Backups and Updates: production/administrators/backups-updates.md
+    - Network:
+      - WebSocket Endpoints: production/network/ws-endpoints.md
+      - HTTP Endpoints: production/network/http-endpoints.md
+      - Clients: production/network/clients.md
     - Auth:
         - Authentication: production/auth/authentication.md
         - Authorization: production/auth/authorization.md
@@ -103,9 +104,6 @@ nav:
     - Use Cases:
         - Integrations: production/use-cases/integrations.md
         - Examples: production/use-cases/examples.md
-    - Guides:
-      - How to backup the Long Term Memory: production/advanced/memory_backup.md
-
 
   - FAQ:
     - General: faq/general.md
@@ -114,19 +112,11 @@ nav:
     - Customization: faq/customization.md
     - Security & Spending: faq/security_and_spending.md
     - Concepts:
-      - LLM Concepts:
-            - Language Models: framework/llm-concepts/llm.md
-            - Retrieval Augmented Generation: framework/llm-concepts/rag.md
-            - Prompt: framework/llm-concepts/prompt.md
-            - Encoder: framework/llm-concepts/embedder.md
-            - Vector Memory: framework/llm-concepts/vector-memory.md
-  # - Altro:
-  #   - Resources:
-  #     - Videos:
-  #       - Installation: resources/video-installation.md
-  #     - Tutorials: resources/tutorials.md
-  #     - Events: resources/events.md
-  #   - Made with the Cat: made-with-the-cat.md
+      - Language Models: faq/llm-concepts/llm.md
+      - Retrieval Augmented Generation: faq/llm-concepts/rag.md
+      - Prompt: faq/llm-concepts/prompt.md
+      - Encoder: faq/llm-concepts/embedder.md
+      - Vector Memory: faq/llm-concepts/vector-memory.md
 
 theme:
   name: material

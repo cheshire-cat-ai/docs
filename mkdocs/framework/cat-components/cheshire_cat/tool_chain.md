@@ -1,6 +1,6 @@
 # Tool Chain
 
-Sometimes a simple answer from the [language model](../llm.md#completion-model) is not enough.
+Sometimes a simple answer from the [language model](faq/llm-concepts/llm.md) is not enough.
 For this reason, the Cat can exploit a set of custom tools (e.g. API calls and Python functions) coming from the [plugins](../plugins.md).  
 The decision on *whether* and *which* action should be taken to fulfill the user's request is delegated to an Agent, i.e. the Tool Agent.
 

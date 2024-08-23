@@ -19,8 +19,6 @@ Create a folder on your machine, and inside it create a file named `compose.yml`
 Copy/paste the following inside:
 
 ```yaml
-version: '3.7'
-
 services:
 
   cheshire-cat-core:

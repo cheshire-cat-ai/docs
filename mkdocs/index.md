@@ -1,7 +1,6 @@
 # &#128075; Hello, dear
 
-The Cheshire Cat is an open-source, hackable and production-ready framework that allows developing intelligent personal
-AI agents on top of [Large Language Models](framework/cat-components/llm.md) (LLM).
+The Cheshire Cat is an open-source, hackable and production-ready framework that allows developing AI agents on top of [Large Language Models](faq/llm-concepts/llm.md) (LLM).
 
 ```
 "Every adventure requires a first step".
@@ -50,7 +49,7 @@ AI agents on top of [Large Language Models](framework/cat-components/llm.md) (LL
 
     Easily choose from a plenty of models to use!
 
-    [Compatible Models](production/administrators/docker-compose/#cat-ollama){ .md-button }
+    [Compatible Models](production/administrators/docker-compose.md#cat-ollama){ .md-button }
 
 - &#128220; __Can ingest documents__
 
@@ -58,7 +57,7 @@ AI agents on top of [Large Language Models](framework/cat-components/llm.md) (LL
 
     Ground the model based on your knowledge base!
 
-    [Retrieval Augmented Generation](framework/llm-concepts/rag.md){ .md-button }
+    [Retrieval Augmented Generation](faq/llm-concepts/rag.md){ .md-button }
 
 - &#128024; __Local Long term memory__
 
@@ -82,11 +81,15 @@ AI agents on top of [Large Language Models](framework/cat-components/llm.md) (LL
 
 [:fontawesome-brands-discord: Discord](https://discord.gg/bHX5sNFCYU){ .md-button }
 
-Join our Discord community where you can
-connect with other developers and ask for support to the contributors or directly to the Cat &#128570;
-mentioning `@Cheshire Cat AI`.
+Join our Discord community where you can:
 
-**Remember to give the project a star! &#11088; and thanks! &#128591;**
+- connect with other developers
+- ask for support to the contributors
+- see what people have already [done with the Cat](https://discord.com/channels/1092359754917089350/1099439547500220427)
+- join regular dev & user meetings
+- follow monthly live tutorials called `Meow Talks`
+
+---
 
 ![Wikipedia picture of the Cheshire Cat](assets/img/cheshire-cat-tree-shade.jpg)
 

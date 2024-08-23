@@ -1,27 +1,27 @@
-# Instructions Prompt
+# Procedures Prompt
 
-The Instruction Prompt explains the [Tool Agent](../cheshire_cat/tool_chain.md) how to format its reasoning.  
-The [Tool Agent](../cheshire_cat/agent.md) uses a [chain](https://python.langchain.com/v0.2/docs/introduction/)
-to decide *when* and *which* [tool](../plugins.md) is the most appropriate to fulfill the user's needs.
+The Procedures Prompt explains the [ Procedures Agent](../cheshire_cat/tool_chain.md) how to format its reasoning.  
+The [Agent](../cheshire_cat/agent.md) uses a [chain](https://python.langchain.com/v0.2/docs/introduction/)
+to decide *when* and *which* [tool](../../../plugins/tools.md) or [form](../../../plugins/forms.md) is the most appropriate to fulfill the user's needs.
 
-By default, it is set to Langchain [instructions format](https://api.python.langchain.com/en/latest/agents/langchain.agents.conversational.base.ConversationalAgent.html?highlight=prompt%20format_instruction)
-which looks like this:
+The prompt looks like this:
 
 ```python
-instructions = """
-To use a tool, please use the following format:
+TOOL_PROMPT = """Create a JSON with the correct "action" and "action_input" to help the Human.
+You can use one of these actions:
+{tools}
+- "no_action": Use this action if no relevant action is available. Input is always null.
 
-Thought: Do I need to use a tool? Yes
-Action: the action to take, should be one of [{tool_names}]
-Action Input: the input to the action
-Observation: the result of the action
+## The JSON must have the following structure:
 
-When you have a response to say to the Human, or if you do not need to use a tool, you MUST use the format:
+{{
+    "action": // str - The name of the action to take, should be one of [{tool_names}, "no_action"]
+    "action_input": // str or null - The input to the action according to its description
+}}
 
-Thought: Do I need to use a tool? No
-
-AI: [your response here]"""
+{examples}
+"""
 ```
 
-where the placeholder `{tool_names}` is replaced with the list of Python [tools](../plugins.md) retrieved from the [procedural memory](../memory/long_term_memory.md).
+where the placeholders `{tools}` and `{tool_names}` is replaced with the list of Python tools retrieved from the [procedural memory](../memory/long_term_memory.md).
 

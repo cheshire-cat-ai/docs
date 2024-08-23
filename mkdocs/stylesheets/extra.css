@@ -30,6 +30,13 @@ body[data-md-color-scheme="slate"] .md-header__button.md-logo img {
 [data-md-color-scheme="custom"] .md-button {
   color: #666;
 }
+[data-md-color-scheme="custom"] .md-button-grid,
+[data-md-color-scheme="slate"] .md-button-grid {
+  width: 300px;
+  margin: 10px 10px;
+  padding: 20px 20px;
+  text-align: center;
+} 
 
 [data-md-color-scheme="custom"] .md-typeset a {
   font-weight: 700;

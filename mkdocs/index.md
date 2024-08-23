@@ -11,13 +11,13 @@ The Cheshire Cat is an open-source, hackable and production-ready framework that
 
 <div class="grid" markdown>
 
-[&#127939; Get started now](quickstart/installation-configuration.md){ .md-button }
+[&#127939; Get started now](quickstart/installation-configuration.md){ .md-button .md-button-grid }
  
-[&#129693; Available Hooks](plugins/hooks.md#available-hooks){ .md-button }
+[&#129693; Available Hooks](plugins/hooks.md#available-hooks){ .md-button .md-button-grid }
 
-[&#128268; Plugin documentation](plugins/plugins.md){ .md-button }
+[&#128268; Plugin documentation](plugins/plugins.md){ .md-button .md-button-grid }
 
-[&#128640; Docker Compose examples](production/administrators/docker-compose.md){ .md-button }
+[&#128640; Docker Compose examples](production/administrators/docker-compose.md){ .md-button .md-button-grid }
 
 </div>
 

@@ -2,14 +2,14 @@
 
 # Mad Hatter
 
-The Mad Hatter is the Cat's [plugins](/docs/plugins/plugins) manager.  
+The Mad Hatter is the Cat's [plugins](../../../plugins/plugins.md) manager.  
 It takes care of loading, prioritizing and executing plugins.
 
 Specifically, the Mad Hatter lists all available plugins in proper folder and sort their hooks in descending order of priority.  
 When the Cat invokes them, it executes them following that order.
 
 !!! note "Developer documentation"
-    - [How to write a plugin](/docs/plugins/plugins)
-    - [Hooks](/docs/plugins/hooks)
-    - [Tools](/docs/plugins/tools)
-    - [Forms](/docs/plugins/forms)
+    - [How to write a plugin](../../../plugins/plugins.md)
+    - [Hooks](../../../plugins/hooks.md)
+    - [Tools](../../../plugins/tools.md)
+    - [Forms](../../../plugins/forms.md)

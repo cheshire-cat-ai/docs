@@ -66,7 +66,7 @@ class PizzaForm(CatForm): #(3)
 1. Pydantic class representing the information you need to retrieve.
 2. Every class decorated with `@forms` is a Form.
 3. Every Form must inherit from `CatForm`.
-4. Description of the Form. <!-- , useful to the [tool chain](/cat-components/cheshire_cat/tool_chain/). It is necessary, as it will show up in the Tool chain prompt. It should describe the purpose of the form, so that the LLM can select the tool and input it properly. -->
+4. Description of the Form. <!-- , useful to the [procedures chain](/cat-components/cheshire_cat/tool_chain/). It is necessary, as it will show up in the Procedures chain prompt. It should describe the purpose of the form, so that the LLM can select the tool and input it properly. -->
 5. Pydantic class name.
 6. Each Form must include a list of *start examples* to guide the LLM in identifying and initiating the form. This is close to the tool's docstring principle.
 7. Each Form must include a list of *stop examples* to help the LLM in determining when to stop the form during the conversation.

@@ -65,7 +65,7 @@ nav:
         - The Stray Cat: framework/cat-components/cheshire_cat/stray_cat.md
         - The Agent:
             - Introduction: framework/cat-components/cheshire_cat/agent.md
-            - Tool Chain: framework/cat-components/cheshire_cat/tool_chain.md
+            - Procedures Chain: framework/cat-components/cheshire_cat/tool_chain.md
             - Memory Chain: framework/cat-components/cheshire_cat/memory_chain.md
         - The Prompts:
             - Main Prompt: framework/cat-components/prompts/main_prompt.md

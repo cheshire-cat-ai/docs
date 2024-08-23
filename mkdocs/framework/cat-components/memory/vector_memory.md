@@ -5,7 +5,7 @@ These are particular databases that store the content in the form of geometrical
 
 A vector memory comes in the guise of a named collection of vectors and additional, optional metadata.  
 The latter can be used to filter the search in the database.  
-Each vector represents a memory. They are also called *embeddings* as they are the results of the text-to-vector conversion yielded by the [embedder](../llm.md#embedding-model).
+Each vector represents a memory. They are also called *embeddings* as they are the results of the text-to-vector conversion yielded by the [embedder](../../../faq/llm-concepts/llm.md#embedding-model).
 
 Such databases are particularly useful because they allow to fetch relevant documents based on the vector similarity
 between a query and the stored embeddings.
@@ -38,4 +38,4 @@ flowchart LR
 
 ```
 
-Nodes with the &#129693; point the execution places where there is an available [hook](../plugins.md) to customize the execution pipeline.
+Nodes with the &#129693; point the execution places where there is an available [hook](../../../plugins/plugins.md) to customize the execution pipeline.

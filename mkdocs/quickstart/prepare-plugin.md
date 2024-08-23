@@ -1,4 +1,4 @@
-# &#128268; Preparing a Plugin
+# &#128268; Your first Plugin
 
 Plugins are packages of `Tools` and `Hooks`.
 You don't distribute a `Tool` or a `Hook` directly, you will distribute a Plugin containing them.

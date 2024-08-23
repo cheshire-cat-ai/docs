@@ -1,4 +1,4 @@
-To facilitate, speed up, and standardize the Cat's user experience, the Cat lives inside a Docker container.
+To facilitate, speed up, and standardize the Cat's user experience, the Cat lives inside a Docker container. This allows for maximum power, flexibility and portability, but requires a little understanding from you on [how docker works](https://docs.docker.com/get-started/).
 
 
 ## Cat standalone
@@ -19,20 +19,26 @@ services:
 
 ## Cat + Ollama
 
-The cat is agnostic, meaning You can attach your preferred llm and embedder model/provider. The Cat supports the most used ones, but you can increase the number of models/providers by [plugins](../../plugins/hooks.md/#__tabbed_1_5), here is a list of the main ones:
+The Cat is model agnostic, meaning you can attach your preferred LLM and embedder model/provider. The Cat supports the most used ones, but you can increase the number of models/providers by [plugins](../../plugins/hooks.md/#__tabbed_1_5), here is a list of the main ones:
 
 1. OpenAI and Azure OpenAI
 2. Cohere
-3. Ollama (LLM model only)
+3. Ollama
 4. HuggingFace TextInference API (LLM model only)
 5. Google Gemini
 6. Qdrant FastEmbed (Embedder model only)
 7. (custom via plugin)
 
-If you want a setup Cat + Ollama, here an example `compose.yml`:
+Let's see a full local setup for Cat + Ollama.  
+To make this work properly, be sure your docker engine can see the GPU via [NVIDIA docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
+
+As an alternative you can install Ollama directly on your machine and making the Cat aware of it in the Ollama LLM settings, inserting your local network IP or using `host.docker.internal`.
+
+Example `compose.yml`:
 
 ```yaml
 services:
+
   cheshire-cat-core:
     image: ghcr.io/cheshire-cat-ai/core:latest
     container_name: cheshire_cat_core
@@ -64,10 +70,14 @@ services:
               capabilities: [gpu]
 ```
 
+For a solid local embedder, choose one from the FastEmbed list.  
+The Cat will download the embedder in `cat/data` and will use it to embed text.  
+Congratulations, you are now free from commercial LLM providers.
+
 ## Cat + Qdrant
 
 By default the Core uses an embedded version of [Qdrant](https://qdrant.tech/), based on SQLite.  
-It is highly recommended to connect the Cat to a full Qdrant instance to increase performance and capacity!
+It is highly recommended to connect the Cat to a full Qdrant instance to increase performance and scalability!
 
 ```yaml
 services:

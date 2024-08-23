@@ -1,5 +1,7 @@
 # Introduction
 
+There are a few things you need to know about the Cheshire Cat. If you are eager to launch and start hacking, jump to the [installation page](installation-configuration.md), but please be sure to return here.
+
 The Cheshire Cat is a ready-to-use AI micro-framework.
 Once installed and connected to a Language Model (LLM), it can be queried through APIs.
 These APIs return the responses provided by the LLM.

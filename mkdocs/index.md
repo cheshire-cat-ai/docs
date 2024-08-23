@@ -1,5 +1,8 @@
 # &#128075; Hello, dear
 
+The Cheshire Cat is an open-source, hackable and production-ready framework that allows developing intelligent personal
+AI agents on top of [Large Language Models](framework/cat-components/llm.md) (LLM).
+
 ```
 "Every adventure requires a first step".
 (Alice's Adventures in Wonderland - Lewis Carroll)
@@ -7,46 +10,20 @@
 
 ## Quick links
 
-<div class="grid cards" markdown>
+<div class="grid" markdown>
 
-- &#127939; __Onboarding__
+[&#127939; Get started now](quickstart/installation-configuration.md){ .md-button }
+ 
+[&#129693; Available Hooks](plugins/hooks.md#available-hooks){ .md-button }
 
-    ---
+[&#128268; Plugin documentation](plugins/plugins.md){ .md-button }
 
-    Take your first step with hands-on examples!
-
-    [Get started now](quickstart/introduction.md){ .md-button }
-
-- &#128268; __Plugins__
-
-    ---
-
-    Dive into advanced concepts to develop and publish your plugin!
-
-    [Plugin documentation](plugins/plugins.md){ .md-button }
-
-- &#129693; __Hooks__
-
-    ---
-
-    Explore all the available hooks to customize the Cat!
-
-    [Available Hooks](plugins/hooks.md#available-hooks){ .md-button }
-
-- &#128640; __Deploy__
-
-    ---
-
-    Ready-to-use setup to deploy your assistant!
-
-    [Docker Compose examples](production/administrators/docker-compose.md){ .md-button }
+[&#128640; Docker Compose examples](production/administrators/docker-compose.md){ .md-button }
 
 </div>
 
 ## Cheshire Cat Features
 
-The Cheshire Cat is an open-source, hackable and production-ready framework that allows developing intelligent personal
-AI assistant agents on top of [Large Language Models](framework/cat-components/llm.md) (LLM).
 
 <div class="grid cards" markdown>
 
@@ -56,7 +33,8 @@ AI assistant agents on top of [Large Language Models](framework/cat-components/l
 
     Chat with the Cat and interact with its endpoints!
 
-    [:octicons-arrow-right-24: Python API](production/network/clients.md)
+    [Client libs](production/network/clients.md){ .md-button }
+    [Endpoints](production/network/http-endpoints.md){ .md-button }
 
 - &#128640; __Extendable via plugins in Python__
 
@@ -64,7 +42,7 @@ AI assistant agents on top of [Large Language Models](framework/cat-components/l
 
     Write your first plugin, your imagination is the limit!
 
-    [:octicons-arrow-right-24: Write your first plugin](quickstart/prepare-plugin.md)
+    [Write your first plugin](quickstart/prepare-plugin.md){ .md-button }
 
 - &#127757; __Language model agnostic__
 
@@ -72,7 +50,7 @@ AI assistant agents on top of [Large Language Models](framework/cat-components/l
 
     Easily choose from a plenty of models to use!
 
-    [:octicons-arrow-right-24: compatible-models](production/administrators/docker-compose.md#compatible-models)
+    [Compatible Models](production/administrators/docker-compose/#cat-ollama){ .md-button }
 
 - &#128220; __Can ingest documents__
 
@@ -80,7 +58,7 @@ AI assistant agents on top of [Large Language Models](framework/cat-components/l
 
     Ground the model based on your knowledge base!
 
-    [:octicons-arrow-right-24: Retrieval Augmented Generation](framework/llm-concepts/rag.md)
+    [Retrieval Augmented Generation](framework/llm-concepts/rag.md){ .md-button }
 
 - &#128024; __Local Long term memory__
 
@@ -88,7 +66,7 @@ AI assistant agents on top of [Large Language Models](framework/cat-components/l
 
     Make use of a persistent memory across restarts!
 
-    [:octicons-arrow-right-24: Cat's Long Term Memory](framework/cat-components/memory/long_term_memory.md)
+    [Cat's Long Term Memory](framework/cat-components/memory/long_term_memory.md){ .md-button }
 
 - &#128011; __100% dockerized__
 
@@ -96,13 +74,14 @@ AI assistant agents on top of [Large Language Models](framework/cat-components/l
 
     Setup the Cat in the blink of an eye with the pre-built docker image!
 
-    [:octicons-arrow-right-24: Installation](quickstart/installation-configuration.md)
+    [Installation](quickstart/installation-configuration.md){ .md-button }
 
 </div>
 
 ## Get in touch with us
 
-[:fontawesome-brands-discord: Discord](https://discord.gg/bHX5sNFCYU){ .md-button .md-button--primary } &#128072;
+[:fontawesome-brands-discord: Discord](https://discord.gg/bHX5sNFCYU){ .md-button }
+
 Join our Discord community where you can
 connect with other developers and ask for support to the contributors or directly to the Cat &#128570;
 mentioning `@Cheshire Cat AI`.

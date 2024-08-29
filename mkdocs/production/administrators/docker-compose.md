@@ -111,9 +111,9 @@ Add this enviroment variables in your `.env` file:
 
 ```bash
 # Qdrant server
-QDRANT_HOST=cheshire_cat_vector_memory # <url of the cluster>
-QDRANT_PORT=6333 # <port of the cluster, usually 6333>
-QDRANT_API_KEY="" # optional <api-key>
+CCAT_QDRANT_HOST=cheshire_cat_vector_memory # <url of the cluster>
+CCAT_QDRANT_PORT=6333 # <port of the cluster, usually 6333>
+CCAT_QDRANT_API_KEY="" # optional <api-key>
 ```
 
 ## Cat + Reverse proxy

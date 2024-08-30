@@ -45,7 +45,7 @@ services:
     depends_on:
       - ollama
     ports:
-	  - 1865:80
+      - 1865:80
     volumes:
       - ./static:/app/cat/static
       - ./plugins:/app/cat/plugins
@@ -118,4 +118,51 @@ CCAT_QDRANT_API_KEY="" # optional <api-key>
 
 ## Cat + Reverse proxy
 
-TODO
+### Cat with Caddy (automatic https)
+
+This is your `compose.yml`
+
+```yaml
+services:
+
+  cat:
+    image: ghcr.io/cheshire-cat-ai/core:latest
+    container_name: cheshire_cat_core
+    env_file:
+      - .env
+    expose:
+      - 80
+    volumes:
+      - ./cat/static:/app/cat/static
+      - ./cat/plugins:/app/cat/plugins
+      - ./cat/data:/app/cat/data
+
+  caddy:
+    image: caddy:latest
+    depends_on:
+      - cat
+    ports:
+      - 80:80
+      - 443:443
+      - 443:443/udp
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy/data:/data
+      - ./caddy/config:/config
+    restart: unless-stopped
+```
+
+Add this enviroment variable in your `.env` file:
+
+```bash
+CCAT_HTTPS_PROXY_MODE=1
+```
+
+And in `caddy/Caddyfile`:
+```
+localhost {
+    reverse_proxy cat:80
+}
+```
+
+Now you can reach your cat at `https://localhost`!

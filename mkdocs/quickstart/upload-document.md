@@ -31,4 +31,4 @@ In this case, you can see that it used the knowledge coming from the documents (
 ![Alt text](../assets/img/quickstart/upload-document/why-response.png)
 
 ## Next Step
-In the [next step](./prepare-plugin.md), you will learn how to prepare an empty Plugin.
+In the [next step](./installing-plugin.md), you will learn what a plugin is and how to install it.

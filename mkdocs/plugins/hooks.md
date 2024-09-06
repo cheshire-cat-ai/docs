@@ -152,7 +152,7 @@ You should be able to run your own hooks also in tools and forms. Not fully test
 
 ## Available Hooks
 
-You can view the list of available hooks by exploring the Cat source code under the folder `core/cat/mad_hatter/core_plugin/hooks`.
+You can view the list of available hooks by exploring the Cat source code under the folder [`core/cat/mad_hatter/core_plugin/hooks`](https://github.com/cheshire-cat-ai/core/tree/main/core/cat/mad_hatter/core_plugin/hooks){:target="_blank"}.
 All the hooks you find in there define default Cat's behavior and are ready to be overridden by your plugins.
 
 The process diagrams found under the menu `Framework → Technical Diagrams` illustrate where the hooks are called during the Cat's execution flow.

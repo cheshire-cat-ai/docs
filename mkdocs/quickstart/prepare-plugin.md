@@ -1,15 +1,13 @@
 # &#128268; Your first Plugin
 
 Plugins are packages of `Tools` and `Hooks`.
-You don't distribute a `Tool` or a `Hook` directly, you will distribute a Plugin containing them.
+You don't distribute a `Tool` or a `Hook` directly, you will distribute a Plugin containing them. Don't worry, we'll explore what tools and hooks are in details in the upcoming steps. For now, let's start by creating an empty plugin.
 
 ## Creating the Plugin
 
-In this step, we will prepare an empty plugin and in the next steps we will insert a `Tool` and a `Hook` inside it.
-
 To create a plugin just create a new folder in `core/cat/plugins/`, for our first plugin the folder name will be `poetic_sock_seller`.
 
-You need two files to your plugin folder:
+You need two files in your plugin folder:
 
     ├── core
     │   ├── cat

@@ -15,7 +15,7 @@ When you restart the Cat, all conversation history and uploaded documents will s
 
 Congratulations on completing the quickstart!  
 
-We encourage you to explore the Cat further and try writing and publish your own plugins to enhance your experience.  
+We encourage you to explore the Cat further and try writing and publishing your own plugins to enhance your experience.  
 
 If you have any questions or need assistance, feel free to join our [:fontawesome-brands-discord: Discord](https://discord.gg/bHX5sNFCYU) community to:
 

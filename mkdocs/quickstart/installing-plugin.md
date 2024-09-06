@@ -1,6 +1,8 @@
 # &#128229; Installing a Plugin from the Registry
 
-Installing plugins from our registry is a seamless process that enhances your Cheshire Cat AI experience. Whether you're seeking specific functionalities or exploring new features, our registry offers a diverse range of plugins ready for installation.
+Plugins are a way to enhance Cheshire Cat AI. Developers from around the world create plugins and can choose to publish them in our public registry.
+
+Installing plugins from the registry is a seamless process that further enhances your Cheshire Cat AI experience. Whether you're seeking specific functionalities or exploring new features, our registry offers a diverse range of plugins ready for installation.
 
 ## Through the Admin Dashboard
 

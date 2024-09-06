@@ -57,11 +57,12 @@ Default value: `false`
 
 Enable this variable if you are using a proxy like Nginx with SSL in front of the Cat, otherwise https will give redirection problems.
 
+This option is mapped to the `--proxy_headers` Uvicorn option, you can reference the [Uvicorn HTTP setting](https://www.uvicorn.org/settings/#http){:target="_blank"} page for more info.
+
 ### CCAT_CORS_FORWARDED_ALLOW_IPS
 Default value: `*`
 
-TODO: explain this env 'cause I'm cooked
-
+When the `CCAT_HTTPS_PROXY_MODE` option is enabled, this option is mapped to the `--forwarded-allow-ips` Uvicorn option, you can reference the [Uvicorn HTTP setting](https://www.uvicorn.org/settings/#http){:target="_blank"} page for more info.
 
 ## Security
 

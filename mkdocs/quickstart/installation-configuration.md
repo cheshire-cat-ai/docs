@@ -16,7 +16,7 @@ To use `ChatGPT`, you need an API key. You can request one on the provider's web
 
 ## Setup
 
-Create a folder on your machine, we will user `cheshire-cat-ai`, and inside it create a file named `compose.yml`.
+Create a folder on your machine, we will use `cheshire-cat-ai`, and inside it create a file named `compose.yml`.
 Copy/paste the following inside:
 
 ```yaml

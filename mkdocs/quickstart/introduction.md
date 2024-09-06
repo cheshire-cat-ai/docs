@@ -37,16 +37,15 @@ The `Mad Hatter` is the component that manages plugins.
 
 ## Sharing Plugins
 If desired, you can publish your `Plugins` on the public registry.
-Other users will be able to install them with just a single click from the Admin Portal.
+Other users will be able to install them with just a single click.
 
 ## Admin Portal
 A web portal for Admin users completes the framework.
-Using this portal, the admin can configure the settings,
-install plugins, upload documents and use it as a playground tool.
+Using this portal, the admin can configure the settings, install plugins, upload documents and use it as a playground tool.
 You can chat with the Cheshire Cat, inspect its responses and directly query its memories.
 
 ## Next step
-In the next step, you will learn how to install the Cat, set the LLM and the basics of this all.
+In the [next step](./installation-configuration.md), you will learn how to install the Cat, set the LLM and the basics of this all.
 
 We will be transforming the Cat into a sock seller.
 More in detail, we will upload some knowledge (documents) about socks knitting.

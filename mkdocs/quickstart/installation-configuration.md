@@ -9,7 +9,7 @@ Hence, when you run the Cat for the first time, you need to configure the LLM an
 Most people use [ChatGPT](https://platform.openai.com/docs/models/gpt-3-5), it's quite cheap and powerful enough.
 We will do the same during the next steps.
 
-To use `ChatGPT`, you need an API key. You can request one on the provider's website: 
+To use `ChatGPT`, you need an API key. You can request one on the provider's website:  
     - visit your OpenAI [API Keys](https://platform.openai.com/account/api-keys) page;  
     - create an API key with `+ Create new secret key` and copy it
 
@@ -26,6 +26,7 @@ services:
     container_name: cheshire_cat_core
     ports:
       - 1865:80
+      - 5678:5678 # only for development purposes (take away in production)
     volumes:
       - ./static:/app/cat/static
       - ./plugins:/app/cat/plugins

@@ -152,10 +152,10 @@ You should be able to run your own hooks also in tools and forms. Not fully test
 
 ## Available Hooks
 
-You can view the list of available hooks by exploring the Cat source code under the folder `core/cat/mad_hatter/core_plugin/hooks`.
+You can view the list of available hooks by exploring the Cat source code under the folder [`core/cat/mad_hatter/core_plugin/hooks`](https://github.com/cheshire-cat-ai/core/tree/main/core/cat/mad_hatter/core_plugin/hooks){:target="_blank"}.
 All the hooks you find in there define default Cat's behavior and are ready to be overridden by your plugins.
 
-The process diagrams found under the menu `Framework → Technical Diagrams` illustrate where the hooks are called during the Cat's execution flow.
+The process diagrams found under the [`Framework → Technical Diagrams`](../framework/flows/cat-bootstrap.md) section illustrate where the hooks are called during the Cat's execution flow.
 Not all the hooks have been documented yet. ( [help needed! &#128568;](https://discord.com/channels/1092359754917089350/1092360068269359206){:target="_blank"} ).
 
 === "&#127754; Flow"
@@ -696,16 +696,16 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     <div class="annotate" mardown>
 
-    | Name                                      | Description                                                    |
-    | :---------------------------------------- | :------------------------------------------------------------- |
-    | Rabbit Hole instantiates parsers (1)      | Intervene before the files' parsers are instiated              |
-    | Before Rabbit Hole insert memory (2)      | Intervene before the Rabbit Hole insert a document in the declarative memory |
-    | Before Rabbit Hole splits text (3)        | Intervene before the uploaded document is split into chunks    |
-    | After Rabbit Hole splitted text (4)       | Intervene after the Rabbit Hole's split the document in chunks |
-    | Before Rabbit Hole stores documents (5)   | Intervene before the Rabbit Hole starts the ingestion pipeline |
-    | After Rabbit Hole stores documents (6)    | Intervene after the Rabbit Hole ended the ingestion pipeline   |
-    | Rabbit Hole instantiates parsers (7)      | Hook the available parsers for ingesting files in the declarative memory   |
-    | Rabbit Hole instantiates splitter (8)     | Hook the splitter used to split text in chunks                 |
+    | Name                                    | Description                                                                  |
+    | :-------------------------------------- | :--------------------------------------------------------------------------- |
+    | Rabbit Hole instantiates parsers (1)    | Intervene before the files' parsers are instiated                            |
+    | Before Rabbit Hole insert memory (2)    | Intervene before the Rabbit Hole insert a document in the declarative memory |
+    | Before Rabbit Hole splits text (3)      | Intervene before the uploaded document is split into chunks                  |
+    | After Rabbit Hole splitted text (4)     | Intervene after the Rabbit Hole's split the document in chunks               |
+    | Before Rabbit Hole stores documents (5) | Intervene before the Rabbit Hole starts the ingestion pipeline               |
+    | After Rabbit Hole stores documents (6)  | Intervene after the Rabbit Hole ended the ingestion pipeline                 |
+    | Rabbit Hole instantiates parsers (7)    | Hook the available parsers for ingesting files in the declarative memory     |
+    | Rabbit Hole instantiates splitter (8)   | Hook the splitter used to split text in chunks                               |
 
     </div>
 
@@ -918,14 +918,14 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     <div class="annotate" mardown>
 
-    | Name                | Description                                        |
-    | :-------------------| :------------------------------------------------- |
-    | Activated (1)       | Intervene when a plugin is enabled                 |
-    | Deactivated (2)     | Intervene when a plugin is disabled                |
-    | Settings schema (3) | Override how the plugin's settings are retrieved   |
-    | Settings model (4)  | Override how the plugin's settings are retrieved   |
-    | Load settings (5)   | Override how the plugin's settings are loaded      |
-    | Save settings (6)   | Override how the plugin's settings are saved       |
+    | Name                | Description                                      |
+    | :------------------ | :----------------------------------------------- |
+    | Activated (1)       | Intervene when a plugin is enabled               |
+    | Deactivated (2)     | Intervene when a plugin is disabled              |
+    | Settings schema (3) | Override how the plugin's settings are retrieved |
+    | Settings model (4)  | Override how the plugin's settings are retrieved |
+    | Load settings (5)   | Override how the plugin's settings are loaded    |
+    | Save settings (6)   | Override how the plugin's settings are saved     |
 
     </div>
 
@@ -1159,10 +1159,10 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     <div class="annotate" mardown>
 
-    | Name                              | Description                                         |
-    | :---------------------------------| :---------------------------------------------------|
-    | Factory Allowed LLMs (1)          | Intervene before cat retrive llm settings           |
-    | Factory Allowed Embedders (2)     | Intervene before cat retrive embedder settings      |
+    | Name                          | Description                                    |
+    | :---------------------------- | :--------------------------------------------- |
+    | Factory Allowed LLMs (1)      | Intervene before cat retrive llm settings      |
+    | Factory Allowed Embedders (2) | Intervene before cat retrive embedder settings |
     
     </div>
 

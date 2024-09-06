@@ -1,6 +1,8 @@
 # &#128229; Installing a Plugin from the Registry
 
-Installing plugins from our registry is a seamless process that enhances your Cheshire Cat AI experience. Whether you're seeking specific functionalities or exploring new features, our registry offers a diverse range of plugins ready for installation.
+Plugins are a way to enhance Cheshire Cat AI. Developers from around the world create plugins and can choose to publish them in our public registry.
+
+Installing plugins from the registry is a seamless process that further enhances your Cheshire Cat AI experience. Whether you're seeking specific functionalities or exploring new features, our registry offers a diverse range of plugins ready for installation.
 
 ## Through the Admin Dashboard
 
@@ -28,3 +30,6 @@ After installing a plugin, consider these steps:
 
 - **Refresh**: The admin refreshes automatically after the installation but if for some reason the plugin does not show, refresh the page or check cat logs for any errors;
 - **Settings Configuration**: If the newly installed plugin requires setup or configuration, look for the cog icon associated with the plugin. Click on it to access and adjust the plugin's settings according to your preferences.
+
+## Next Step
+In the [next step](./prepare-plugin.md), you will learn how easy it is to create your own plugin.

@@ -99,7 +99,7 @@ You can simply use `@tool` or pass arguments.
     return "Tool output"
     ```
 
-## Tools debugging
+## Tools troubleshooting
 
 User's Input:
 > Can you tell me what time is it?

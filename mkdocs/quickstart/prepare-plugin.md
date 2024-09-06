@@ -38,7 +38,7 @@ Your empty plugin will be there, activate it:
 
 #### More Info
 
-[Developers → Plugins Reference → Plugin](../plugins/plugins.md)
+[`Developers → Plugins Reference → Plugin`](../plugins/plugins.md)
 
 ## Next Step
 

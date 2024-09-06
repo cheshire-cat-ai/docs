@@ -40,7 +40,7 @@ Your empty plugin will be there, activate it:
 
 Here the plugins reference: [`Plugins`](../plugins/plugins.md)
 
-If you plan to publish your plugin, also take a look at this [`Plugins -> Registry`](../plugins/plugins-registry/plugin-from-template.md)
+If you plan to publish your plugin, also take a look at this [`Plugins → Registry`](../plugins/plugins-registry/plugin-from-template.md)
 
 ## Next Step
 

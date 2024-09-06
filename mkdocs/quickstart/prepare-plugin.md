@@ -40,6 +40,8 @@ Your empty plugin will be there, activate it:
 
 [`Developers → Plugins Reference → Plugin`](../plugins/plugins.md)
 
+[`Plugins -> Registry`](../plugins/plugins-registry/plugin-from-template.md)
+
 ## Next Step
 
 In the [next step](./writing-tool.md), you will learn how to create your first `Tool`.

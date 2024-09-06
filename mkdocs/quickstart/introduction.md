@@ -37,7 +37,7 @@ The `Mad Hatter` is the component that manages plugins.
 
 ## Sharing Plugins
 If desired, you can publish your `Plugins` on the public registry.
-Other users will be able to install them with just a single click from the Admin Portal.
+Other users will be able to install them with just a single click.
 
 ## Admin Portal
 A web portal for Admin users completes the framework.

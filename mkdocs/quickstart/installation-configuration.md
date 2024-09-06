@@ -26,6 +26,7 @@ services:
     container_name: cheshire_cat_core
     ports:
       - 1865:80
+      - 5678:5678 # only for development purposes (take away in production)
     volumes:
       - ./static:/app/cat/static
       - ./plugins:/app/cat/plugins

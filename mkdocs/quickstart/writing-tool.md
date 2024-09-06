@@ -93,14 +93,11 @@ The only limit is your fantasy &#128512;.
 When changes to the plugin's source code are detected, the Cat automatically restarts.
 Feel free to make changes within the code and observe the results.
 
-## Debugging
-
-Sometimes debugging can be necessary.
-Please refer to the `Developers -> Debugging` section for more information.
-
 #### More Info
 
-[Developers → Plugins Reference → Tools](../plugins/tools.md)
+Tools reference: [Plugins → Tools](../plugins/tools.md)
+
+Sometimes debugging can be necessary, please refer to the [`Plugins -> Debugging`](../plugins/debugging/vscode.md) section for more information.
 
 ## Next Step
 

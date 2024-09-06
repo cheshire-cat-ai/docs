@@ -80,7 +80,8 @@ Cheshire Cat: {
 This example explains the **Raw** use of the Cat APIs, however there are convinient and ready-made libraries available for various languages!
 #### More Info
 
+These are client libraries for different languages to speed up the connection with the Cat:
 [`Production -> Client Libraries`](../production/network/clients.md)
 
 ## Next Step
-In the [next step](./upload-document.md), you will learn how to load information into the cat by uploading documents.
+In the [next step](./upload-document.md), you will learn how to load information into the Cat by uploading documents.

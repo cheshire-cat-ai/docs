@@ -57,7 +57,7 @@ The `agent_prompt_prefix` hook, in particular, allows instructing the Cat about 
 
 #### More Info
 
-[Developers → Plugins Reference → Hooks](../plugins/hooks.md)
+Hooks reference: [Plugins → Hooks](../plugins/hooks.md)
 
 ## Next Step
 

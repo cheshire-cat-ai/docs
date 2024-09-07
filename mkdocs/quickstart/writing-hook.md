@@ -62,4 +62,4 @@ The plugin management flow also is customizable (using the `plugin` decorator in
 
 ## Next Step
 
-In the [next step](./stopping-the-cat.md), you will learn how to `stop the cat`.
+In the [next step](./conclusion.md), we will summarizes and wraps up.

@@ -1,13 +1,8 @@
-# &#128640; Stopping the Cat
+# &#128640; Conclusion
 
-## Stopping the Cat
+Congratulations on completing the quickstart! You should now have an overview of how to install the Cat and its main capabilities!
 
-When you're done using the Cat, simply use the `docker compose down` command to stop it.
-When you restart the Cat, all conversation history, uploaded documents, and installed plugins, including your own, will still be there.
-
-## Next Step
-
-Congratulations on completing the quickstart!  
+## What's Next?
 
 We encourage you to explore the Cat further and try writing and publishing your own plugins to enhance your experience.  
 

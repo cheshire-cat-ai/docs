@@ -1,19 +1,8 @@
-# &#128640; Stopping the Cat
+# &#128640; Conclusion
 
-## Stopping the Cat
+Congratulations on completing the quickstart! You should now have an overview of how to install the Cat and its main capabilities!
 
-When you're done using the Cat, stop the terminal by clicking on it and press `CTRL + c`. Then, run the command:
-
-```bash
-docker compose down
-```
-
-We want to remind you that Long-Term Memory is a locally persisted memory.
-When you restart the Cat, all conversation history and uploaded documents will still be there.
-
-## Next Step
-
-Congratulations on completing the quickstart!  
+## What's Next?
 
 We encourage you to explore the Cat further and try writing and publishing your own plugins to enhance your experience.  
 

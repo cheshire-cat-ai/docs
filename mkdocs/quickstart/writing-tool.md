@@ -97,7 +97,7 @@ Feel free to make changes within the code and observe the results.
 
 Tools reference: [Plugins → Tools](../plugins/tools.md)
 
-Sometimes debugging can be necessary, please refer to the [`Plugins -> Debugging`](../plugins/debugging/vscode.md) section for more information.
+Sometimes debugging can be necessary, please refer to the [`Plugins → Debugging`](../plugins/debugging/vscode.md) section for more information.
 
 ## Next Step
 

@@ -41,7 +41,7 @@ nav:
       - Creating a Plugin: quickstart/prepare-plugin.md
       - Writing the first Tool: quickstart/writing-tool.md
       - Writing the first Hook: quickstart/writing-hook.md
-      - Stopping the Cat: quickstart/stopping-the-cat.md
+      - Conclusion: quickstart/conclusion.md
 
   - Plugins:
     - Plugin: plugins/plugins.md

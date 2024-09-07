@@ -7,7 +7,7 @@ The Core can be configured using environment variables, the values are read duri
 To set environment variables:
 
  - Create a file named `.env` at the same level of the `compose.yml` file.
- - Here is a [`.env.example` file](https://github.com/cheshire-cat-ai/core/blob/main/.env.example) you can use as a reference.
+ - [Here](https://github.com/cheshire-cat-ai/core/blob/main/.env.example){:target="_blank"} there is a example you can use as a reference.
  - Add to `compose.yml` the command to read the `.env`:
 
     ```yml hl_lines="5 6"

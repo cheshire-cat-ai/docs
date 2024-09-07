@@ -5,10 +5,9 @@ The attached code will be invoked during the flow's execution and can modify the
 
 ## Transform the Cat into a Poetic Socks Seller
 
-At the moment, if you ask the Cat “who are you?”, he will present himself as the Cheshire Cat AI.
-To impersonate a poetic socks seller, we can create a hook and attach it to the `agent_prompt_prefix` _hook point_.
-
-TODO: "hook point" what is this? "hook definition"?
+At the moment, if you ask the Cat 'Who are you?', it will introduce itself as the Cheshire Cat AI.
+To change the Cat's personality, for example, to make it a poetic socks seller, you can use the `agent_prompt_prefix` hook.  
+Copy and append the following source code to the file `poetic_sock_seller.py`:
 
 ```python
 from cat.mad_hatter.decorators import hook
@@ -63,4 +62,4 @@ The plugin management flow also is customizable (using the `plugin` decorator in
 
 ## Next Step
 
-In the [next step](./stopping-the-cat.md), you will learn how to `stop the cat`.
+In the [next step](./conclusion.md), we will summarizes and wraps up.

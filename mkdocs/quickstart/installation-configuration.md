@@ -84,7 +84,7 @@ docker compose down
 
 - Start the Cat if it's stopped
 - Open the `Admin Portal` in your browser at [`localhost:1865/admin`](http://localhost:1865/admin){:target="_blank"}
-- Authenticate as administrator with user and password `admin`:
+- Authenticate as administrator with user `admin` and password `admin`:
 ![alt text](../assets/img/quickstart/installation-configuration/logon.png){: style="height:50%;width:50%"}
 - In the `Settings` tab configure the `Large Language Model` and the `Embedder` and paste your API key:  
 ![alt text](../assets/img/quickstart/installation-configuration/configure-llm-embedder.png){: style="height:50%;width:50%"}  

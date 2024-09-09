@@ -13,8 +13,6 @@ Try to ask something about socks, e.g. "what do you know about socks?".
 The Cat will give a generic answer.
 Afterward, we will expand this general knowledge with more specific information.
 
-You have learned how to use the playground to test your AI via the Admin Portal.
-
 ![Alt text](../assets/img/quickstart/play-with-the-cat/play-with-the-cat.png)
 
 

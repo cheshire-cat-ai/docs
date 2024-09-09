@@ -99,6 +99,8 @@ Tools reference: [Plugins → Tools](../plugins/tools.md)
 
 Sometimes debugging can be necessary, please refer to the [`Plugins → Debugging`](../plugins/debugging/vscode.md) section for more information.
 
+If you need info about running actions in future see [`Framework → White Rabbit`](../framework/cat-components/cheshire_cat/white_rabbit.md)
+
 ## Next Step
 
 In the [next step](./writing-hook.md), you will learn how to create your first `Hook`.

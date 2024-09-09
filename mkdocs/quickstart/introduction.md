@@ -25,6 +25,11 @@ The Cheshire Cat isn't limited to just answering questions; it can also perform 
 You can write Python functions called `Tools` and have the LLM execute this code.
 The only limit to the Python code's capabilities is your imagination.
 
+## Execute Actions in the Future
+Actions are not limited to being triggered immediately after a chat initiated by a human, they can be scheduled for future execution and, if needed, set to recur, or even initiated without any chat trigger.
+
+The `White Rabbit` is the component that triggers the scheduled Actions.
+
 ## Extending the Core
 Additionally, it's possible to customize the Cheshire Cat's core.
 In the main process flow, there are predefined adaptation points called `Hooks`.

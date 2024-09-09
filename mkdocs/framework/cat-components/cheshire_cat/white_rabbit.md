@@ -2,7 +2,8 @@
 
 The White Rabbit is the Cat's built-in scheduler. It is built upon the [APScheduler](https://github.com/agronholm/apscheduler). It enables the scheduling of various type of jobs, including one-time, interval-based and cron jobs. It provides also the capability to manage job execution, pausing, resuming and canceling jobs.
 
-Currently, jobs are stored in memory, but future updates will support database storage for persistent job management.
+!!! note 
+    Currently, jobs are stored in memory, but future updates will support database storage for persistent job management. Suggestion, you can reschedule jobs at each startup of the Cat using the `after_cat_bootstrap` hook.
 
 ## How to use
 

@@ -20,43 +20,59 @@ Afterward, we will expand this general knowledge with more specific information.
 ## Chatting with the Cat: API interaction
 
 The Cat is an API-first framework, you can chat with it using the WebSocket protocol.
+Here is an example of how to do it in Javascript and Python:
 
-First, set the API key by creating a file named `.env` in the same folder as the `compose.yml` file with the following content. Then, restart the Cat with `docker compose down` followed by `docker compose up`.
-```
-CCAT_API_KEY_WS=meow_secret
-```
+=== "JavaScript"
+    ```javascript
+    let ws = new WebSocket("ws://localhost:1865/ws")
 
-Here is an example of how to use it in Python:
+    let humanTurn = function(){
+        let msg = prompt("Human message:")
+        if(msg) {
+            ws.send(JSON.stringify({"text": msg}))
+        }
+    }
 
-```python
-import asyncio
-import json
+    ws.onopen = function(){
+        humanTurn()
+    }
 
-from websockets.asyncio.client import connect
+    ws.onmessage = function(msg){
+        let msg_parsed = JSON.parse(msg.data)
+        console.log(msg_parsed.content)
+        if(msg_parsed.type == "chat") {
+            humanTurn()   
+        }
+    }
+    ```
+=== "Python"
+    ```python
+    import json
+    import asyncio
+    from websockets.asyncio.client import connect
 
+    async def cat_chat():
+        # Creating a websocket connection
+        async with connect("ws://localhost:1865/ws") as websocket:
+            while True:
+                # Taking user input and sending it through the websocket
+                user_input = input("Human: ")
+                await websocket.send(json.dumps({"text": user_input}))
 
-async def cat_chat():
-    # Creating a websocket connection
-    async with connect("ws://localhost:1865/ws?token=meow_secret") as websocket:
+                # Receiving and printing the cat's response
+                async for message in websocket:
+                    cat_response = json.loads(message)
+                    print(cat_response["content"])
 
-        # Taking user input and sending it through the websocket
-        user_input = input("Human: ")
-        await websocket.send(json.dumps({"text": user_input}))
+                    # Human turn!
+                    if cat_response["type"] == "chat":
+                        break
 
-        # Receiving and printing the cat's response
-        async for message in websocket:
-            cat_response = json.loads(message)
+    # To stop the script: CTRL + c
+    asyncio.run(cat_chat())
+    ```
 
-            if cat_response["type"] == "chat":
-                print("Cheshire Cat:", cat_response["content"])
-                break
-
-
-# Running the function until completion
-asyncio.run(cat_chat())
-```
-
-Run it and ask `what do you know about socks?` again, the output in the terminal should looks like:
+Run it and ask `what do you know about socks?` again, the output in the terminal should look like:
 
 ```
 ❯ python main.py

@@ -6,19 +6,19 @@ However, if you want to secure your communication with the Cat as well you can d
 
 ## Securing HTTP
 
-To enable authentication for HTTP endpoints you need to set the `CCAT_API_KEY` environment variable. This will lock the Cat HTTP endpoints and you will need to pass the value of the `CCAT_API_KEY` to authenticate your request.
+To secure HTTP endpoints, set the `CCAT_API_KEY` environment variable. This will restrict access to the Cat's HTTP endpoints, requiring the value of `CCAT_API_KEY` to authenticate requests.
 
-Enabling the API key will also enable JWT authentication. For more details [JWT Authentication](#jwt-authentication).
+Enabling the API key also activates JWT authentication. For more information, see [JWT Authentication](#jwt-authentication).
 
 ## Securing WS
 
-To enable authentication for WebSocket communication you need to set the `CCAT_API_KEY_WS` environment variable. This will lock the Cat WebSocket endpoint used for conversations. You'll need to pass the value of the `CCAT_API_KEY_WS` to ensure the Cat will open the connection.
+To secure WebSocket communication, set the `CCAT_API_KEY_WS` environment variable. This will lock down the Cat’s WebSocket endpoints used for conversations. You'll need to provide the `CCAT_API_KEY_WS` value to establish a connection.
 
-Enabling the API key will also enable JWT authentication. If you are communicating via browser, you'll probably don't want to use an API key directly in the connection URL, indeed you'll want to use a [temporary token](#jwt-authentication).
+Activating the API key also enables JWT authentication. If you're communicating via a browser, it’s recommended to use a [temporary token](#jwt-authentication) instead of including the API key directly in the connection URL.
 
 ## JWT Authentication
 
-Once you've enabled the Cat API keys variable you can also use JSON Web Token to authenticate both HTTP and WebSocket requests. To generate a valid token you can make an HTTP POST request to `/auth/token` passing username and password in the payload.
+Once the Cat API key variables are enabled, you can also use JSON Web Tokens (JWT) to authenticate both HTTP and WebSocket requests. To generate a valid token, make an HTTP POST request to `/auth/token`, including your username and password in the payload.
 
 ```python
 

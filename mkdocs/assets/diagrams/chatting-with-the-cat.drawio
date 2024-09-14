@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.12" pages="6">
   <diagram name="chatting-with-the-cat" id="1h3j-1ed5YaDxNWtT5wZ">
-    <mxGraphModel dx="3161" dy="216" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
+    <mxGraphModel dx="4814" dy="1208" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="Main Flow" parent="0" />
@@ -415,11 +415,6 @@
         <mxCell id="fu8XfMJG3UurVQH572fY-116" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontFamily=Helvetica;fontColor=#ffffff;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="fu8XfMJG3UurVQH572fY-113" vertex="1">
           <mxGeometry y="8" width="260" height="30" as="geometry" />
         </mxCell>
-        <UserObject label="🪝 Hook Definition" linkTarget="_blank" id="fu8XfMJG3UurVQH572fY-117">
-          <mxCell style="shape=label;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;fillColor=#2e303e;strokeColor=#82b366;fontColor=#82b365;arcSize=50;fillStyle=solid;shadow=0;glass=1;strokeWidth=2;labelBackgroundColor=none;sketch=1;curveFitting=1;jiggle=2;" parent="fu8XfMJG3UurVQH572fY-113" vertex="1">
-            <mxGeometry x="59" y="204" width="136" height="22.36" as="geometry" />
-          </mxCell>
-        </UserObject>
         <mxCell id="fu8XfMJG3UurVQH572fY-118" value="LLM Component" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;sketch=1;curveFitting=1;jiggle=2;fontSize=19;fontFamily=Architects Daughter;fontColor=#ffffff;fontStyle=1;labelBorderColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="fu8XfMJG3UurVQH572fY-113" vertex="1">
           <mxGeometry x="20" y="109" width="210" height="27" as="geometry" />
         </mxCell>
@@ -1293,7 +1288,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="execute-agent" id="bpyffqVtuKNMCsPDTpwj">
-    <mxGraphModel dx="1911" dy="-53" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
+    <mxGraphModel dx="3088" dy="652" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
       <root>
         <mxCell id="mYRc7Y-7LVEX6wDy4Qgd-0" />
         <mxCell id="mYRc7Y-7LVEX6wDy4Qgd-1" value="Main Flow" parent="mYRc7Y-7LVEX6wDy4Qgd-0" />

@@ -1288,7 +1288,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="execute-agent" id="bpyffqVtuKNMCsPDTpwj">
-    <mxGraphModel dx="3088" dy="652" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
+    <mxGraphModel dx="1029" dy="-583" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
       <root>
         <mxCell id="mYRc7Y-7LVEX6wDy4Qgd-0" />
         <mxCell id="mYRc7Y-7LVEX6wDy4Qgd-1" value="Main Flow" parent="mYRc7Y-7LVEX6wDy4Qgd-0" />
@@ -1545,16 +1545,16 @@
         <mxCell id="RZ4SGVBxtaZkJQt6pgWz-3" value="‹Agent Input›" style="swimlane;whiteSpace=wrap;html=1;startSize=33;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#ffffff;rounded=1;sketch=1;curveFitting=1;jiggle=2;swimlaneFillColor=none;fillStyle=zigzag;fontSize=16;labelBackgroundColor=none;fontFamily=Architects Daughter;arcSize=6;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;points=[[0,0,0,0,0],[0,0.25,0,0,0],[0,0.5,0,0,0],[0,0.75,0,0,0],[0,1,0,0,0],[0.25,0,0,0,0],[0.25,1,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.75,0,0,0,0],[0.75,1,0,0,0],[1,0,0,0,0],[1,0.17,0,0,0],[1,0.5,0,0,0],[1,0.75,0,0,0],[1,1,0,0,0]];" parent="mYRc7Y-7LVEX6wDy4Qgd-1" vertex="1">
           <mxGeometry x="869" y="1724" width="302" height="287" as="geometry" />
         </mxCell>
-        <mxCell id="RZ4SGVBxtaZkJQt6pgWz-4" value="Declarative Memory" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="RZ4SGVBxtaZkJQt6pgWz-3" vertex="1">
+        <mxCell id="RZ4SGVBxtaZkJQt6pgWz-4" value="Declarative Memory&lt;div&gt;Formatted&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="RZ4SGVBxtaZkJQt6pgWz-3" vertex="1">
           <mxGeometry x="20" y="172" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RZ4SGVBxtaZkJQt6pgWz-5" value="Chat History" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="RZ4SGVBxtaZkJQt6pgWz-3" vertex="1">
+        <mxCell id="RZ4SGVBxtaZkJQt6pgWz-5" value="Chat History&lt;div&gt;Formatted&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="RZ4SGVBxtaZkJQt6pgWz-3" vertex="1">
           <mxGeometry x="20" y="229" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="RZ4SGVBxtaZkJQt6pgWz-6" value="User Question" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="RZ4SGVBxtaZkJQt6pgWz-3" vertex="1">
           <mxGeometry x="23" y="55" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RZ4SGVBxtaZkJQt6pgWz-7" value="Episodic Memory" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="RZ4SGVBxtaZkJQt6pgWz-3" vertex="1">
+        <mxCell id="RZ4SGVBxtaZkJQt6pgWz-7" value="Episodic Memory&lt;div&gt;Formatted&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="RZ4SGVBxtaZkJQt6pgWz-3" vertex="1">
           <mxGeometry x="23" y="114" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="RZ4SGVBxtaZkJQt6pgWz-8" value="Tools Output" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="RZ4SGVBxtaZkJQt6pgWz-3" vertex="1">

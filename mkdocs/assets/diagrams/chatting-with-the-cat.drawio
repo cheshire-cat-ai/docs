@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.12" pages="6">
   <diagram name="chatting-with-the-cat" id="1h3j-1ed5YaDxNWtT5wZ">
-    <mxGraphModel dx="4814" dy="1208" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
+    <mxGraphModel dx="3667" dy="520" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="Main Flow" parent="0" />
@@ -1288,7 +1288,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="execute-agent" id="bpyffqVtuKNMCsPDTpwj">
-    <mxGraphModel dx="2676" dy="405" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
+    <mxGraphModel dx="1544" dy="-274" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#2e303e" math="0" shadow="0">
       <root>
         <mxCell id="mYRc7Y-7LVEX6wDy4Qgd-0" />
         <mxCell id="mYRc7Y-7LVEX6wDy4Qgd-1" value="Main Flow" parent="mYRc7Y-7LVEX6wDy4Qgd-0" />
@@ -1500,9 +1500,11 @@
             <mxPoint x="787" y="2066" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IlPi-3G3a_z-006qVOks-0" value="2. default prompt" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#fff2cc;sketch=1;curveFitting=1;jiggle=2;fontColor=#fff2cc;fillStyle=dashed;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;" parent="mYRc7Y-7LVEX6wDy4Qgd-1" vertex="1">
-          <mxGeometry x="1698" y="1869" width="129" height="20" as="geometry" />
-        </mxCell>
+        <UserObject label="2. default prompt" link="https://cheshire-cat-ai.github.io/docs/framework/cat-components/prompts/main_prompt/" linkTarget="_blank" id="IlPi-3G3a_z-006qVOks-0">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#fff2cc;sketch=1;curveFitting=1;jiggle=2;fontColor=#fff2cc;fillStyle=dashed;shadow=0;glass=0;strokeWidth=2;labelBackgroundColor=none;" parent="mYRc7Y-7LVEX6wDy4Qgd-1" vertex="1">
+            <mxGeometry x="1698" y="1869" width="129" height="20" as="geometry" />
+          </mxCell>
+        </UserObject>
         <mxCell id="fvAf2nPLCj6WGXSZRMYT-0" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.6;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#fff2cc;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=block;endFill=1;sketch=1;curveFitting=1;jiggle=2;fillColor=#f5f5f5;endSize=6;strokeWidth=2;exitPerimeter=0;" parent="mYRc7Y-7LVEX6wDy4Qgd-1" source="mYRc7Y-7LVEX6wDy4Qgd-46" target="IlPi-3G3a_z-006qVOks-0" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1618" y="2187" as="targetPoint" />

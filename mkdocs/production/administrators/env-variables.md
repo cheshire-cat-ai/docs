@@ -85,7 +85,7 @@ By default, WebSocket endpoints are open to the public.
 If you want to lock them down, set this environment variable, e.g. `CCAT_API_KEY_WS=meows`.
 
 To pass the gate, call the WS endpoint using a `token` query parameter:  
-Example `ws://localhost:1865/ws/<user_id>/?token=<ccat_api_key_ws>`.
+Example `ws://localhost:1865/ws/<user_id>?token=<ccat_api_key_ws>`.
 
 Keep in mind that api keys are intended for machine-2-machine communication; If you are talking to the Cat from a browser, set the api keys to secure your installation, but only communicate with the Cat via JWT (TODO: insert JWT tutorial).
 

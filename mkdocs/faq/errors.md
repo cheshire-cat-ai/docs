@@ -18,3 +18,10 @@ In VirtualBox, you can select Settings->Network, then choose NAT in the "Attache
 
 If you want to work on the documentation of the Cat, you also have to add one rule for port 8000 which is used by `mkdocs`, and to configure `mkdocs` itself to respond to all requests (not only localhost as per the default).
 
+#### Proxy HTTPS and Mixed content
+
+I'm using the Cat behind an HTTPS proxy but the login page tries to load some assets over HTTP instead of HTTPS. It seems to be related to `url_for('core-static', ...)`.
+
+![alt text](../assets/img/faq/https_mixed_content.png)
+
+You need to configure the [`CCAT_HTTPS_PROXY_MODE`](../production/administrators/env-variables.md/?h=ccat_https_proxy_mode#ccat_https_proxy_mode) environment variable

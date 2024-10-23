@@ -87,12 +87,12 @@ nav:
         - Plugins Lifecycle: framework/flows/plugins-lifecycle.md
         - Rabbit Hole Ingestion: framework/flows/rabbit-hole-ingestion.md
 
-  - Production:
-    - Administration:
-        - Docker Compose: production/administrators/docker-compose.md
-        - Environment Variables: production/administrators/env-variables.md
-        - Automatic Tests: production/administrators/tests.md
-        - Backups and Updates: production/administrators/backups-updates.md
+  - Administration:
+    - Make the Cat Private: production/administrators/make_the_cat_private.md
+    - Docker Compose: production/administrators/docker-compose.md
+    - Environment Variables: production/administrators/env-variables.md
+    - Automatic Tests: production/administrators/tests.md
+    - Backups and Updates: production/administrators/backups-updates.md
     - Network:
       - WebSocket Endpoints: production/network/ws-endpoints.md
       - HTTP Endpoints: production/network/http-endpoints.md

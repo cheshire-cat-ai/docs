@@ -31,7 +31,7 @@ If you're looking for a straightforward way to manage users, you can use the Adm
 
 #### Restful API
 
-The internal user management system is also accessible via a comprehensive RESTful API. There are endpoints for creation, retrieval, updating, and deletion of users. For more information, check the [endpoints](../../production/endpoints.md) page.
+The internal user management system is also accessible via a comprehensive RESTful API. There are endpoints for creation, retrieval, updating, and deletion of users. For more information, check the [endpoints](../../production/network/http-endpoints.md) page.
 
 ## Want to bring in your own users?
 

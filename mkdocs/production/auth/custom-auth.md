@@ -28,8 +28,12 @@ import httpx
 
 class CustomAuthHandler(BaseAuthHandler):
     
+    def __init__(self, **config):
+        self.server_url = config.get("server_url")
+
+    
     async def authorize_user_from_jwt(self, token: str, auth_resource: str, auth_permission: str):
-        jwt_validation_url = "http://127.0.0.1:8001/validate-token"
+        jwt_validation_url = f"{self.server_url}/validate-token"
         
         async with httpx.AsyncClient() as client:
             response = await client.get(jwt_validation_url, headers={
@@ -49,7 +53,7 @@ class CustomAuthHandler(BaseAuthHandler):
             return None  # If the server responds with an error or doesn't respond at all
         
         
-    async def authorize_user_from_key(self, user_id: str, api_key: str, auth_resource, auth_permission):
+    async def authorize_user_from_key(self, protocol: str, user_id: str, api_key: str, auth_resource, auth_permission):
         # Optional: Handle API key authentication, if applicable
         return None
 
@@ -130,14 +134,9 @@ These may include: information about the external identity provider, authenticat
 
 The `factory_allowed_auth_handlers` hook allows you to add your own auth handlers to the list of allowed auth handlers.
 
-Implementation:
+### AuthUserInfo
 
-```python
-from cat.mad_hatter.decorators import hook
-
-@hook(priority=0)
-def factory_allowed_auth_handlers(allowed, cat):
-    # Add the CustomAuthHandlerConfig to the allowed handlers
-    allowed.append(CustomAuthHandlerConfig)
-    return allowed
-```
+The `AuthUserInfo` class represents the decoded content of an authentication token. This class is used to standardize the 
+output of AuthHandlers, ensuring that token details are consistent across different authentication systems. 
+The AuthUserInfo object is crucial for session management within Cat's core, as it either retrieves or creates a user 
+session, known as a StrayCat. 

@@ -11,7 +11,7 @@ your instance following the instructions in the [authentication](authentication.
 
 ## Building a Custom AuthHandler
 
-Let's walk through the process of creating a custom `AuthHandler`. While the exact implementation will vary depending on
+Let's walk through the process of creating a custom `AuthHandler`. While the exact implementation is subject to the
 provider or system you choose to rely on, the overall structure will remain the same.
 
 ### Create the Custom Handler 

@@ -126,8 +126,8 @@ own auth logic in there inserting, for example, credentials validation request t
 
 ### AuthHandlerConfig
 
-The `AuthHandlerConfig` is the configuration class from which your own will inherit to create your own configuration
-class for your auth handler. It includes all the necessary settings to initialize your custom handler.
+The `AuthHandlerConfig` class provides a base configuration that you can extend to define custom settings for your 
+authentication handler. It includes all the necessary settings to initialize your custom handler.
 These may include: information about the external identity provider, authentication endpoint, client secrets, etc.
 
 ### Allowed Auth Handlers Hook

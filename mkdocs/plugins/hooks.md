@@ -1161,8 +1161,9 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     | Name                          | Description                                    |
     | :---------------------------- | :--------------------------------------------- |
-    | Factory Allowed LLMs (1)      | Intervene before cat retrive llm settings      |
-    | Factory Allowed Embedders (2) | Intervene before cat retrive embedder settings |
+    | Factory Allowed LLMs (1)      | Intervene before cat retrieve llm settings      |
+    | Factory Allowed Embedders (2) | Intervene before cat retrieve embedder settings | 
+    | Factory Allowed AuthHandlers (3) | Intervene before cat retrieve auth handler settings | 
     
     </div>
 
@@ -1244,5 +1245,29 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             - [Python reference]()
             - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/core_plugin/hooks/language.py#L23)
+
+    3. **Input arguments**  
+        `allowed`: List of AuthHandlerConfig classes
+        
+        !!! info
+            Useful to extend support of custom auth handlers.
+
+        ??? example
+
+            ```python
+
+            from cat.mad_hatter.decorators import hook
+            from typing import List
+            
+            @hook(priority=0)
+            def factory_allowed_auth_handlers(allowed: List[AuthHandlerConfig], cat) -> List:
+                # Add your custom auth handler configuration here
+                allowed.append(CustomAuthHandlerConfig)
+                return allowed
+            ```
+
+        ??? note "Other resources"
+
+            - [Custom Auth](../production/auth/custom-auth.md)
 
 > ***NOTE:***  Any function in a plugin decorated by `@plugin` and named properly (among the list of available overrides, **Plugin** tab in the table above) is used to override plugin behaviour. These are not hooks because they are not piped, they are *specific* for every plugin.

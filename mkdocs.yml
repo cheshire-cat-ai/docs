@@ -101,6 +101,7 @@ nav:
         - Authentication: production/auth/authentication.md
         - Authorization: production/auth/authorization.md
         - User Management: production/auth/user-management.md
+        - Custom Auth: production/auth/custom-auth.md
     - Use Cases:
         - Integrations: production/use-cases/integrations.md
         - Examples: production/use-cases/examples.md

@@ -20,6 +20,9 @@ This is where Forms come in handy!
 ## Implementation
 
 ```python
+import requests
+from pydantic import BaseModel
+from cat.experimental.form import CatForm, CatFormState, form
 
 class PizzaOrder(BaseModel): #(1)
     pizza_type: str

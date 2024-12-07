@@ -472,7 +472,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
     | Agent prompt prefix (3)       | Intervene while the agent manager formats the Cat's personality                                            |
     | Agent prompt suffix (4)       | Intervene while the agent manager formats the prompt suffix with the memories and the conversation history |
     | Agent allowed tools (5)       | Intervene before the recalled tools are provided to the agent                                              |
-    | Agent prompt instructions (6) | Intervent while the agent manager formats the reasoning prompt                                             |
+    | Agent prompt instructions (6) | Intervene while the agent manager formats the reasoning prompt                                             |
 
     </div>
 
@@ -485,6 +485,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             "episodic_memory": episodic_memory_formatted_content,  # strings with documents recalled from memories
             "declarative_memory": declarative_memory_formatted_content,
             "chat_history": conversation_history_formatted_content,
+            "tools_output": tools_output
         }
         ```
 
@@ -569,25 +570,17 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
         Default is:
 
         ```python
-        prompt_suffix = """
+        prompt_suffix =  """
+
         # Context
-        
         {episodic_memory}
         
         {declarative_memory}
         
         {tools_output}
-        
-        ## Conversation until now:{chat_history}
-         - Human: {input}
-         - AI: 
         """
+
         ```
-
-        !!! warning
-
-            The placeholders `{episodic_memory}`, `{declarative_memory}`, `{tools_output}`,
-            `{chat_history}` and `{input}` are mandatory!
 
         ??? example
 
@@ -597,21 +590,15 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             @hook  # default priority = 1
             def agent_prompt_suffix(prompt_suffix, cat):
                 # tell the LLM to always answer in a specific language
-                prompt_suffix = """ 
+                prompt_suffix =  """
                 # Context
-        
                 {episodic_memory}
                 
                 {declarative_memory}
                 
                 {tools_output}
-                
-                ALWAYS answer in Czech!
-
-                ## Conversation until now:{chat_history}
-                 - Human: {input}
-                   - AI: 
                 """
+
                 return prompt_suffix
             ```
 
@@ -649,33 +636,26 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
         `instructions`: string with the reasoning template. Default is:
 
         ```python
-        Answer the following question: `{input}`
-        You can only reply using these tools:
-        
+        Create a JSON with the correct "action" and "action_input" to help the Human.
+        You can use one of these actions:
         {tools}
-        none_of_the_others: none_of_the_others(None) - Use this tool if none of the others tools help. Input is always None.
+        - "no_action": Use this action if no relevant action is available. Input is always null.
         
-        If you want to use tools, use the following format:
-        Action: the name of the action to take, should be one of [{tool_names}]
-        Action Input: the input to the action
-        Observation: the result of the action
-        ...
-        Action: the name of the action to take, should be one of [{tool_names}]
-        Action Input: the input to the action
-        Observation: the result of the action
+        ## The JSON must have the following structure:
         
-        When you have a final answer respond with:
-        Final Answer: the final answer to the original input question
-        
-        Begin!
-        
-        Question: {input}
-        {agent_scratchpad}
+          ```json
+          {{
+              "action": // str - The name of the action to take, should be one of [{tool_names}, "no_action"]
+              "action_input": // str or null - The input to the action according to its description
+          }}
+          ```
+          
+        {examples}
         ```
 
         !!! warning
 
-            The placeholders `{input}`, `{tools}` and `{tool_names}` are mandatory!
+            The placeholders `{tools}`,`{tool_names}` and `{examples}` are mandatory!
 
         ??? example
 
@@ -698,49 +678,17 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
     | Name                                    | Description                                                                  |
     | :-------------------------------------- | :--------------------------------------------------------------------------- |
-    | Rabbit Hole instantiates parsers (1)    | Intervene before the files' parsers are instiated                            |
-    | Before Rabbit Hole insert memory (2)    | Intervene before the Rabbit Hole insert a document in the declarative memory |
-    | Before Rabbit Hole splits text (3)      | Intervene before the uploaded document is split into chunks                  |
-    | After Rabbit Hole splitted text (4)     | Intervene after the Rabbit Hole's split the document in chunks               |
-    | Before Rabbit Hole stores documents (5) | Intervene before the Rabbit Hole starts the ingestion pipeline               |
-    | After Rabbit Hole stores documents (6)  | Intervene after the Rabbit Hole ended the ingestion pipeline                 |
-    | Rabbit Hole instantiates parsers (7)    | Hook the available parsers for ingesting files in the declarative memory     |
-    | Rabbit Hole instantiates splitter (8)   | Hook the splitter used to split text in chunks                               |
+    | Before Rabbit Hole insert memory (1)    | Intervene before the Rabbit Hole insert a document in the declarative memory |
+    | Before Rabbit Hole splits text (2)      | Intervene before the uploaded document is split into chunks                  |
+    | After Rabbit Hole splitted text (3)     | Intervene after the Rabbit Hole's split the document in chunks               |
+    | Before Rabbit Hole stores documents (4) | Intervene before the Rabbit Hole starts the ingestion pipeline               |
+    | After Rabbit Hole stores documents (5)  | Intervene after the Rabbit Hole ended the ingestion pipeline                 |
+    | Rabbit Hole instantiates parsers (6)    | Hook the available parsers for ingesting files in the declarative memory     |
+    | Rabbit Hole instantiates splitter (7)   | Hook the splitter used to split text in chunks                               |
 
     </div>
 
     1. **Input arguments**  
-        `file_handlers`: dictionary with mime types and related file parsers. Default is:
-
-        ```python
-        {
-            "application/pdf": PDFMinerParser(),  # pdf parser
-            "text/plain": TextParser(),  # txt parser
-            "text/markdown": TextParser(),  # md parser fallback to txt parser
-            "text/html": BS4HTMLParser()  # html parser
-        }
-        ```
-
-        ??? example
-
-            ```python
-            from langchain.document_loaders.parsers.txt import TextParser
-            from cat.mad_hatter.decorators import hook
-            
-            @hook  # default priority = 1
-            def rabbithole_instantiates_parsers(file_handlers, cat):
-                # use the txt parser to parse also .odt files
-                file_handlers["application/vnd.oasis.opendocument.text"] = TextParser()
-
-                return file_handlers
-            ```
-
-        ??? note "Other resources"
-
-            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.rabbithole_instantiates_parsers)
-            - [IngestAnything plugin](https://github.com/Furrmidable-Crew/IngestAnything)
-
-    2. **Input arguments**  
         `doc`: Langchain document chunk to be inserted in the declarative memory. E.g.
 
         ```python
@@ -770,7 +718,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [RabbitHole segmentation plugin](https://github.com/team-sviluppo/cc_rabbithole_segmentation)
             - [Summarization plugin](https://github.com/Furrmidable-Crew/ccat_summarization)
 
-    3. **Input arguments**  
+    2. **Input arguments**  
         `docs`: List of Langchain documents with full text. E.g.
 
         ```python
@@ -793,7 +741,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.before_rabbithole_splits_text)
 
-    4. **Input arguments**  
+    3. **Input arguments**  
         `chunks`: list of Langchain documents with text chunks.
 
         ??? example
@@ -815,7 +763,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.after_rabbithole_splitted_text)
 
-    5. **Input arguments**  
+    4. **Input arguments**  
         `docs`: list of chunked Langchain documents before being inserted in memory.
 
         ??? example
@@ -847,7 +795,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.before_rabbithole_stores_documents)
             - [Summarization plugin](https://github.com/Furrmidable-Crew/ccat_summarization)
   
-    6. **Input arguments**
+    5. **Input arguments**
 
         `source`: the name of the ingested file/url <br />
         `docs`: a list of Qdrant `PointStruct` just inserted into the vector database
@@ -866,7 +814,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
             - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.after_rabbithole_stored_documents)
 
-    7. **Input arguments**
+    6. **Input arguments**
 
         `file_handlers`: dictionary in which keys are the supported mime types and values are the related parsers
 
@@ -894,7 +842,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
             - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/rabbithole/#cat.mad_hatter.core_plugin.hooks.rabbithole.rabbithole_instantiates_parsers)
             - [IngestAnything Plugin](https://github.com/Furrmidable-Crew/IngestAnything)
   
-    8. **Input arguments**
+    7. **Input arguments**
 
         `text_splitter`: An instance of the Langchain TextSplitter subclass.
 
@@ -1206,8 +1154,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference]()
-            - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/core_plugin/hooks/language.py#L7)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/factory/#cat.mad_hatter.core_plugin.hooks.factory.factory_allowed_llms)
     
     2. **Input arguments**  
         `allowed`: List of LLMSettings classes
@@ -1243,8 +1190,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
-            - [Python reference]()
-            - [Plugin object](https://github.com/cheshire-cat-ai/core/blob/main/core/cat/mad_hatter/core_plugin/hooks/language.py#L23)
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/factory/#cat.mad_hatter.core_plugin.hooks.factory.factory_allowed_embedders)
 
     3. **Input arguments**  
         `allowed`: List of AuthHandlerConfig classes
@@ -1268,6 +1214,7 @@ Not all the hooks have been documented yet. ( [help needed! &#128568;](https://d
 
         ??? note "Other resources"
 
+            - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/factory/#cat.mad_hatter.core_plugin.hooks.factory.factory_allowed_auth_handlers)
             - [Custom Auth](../production/auth/custom-auth.md)
 
 > ***NOTE:***  Any function in a plugin decorated by `@plugin` and named properly (among the list of available overrides, **Plugin** tab in the table above) is used to override plugin behaviour. These are not hooks because they are not piped, they are *specific* for every plugin.

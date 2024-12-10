@@ -96,6 +96,7 @@ nav:
     - Network:
       - WebSocket Endpoints: production/network/ws-endpoints.md
       - HTTP Endpoints: production/network/http-endpoints.md
+      - Custom Endpoints: production/network/custom-endpoints.md
       - Clients: production/network/clients.md
     - Auth:
         - Authentication: production/auth/authentication.md

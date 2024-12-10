@@ -25,6 +25,8 @@ curl http://localhost:1865/custom/hello
 !!! note FastAPI under the hood
     Since there's FastAPI under the hood, you can use every FastAPI operation parameters like `path`, `tags`, `response_model`, etc.
 
+Here's a more complex example:
+
 ```python
 
 from cat.mad_hatter.decorators import endpoint
@@ -47,7 +49,10 @@ def custom_ingestion(document: CustomDocument, stray=Depends(HTTPAuth(AuthResour
 
 ```
 
-## Further Examples
+Once you activate your plugin the Cheshire Cat will add the custom endpoints to the FastAPI routes and will clear the
+`/docs` cache to reflect the new endpoints and their OpenAPI documentation.
+
+## Available Decorators
 
 You have three different decorators available to declare custom endpoints:
 

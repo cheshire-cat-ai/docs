@@ -44,10 +44,11 @@ nav:
       - Conclusion: quickstart/conclusion.md
 
   - Plugins:
-    - Plugin: plugins/plugins.md
+    - How to Write a Plugin: plugins/plugins.md
     - Tools: plugins/tools.md
     - Hooks: plugins/hooks.md
     - Forms: plugins/forms.md
+    - Custom Endpoints: plugins/endpoints.md
     - Logging: plugins/logging.md
     - Settings: plugins/settings.md
     - Dependencies: plugins/dependencies.md

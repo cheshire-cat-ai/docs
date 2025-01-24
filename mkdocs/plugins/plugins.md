@@ -85,10 +85,8 @@ def agent_prompt_prefix(prefix, cat):
     return prefix
 ```
 
-Please note that, in order to work as expected, the hook priority must be greater than 0, in order to be overriding the standard plugin.
-If you do not provide a priority, your hook will have `priority=1` and implicitly override the default one.
-
-More examples on hooks [here](hooks.md).
+Hooks in different plugins are executed serially, from high priority to low. If you do not provide a priority, your hook will have `priority=1`.
+More examples ans details on hooks [here](hooks.md).
 
 
 
@@ -145,9 +143,25 @@ class PizzaForm(CatForm):
 
 More examples on forms [here](forms.md).
 
+## &#x1f310; Custom Endpoints
+
+To extend the REST API endpoints available, use the `@endpoint` decorator in your plugin.
+
+```python
+from cat.mad_hatter.decorators import endpoint
+
+@endpoint.get("/new")
+def my_endpoint():
+    return "meooow"
+```
+
+Your Cat now replies to GET requests to `localhost:1865/custom/new` and is listed in `/docs` alongside core endpoints. Being based on [FastAPI endpoints](https://fastapi.tiangolo.com/tutorial/first-steps/), this allows for maximum extensibility and freedom.  
+You can add permissions to the endpoint and easily obtain the user session (what you saw above as `cat` or `stray`), use the LLM or change the working memory.  
+See more details and examples [here](endpoints.md).
+
 ## &#128570; StrayCat
 
-You surely noticed that tools, hooks and forms put at your disposal a variable called `cat`.  
+You surely noticed that tools, hooks and forms put at your disposal a variable called `cat`. That same object is available in endpoints as `stray`.  
 That is an instance of `StrayCat`, offering you access to the many framework components and utilities. Just to give an example, you can invoke the LLM directly using `cat.llm("write here a prompt")`.
 
 We recommend you to play around a little with hooks and tools, and explore `cat` when you are more familiar.

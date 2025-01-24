@@ -4,6 +4,7 @@ You will find there most of the documentation you need, alongside code snippets 
 
 Check out also the the community [client libraries](clients.md).
 
+When you feel ready you can also create custom endpoints direclty in your plugins.
 
 ## Examples
 

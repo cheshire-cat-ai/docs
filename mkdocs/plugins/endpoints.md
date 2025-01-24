@@ -2,7 +2,7 @@
 # &#x1f310; Custom Endpoints
 
 Custom endpoints allow you to extend the REST API offered by the Cat.  
-All endpoints are documented direclty on your installation under [`localhost:1865/docs`](http://localhost:1865/docs), with usage examples and a playground to try them out.
+All endpoints are documented directly on your installation under [`localhost:1865/docs`](http://localhost:1865/docs), with usage examples and a playground to try them out.
 
 ## How to add a custom endpoint
 
@@ -17,7 +17,7 @@ def my_endpoint():
     return "meooow"
 ```
 
-Now open your browser on [`localhost:1865/custom/new`](http://localhost:1865/custom/new), you should see a meow in the page.
+Now open your browser on [`localhost:1865/custom/new`](http://localhost:1865/custom/new), you should see a `meooow` in the page.
 The new endpoint also appeared in `/docs` alongside core endpoints, under the `Custom Endpoints` group.  
 
 ## StrayCat and permissions
@@ -42,7 +42,7 @@ The double naming may be confusing, it will be unified in version 2. ;)
 
 Utility function `check_permissions` will handle authentication and authorization, giving in output a `StrayCat` if successful. The function requires you to specify a resource (e.g. `PLUGINS`, `MEMORY`) and a permission (e.g. `READ`, `WRITE`); you can see available resources and permissions in the user manager (admin panel) and in source code under `cat/auth/permissions.py`.  
 
-For simplicity you can write resource and permissions as strings, and they will be automatically validated. Under the hood those are treated as enums and you can use them directly:
+For simplicity you can write resource and permission as strings, and they will be automatically validated. Under the hood those are treated as enums and you can use those directly:
 
 ```python
 from cat.mad_hatter.decorators import endpoint
@@ -60,7 +60,7 @@ def joke(stray=check_permissions(AuthResource.CONVERSATION, AuthPermission.WRITE
 
 To make your endpoint work with custom data structures, it is a good idea to make [pydantic](https://docs.pydantic.dev/latest/) models describing input and output, so you get code clarity plus automatic validation and documentation.
 
-Let's imagine an endpoint you can call from any client, for example a Javascript frontend or a batch job running in the night on a remote server. Endpoint will receive topic and language for the joke, and send as output the joke and the user id.
+Let's imagine an endpoint you can call from any client, for example a Javascript frontend or a Rust batch job running in the night on a remote server. Endpoint will receive `topic` and `language` for the joke, and send as output `joke` and `user_id`.
 
 ```python
 from pydantic import BaseModel
@@ -105,12 +105,12 @@ Ad the glorious response something like:
 }
 ```
 
-As you can see specifying input and output models gave you automatic validation and automatic documentation. You can avoid typing everything, but it is a good practice.
+As you can see specifying input and output models gave you automatic validation and automatic documentation. You can avoid typing everything in prototyping stage, but it is a good practice for production.
 
 
 ## Path and Tags
 
-You are free to name the endpoint as you please, using any HTTP verb (`GET`, `POST`, `PUT`, `DELETE`) and deciding in autonomy what the endpoint gets as input and what gives in output. You can also customize the endpoint's path: 
+You are free to name the endpoint as you please, using any HTTP verb (`GET`, `POST`, `PUT`, `DELETE`) and deciding in autonomy what the endpoint gets as input and gives as output. You can also customize the endpoint's path: 
 
 ```python
 @endpoint.get(path="/joke", prefix="/random", tags=["Useful Stuff"])
@@ -122,7 +122,7 @@ This time the endpoint will be listening on `http://localhost:1865/random/joke` 
 
 ## Dependency injection
 
-Being a full blown FastAPI endpoint, you can use any primitive available in [FastAPI](https://fastapi.tiangolo.com/).  
+Being a full blown [FastAPI](https://fastapi.tiangolo.com/) endpoint, you can use any primitive available in FastAPI.  
 Here is an example to access directly the network request:
 
 ```python

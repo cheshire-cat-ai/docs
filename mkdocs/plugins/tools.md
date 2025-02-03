@@ -83,6 +83,7 @@ You can simply use `@tool` or pass arguments.
         examples : List[str] = []
     )
     ```
+### Tool arguments
 
 - Every `@tool` receives two arguments: a string representing the tool input, and a StrayCat instance.
     ```python

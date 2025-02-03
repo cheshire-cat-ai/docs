@@ -14,7 +14,7 @@ Please check our documentation for more details about how the Cat internally wor
 
 Of course, you can: just change the prompts in the Plugin folder accordingly, and take care not to mix languages to get best results.
 
-#### How can I know where the Cat gets the asnwers from? I'd like to know if it's using the files I uploaded or if it's querying the configured LLM
+#### How can I know where the Cat gets the answers from? I'd like to know if it's using the files I uploaded or if it's querying the configured LLM
 
 Just open the console in your browser to check the logs there. At some point soon, this information will end up in the user interface, but at the moment is behind the scenes.
 

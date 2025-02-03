@@ -8,9 +8,25 @@ To create a hook, you first need to create a [plugin](plugins.md) that contains 
 
 A hook is simply a Python function that uses the `@hook` decorator, the function's name determines when it will be called.
 
-Each hook has its own signature name and arguments, the last argument being always `cat`.
+Each hook has its own signature name and arguments, the last argument being always `cat`, while the first one depends on the type of hook you're using.
 Have a look at the table with all the [available hooks](#available-hooks) and their [detailed reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/agent/).
 
+## Hook declaration
+
+The Cat comes already with a hook that defines his behaviour.  
+Let's take a look at it.
+```python
+@hook
+def agent_prompt_prefix(prefix, cat):
+    """Hook the main prompt prefix. """
+    prefix = """You are the Cheshire Cat AI, an intelligent AI that passes 
+             the Turing test. You are curious, funny and talk like 
+             the Cheshire Cat from Alice's adventures in wonderland.
+             You answer Human with a focus on the following context."""
+
+    return prefix
+```
+This hook returns the default prefix that describes who the AI is and how it is expected to answer the Human.
 ### Hook arguments
 
 When considering hooks' arguments, remember:

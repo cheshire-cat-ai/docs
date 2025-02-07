@@ -45,3 +45,4 @@ Some of the clients are maintained from the community, some others come from ind
 | Language                                                             | Repository                                                         |
 | :-------------------------------------------------------------------:| :----------------------------------------------------------------: |
 | ![Image title](../../assets/img/clientlib/Go_logo.png){ width="60" } | [Meow CLI](https://github.com/saniales/meow){:target="_blank"}     |
+| ![Image title](../../assets/img/clientlib/1869px-Python-logo-notext.png){ width="60" } | [Cheshire Cat CLI](https://github.com/rmoscetti/cheshire-cat-ai-tools){:target="_blank"}     |

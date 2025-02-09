@@ -41,7 +41,7 @@ venv.bak/
 .idea/
 .vscode/
 
-cat/
+cat
 
 # Drawio temporary files
 .$drawio-cheshire-cat-library.xml.bkp

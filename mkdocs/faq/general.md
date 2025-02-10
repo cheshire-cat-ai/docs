@@ -29,6 +29,3 @@ We provide a [widget](https://github.com/cheshire-cat-ai/widget-vue) to connect 
 
 You are free to modify the Admin to adapt it to your product, **however** you will need to respect the GPL3 Licence, meaning you are free to fork the codebase and go on your own, but you are forced to open source eventual changes.
 
-#### Why the Admin does not provide Basic (username/password) or Third-party Authentication (such as OAuth)?
-
-The only use case of the Admin is to provide a more friendly way to interact with the Cat with **basic** authentication through an  `api_key`.

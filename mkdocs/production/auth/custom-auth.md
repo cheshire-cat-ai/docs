@@ -24,7 +24,7 @@ from cat.factory.custom_auth_handler import BaseAuthHandler
 from cat.auth.permissions import (
     AuthPermission, AuthResource, AuthUserInfo, get_base_permissions
 )
-import httpx
+import requests
 
 class CustomAuthHandler(BaseAuthHandler):
     
@@ -32,13 +32,12 @@ class CustomAuthHandler(BaseAuthHandler):
         self.server_url = config.get("server_url")
 
     
-    async def authorize_user_from_jwt(self, token: str, auth_resource: str, auth_permission: str):
+    def authorize_user_from_jwt(self, token: str, auth_resource: str, auth_permission: str):
         jwt_validation_url = f"{self.server_url}/validate-token"
         
-        async with httpx.AsyncClient() as client:
-            response = await client.get(jwt_validation_url, headers={
-                "Authorization": f"Bearer {token}"
-            })
+        response = requests.get(jwt_validation_url, headers={
+            "Authorization": f"Bearer {token}"
+        })
 
         if response.status_code == 200:
             user_data = response.json()
@@ -53,7 +52,7 @@ class CustomAuthHandler(BaseAuthHandler):
             return None  # If the server responds with an error or doesn't respond at all
         
         
-    async def authorize_user_from_key(self, protocol: str, user_id: str, api_key: str, auth_resource, auth_permission):
+    def authorize_user_from_key(self, protocol: str, user_id: str, api_key: str, auth_resource, auth_permission):
         # Optional: Handle API key authentication, if applicable
         return None
 

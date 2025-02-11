@@ -20,4 +20,4 @@ Just open the console in your browser to check the logs there. At some point soo
 
 #### I sent to the Cat some text and documents I want to get rid of, How can I achieve it?  
 
-You can delete the `long_term_memory` folder and restart the Cat! Remember that you will lost everything!
+You can delete the [`long_term_memory`](../framework/cat-components/memory/long_term_memory.md) folder and restart the Cat! Remember that you will lost everything!

@@ -53,6 +53,9 @@ nav:
     - Settings: plugins/settings.md
     - Dependencies: plugins/dependencies.md
     - Examples: plugins/examples.md
+    - Hooks API Reference:
+      - Flow:
+        - before_cat_bootstrap: plugins/hooks-reference/flow/before_cat_bootstrap.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md

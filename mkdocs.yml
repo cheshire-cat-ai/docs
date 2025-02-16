@@ -57,6 +57,7 @@ nav:
       - Flow:
         - before_cat_bootstrap: plugins/hooks-reference/flow/before_cat_bootstrap.md
         - after_cat_bootstrap: plugins/hooks-reference/flow/after_cat_bootstrap.md
+        - before_cat_reads_message: plugins/hooks-reference/flow/before_cat_reads_message.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md

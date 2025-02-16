@@ -8,12 +8,12 @@ Intervene before the Cat has instantiated its components.
 
 !!! warning
     Please, note that at this point the [`CheshireCat`](/docs/API_Documentation/looking_glass/cheshire_cat) hasn't yet finished to instantiate 
-    and the only already existing component is the [`MadHatter`](../../../framework/cat-components/cheshire_cat/mad_hatter.md) (e.g. no language models yet).
+    and the only already existing component is the [`MadHatter`](../../../framework/cat-components/cheshire_cat/mad_hatter.md) (e.g., no language models yet).
 
-Bootstrapping is the process of loading the plugins, the natural language objects (e.g. the LLM), the memories,
+Bootstrapping is the process of loading the plugins, the natural language objects (e.g., the LLM), the memories,
 the *Main Agent*, the *Rabbit Hole* and the *White Rabbit*.
 
-This hook allows to intercept such process and is executed in the middle of plugins and
+This hook allows intercepting the start of this process and is executed in the middle of plugins and
 natural language objects loading.
 
 This hook can be used to set or store variables to be propagated to subsequent loaded objects.

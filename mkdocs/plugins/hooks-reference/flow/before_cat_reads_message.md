@@ -27,9 +27,9 @@ The incoming message is a JSON dictionary with keys:
 
 ## &#x21A9;&#xFE0F; Return
 
-| Name                | Type   | Description                                         |
-|:--------------------|:-------|-----------------------------------------------------|
-| `user_message_json` | `dict` | Edited JSON dictionary that will be fed to the Cat. |
+Type: `dict`
+
+Edited JSON dictionary that will be fed to the Cat.
 
 ## &#x270D; Example
 

@@ -53,5 +53,4 @@ You can also add custom keys to store any custom data, such as the resulting dic
 ```
 
 !!! note
-    - [Python reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/mad_hatter/core_plugin/hooks/flow/#cat.mad_hatter.core_plugin.hooks.flow.before_cat_bootstrap)
     - [Debugger plugin](https://github.com/sambarza/cc-vscode-debugpy)

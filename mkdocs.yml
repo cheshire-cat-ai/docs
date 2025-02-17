@@ -63,6 +63,7 @@ nav:
         - before_cat_recalls_episodic_memories: plugins/hooks-reference/flow/before_cat_recalls_episodic_memories.md
         - before_cat_recalls_declarative_memories: plugins/hooks-reference/flow/before_cat_recalls_declarative_memories.md
         - before_cat_recalls_procedural_memories: plugins/hooks-reference/flow/before_cat_recalls_procedural_memories.md
+        - after_cat_recalls_memories: plugins/hooks-reference/flow/after_cat_recalls_memories.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md

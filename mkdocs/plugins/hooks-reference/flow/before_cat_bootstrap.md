@@ -2,7 +2,7 @@
 title: before_cat_bootstrap
 ---
 
-# `before_cat_bootstrap(cat)`
+# `before_cat_bootstrap`
 
 Intervene before the Cat has instantiated its components.
 

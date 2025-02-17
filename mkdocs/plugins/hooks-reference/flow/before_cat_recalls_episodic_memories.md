@@ -2,7 +2,7 @@
 title: before_cat_recalls_episodic_memories
 ---
 
-# `before_cat_recalls_episodic_memories(episodic_recall_config, cat)`
+# `before_cat_recalls_episodic_memories`
 
 Intervene before the Cat searches in previous users' messages.
 

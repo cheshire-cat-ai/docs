@@ -2,7 +2,7 @@
 title: before_cat_reads_message
 ---
 
-# `before_cat_reads_message(user_message_json, cat)`
+# `before_cat_reads_message`
 
 Intervene as soon as a WebSocket message is received.
 

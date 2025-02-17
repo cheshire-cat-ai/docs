@@ -2,7 +2,7 @@
 title: before_cat_recalls_memories
 ---
 
-# `before_cat_recalls_memories(cat)`
+# `before_cat_recalls_memories`
 
 Intervene before the Cat searches into the specific memories.
 

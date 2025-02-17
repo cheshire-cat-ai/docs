@@ -2,7 +2,7 @@
 title: after_cat_bootstrap
 ---
 
-# `after_cat_bootstrap(cat)`
+# `after_cat_bootstrap`
 
 Intervene after the Cat has instantiated its components.
 

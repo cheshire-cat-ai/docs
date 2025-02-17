@@ -2,7 +2,7 @@
 title: cat_recall_query
 ---
 
-# `cat_recall_query(user_message, cat)`
+# `cat_recall_query`
 
 Intervene before the recall query is embedded, hooking into the semantic search query.
 

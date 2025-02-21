@@ -156,12 +156,12 @@ def my_endpoint():
 ```
 
 Your Cat now replies to GET requests to `localhost:1865/custom/new` and is listed in `/docs` alongside core endpoints. Being based on [FastAPI endpoints](https://fastapi.tiangolo.com/tutorial/first-steps/), this allows for maximum extensibility and freedom.  
-You can add permissions to the endpoint and easily obtain the user session (what you saw above as `cat` or `stray`), use the LLM or change the working memory.  
+You can add permissions to the endpoint and easily obtain the user session (what you saw above as `cat`), use the LLM or change the working memory.  
 See more details and examples [here](endpoints.md).
 
 ## &#128570; StrayCat
 
-You surely noticed that tools, hooks and forms put at your disposal a variable called `cat`. That same object is available in endpoints as `stray`.  
+You surely noticed that all the primitives listed above put at your disposal a variable called `cat`.  
 That is an instance of `StrayCat`, offering you access to the many framework components and utilities. Just to give an example, you can invoke the LLM directly using `cat.llm("write here a prompt")`.
 
 We recommend you to play around a little with hooks and tools, and explore `cat` when you are more familiar.

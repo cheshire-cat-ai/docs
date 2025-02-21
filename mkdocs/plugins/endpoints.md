@@ -20,27 +20,31 @@ def my_endpoint():
 Now open your browser on [`localhost:1865/custom/new`](http://localhost:1865/custom/new), you should see a `meooow` in the page.
 The new endpoint also appeared in `/docs` alongside core endpoints, under the `Custom Endpoints` group.  
 
-## StrayCat and permissions
+## Authentication and Authorization via StrayCat
 
-You'll probably want to access the user session and all Cat's functionality from within the endpoint. As an example let's have the endpoint producing a joke:
+You'll probably want to:
+
+ 1. restrict your custom endpoints to requests providing the [correct key or jwt](../production/auth/authentication.md)
+ 2. access the [user session and main Cat's modules](../framework/cat-components/cheshire_cat/stray_cat.md) from within the endpoint
+
+As an example let's have the endpoint producing a joke:
 
 ```python
 from cat.mad_hatter.decorators import endpoint
 from cat.auth.permissions import check_permissions
 
 @endpoint.get("/joke")
-def joke(stray=check_permissions("CONVERSATION", "WRITE")):
+def joke(cat=check_permissions("CONVERSATION", "WRITE")):
     
     # invoking the LLM!
-    return stray.llm("Tell me a short joke.")
+    return cat.llm("Tell me a short joke.")
 ```
 
 We all know LLMs' jokes are rarely fun, but you can generate a new one every time you access endpoint `GET /custom/joke`.
 
-Notice here we used `stray` in the same way we used `cat` in hooks and tools. It is in both cases an instance of [`StrayCat`](./../framework/cat-components/cheshire_cat/stray_cat.md), to let you easily access user session, LLM and most of the functionality the framework can offer.  
-The double naming may be confusing, it will be unified in version 2. ;)
+Notice here we used `cat` as we did in hooks and tools. It is in all cases an instance of [`StrayCat`](./../framework/cat-components/cheshire_cat/stray_cat.md), to let you easily access user session, LLM and most of the functionality the framework can offer.
 
-Utility function `check_permissions` will handle authentication and authorization, giving in output a `StrayCat` if successful. The function requires you to specify a resource (e.g. `PLUGINS`, `MEMORY`) and a permission (e.g. `READ`, `WRITE`); you can see available resources and permissions in the user manager (admin panel) and in source code under `cat/auth/permissions.py`.  
+Utility function `check_permissions` will handle authentication and authorization, both for api keys and jwt, giving in output a `StrayCat` if successful. The function requires you to specify a resource (e.g. `PLUGINS`, `MEMORY`) and a permission (e.g. `READ`, `WRITE`); you can see available resources and permissions in the user manager (admin panel) and in source code under `cat/auth/permissions.py`.  
 
 For simplicity you can write resource and permission as strings, and they will be automatically validated. Under the hood those are treated as enums and you can use those directly:
 
@@ -49,11 +53,14 @@ from cat.mad_hatter.decorators import endpoint
 from cat.auth.permissions import AuthResource, AuthPermission, check_permissions
 
 @endpoint.get("/joke")
-def joke(stray=check_permissions(AuthResource.CONVERSATION, AuthPermission.WRITE)):
+def joke(cat=check_permissions(AuthResource.CONVERSATION, AuthPermission.WRITE)):
     
     # invoking the LLM!
-    return stray.llm("Tell me a short joke.")
+    return cat.llm("Tell me a short joke.")
 ```
+
+!!!warning
+    If your endpoint function does not have a `cat=check_permissions(...)` argument, the endpoint will be wide open to the web.
 
 
 ## Endpoint input and output
@@ -76,14 +83,14 @@ class JokeOutput(BaseModel):
 @endpoint.post("/topic-joke")
 def topic_joke(
     joke_input: JokeInput,
-    stray=check_permissions("CONVERSATION", "WRITE"),
+    cat=check_permissions("CONVERSATION", "WRITE"),
 ) -> JokeOutput:
 
-    joke = stray.llm(f"Tell me a short joke about {joke_input.topic}, in {joke_input.language} language.")
+    joke = cat.llm(f"Tell me a short joke about {joke_input.topic}, in {joke_input.language} language.")
     
     return JokeOutput(
         joke=joke,
-        user_id=stray.user_id
+        user_id=cat.user_id
     )
 ```
 

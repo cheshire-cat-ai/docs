@@ -1,47 +1,105 @@
 # User Management
 
-If you are developing an application that supports multiple users, it's crucial to ensure that each user's session and memories are isolated. By separating user sessions, you can prevent the mixing of user data, which is particularly important for maintaining data privacy and providing a personalized experience for each user.
-[Why is this important?](#why-is-this-important)
 
-## Shadow Users
+We divide users in 3 categories:
+
+| User type    | Use case             | Where are they stored  | Authentication method     |
+|--------------|----------------------|------------------------|---------------------------|
+| **Public**   | Website support chat | Nowhere                | API keys (`CCAT_API_KEY`, `CCAT_API_KEY_WS`) and `user_id` |
+| **Internal** | Company assistant    | Cat core               | JSON Web Token (JWT)      |
+| **Custom**   | Your imagination     | Your identity provider | Your custom `AuthHandler` |
+
+If you are developing an application that supports multiple users, it's crucial to ensure that each user's session and memories are isolated, with granular access.
+
+Each user interacts with the Cat via a dedicated [`StrayCat`](../../framework/cat-components/cheshire_cat/stray_cat.md) instance, which in turn you will be able to use in your plugins as `cat`.
+
+Let's now see the 3 types of users in detail.
+
+## Public Users
+
+Users are public when they are not stored in core or in an external identity provider (like [KeyCloak](https://github.com/lucagobbi/catcloak)), but they are still allowed to use endpoints. A typical use case is a customer support AI on a public website, where you don't want to register and store users.
+
+Public users will be created, kept during the conversation, then permanently deleted.  
+To allow them access to the Cat you need to provide in each request a `user_id` and a credential (if required).
+
+### ID
 
 By default, the Cat requires a unique user identifier to associate sessions and memory data with individual users. 
-The easiest way to provide this identifier is passing the `user_id` to HTTP endpoints or to the WebSocket messaging interface.
+Generate this temporary identifier as you see fit and pass it as `user_id` to HTTP endpoints or to the WebSocket messaging interface.
 
-You can pass the user ID in the WebSocket endpoint like this:
-`ws://localhost:1865/ws/{user_id}`
+You can pass a user ID to WebSocket endpoint by changing the address:  
+`ws://localhost:1865/ws/caterpillar_123456`
 
-For HTTP endpoints, just include the `user_id` in the request header.
+For HTTP endpoints, just include a `user_id` header in the request:  
+`user_id`: `caterpillar_123456`
 
 !!! note 
     If no user id is provided, the Cat will assume `user_id = "user"`.
 
+### Credentials
+
+If you set up `CCAT_API_KEY` and `CCAT_API_KEY_WS`, public users still need to provide those credentials, respectively via [http](./authentication.md#http-key) and [websocket](./authentication.md#websocket-key).
+
+If you did not set them, at your own peril all endpoints are wide open and you just need to specify the `user_id`.  
+
+Most people building public chatbots leave websocket open and lock down all http endpoints.  
+In any case it is recommended that you do this kind of requests server side, from a smartphone app, or between containers in a private docker network.  
+Avoid using your keys in a browser or any other transparent client.
+
+
+
 ## Internal Users
 
-The Cat framework includes a simple, internal user management system for creating, retrieving, updating, and deleting users. This system provides a convenient, built-in way to manage JWT authentication. By default, authentication is disabled in The Cat. [Need help enabling it?](./authentication.md).
+In use cases in which a specific and restricted set of users will use your Cat, you want dedicated credentials, detailed management and permanent storage.
+
+### Management
+
+The Cat framework includes a simple, internal user management system for creating, retrieving, updating, and deleting users. Endpoints for user management can be found on your installation under `/docs`.
+
+If you're looking for a straightforward way to manage users, you can use the Admin panel. Simply click on the `Settings` tab and you'll see a `User Management` section.
+
+### Credentials
+
+Once registered into the Cat with username and password, a user can be assigned granular permissions and can access endpoints with a JWT (JSON Web Token).
+
+Detailed instructions on how to obtain and use the JWT are [here](./authentication.md#obtaining-a-jwt).  
+Remember to customize your JWT secret via the [`CCAT_JWT_SECRET`](./authentication.md#2-securing-jwt) environment variable.
 
 !!! note 
     When authenticating requests with a JWT token, you do not need to pass the `user_id`; The Cat will automatically extract it from the token.
 
-### Managing Internal Users
 
-#### Admin Panel
-
-If you're looking for a straightforward way to manage users, you can use the Admin panel. Simply click on the `Settings` tab and you'll see a `User Management` section.
-
-#### Restful API
-
-The internal user management system is also accessible via a comprehensive RESTful API. There are endpoints for creation, retrieval, updating, and deletion of users. For more information, check the [endpoints](../../production/network/http-endpoints.md) page.
-
-## Want to bring in your own users?
+## Custom Users
 
 If you already have a user management system or identity provider, you can easily integrate it with the Cat by implementing a custom `AuthHandler`.
 
 This allows you to use your own authentication logic and pass the necessary `AuthUserInfo` to the Cat. For more details, refer to the [custom auth guide](./custom-auth.md).
 
-## Why is this important?
+### Credentials
 
-As stated above, when working with multiple users, it’s important to separate their sessions and memories. Without that, you'll face WebSocket connection issues and poor user experience can arise. The Cat internally use the provided `user_id` to build a WebSocket connection and tie it to a [StrayCat](../../framework/cat-components/cheshire_cat/stray_cat.md) instance which will handle the user session and memory retrieval.
+While you can customize the `AuthHandler` to assign identity and permissions via any identity provider, we enforce a standard on how credentials must be sent to the Cat:
+
+ - for http, via `Authentication: Bearer <credential>` header
+ - for websocket, via `?token=<credential>` query parameter 
+ - the two above are valid for both api keys and JWT
+
+This allows for auth and user management customization without breaking the many [client libraries and tools](../network/clients.md) the community is building.
+
+
+## Examples
+
+### Access current user from a plugin
+
+In hooks, tools, forms and custom endpoints you can easily obtain user information from the `cat` variable, instance of [`StrayCat`](../../framework/cat-components/cheshire_cat/stray_cat.md).
+
+```python
+from cat.mad_hatter.decorators import tool
+
+@tool(return_direct=True)
+def who_am_i(arg, cat):
+    """Use to retrieve info about the current user."""
+    return f"Hello {cat.user_id}, here is some info about you: {cat.user_data.model_dump_json()}"
+```
 
 ### Users and memories
 
@@ -69,10 +127,4 @@ def before_cat_recalls_declarative_memories(declarative_recall_config, cat):
 
 ```
 
-### Users and conversations
-
-The WebSocket client and the HTTP message endpoint identifies the current `user_id` using respectively the `ws://localhost:1865/ws/{user_id}` path variable or the `user_id` in the request header.
-The Cat uses this `user_id` to access the user's working memory and store conversations, using the `user_id` as metadata for retrieval. 
-
-This ensures that conversations remain isolated, preventing any mix-up between different users and providing a seamless, personalized experience.
 

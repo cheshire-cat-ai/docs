@@ -246,7 +246,7 @@ To generate a valid token make an HTTP POST request to `/auth/token`, including 
     ```
 
 As you can see having an [internal user](./user-management.md#internal-users) in the Cat with specific username and password is a prerequisite to obtain a JWT.
-The same is not true for API key authentication, in which user can be created on the fly (see [shadow users](./user-management.md#shadow-users)).
+The same is not true for API key authentication, in which user can be created on the fly (see [public users](./user-management.md#public-users)).
 
 You can make JWT work also for [external users](./user-management.md) (e.g via identity provider or CMS) implementing a custom [`AuthHandler`](./custom-auth.md)
 
@@ -323,9 +323,16 @@ Same goes to authenticate WebSocket:
 TODO
 
 
-## 3. Use Secure Protocols
+## 3. Secure Custom Endpoints
+
+Custom endpoints in plugins are open by default, unless you [specify required permissions](../../plugins/endpoints.md#authentication-and-authorization-via-straycat).
+
+
+## 4. Use Secure Protocols
 
 The final step is to have the Cat behind a reverse proxy, hopefully with automatic TLS certificates.
 
 There are many open source reverse proxies available, most of them automatically manage certificates via [Let's Encrypt](https://letsencrypt.org/){:target="_blank"}.
 A few example setups are available [here](../administrators/docker-compose.md#cat-reverse-proxy).
+
+

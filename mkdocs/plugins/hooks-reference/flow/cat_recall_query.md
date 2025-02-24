@@ -26,7 +26,7 @@ An official plugin is available to test this technique.
 Type: `str`
 
 Edited string to be used for context retrieval in memory.
-The returned string is further stored in theWorking Memory at `cat.working_memory.recall_query`.
+The returned string is further stored in the Working Memory at `cat.working_memory.recall_query`.
 
 ## &#x270D; Example
 

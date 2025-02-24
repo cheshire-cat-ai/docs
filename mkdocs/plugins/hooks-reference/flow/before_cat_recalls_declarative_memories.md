@@ -22,7 +22,7 @@ It also returns the embedded query (embedding) and the conditions on recall (met
 | `declarative_recall_config` | `dict`                                                                  | Dictionary with data needed to recall declarative memories.        |
 | `cat`                       | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components. |
 
-The default value for `declarative_recall_config` is:
+The default value of `declarative_recall_config` is:
 ```python
 {
     "embedding": recall_query_embedding,  # embedding of the recall query

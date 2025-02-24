@@ -22,7 +22,7 @@ It also returns the embedded query (embedding) and the conditions on recall (met
 | `procedural_recall_config` | `dict`                                                                  | Dictionary with data needed to recall tools from procedural memory. |
 | `cat`                      | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components.  |
 
-The default value for `procedural_recall_config` is:
+The default value of `procedural_recall_config` is:
 ```python
 {
     "embedding": recall_query_embedding,  # embedding of the recall query

@@ -68,6 +68,7 @@ nav:
         - before_cat_sends_message: plugins/hooks-reference/flow/before_cat_sends_message.md
       - Agent:
         - before_agent_starts: plugins/hooks-reference/agent/before_agent_starts.md
+        - agent_fast_reply: plugins/hooks-reference/agent/agent_fast_reply.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md

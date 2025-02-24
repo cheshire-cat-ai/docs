@@ -69,6 +69,7 @@ nav:
       - Agent:
         - before_agent_starts: plugins/hooks-reference/agent/before_agent_starts.md
         - agent_fast_reply: plugins/hooks-reference/agent/agent_fast_reply.md
+        - agent_allowed_tools: plugins/hooks-reference/agent/agent_allowed_tools.md
         - agent_prompt_prefix: plugins/hooks-reference/agent/agent_prompt_prefix.md
         - agent_prompt_suffix: plugins/hooks-reference/agent/agent_prompt_suffix.md
     - Python Reference: API_Documentation/

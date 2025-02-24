@@ -6,15 +6,17 @@ title: agent_prompt_prefix
 
 Intervene while the agent manager formats the Cat's personality.
 
-Allows editing the message prefix that will be fed to the LLM.
-It's most commonly used to instruct the LLM about who it is and how to answer.
+Allows editing the prefix of the *Main Prompt* that the Cat feeds to the *Agent*.
+It describes the personality of your assistant and its general task.
+
+The prefix is then completed with the [`agent_prompt_suffix`](agent_prompt_suffix.md).
 
 ## &#128196; Arguments 
 
-| Name     | Type                                                                    | Description                                                        |
-|:---------|:------------------------------------------------------------------------|--------------------------------------------------------------------|
-| `prefix` | `str`                                                                   | The message prefix.                                                |
-| `cat`    | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components. |
+| Name     | Type                                                                    | Description                                                            |
+|:---------|:------------------------------------------------------------------------|------------------------------------------------------------------------|
+| `prefix` | `str`                                                                   | Main / System prompt with personality and general task to be achieved. |
+| `cat`    | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components.     |
 
 The default value of `prefix` is:
 ```

@@ -24,20 +24,26 @@ Some of the clients are maintained from the community, some others come from ind
 
 ## Frontend Chat Widgets
 
-| Name              | Framework                                                              | Repository                                                                                         |
-| :---------------: | :--------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: |
-| widget-vue        | ![Image title](../../assets/img/clientlib/Vue.js.png){ width="40" }    | [Vue Widget](https://github.com/cheshire-cat-ai/widget-vue){:target="_blank"}                      |
-| widget-alpine     | ![Image title](../../assets/img/clientlib/Alpine.js.png){ width="40" } | [Alpine Widget](https://github.com/cheshire-cat-ai/widget-alpine){:target="_blank"}                |
-| widget-svelte     | ![Image title](../../assets/img/clientlib/Svelte.js.png){ width="40" } | [Svelte Widget](https://github.com/cheshire-cat-ai/widget-svelte){:target="_blank"}                |
-| widget-CCAT-react | ![Image title](../../assets/img/clientlib/React.js.png){ width="40" }  | [React Widget](https://github.com/AndreaPesce2002/widget-CCAT-react){:target="_blank"}             |
+| Framework                                                               | Repository                                                                                          |
+| :---------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
+| ![Image title](../../assets/img/clientlib/Vue.js.png){ width="40" }     | [Vue Widget](https://github.com/cheshire-cat-ai/widget-vue){:target="_blank"}                       |
+| ![Image title](../../assets/img/clientlib/Alpine.js.png){ width="40" }  | [Alpine Widget](https://github.com/cheshire-cat-ai/widget-alpine){:target="_blank"}                 |
+| ![Image title](../../assets/img/clientlib/Svelte.js.png){ width="40" }  | [Svelte Widget](https://github.com/cheshire-cat-ai/widget-svelte){:target="_blank"}                 |
+| ![Image title](../../assets/img/clientlib/React.js.png){ width="40" }   | [React Widget](https://github.com/AndreaPesce2002/widget-CCAT-react){:target="_blank"}              |
+| ![Image title](../../assets/img/clientlib/Angular.js.png){ width="40" } | [Angular Widget](https://github.com/Edoardo-Croci-CLDev/ccat-chat-widget-angular){:target="_blank"} |
 
 
-## Apps
+## Apps & Integrations
 
-| Name           | Platform                                                                          | Repository                                                                         |
-| :------------: | :-------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
-| Meowgram       | ![Image title](../../assets/img/clientlib/2048px-Telegram_logo.png){ width="40" } | [Telegram bot](https://github.com/Pingdred/Meowgram){:target="_blank"}             |
-| discord-bot-ts | ![Image title](../../assets/img/clientlib/discord.png){ width="40" }              | [Discord bot](https://github.com/cheshire-cat-ai/discord-bot-ts){:target="_blank"} |
+| Platform                                                                          | Repository                                                                         |
+| :-------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
+| ![Image title](../../assets/img/clientlib/2048px-Telegram_logo.png){ width="40" } | [Telegram bot](https://github.com/Pingdred/Meowgram){:target="_blank"}             |
+| ![Image title](../../assets/img/clientlib/discord.png){ width="40" }              | [Discord bot](https://github.com/cheshire-cat-ai/discord-bot-ts){:target="_blank"} |
+| ![Image title](../../assets/img/nginx.png){ width="40" }                          | [Nginx compose](https://github.com/mimir-chatbot/reverse-proxy-example){:target="_blank"}<br>[Nginx compose with SSL](https://github.com/vancif/cheshire-cat-nginx-proxy){:target="_blank"} |
+| ![Image title](../../assets/img/tipi.png){ width="40" }                           | [Tipi App](https://runtipi.io/docs/apps-available){:target="_blank"}                |
+| ![Image title](../../assets/img/clientlib/laravel.png){ width="40" }              | [Laravel SDK](https://github.com/webgrafia/cheshire-cat-sdk-laravel){:target="_blank"} |                                        |
+
+
 
 
 ## Command Line Interfaces
@@ -45,4 +51,4 @@ Some of the clients are maintained from the community, some others come from ind
 | Language                                                             | Repository                                                         |
 | :-------------------------------------------------------------------:| :----------------------------------------------------------------: |
 | ![Image title](../../assets/img/clientlib/Go_logo.png){ width="60" } | [Meow CLI](https://github.com/saniales/meow){:target="_blank"}     |
-| ![Image title](../../assets/img/clientlib/1869px-Python-logo-notext.png){ width="40" } | [Cheshire Cat CLI](https://github.com/rmoscetti/cheshire-cat-ai-tools){:target="_blank"}     |
+| ![Image title](../../assets/img/clientlib/1869px-Python-logo-notext.png){ width="40" } | [Cheshire Cat CLI](https://github.com/rmoscetti/cheshire-cat-ai-tools){:target="_blank"}    |

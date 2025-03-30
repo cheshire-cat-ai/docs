@@ -41,7 +41,8 @@ Some of the clients are maintained from the community, some others come from ind
 | ![Image title](../../assets/img/clientlib/discord.png){ width="40" }              | [Discord bot](https://github.com/cheshire-cat-ai/discord-bot-ts){:target="_blank"} |
 | ![Image title](../../assets/img/nginx.png){ width="40" }                          | [Nginx compose](https://github.com/mimir-chatbot/reverse-proxy-example){:target="_blank"}<br>[Nginx compose with SSL](https://github.com/vancif/cheshire-cat-nginx-proxy){:target="_blank"} |
 | ![Image title](../../assets/img/tipi.png){ width="40" }                           | [Tipi App](https://runtipi.io/docs/apps-available){:target="_blank"}                |
-| ![Image title](../../assets/img/clientlib/laravel.png){ width="40" }              | [Laravel SDK](https://github.com/webgrafia/cheshire-cat-sdk-laravel){:target="_blank"} |                                        |
+| ![Image title](../../assets/img/clientlib/laravel.png){ width="40" }              | [Laravel SDK](https://github.com/webgrafia/cheshire-cat-sdk-laravel){:target="_blank"} |
+| ![Image title](../../assets/img/clientlib/wordpress.png){ width="40" }            | [WordPress plugin](https://github.com/webgrafia/cheshire-cat-wp){:target="_blank"} | 
 
 
 

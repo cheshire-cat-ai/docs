@@ -1,0 +1,50 @@
+body[data-md-color-scheme="slate"] .md-header__button.md-logo img {
+  filter: invert(100%);
+}
+
+/* Custom color scheme named "custom" */
+[data-md-color-scheme="custom"] {
+  /* Normal font color */
+  --md-primary-fg-color: #F6F2EC;
+  --md-typeset-a-color: #666;
+  --md-accent-fg-color: #666;
+  --md-primary-bg-color: #666;
+
+  /* Background color */
+  --md-background-primary: #100e0b;
+  background-color: #F6F2EC;
+}
+
+[data-md-color-scheme="custom"] .md-nav--secondary .md-nav__title,
+[data-md-color-scheme="custom"] .md-nav--primary .md-nav__title,
+[data-md-color-scheme="custom"] .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
+  background: #F6F2EC;
+  box-shadow: none;
+}
+
+[data-md-color-scheme="custom"] .md-header {
+  color: black;
+}
+
+/* Buttons */
+[data-md-color-scheme="custom"] .md-button {
+  color: #666;
+}
+[data-md-color-scheme="custom"] .md-button-grid,
+[data-md-color-scheme="slate"] .md-button-grid {
+  width: 300px;
+  margin: 10px 10px;
+  padding: 20px 20px;
+  text-align: center;
+} 
+
+[data-md-color-scheme="custom"] .md-typeset a {
+  font-weight: 700;
+}
+
+[data-md-color-scheme="slate"] {
+  /* Normal font color */
+  --md-typeset-a-color: #FCC263!important;
+  --md-accent-fg-color: #FCC263!important;
+}
+

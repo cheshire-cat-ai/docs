@@ -159,9 +159,9 @@ extra:
       name: The Cheshire Cat Discord Server
 
 # additional CSS and JS files
-extra_javascript:
-  - javascripts/cheshire-cat-widget-init.js
-  - javascripts/cheshire-cat-widget.js
+#extra_javascript:
+#  - javascripts/cheshire-cat-widget-init.js
+#  - javascripts/cheshire-cat-widget.js
 extra_css:
   - stylesheets/extra.css
 

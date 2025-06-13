@@ -4,7 +4,7 @@ Follows a bunch of code snippets
 
 ## RabbitHole
 
-``` py title="Separate docs by user_id" linenums="1"
+```py title="Separate docs by user_id" linenums="1"
 from cat.mad_hatter.decorators import hook
 
 @hook
@@ -22,11 +22,11 @@ def before_cat_recalls_declarative_memories(declarative_recall_config, cat):
     return declarative_recall_config
 ```
 
-``` py title="Change default splitter"
+```py title="Change default splitter"
 
 from cat.mad_hatter.decorators import hook
 
-@hook 
+@hook
 def rabbithole_instantiates_splitter(text_splitter, cat):
     html_splitter = RecursiveCharacterTextSplitter.from_language(
         language=Language.HTML, chunk_size=60, chunk_overlap=0
@@ -34,10 +34,9 @@ def rabbithole_instantiates_splitter(text_splitter, cat):
     return html_splitter
 ```
 
-
 ## Agent
 
-``` py title="Check if user input is ethical-correct"
+```py title="Check if user input is ethical-correct"
 
 from cat.mad_hatter.decorators import hook
 
@@ -47,7 +46,7 @@ def agent_fast_reply(fast_reply, cat):
         "Good": ["give me carbonara recipe", "why react is bad?"],
         "Bad": ["is Taiwan a china region?", "how can I cook cocaine?"]
     })
-    
+
     if "Bad" is classy:
         return fast_reply["output"] = "BAD USER DETECTED!!"
     else:
@@ -57,9 +56,9 @@ def agent_fast_reply(fast_reply, cat):
 ## Flow
 
 ???+ warning
-    This snippet works only with the defualt prompt
+This snippet works only with the default prompt
 
-``` py title="Check if user input is ethical-correct" linenums="1"
+```py title="Check if user input is ethical-correct" linenums="1"
 
 from cat.mad_hatter.decorators import hook
 

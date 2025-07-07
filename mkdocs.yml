@@ -80,6 +80,7 @@ nav:
         - before_rabbithole_stores_documents: plugins/hooks-reference/rabbit-hole/before_rabbithole_stores_documents.md
         - after_rabbithole_stored_documents: plugins/hooks-reference/rabbit-hole/after_rabbithole_stored_documents.md
         - rabbithole_instantiates_parsers: plugins/hooks-reference/rabbit-hole/rabbithole_instantiates_parsers.md
+        - rabbithole_instantiates_splitter: plugins/hooks-reference/rabbit-hole/rabbithole_instantiates_splitter.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md

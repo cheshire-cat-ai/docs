@@ -84,6 +84,7 @@ nav:
       - Factory:
         - factory_allowed_llms: plugins/hooks-reference/factory/factory_allowed_llms.md
         - factory_allowed_embedders: plugins/hooks-reference/factory/factory_allowed_embedders.md
+        - factory_allowed_auth_handlers: plugins/hooks-reference/factory/factory_allowed_auth_handlers.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md

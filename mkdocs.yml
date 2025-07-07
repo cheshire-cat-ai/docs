@@ -83,6 +83,7 @@ nav:
         - rabbithole_instantiates_splitter: plugins/hooks-reference/rabbit-hole/rabbithole_instantiates_splitter.md
       - Factory:
         - factory_allowed_llms: plugins/hooks-reference/factory/factory_allowed_llms.md
+        - factory_allowed_embedders: plugins/hooks-reference/factory/factory_allowed_embedders.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md

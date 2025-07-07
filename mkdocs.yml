@@ -81,6 +81,8 @@ nav:
         - after_rabbithole_stored_documents: plugins/hooks-reference/rabbit-hole/after_rabbithole_stored_documents.md
         - rabbithole_instantiates_parsers: plugins/hooks-reference/rabbit-hole/rabbithole_instantiates_parsers.md
         - rabbithole_instantiates_splitter: plugins/hooks-reference/rabbit-hole/rabbithole_instantiates_splitter.md
+      - Factory:
+        - factory_allowed_llms: plugins/hooks-reference/factory/factory_allowed_llms.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md

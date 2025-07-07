@@ -73,6 +73,8 @@ nav:
         - agent_prompt_prefix: plugins/hooks-reference/agent/agent_prompt_prefix.md
         - agent_prompt_suffix: plugins/hooks-reference/agent/agent_prompt_suffix.md
         - agent_prompt_instructions: plugins/hooks-reference/agent/agent_prompt_instructions.md
+      - Rabbit Hole:
+        - before_rabbithole_insert_memory: plugins/hooks-reference/rabbit-hole/before_rabbithole_insert_memory.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md

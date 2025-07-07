@@ -13,10 +13,10 @@ For instance, the hook allows to change the text or edit/add metadata.
 
 ## &#128196; Arguments
 
-| Name  | Type                                                                    | Description                                                                         |
-|:------|:------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| `doc` | `List[Document]`                                                        | Langchain `Document`s resulted after parsing the file uploaded in the *RabbitHole*. |
-| `cat` | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components.                  |
+| Name   | Type                                                                    | Description                                                                         |
+|:-------|:------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| `docs` | `List[Document]`                                                        | Langchain `Document`s resulted after parsing the file uploaded in the *RabbitHole*. |
+| `cat`  | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components.                  |
 
 `doc` example:
 

@@ -76,6 +76,7 @@ nav:
       - Rabbit Hole:
         - before_rabbithole_insert_memory: plugins/hooks-reference/rabbit-hole/before_rabbithole_insert_memory.md
         - before_rabbithole_splits_text: plugins/hooks-reference/rabbit-hole/before_rabbithole_splits_text.md
+        - after_rabbithole_splitted_text: plugins/hooks-reference/rabbit-hole/after_rabbithole_splitted_text.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md

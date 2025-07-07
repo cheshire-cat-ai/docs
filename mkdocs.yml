@@ -78,6 +78,7 @@ nav:
         - before_rabbithole_splits_text: plugins/hooks-reference/rabbit-hole/before_rabbithole_splits_text.md
         - after_rabbithole_splitted_text: plugins/hooks-reference/rabbit-hole/after_rabbithole_splitted_text.md
         - before_rabbithole_stores_documents: plugins/hooks-reference/rabbit-hole/before_rabbithole_stores_documents.md
+        - after_rabbithole_stored_documents: plugins/hooks-reference/rabbit-hole/after_rabbithole_stored_documents.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md

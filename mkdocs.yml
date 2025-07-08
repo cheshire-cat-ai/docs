@@ -53,6 +53,38 @@ nav:
     - Settings: plugins/settings.md
     - Dependencies: plugins/dependencies.md
     - Examples: plugins/examples.md
+    - Hooks API Reference:
+      - Flow:
+        - before_cat_bootstrap: plugins/hooks-reference/flow/before_cat_bootstrap.md
+        - after_cat_bootstrap: plugins/hooks-reference/flow/after_cat_bootstrap.md
+        - before_cat_reads_message: plugins/hooks-reference/flow/before_cat_reads_message.md
+        - cat_recall_query: plugins/hooks-reference/flow/cat_recall_query.md
+        - before_cat_recalls_memories: plugins/hooks-reference/flow/before_cat_recalls_memories.md
+        - before_cat_recalls_episodic_memories: plugins/hooks-reference/flow/before_cat_recalls_episodic_memories.md
+        - before_cat_recalls_declarative_memories: plugins/hooks-reference/flow/before_cat_recalls_declarative_memories.md
+        - before_cat_recalls_procedural_memories: plugins/hooks-reference/flow/before_cat_recalls_procedural_memories.md
+        - after_cat_recalls_memories: plugins/hooks-reference/flow/after_cat_recalls_memories.md
+        - before_cat_stores_episodic_memory: plugins/hooks-reference/flow/before_cat_stores_episodic_memory.md
+        - before_cat_sends_message: plugins/hooks-reference/flow/before_cat_sends_message.md
+      - Agent:
+        - before_agent_starts: plugins/hooks-reference/agent/before_agent_starts.md
+        - agent_fast_reply: plugins/hooks-reference/agent/agent_fast_reply.md
+        - agent_allowed_tools: plugins/hooks-reference/agent/agent_allowed_tools.md
+        - agent_prompt_prefix: plugins/hooks-reference/agent/agent_prompt_prefix.md
+        - agent_prompt_suffix: plugins/hooks-reference/agent/agent_prompt_suffix.md
+        - agent_prompt_instructions: plugins/hooks-reference/agent/agent_prompt_instructions.md
+      - Rabbit Hole:
+        - before_rabbithole_insert_memory: plugins/hooks-reference/rabbit-hole/before_rabbithole_insert_memory.md
+        - before_rabbithole_splits_text: plugins/hooks-reference/rabbit-hole/before_rabbithole_splits_text.md
+        - after_rabbithole_splitted_text: plugins/hooks-reference/rabbit-hole/after_rabbithole_splitted_text.md
+        - before_rabbithole_stores_documents: plugins/hooks-reference/rabbit-hole/before_rabbithole_stores_documents.md
+        - after_rabbithole_stored_documents: plugins/hooks-reference/rabbit-hole/after_rabbithole_stored_documents.md
+        - rabbithole_instantiates_parsers: plugins/hooks-reference/rabbit-hole/rabbithole_instantiates_parsers.md
+        - rabbithole_instantiates_splitter: plugins/hooks-reference/rabbit-hole/rabbithole_instantiates_splitter.md
+      - Factory:
+        - factory_allowed_llms: plugins/hooks-reference/factory/factory_allowed_llms.md
+        - factory_allowed_embedders: plugins/hooks-reference/factory/factory_allowed_embedders.md
+        - factory_allowed_auth_handlers: plugins/hooks-reference/factory/factory_allowed_auth_handlers.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md

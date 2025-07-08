@@ -4,7 +4,7 @@ title: factory_allowed_auth_handlers
 
 # `factory_allowed_auth_handlers`
 
-Intervene before cat retrieve auth handler settings.
+Customize which AuthHandlers are available.
 
 !!! info
     Useful to extend support for custom auth handlers. For more information see [Custom Auth](../../../production/auth/custom-auth.md)

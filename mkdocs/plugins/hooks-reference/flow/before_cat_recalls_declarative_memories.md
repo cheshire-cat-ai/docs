@@ -35,7 +35,7 @@ The default value of `declarative_recall_config` is:
 
 Type: `dict`
 
-Edited dictionary that will be fed to the embedder.
+Edited dictionary that will be fed as a query to the Vector db.
 
 ## &#x270D; Example
 

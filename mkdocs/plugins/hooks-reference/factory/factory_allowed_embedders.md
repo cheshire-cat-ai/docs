@@ -4,7 +4,7 @@ title: factory_allowed_embedders
 
 # `factory_allowed_embedders`
 
-Intervene before cat retrieve embedder settings.
+Customize which embedders are available.
 
 !!! info
     Useful to extend or restrict support of embedders.

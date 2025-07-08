@@ -6,6 +6,7 @@ docs_dir: mkdocs
 site_dir: docs
 
 plugins:
+  - mermaid2
   - mkdocs-video:
       is_video: True
       video_muted: True
@@ -54,8 +55,6 @@ nav:
     - Examples: plugins/examples.md
     - Hooks API Reference:
       - Flow:
-        - before_cat_bootstrap: plugins/hooks-reference/flow/before_cat_bootstrap.md
-        - after_cat_bootstrap: plugins/hooks-reference/flow/after_cat_bootstrap.md
         - before_cat_reads_message: plugins/hooks-reference/flow/before_cat_reads_message.md
         - cat_recall_query: plugins/hooks-reference/flow/cat_recall_query.md
         - before_cat_recalls_memories: plugins/hooks-reference/flow/before_cat_recalls_memories.md
@@ -71,19 +70,21 @@ nav:
         - agent_allowed_tools: plugins/hooks-reference/agent/agent_allowed_tools.md
         - agent_prompt_prefix: plugins/hooks-reference/agent/agent_prompt_prefix.md
         - agent_prompt_suffix: plugins/hooks-reference/agent/agent_prompt_suffix.md
-        - agent_prompt_instructions: plugins/hooks-reference/agent/agent_prompt_instructions.md
       - Rabbit Hole:
+        - rabbithole_instantiates_parsers: plugins/hooks-reference/rabbit-hole/rabbithole_instantiates_parsers.md
+        - rabbithole_instantiates_splitter: plugins/hooks-reference/rabbit-hole/rabbithole_instantiates_splitter.md
         - before_rabbithole_insert_memory: plugins/hooks-reference/rabbit-hole/before_rabbithole_insert_memory.md
         - before_rabbithole_splits_text: plugins/hooks-reference/rabbit-hole/before_rabbithole_splits_text.md
         - after_rabbithole_splitted_text: plugins/hooks-reference/rabbit-hole/after_rabbithole_splitted_text.md
         - before_rabbithole_stores_documents: plugins/hooks-reference/rabbit-hole/before_rabbithole_stores_documents.md
         - after_rabbithole_stored_documents: plugins/hooks-reference/rabbit-hole/after_rabbithole_stored_documents.md
-        - rabbithole_instantiates_parsers: plugins/hooks-reference/rabbit-hole/rabbithole_instantiates_parsers.md
-        - rabbithole_instantiates_splitter: plugins/hooks-reference/rabbit-hole/rabbithole_instantiates_splitter.md
       - Factory:
         - factory_allowed_llms: plugins/hooks-reference/factory/factory_allowed_llms.md
         - factory_allowed_embedders: plugins/hooks-reference/factory/factory_allowed_embedders.md
         - factory_allowed_auth_handlers: plugins/hooks-reference/factory/factory_allowed_auth_handlers.md
+      - Lifecycle:
+        - before_cat_bootstrap: plugins/hooks-reference/lifecycle/before_cat_bootstrap.md
+        - after_cat_bootstrap: plugins/hooks-reference/lifecycle/after_cat_bootstrap.md
     - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md
@@ -205,8 +206,8 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tabbed:
       alternate_style: true
-  #- pymdownx.superfences:
-  #    custom_fences:
-  #      - name: mermaid
-  #        class: mermaid
-  #        format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

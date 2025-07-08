@@ -4,7 +4,7 @@ title: factory_allowed_llms
 
 # `factory_allowed_llms`
 
-Intervene before cat retrieve llm settings.
+Customize which LLMs are available.
 
 !!! info
     Useful to extend or restrict support of LLMs.

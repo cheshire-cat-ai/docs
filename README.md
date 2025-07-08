@@ -1,6 +1,6 @@
 # &#128075; Hello, Dear
 
-> Good documentation is *key* to a good software and at Cheshire Cat AI we are always looking for great community members that are willing to improve it with their writing skills. This README as well as all the documentation you can find about the [Cat](https://cheshire-cat-ai.github.io/docs/) is the result of an effort between our Core team and a great Community. Remember to always have fun whatever you decide to contribute to, meow.
+> Good documentation is *key* to a good software and at Cheshire Cat AI we are always looking for great community members that are willing to improve it with their writing skills. This README as well as all the documentation you can find about the [Cat](https://cheshire-cat-ai.github.io/docs/) is the result of an effort between our Core team and a great Community. Remember to always have fun and be kind.
 
 ## 📚 How to Contribute Documentation
 
@@ -16,48 +16,6 @@
 10. Keep your contributions up-to-date with any changes or updates made to the main repository.
 
 There is a [dedicated channel for Docs on our official Discord](https://discord.com/channels/1092359754917089350/1092360068269359206), don't be shy and contact us there if you need help!
-
-### &#129693; Hooks documentation
-
-To help documenting the [hooks table](mkdocs/plugins/hooks.md#available-hooks), ensure these elements are not missing and please keep the order:
-
-1. Annotation number with bold heading
-2. *Input arguments* description with *code snippet* example
-3. *optional*: any other **non collapsible** `warning` box/additional `info` for tips, tricks and discouraged behaviors (`!!! info`/`!!! warning`)
-4. **collapsible** snippet example (`??? example`)
-5. **collapsible** note section with title: `??? note "Other resources"` --> in this section please include the link to the hook Python reference in the documentation and any other useful links to other doc's pages.
-
-Example:
-
-```python
-1. **Input arguments**
-        `user_message_json`, i.e. the JSON message sent via WebSocket done like this:
-        ```JSON
-        {
-            "text": # user's message here
-        }
-        ```
-
-        !!! info
-            Hook the incoming user message JSON dictionary
-
-        ??? example
-
-            ```python
-            from cat.mad_hatter.decorators import hook
-
-            @hook  # default priority = 1
-            def before_cat_reads_message(user_message_json, cat):
-                user_message_json["text"] = "The original message has been replaced"
-                cat.working_memory["hacked"] = True
-
-                return user_message_json
-            ```
-
-        ??? note "Other resources"
-
-            - [Python reference]()
-```
 
 ## 🤹 Manage the tecnology [mkdocs]
 

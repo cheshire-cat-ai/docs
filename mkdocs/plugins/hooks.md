@@ -131,7 +131,7 @@ You can define your own hooks, so other plugins can listen and interact with the
 ```python
 # plugin cat_commerce
 @hook
-def hook_name(cat):    
+def before_cat_reads_message(msg, cat):
     default_order = [
         "wool ball",
         "catnip"
@@ -145,7 +145,7 @@ def hook_name(cat):
 Other plugins may be able to edit or just track the event:
 
 ```python
-# plugin B
+# plugin A
 @hook
 def cat_commerce_order(order, cat):
     if "catnip" in order:
@@ -154,7 +154,7 @@ def cat_commerce_order(order, cat):
 ```
 
 ```python
-# plugin A
+# plugin B
 @hook
 def cat_commerce_order(order, cat):
     if len(order) > 1:
@@ -164,12 +164,10 @@ def cat_commerce_order(order, cat):
         cat.send_ws_message("Cat is going broke")
 ```
 
-You should be able to run your own hooks also in tools and forms. Not fully tested yet, let us know :)
-
 ## Available Hooks
 
-You can view the list of available hooks by exploring the Cat source code under the folder [`core/cat/mad_hatter/core_plugin/hooks`](https://github.com/cheshire-cat-ai/core/tree/main/core/cat/mad_hatter/core_plugin/hooks){:target="_blank"}.
-All the hooks you find in there define default Cat's behavior and are ready to be overridden by your plugins.
+Here is a list of availble hooks. Each has a dedicated page with examples (see `Hooks API Reference` on the left menu).
+Hooks define default Cat's behavior and are ready to be overridden by your plugins.
 
 The process diagrams found under the [`Framework → Technical Diagrams`](../framework/flows/cat-bootstrap.md) section illustrate where the hooks are called during the Cat's execution flow.
 Not all the hooks have been documented yet. ( [help needed! &#128568;](https://discord.com/channels/1092359754917089350/1092360068269359206){:target="_blank"} ).

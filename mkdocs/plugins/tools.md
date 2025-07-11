@@ -60,7 +60,7 @@ Let's take a look at it, line by line.
 
 ```python
 @tool(
-    return_direct=False
+    return_direct=False,
     examples=["what time is it", "get the time"]
 )
 def get_the_time(tool_input, cat):

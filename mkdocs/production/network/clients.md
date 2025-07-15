@@ -43,6 +43,8 @@ Some of the clients are maintained from the community, some others come from ind
 | ![Image title](../../assets/img/tipi.png){ width="40" }                           | [Tipi App](https://runtipi.io/docs/apps-available){:target="_blank"}                |
 | ![Image title](../../assets/img/clientlib/laravel.png){ width="40" }              | [Laravel SDK](https://github.com/webgrafia/cheshire-cat-sdk-laravel){:target="_blank"} |
 | ![Image title](../../assets/img/clientlib/wordpress.png){ width="40" }            | [WordPress plugin](https://github.com/webgrafia/cheshire-cat-wp){:target="_blank"} | 
+| ![Image title](../../assets/img/clientlib/flutter.png){ width="40" }              | [Flutter-Cat](https://github.com/pignatiello/fluttercat.git){:target="_blank"} |
+
 
 
 

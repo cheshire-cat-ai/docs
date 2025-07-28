@@ -29,6 +29,7 @@ Some of the clients are maintained from the community, some others come from ind
 | ![Image title](../../assets/img/clientlib/Vue.js.png){ width="40" }     | [Vue Widget](https://github.com/cheshire-cat-ai/widget-vue){:target="_blank"}                       |
 | ![Image title](../../assets/img/clientlib/Alpine.js.png){ width="40" }  | [Alpine Widget](https://github.com/cheshire-cat-ai/widget-alpine){:target="_blank"}                 |
 | ![Image title](../../assets/img/clientlib/Svelte.js.png){ width="40" }  | [Svelte Widget](https://github.com/cheshire-cat-ai/widget-svelte){:target="_blank"}                 |
+|  ![Image title](../../assets/img/clientlib/ts_react.png){ width="40" }  |  [React + TS Widget](https://github.com/matteo-brandolino/widget-ccat-react-ts){:target="\_blank"}   |
 | ![Image title](../../assets/img/clientlib/React.js.png){ width="40" }   | [React Widget](https://github.com/AndreaPesce2002/widget-CCAT-react){:target="_blank"}              |
 | ![Image title](../../assets/img/clientlib/Angular.js.png){ width="40" } | [Angular Widget](https://github.com/Edoardo-Croci-CLDev/ccat-chat-widget-angular){:target="_blank"} |
 

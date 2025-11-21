@@ -6,7 +6,7 @@ We have prepared a GitHub template for you to expedite the creation of a new plu
 
 In the example we will create a plugin for the Poetic Socks Seller (refer to the Quickstart section if you're not familiar with it). In the next steps, replace `poetic_sock_seller` with the name of you futuristic plugin!
 
-Navigate to the [plugin-template](https://github.com/cheshire-cat-ai/plugin-template){:target="_blank"} GitHub repository, click on `Use this template` and, then, `Create a new repository`:
+Navigate to the [plugin_template](https://github.com/cheshire-cat-ai/plugin_template){:target="_blank"} GitHub repository, click on `Use this template` and, then, `Create a new repository`:
 
 ![Alt text](../../assets/img/quickstart/prepare-plugin/create-from-template.png)
 

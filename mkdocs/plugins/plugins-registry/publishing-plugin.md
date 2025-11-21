@@ -8,7 +8,7 @@ A plugin that will be published in our public registry requires some precautions
 
 To make it easier for you, we have provided a GitHub repository template so that you only need to clone it and find yourself with a folder ready to develop your first public plugin without worries.
 
-You can find the repository at this address: [https://github.com/cheshire-cat-ai/plugin-template](https://github.com/cheshire-cat-ai/plugin-template)
+You can find the repository at this address: [https://github.com/cheshire-cat-ai/plugin_template](https://github.com/cheshire-cat-ai/plugin_template)
 
 Click on the colorful "Use this template" button at the top and choose to create a new repository. Once you've chosen the name for your repository and cloned the code to your machine, you can run the setup script to clean up the files and rename everything as needed.
 

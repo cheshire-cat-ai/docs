@@ -145,7 +145,7 @@ More examples on forms [here](forms.md).
 
 ## &#x1f310; Custom Endpoints
 
-To extend the REST API endpoints available, use the `@endpoint` decorator in your plugin.
+To extend the REST API endpoints available, use the [@endpoint](../production/network/http-endpoints.md) decorator in your plugin.
 
 ```python
 from cat.mad_hatter.decorators import endpoint

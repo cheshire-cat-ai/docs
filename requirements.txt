@@ -7,3 +7,4 @@ mkdocs-literate-nav
 mkdocs-section-index
 mkdocs-mermaid2-plugin
 beautifulsoup4
+mike

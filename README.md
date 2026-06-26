@@ -17,6 +17,20 @@
 
 There is a [dedicated channel for Docs on our official Discord](https://discord.com/channels/1092359754917089350/1092360068269359206), don't be shy and contact us there if you need help!
 
+## 🔀 Versioned docs (v1 / v2)
+
+The published site hosts multiple versions, managed with [mike](https://github.com/jimporter/mike). Use the version switcher in the top bar to move between them.
+
+- **`main` branch → v2**, published as `latest` (the default users land on). It documents core `v2`.
+- **`v1` branch → v1**, frozen, published as version `1`. It documents core tag `1.9.2`.
+
+Where to contribute:
+
+- Writing **new v2 docs** or fixing current docs → branch off `main`, open your PR against `main`.
+- Patching the **old v1 docs** → branch off `v1`, open your PR against `v1`.
+
+Each branch deploys its own version automatically on push via GitHub Actions, so you don't run `mike` by hand. `mkdocs serve` still previews whichever branch you have checked out.
+
 ## 🤹 Manage the tecnology [mkdocs]
 
 To modify the behavior of MkDocs and its plugins, everything you need is within the `mkdocs.yml` file.  

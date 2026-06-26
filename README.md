@@ -19,7 +19,7 @@ There is a [dedicated channel for Docs on our official Discord](https://discord.
 The published site hosts multiple versions, managed with [mike](https://github.com/jimporter/mike). Use the version switcher in the top bar to move between them.
 
 - **`main` branch → v2**, published as `latest` (the default users land on). It documents core `v2`.
-- **`v1` branch → v1**, frozen, published as version `1`. It documents core tag `1.9.2`.
+- **`v1` branch → v1**, frozen, published as version `1`. Pure static docs (no API reference, no core checkout).
 
 Where to contribute:
 

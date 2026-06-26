@@ -48,4 +48,5 @@ The LLM and embedder are written as `"provider:model"` strings (e.g. `"openai:gp
 
 ## Stopping the Cat
 
-Stop the process with `CTRL + C` in the terminal.
+Stop the process with `CTRL + C` in the terminal.  
+To start it again: `uv run ccat`.

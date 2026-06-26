@@ -15,7 +15,7 @@ This hook can be used to edit the message sent to the user or to add keys to the
 | Name      | Type                                                                    | Description                                                        |
 |:----------|:------------------------------------------------------------------------|--------------------------------------------------------------------|
 | `message` | `dict`                                                                  | JSON dictionary to be sent to the WebSocket client.                |
-| `cat`     | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components. |
+| `cat`     | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components. |
 
 TODO: Resolve doc mismatch
 

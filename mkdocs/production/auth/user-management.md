@@ -11,7 +11,7 @@ We divide users in 3 categories:
 
 If you are developing an application that supports multiple users, it's crucial to ensure that each user's session and memories are isolated, with granular access.
 
-Each user interacts with the Cat via a dedicated [`StrayCat`](../../framework/cat-components/cheshire_cat/stray_cat.md) instance, which in turn you will be able to use in your plugins as `cat`.
+Each user interacts with the Cat via a dedicated [`StrayCat`](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) instance, which in turn you will be able to use in your plugins as `cat`.
 
 Let's now see the 3 types of users in detail.
 
@@ -90,7 +90,7 @@ This allows for auth and user management customization without breaking the many
 
 ### Access current user from a plugin
 
-In hooks, tools, forms and custom endpoints you can easily obtain user information from the `cat` variable, instance of [`StrayCat`](../../framework/cat-components/cheshire_cat/stray_cat.md).
+In hooks, tools, forms and custom endpoints you can easily obtain user information from the `cat` variable, instance of [`StrayCat`](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/).
 
 ```python
 from cat.mad_hatter.decorators import tool
@@ -104,8 +104,8 @@ def who_am_i(arg, cat):
 ### Users and memories
 
 In the Cat, users and memories are closely related. Without user-specific memory isolation, The Cat cannot maintain context across conversations.
-By default, the user system affects only the [working memory](../../framework/cat-components/memory/working_memory.md) and
-the [episodic memory](../../framework/cat-components/memory/long_term_memory.md). The other memories are shared among users, but you could easily think about a custom plugin to store and restrict access to data in [Long Term Memory](../../framework/cat-components/memory/long_term_memory.md) based on `user_id`.
+By default, the user system affects only the working memory and
+the episodic memory. The other memories are shared among users, but you could easily think about a custom plugin to store and restrict access to data in Long Term Memory based on `user_id`.
 
 Here's an example of how the `user_id` could be used to filter declarative memories both on the uploading and retrieval side:
 

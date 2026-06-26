@@ -14,7 +14,7 @@ Customize which LLMs are available.
 | Name      | Type                                                                    | Description                                                        |
 |:----------|:------------------------------------------------------------------------|--------------------------------------------------------------------|
 | `allowed` | `List[LLMSettings]`                                                     | List of LLMSettings classes, contains the allowed language models. |
-| `cat`     | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components. |
+| `cat`     | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components. |
 
 ## &#x21A9;&#xFE0F; Return
 

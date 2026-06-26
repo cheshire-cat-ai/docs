@@ -13,7 +13,7 @@ Allows replacing the default text splitter to customize the splitting process.
 | Name            | Type                                                                    | Description                                                                     |
 |:----------------|:------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | `text_splitter` | `TextSplitter`                                                          | The text splitter used by default, currently is the Langchain's `TextSplitter`. |
-| `cat`           | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components.              |
+| `cat`           | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components.              |
 
 ## &#x21A9;&#xFE0F; Return
 

@@ -13,7 +13,7 @@ Allows replacing or extending existing supported mime types and related parsers 
 | Name            | Type                                                                    | Description                                                                                 |
 |:----------------|:------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | `file_handlers` | `dict`                                                                  | A dictionary in which keys are the supported mime types and values are the related parsers. |
-| `cat`           | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components.                          |
+| `cat`           | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components.                          |
 
 ## &#x21A9;&#xFE0F; Return
 

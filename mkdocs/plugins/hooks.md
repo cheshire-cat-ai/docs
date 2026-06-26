@@ -3,7 +3,6 @@
 During execution the Cat emits a few events, for example when a user message arrives, or when a new document is uploaded to memory.
 You can `hook` these events to execute your own code and change behavior, memory and anything the Cat does.
 
-The [`Framework → Technical Diagrams`](../framework/flows/cat-bootstrap.md) section illustrates with a diagram where the hooks are called during the Cat's execution flow.
 Not all the hooks have been documented yet. ( [help needed! &#128568;](https://discord.com/channels/1092359754917089350/1092360068269359206){:target="_blank"} ).
 
 ## Available Hooks
@@ -403,7 +402,7 @@ This hook returns the default prefix that describes who the AI is and how it is 
 
 When considering hooks' arguments, remember:
 
-- `cat` will always be present, as it allows you to use the framework components. It will be always the last one. See [here](../framework/cat-components/cheshire_cat/stray_cat.md) for details and examples.
+- `cat` will always be present, as it allows you to use the framework components. It will be always the last one. See [here](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) for details and examples.
     ```python
     @hook
     def hook_name(cat):

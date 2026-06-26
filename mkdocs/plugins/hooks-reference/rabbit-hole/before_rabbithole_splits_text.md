@@ -16,7 +16,7 @@ For instance, the hook allows to change the text or edit/add metadata.
 | Name   | Type                                                                    | Description                                                                         |
 |:-------|:------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | `docs` | `List[Document]`                                                        | Langchain `Document`s resulted after parsing the file uploaded in the *RabbitHole*. |
-| `cat`  | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components.                  |
+| `cat`  | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components.                  |
 
 `doc` example:
 

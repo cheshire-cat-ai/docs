@@ -91,7 +91,7 @@ More examples ans details on hooks [here](hooks.md).
 
 
 
-## 📋 Forms
+## Forms
 
 A Form allows you to define a specific data structure, that the framework will try to automatically trigger and fullfill in a multi-turn dialogue.
 You can define custom:
@@ -165,4 +165,4 @@ You surely noticed that all the primitives listed above put at your disposal a v
 That is an instance of `StrayCat`, offering you access to the many framework components and utilities. Just to give an example, you can invoke the LLM directly using `cat.llm("write here a prompt")`.
 
 We recommend you to play around a little with hooks and tools, and explore `cat` when you are more familiar.
-See [examples](../framework/cat-components/cheshire_cat/stray_cat.md) on how to use `cat` in your plugins, and the full [`StrayCat` reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/).
+See [examples](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) on how to use `cat` in your plugins, and the full [`StrayCat` reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/).

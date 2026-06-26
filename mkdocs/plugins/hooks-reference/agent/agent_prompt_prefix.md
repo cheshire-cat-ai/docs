@@ -16,7 +16,7 @@ The prefix is then completed with the [`agent_prompt_suffix`](agent_prompt_suffi
 | Name     | Type                                                                    | Description                                                            |
 |:---------|:------------------------------------------------------------------------|------------------------------------------------------------------------|
 | `prefix` | `str`                                                                   | Main / System prompt with personality and general task to be achieved. |
-| `cat`    | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components.     |
+| `cat`    | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components.     |
 
 The default value of `prefix` is:
 ```

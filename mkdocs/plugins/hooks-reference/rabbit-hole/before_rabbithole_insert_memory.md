@@ -19,7 +19,7 @@ doc = Document(page_content="So Long, and Thanks for All the Fish", metadata={})
 | Name  | Type                                                                    | Description                                                        |
 |:------|:------------------------------------------------------------------------|--------------------------------------------------------------------|
 | `doc` | `Document`                                                              | Langchain `Document` to be inserted in memory.                     |
-| `cat` | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components. |
+| `cat` | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components. |
 
 The `Document` has two properties:
 

@@ -1,4 +1,4 @@
-# 📋 Forms
+# Forms
 
 Forms are Particular Tools useful for collecting user information during a conversation!
 

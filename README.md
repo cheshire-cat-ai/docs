@@ -1,50 +1,30 @@
-
 ## 📚 How to Contribute Documentation
 
-1. Fork the repository.
-2. Using Markdown syntax, edit or create new files for the documentation in the `/mkdocs` directory.
-3. Use **headings**, **bullet points** or **numbered lists**, **code blocks** and other formatting tools to make the documentation easy to read and understand.
-4. Use clear and concise language to explain the features, functions or concepts that are being documented.
-5. Use hyperlinks, images or other visual aids to enhance the documentation.
-6. Use the appropriate `/assets` folder for your static assets. Eg. Images goes under `/assets/img`.
-7. Add a new item or adjust menu levels through the `mkdocs.yml` file if you have made any structural modifications.
-8. When finished, commit and push your changes to your forked repository.
-9. Open a pull request and ask for feedback from the community.
-10. Keep your contributions up-to-date with any changes or updates made to the main repository.
+1. Fork the repository and branch off `main`.
+2. Edit or add Markdown files in the `/mkdocs` directory. Use headings, lists, code blocks and visual aids to keep things clear and concise.
+3. Put static assets in the relevant `/assets` folder (e.g. images under `/assets/img`).
+4. If you change the structure, update the menu in `mkdocs.yml`.
+5. Commit, push, and open a pull request against `main`.
 
 There is a [dedicated channel for Docs on our official Discord](https://discord.com/channels/1092359754917089350/1092360068269359206), don't be shy and contact us there if you need help!
 
-## 🔀 Versioned docs (v1 / v2)
+## 🤹 Manage the technology [mkdocs]
 
-The published site hosts multiple versions, managed with [mike](https://github.com/jimporter/mike). Use the version switcher in the top bar to move between them.
-
-- **`main` branch → v2**, published as `latest` (the default users land on). It documents core `v2`.
-- **`v1` branch → v1**, frozen, published as version `1`. Pure static docs (no API reference, no core checkout).
-
-Where to contribute:
-
-- Writing **new v2 docs** or fixing current docs → branch off `main`, open your PR against `main`.
-- Patching the **old v1 docs** → branch off `v1`, open your PR against `v1`.
-
-Each branch deploys its own version automatically on push via GitHub Actions, so you don't run `mike` by hand. `mkdocs serve` still previews whichever branch you have checked out.
-
-## 🤹 Manage the tecnology [mkdocs]
-
-To modify the behavior of MkDocs and its plugins, everything you need is within the `mkdocs.yml` file.  
-We invite you to read the documentation for the [MkDocs Material theme](https://squidfunk.github.io/mkdocs-material/reference/) to fully understand all the potential of the tool and how to make the most of its extensive features.
+To modify the behavior of MkDocs and its plugins, everything you need is within the `mkdocs.yml` file.
+We invite you to read the documentation for the [MkDocs Material theme](https://squidfunk.github.io/mkdocs-material/reference/) to fully understand the tool and make the most of its features.
 
 ### 📦 Requirements
 
-- Python 3.8+
-- Pip 20+
+- Python 3.13+
+- [uv](https://docs.astral.sh/uv/)
 
 Install dependencies:
 
-`pip install -r requirements.txt`
+`uv sync`
 
 ### 🛠️ Develop
 
-`mkdocs serve` or `python -m mkdocs serve` will launch a local, non static, instance of the documentation website.
+`uv run mkdocs serve` will launch a local, non-static instance of the documentation website.
 
 ### 🖌️ Diagrams
 
@@ -66,19 +46,19 @@ In the `mkdocs.yml` there is defined the hook `drawio_file.py`, this mkdocs plug
 hooks:
   - mkdocs/hooks/drawio_file.py
 ```
-  
+
 Remember that:
 
 - the tab selected during the save of the draw.io file, will become the initial page when the diagram is opened
 
 - the layers visible during the save of the draw.io files, will be the default visible layers when the diagram is opened
-  
+
 - by default, the hooks shapes have to be visible
-  
+
 - the folder `mkdocs/assets/img/diagrams` contains the svg files used in the main diagram pages, in case you change the diagrams remember to update them.
 
 ### 🏗️ Build
 
-The build stage is automated using GitHub action, you don't need to do it in order to contribute. However, if you want to have a static copy of the documentation on your local machine you are free to do it.  
+The build stage is automated using GitHub Actions, you don't need to do it in order to contribute. However, if you want a static copy of the documentation on your local machine you are free to do it.
 
-`mkdocs build` or `python -m mkdocs build` will create the actual docs static website in a folder named `/docs`.
+`uv run mkdocs build` will create the docs static website in a folder named `/docs`.

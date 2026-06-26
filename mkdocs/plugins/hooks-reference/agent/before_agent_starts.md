@@ -13,7 +13,7 @@ This hook allows reading and editing the agent input.
 | Name          | Type                                                                    | Description                                                        |
 |:--------------|:------------------------------------------------------------------------|--------------------------------------------------------------------|
 | `agent_input` | `dict`                                                                  | The information that is about to be passed to the agent.           |
-| `cat`         | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components. |
+| `cat`         | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components. |
 
 The value of `agent_input` will be:
 ```python

@@ -25,7 +25,7 @@ The new endpoint also appeared in `/docs` alongside core endpoints, under the `C
 You'll probably want to:
 
  1. restrict your custom endpoints to requests providing the [correct key or jwt](../production/auth/authentication.md)
- 2. access the [user session and main Cat's modules](../framework/cat-components/cheshire_cat/stray_cat.md) from within the endpoint
+ 2. access the [user session and main Cat's modules](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) from within the endpoint
 
 As an example let's have the endpoint producing a joke:
 
@@ -42,7 +42,7 @@ def joke(cat=check_permissions("CONVERSATION", "WRITE")):
 
 We all know LLMs' jokes are rarely fun, but you can generate a new one every time you access endpoint `GET /custom/joke`.
 
-Notice here we used `cat` as we did in hooks and tools. It is in all cases an instance of [`StrayCat`](./../framework/cat-components/cheshire_cat/stray_cat.md), to let you easily access user session, LLM and most of the functionality the framework can offer.
+Notice here we used `cat` as we did in hooks and tools. It is in all cases an instance of [`StrayCat`](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/), to let you easily access user session, LLM and most of the functionality the framework can offer.
 
 Utility function `check_permissions` will handle authentication and authorization, both for api keys and jwt, giving in output a `StrayCat` if successful. The function requires you to specify a resource (e.g. `PLUGINS`, `MEMORY`) and a permission (e.g. `READ`, `WRITE`); you can see available resources and permissions in the user manager (admin panel) and in source code under `cat/auth/permissions.py`.  
 

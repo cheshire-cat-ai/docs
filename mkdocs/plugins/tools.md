@@ -90,12 +90,12 @@ You can simply use `@tool` or pass arguments.
     def mytool(tool_input, cat):
     ```
     - The `tool_input` is a string, so if you asked in the docstring to produce an int or a dict, be sure to cast or parse the string.
-    - With `cat` you can access and use all the main framework components. This is powerful but requires some learning, see [here](../framework/cat-components/cheshire_cat/stray_cat.md).
+    - With `cat` you can access and use all the main framework components. This is powerful but requires some learning, see [here](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/).
 - The docstring is necessary, as it will show up in the LLM prompt. It should describe what the tool is useful for and how to prepare inputs, so the LLM can select the tool and input it properly.
     ```python
     """When to use the tool. Tool input description."""
     ```
-- A tool always return a string, which goes back to the agent or directly back to the user chat. If you need to store additional information, store it in [`cat.working_memory`](../framework/cat-components/memory/working_memory.md).
+- A tool always return a string, which goes back to the agent or directly back to the user chat. If you need to store additional information, store it in `cat.working_memory`.
     ```python
     return "Tool output"
     ```

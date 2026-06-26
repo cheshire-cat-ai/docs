@@ -15,7 +15,7 @@ The suffix is concatenated to [`agent_prompt_prefix`](agent_prompt_prefix.md) wh
 | Name            | Type                                                                    | Description                                                                 |
 |:----------------|:------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | `suffix`        | `str`                                                                   | The ending part of the prompt containing the memories and the chat history. |
-| `cat`           | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components.          |
+| `cat`           | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components.          |
 
 The default value of `suffix` is:
 ```

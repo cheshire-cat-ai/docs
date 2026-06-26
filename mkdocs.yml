@@ -27,7 +27,6 @@ plugins:
             docstring_style: numpy
 
 hooks:
-  - mkdocs/hooks/drawio_file.py
   - mkdocs/hooks/prepare_cat.py
 
 nav:
@@ -93,35 +92,7 @@ nav:
     - Debugging:
         - Visual Studio Code: plugins/debugging/vscode.md
 
-  - Framework:
-      - Cat Components:
-        - The Core: framework/cat-components/cheshire_cat/core.md
-        - The Stray Cat: framework/cat-components/cheshire_cat/stray_cat.md
-        - The Agent:
-            - Introduction: framework/cat-components/cheshire_cat/agent.md
-            - Procedures Chain: framework/cat-components/cheshire_cat/tool_chain.md
-            - Memory Chain: framework/cat-components/cheshire_cat/memory_chain.md
-        - The Prompts:
-            - Main Prompt: framework/cat-components/prompts/main_prompt.md
-            - Instruction Prompt: framework/cat-components/prompts/instructions.md
-        - The Vector Memory:
-            - Vector Memory Collections: framework/cat-components/memory/vector_memory.md
-        - The Long Term Memory:
-            - Introduction: framework/cat-components/memory/long_term_memory.md
-            - Episodic Memory: framework/cat-components/memory/episodic_memory.md
-            - Declarative Memory: framework/cat-components/memory/declarative_memory.md
-            - Procedural Memory: framework/cat-components/memory/procedural_memory.md
-        - The Working Memory: framework/cat-components/memory/working_memory.md
-        - The Rabbit Hole: framework/cat-components/cheshire_cat/rabbit_hole.md
-        - The White Rabbit: framework/cat-components/cheshire_cat/white_rabbit.md
-        - The Mad Hatter: framework/cat-components/cheshire_cat/mad_hatter.md
-      - Technical Diagrams:
-        - The Cat Bootstrap: framework/flows/cat-bootstrap.md
-        - Chatting with the Cat: framework/flows/chatting-with-the-cat.md
-        - Plugins Lifecycle: framework/flows/plugins-lifecycle.md
-        - Rabbit Hole Ingestion: framework/flows/rabbit-hole-ingestion.md
-
-  - Administration:
+  - Deploy:
     - Make the Cat Private: production/administrators/make_the_cat_private.md
     - Docker Compose: production/administrators/docker-compose.md
     - Environment Variables: production/administrators/env-variables.md
@@ -155,8 +126,6 @@ theme:
   favicon: assets/img/favicon.ico
   logo: assets/img/cheshire-cat-logo.svg
   font:
-    #text: Old Standard TT
-    #text: Source Serif Pro
     text: Roboto Mono
   features:
     - navigation.indexes

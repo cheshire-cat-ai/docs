@@ -19,7 +19,7 @@ It's useful for custom agent logic or when you want to use recalled memories, bu
 | Name         | Type                                                                    | Description                                                        |
 |:-------------|:------------------------------------------------------------------------|--------------------------------------------------------------------|
 | `fast_reply` | `dict`                                                                  | An initially empty dict that can be populated with a response.     |
-| `cat`        | [StrayCat](../../../framework/cat-components/cheshire_cat/stray_cat.md) | Cheshire Cat instance, allows you to use the framework components. |
+| `cat`        | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components. |
 
 ## &#x21A9;&#xFE0F; Return
 

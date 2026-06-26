@@ -9,16 +9,16 @@ These APIs return the responses provided by the LLM.
 But this is just the beginning.
 
 ## Previous Conversation History
-All previous conversations are stored in a local database called [`episodic memory`](../framework/cat-components/memory/episodic_memory.md).
+All previous conversations are stored in a local database called `episodic memory`.
 When you ask a question, the Cat answers taking into account the past conversations.
 
 ## Loading Documents
 You can load text documents as well.
-These documents are also saved in a local database called [`declarative memory`](../framework/cat-components/memory/declarative_memory.md).
+These documents are also saved in a local database called `declarative memory`.
 When answering, the Cat will consider the information within these documents.
 Documents can be uploaded through the APIs or the `Admin Portal`.
 
-The [`Rabbit Hole`](../framework/cat-components/cheshire_cat/rabbit_hole.md) is the component responsible for the document ingestion.
+The `Rabbit Hole` is the component responsible for the document ingestion.
 
 ## Performing Actions
 The Cheshire Cat isn't limited to just answering questions; it can also perform actions.
@@ -28,7 +28,7 @@ The only limit to the Python code's capabilities is your imagination.
 ## Executing Actions in the Future
 Actions are not limited to being triggered immediately after a chat initiated by a human, they can be scheduled for future execution and, if needed, set to recur, or even initiated without any chat trigger.
 
-The [`White Rabbit`](../framework/cat-components/cheshire_cat/white_rabbit.md) is the component that triggers the scheduled Actions.
+The `White Rabbit` is the component that triggers the scheduled Actions.
 
 ## Extending the Core
 Additionally, it's possible to customize the Cheshire Cat's core.
@@ -39,7 +39,7 @@ without directly modifying the core of the Cheshire Cat.
 
 [`Tools`](../plugins/tools.md) and [`Hooks`](../plugins/hooks.md) are packaged into [`Plugins`](../plugins/plugins.md) that can be installed by placing files in a specific folder or using the `Admin Portal`.
 
-The [`Mad Hatter`](../framework/cat-components/cheshire_cat/mad_hatter.md) is the component that manages plugins.
+The `Mad Hatter` is the component that manages plugins.
 
 ## Sharing Plugins
 If desired, you can  [`publish your Plugins`](../plugins/plugins-registry/publishing-plugin.md) on the public registry.

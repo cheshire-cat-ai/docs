@@ -1,42 +1,43 @@
-name: Build and deploy mkdocs on gh-pages
+name: Build and deploy mkdocs (v1) on gh-pages
 
 on:
   push:
     branches:
-      - main
-  schedule:
-    - cron: '0 4 * * 1' # Every Monday at 4:00 AM
+      - v1
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout 🛎️
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # full history so mike can update the gh-pages branch
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Clone repository
-      uses: actions/checkout@v3
+    - name: Clone core (v1, pinned) 🐱
+      uses: actions/checkout@v4
       with:
         repository: cheshire-cat-ai/core
-        ref: main
+        ref: '1.9.2'
         # Relative path under $GITHUB_WORKSPACE to place the repository
         path: core
 
-    - name: Build site 🏗️
+    - name: Configure Git 🔧
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Deploy v1 with mike 🚀
       run: |
         cp -r core/core/cat ./
-        mkdocs build
-
-    - name: Deploy to GitHub Pages 🚀
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs
-        publish_branch: gh-pages
-        force_orphan: true
+        git fetch origin gh-pages --depth=1 || true
+        mike deploy --push 1

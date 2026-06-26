@@ -47,7 +47,3 @@ Your empty plugin will be there, activate it:
 Here the plugins reference: [`Plugins`](/docs/plugins/plugins/)
 
 If you plan to publish your plugin, also take a look at this [`Plugins → Registry`](/docs/plugins/plugins-registry/plugin-from-template/)
-
-## Next Step
-
-In the [next step](/docs/quickstart/writing-tool/), you will learn how to create your first `Tool` inside the plugin.

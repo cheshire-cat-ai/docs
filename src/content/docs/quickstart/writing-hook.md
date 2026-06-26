@@ -61,7 +61,3 @@ The `agent_prompt_prefix` hook, in particular, allows instructing the Cat about 
 Hooks reference: [Plugins → Hooks](/docs/plugins/hooks/)
 
 The plugin management flow also is customizable (using the `plugin` decorator instead of `hook` ones). Check out [this](/docs/plugins/hooks/) for more information
-
-## Next Step
-
-In the [next step](/docs/quickstart/conclusion/), we will summarizes and wraps up.

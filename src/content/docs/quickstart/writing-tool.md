@@ -100,7 +100,3 @@ Feel free to make changes within the code and observe the results.
 Tools reference: [Plugins → Tools](/docs/plugins/tools/)
 
 Sometimes debugging can be necessary, please refer to the [`Plugins → Debugging`](/docs/plugins/debugging/vscode/) section for more information.
-
-## Next Step
-
-In the [next step](/docs/quickstart/writing-hook/), you will learn how to create your first `Hook`.

@@ -1,5 +1,3 @@
-# MacOS
-.DS_Store
 
 # Node / Astro
 node_modules/
@@ -16,5 +14,8 @@ npm-debug.log*
 .idea/
 .vscode/
 
-# Generated v1 API package (legacy, no longer used)
-cat
+# agents
+CLAUDE.md
+AGENTS.md
+.claude
+.opencode

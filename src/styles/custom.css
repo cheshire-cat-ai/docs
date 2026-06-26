@@ -53,3 +53,13 @@
 .site-title img {
   height: 2.2rem;
 }
+
+/* The logo SVG is white — invisible on the light header. Make it dark in light theme. */
+:root[data-theme='light'] .site-title img {
+  filter: brightness(0);
+}
+
+/* Site title same color as headings (not the teal accent) */
+.site-title {
+  color: var(--sl-color-white);
+}

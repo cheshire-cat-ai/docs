@@ -13,7 +13,7 @@ The Cheshire Cat is an open-source, hackable and production-ready framework that
 
 <div class="grid" markdown>
 
-[&#127939; Get started now](/docs/quickstart/introduction/)
+[&#127939; Get started now](/docs/quickstart/installation-configuration/)
  
 [&#129693; Available Hooks](/docs/plugins/hooks/#available-hooks)
 

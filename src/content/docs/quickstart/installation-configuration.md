@@ -1,96 +1,51 @@
 ---
-title: "Installation and First configuration"
+title: "Installation"
 ---
 
-## Requirements
+The Cheshire Cat is a Python package. The only prerequisite is [`uv`](https://docs.astral.sh/uv/getting-started/installation/), the Python package manager.
 
-To run the Cheshire Cat, you need to have `Docker` ([instructions](https://docs.docker.com/engine/install/)) and `docker compose` ([instructions](https://docs.docker.com/compose/install/)) already installed on your system.
+## Install and run
 
-The Cat is not a LLM, it uses a LLM.
-Hence, when you run the Cat for the first time, you need to configure the LLM and the embedder.  
-Most people use [ChatGPT](https://platform.openai.com/docs/models/gpt-3-5), it's quite cheap and powerful enough.
-We will do the same during the next steps.
-
-To use `ChatGPT`, you need an API key. You can request one on the provider's website:
-
-- visit your OpenAI [API Keys](https://platform.openai.com/account/api-keys) page
-- create an API key with `+ Create new secret key` and copy it
-
-## Setup
-
-Create a folder on your machine, we will use `cheshire-cat-ai`, and inside it create a file named `compose.yml`.
-Copy/paste the following inside:
-
-```yaml
-services:
-
-  cheshire-cat-core:
-    image: ghcr.io/cheshire-cat-ai/core:latest
-    container_name: cheshire_cat_core
-    ports:
-      - 1865:80
-      - 5678:5678
-    volumes:
-      - ./static:/app/cat/static
-      - ./plugins:/app/cat/plugins
-      - ./data:/app/cat/data
-```
-
-## Starting the Cat
-    
-- Open a terminal inside the new folder and run:
+In an empty folder:
 
 ```bash
-docker compose up
+uv init --bare
+uv add cheshire-cat-ai
+uv run ccat
 ```
 
-The first time you run the `docker compose up` command, it will take several minutes to pull the Docker Cat image depending on network connection. Once the download is complete, the startup process will begin.
+The first run downloads the dependencies and scaffolds a minimal project (a `plugins/` folder and a `data/` folder for persistence. When you see the Cheshire Cat logo in the terminal, everything is up and running.
 
-When you see the fantastic Cheshire Cat logo in terminal, it means that everything it's up and running!
+## Where the Cat lives
 
-![Up and running](../assets/img/quickstart/installation-configuration/up-and-running.png)
+Once running, the Cat exposes three addresses on port `1865`:
 
-Inside the new folder, you will see three newly created directories:
+| Address | What it is | For |
+| --- | --- | --- |
+| [localhost:1865](http://localhost:1865) | Web UI | humans |
+| [localhost:1865/docs](http://localhost:1865/docs) | REST API playground | humans |
+| [localhost:1865/openapi.json](http://localhost:1865/openapi.json) | OpenAPI schema | agents |
 
- - `data`: where long term memory and settings are stored
- - `plugins`: where we will install and develop plugins
- - `static`: folder to serve static files from 
+:::tip[For coding agents]
+Point your agent at [localhost:1865/openapi.json](http://localhost:1865/openapi.json). It is the full, machine-readable contract of every endpoint — the Cat's API surface in one file, no scraping required.
+:::
 
-These directories will retain your work even if the container is deleted.
+## Configure the LLM
+
+The Cat is not an LLM, it *uses* one. A fresh install ships with a placeholder LLM that just replies "configure me", so the first thing to do is point the Cat at a real model.
+
+You can do this in two ways:
+
+- **From the UI** — open [localhost:1865](http://localhost:1865), go to **Settings**, pick a provider (e.g. OpenAI) and set your API key, then go to Core Settings and select a model (e.g. `openai:gpt-4o`). The choice is persisted.
+- **From code** — create a `config.py` in your project folder. It is plain Python, so you can read your key from `.env` / `os.environ`:
+
+  ```python
+  DEFAULT_LLM = "openai:gpt-4o"
+  DEFAULT_EMBEDDER = "openai:text-embedding-3-small"
+  ```
+
+The LLM and embedder are written as `"provider:model"` strings (e.g. `"openai:gpt-4o"`, `"ollama:llama3.2"`).
 
 ## Stopping the Cat
 
-Stop the terminal with `CTRL + C`.
-
-## Starting the Cat in background
-
-Now start again the container but in background mode, use the `--detach` or `-d` flag to the command, as:
-```
-docker compose up -d
-```
-In this way the terminal won't be locked by the docker compose execution.
-
-To check the logs do the following:
-
-```
-docker compose logs -f
-```
-
-To stop the container, use this command in a separate terminal session:
-
-```
-docker compose down
-```
-
-## First configuration of the LLM
-
-- Start the Cat if it's stopped
-- Open the `Admin Portal` in your browser at [`localhost:1865/admin`](http://localhost:1865/admin)
-- Authenticate as administrator with user `admin` and password `admin`:
-![alt text](../assets/img/quickstart/installation-configuration/logon.png)
-- In the `Settings` tab configure the `Large Language Model` and the `Embedder` and paste your API key:  
-![alt text](../assets/img/quickstart/installation-configuration/configure-llm-embedder.png)
-<video controls muted style="width:100%" src="/docs/assets/vid/setup.mp4"></video>
-
-## Next step
-In the [next step](/docs/quickstart/play-with-the-cat/), you will learn how to play with the Cat.
+Stop the process with `CTRL + C` in the terminal.

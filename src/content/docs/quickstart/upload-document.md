@@ -31,6 +31,3 @@ By clicking on the question mark next to the answer, you can understand what pro
 In this case, you can see that it used the knowledge coming from the documents (`declarative memory`):
 
 ![Alt text](../assets/img/quickstart/upload-document/why-response.png)
-
-## Next Step
-In the [next step](/docs/quickstart/installing-plugin/), you will learn what a plugin is and how to install it.

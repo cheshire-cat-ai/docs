@@ -98,5 +98,3 @@ Feel free to make changes within the code and observe the results.
 #### More Info
 
 Tools reference: [Plugins → Tools](/docs/plugins/tools/)
-
-Sometimes debugging can be necessary, please refer to the [`Plugins → Debugging`](/docs/plugins/debugging/vscode/) section for more information.

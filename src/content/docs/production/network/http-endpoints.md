@@ -13,8 +13,5 @@ You will find there most of the documentation you need, alongside code snippets 
 
 ![Alt text](../../assets/img/production/end_example4.png)
 
-
-Check out also the the community [client libraries](/docs/production/network/clients/).
-
 When you feel ready you can also create [custom endpoints](/docs/plugins/endpoints/) direclty in your plugins.
 

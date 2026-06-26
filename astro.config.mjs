@@ -116,26 +116,19 @@ export default defineConfig({
                 { label: 'Publishing a Plugin', slug: 'plugins/plugins-registry/publishing-plugin' },
               ],
             },
-            {
-              label: 'Debugging',
-              items: [{ label: 'Visual Studio Code', slug: 'plugins/debugging/vscode' }],
-            },
           ],
         },
         {
           label: 'Deploy',
           items: [
             { label: 'Make the Cat Private', slug: 'production/administrators/make_the_cat_private' },
-            { label: 'Docker Compose', slug: 'production/administrators/docker-compose' },
             { label: 'Environment Variables', slug: 'production/administrators/env-variables' },
             { label: 'Automatic Tests', slug: 'production/administrators/tests' },
             { label: 'Backups and Updates', slug: 'production/administrators/backups-updates' },
             {
               label: 'Network',
               items: [
-                { label: 'WebSocket Endpoints', slug: 'production/network/ws-endpoints' },
                 { label: 'HTTP Endpoints', slug: 'production/network/http-endpoints' },
-                { label: 'Clients', slug: 'production/network/clients' },
               ],
             },
             {

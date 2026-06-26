@@ -86,7 +86,7 @@ While you can customize the `AuthHandler` to assign identity and permissions via
  - for websocket, via `?token=<credential>` query parameter 
  - the two above are valid for both api keys and JWT
 
-This allows for auth and user management customization without breaking the many [client libraries and tools](/docs/production/network/clients/) the community is building.
+This allows for auth and user management customization without breaking the many client libraries and tools the community is building.
 
 
 ## Examples

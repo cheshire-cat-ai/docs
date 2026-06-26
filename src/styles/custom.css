@@ -23,8 +23,9 @@
   --sl-color-bg-sidebar: #fafafa;
 }
 
-/* Teal links in content */
-.sl-markdown-content a:not(:where(.not-content *)) {
+/* Teal links in content — but not link buttons, which set their own text
+   color against an accent background (teal-on-teal would be invisible). */
+.sl-markdown-content a:not(:where(.not-content *)):not(.sl-link-button) {
   color: var(--sl-color-accent);
 }
 

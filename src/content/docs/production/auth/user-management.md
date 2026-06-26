@@ -93,7 +93,7 @@ This allows for auth and user management customization without breaking the many
 
 ### Access current user from a plugin
 
-In hooks, tools, forms and custom endpoints you can easily obtain user information from the `cat` variable, instance of [`StrayCat`](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/).
+In hooks, tools and custom endpoints you can easily obtain user information from the `cat` variable, instance of [`StrayCat`](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/).
 
 ```python
 from cat.mad_hatter.decorators import tool

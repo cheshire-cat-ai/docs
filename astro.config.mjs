@@ -46,9 +46,9 @@ export default defineConfig({
           label: 'Plugins',
           items: [
             { label: 'How to Write a Plugin', slug: 'plugins/plugins' },
+            { label: 'Write an Agent', slug: 'plugins/agents' },
             { label: 'Tools', slug: 'plugins/tools' },
             { label: 'Hooks', slug: 'plugins/hooks' },
-            { label: 'Forms', slug: 'plugins/forms' },
             { label: 'Custom Endpoints', slug: 'plugins/endpoints' },
             { label: 'Logging', slug: 'plugins/logging' },
             { label: 'Settings', slug: 'plugins/settings' },

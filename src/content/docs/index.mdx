@@ -3,13 +3,17 @@ title: "Hello dear"
 ---
 
 import { LinkButton, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import CopyPromptButton from '../../components/CopyPromptButton.astro';
 
 The Cheshire Cat is an open-source, hackable framework - the best way to learn how AI agents really work.
 
 It is designed bottom up to be **easy to understand** and **easy to extend** via vibe coding and agentic engineering.
 
 
-<LinkButton href="/docs/quickstart/installation-configuration/">Get started now</LinkButton>
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin: 1.5rem 0;">
+  <LinkButton href="/docs/quickstart/installation-configuration/">Get started now</LinkButton>
+  <CopyPromptButton />
+</div>
 
 ## Quick links
 

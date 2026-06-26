@@ -1,0 +1,77 @@
+---
+// Copies a ready-made prompt to the clipboard so a user can paste it
+// straight into a coding agent (Claude Code, Cursor, etc.) and start
+// building with the Cheshire Cat right away.
+const prompt = `I want to build an AI agent with the Cheshire Cat, an open-source Python framework.
+
+Read the official docs at https://cheshirecat.ai/docs/ to learn how it works, then:
+1. Run the Cat locally via \`uv\` (see the quickstart).
+2. Scaffold a new plugin for me.
+3. Take a look at the endpoints in \`http://localhost:1865/openapi.json\` (by default most endpoints are locked via Authorization header, default is \`meow\`)
+4. Invite me to visit \`http://localhost:1865\` in the browser
+5. help me configure the LLM`;
+---
+
+<button class="ccat-copy-prompt" data-prompt={prompt} type="button">
+  <svg class="ccat-copy-prompt__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+  </svg>
+  <span class="ccat-copy-prompt__label">Copy prompt for your coding agent</span>
+</button>
+
+<script>
+  document.querySelectorAll('.ccat-copy-prompt').forEach((btn) => {
+    const el = btn as HTMLButtonElement;
+    const label = el.querySelector('.ccat-copy-prompt__label') as HTMLElement;
+    const original = label.textContent;
+    el.addEventListener('click', async () => {
+      const prompt = el.dataset.prompt ?? '';
+      try {
+        await navigator.clipboard.writeText(prompt);
+      } catch {
+        // Fallback for non-secure contexts.
+        const ta = document.createElement('textarea');
+        ta.value = prompt;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      el.classList.add('is-copied');
+      label.textContent = 'Copied! Paste it into your agent';
+      window.setTimeout(() => {
+        el.classList.remove('is-copied');
+        label.textContent = original;
+      }, 2000);
+    });
+  });
+</script>
+
+<style>
+  /* Mirror Starlight's <LinkButton> metrics so both buttons match in size. */
+  .ccat-copy-prompt {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1rem;
+    border-radius: 999rem;
+    border: 1px solid var(--sl-color-accent);
+    background-color: transparent;
+    color: var(--sl-color-accent);
+    font-weight: 600;
+    line-height: 1.1875;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .ccat-copy-prompt:hover,
+  .ccat-copy-prompt.is-copied {
+    background-color: var(--sl-color-accent);
+    color: white;
+  }
+  .ccat-copy-prompt__icon {
+    flex-shrink: 0;
+  }
+</style>

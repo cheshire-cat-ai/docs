@@ -1,0 +1,53 @@
+
+body {
+  /* Normal font color */
+  --md-primary-fg-color:#859;
+  --md-primary-fg-color--dark: #859;
+  --md-primary-bg-color: white;
+
+  --md-typeset-a-color: #08b;
+  --md-accent-fg-color: #08b;
+
+  background-color: #fafafa;
+}
+
+.md-nav--secondary .md-nav__title,
+.md-nav--primary .md-nav__title,
+.md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
+  background: #fafafa;
+  box-shadow: none;
+}
+
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+  height: 40px;
+}
+
+.md-header {
+  color: white;
+}
+
+.md-header__title {
+  font-size: 1.1rem;
+}
+
+.md-search {
+  flex-grow: 1;
+}
+
+.md-search__inner {
+  width: 100%;
+}
+
+.md-tabs__list {
+  justify-content: center;
+}
+
+.md-tabs__link {
+  font-size: 0.8rem;
+  padding-right: 20px;
+}
+.md-tabs__item--active {
+  font-weight: bold;
+}
+
+

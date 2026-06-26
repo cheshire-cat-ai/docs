@@ -39,12 +39,10 @@ jobs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
     - name: Deploy v2 as "latest" with mike 🚀
+      # The prepare_cat hook materialises ./cat from core/src/cat (and strips the
+      # top-level __init__.py so mkdocstrings can collect the package), so no
+      # manual copy is needed here.
       run: |
-        cp -r core/src/cat ./
-        # v2 ships cat/ as a regular package (top-level __init__.py); removing it
-        # makes mkdocstrings/griffe treat it as a namespace package, so it can
-        # discover subdirs without their own __init__.py (e.g. looking_glass).
-        rm -f cat/__init__.py
         git fetch origin gh-pages --depth=1 || true
-        mike deploy --push --update-aliases 2 latest
+        mike deploy --push --update-aliases --title "v2" 2 latest
         mike set-default --push latest

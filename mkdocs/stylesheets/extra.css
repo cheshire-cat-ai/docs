@@ -1,8 +1,8 @@
 
 body {
   /* Normal font color */
-  --md-primary-fg-color:#859;
-  --md-primary-fg-color--dark: #859;
+  --md-primary-fg-color:rgb(60, 60, 60);
+  --md-primary-fg-color--dark: rgb(60, 60, 60);
   --md-primary-bg-color: white;
 
   --md-typeset-a-color: #08b;

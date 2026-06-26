@@ -28,6 +28,7 @@ plugins:
 
 hooks:
   - mkdocs/hooks/drawio_file.py
+  - mkdocs/hooks/prepare_cat.py
 
 nav:
 

@@ -13,18 +13,9 @@ plugins:
       video_autoplay: False
       video_type: mp4
   - search
-  - gen-files:
-      scripts:
-        - gen_pages.py
   - literate-nav:
       nav_file: SUMMARY.md
   - section-index
-  - mkdocstrings:
-      handlers:
-        python:
-          paths: [mkdocs/API_Documentation]
-          options:
-            docstring_style: numpy
 
 hooks:
   - mkdocs/hooks/drawio_file.py
@@ -85,7 +76,6 @@ nav:
       - Lifecycle:
         - before_cat_bootstrap: plugins/hooks-reference/lifecycle/before_cat_bootstrap.md
         - after_cat_bootstrap: plugins/hooks-reference/lifecycle/after_cat_bootstrap.md
-    - Python Reference: API_Documentation/
     - Registry:
       - Using the Plugin Template: plugins/plugins-registry/plugin-from-template.md
       - Publishing a Plugin: plugins/plugins-registry/publishing-plugin.md

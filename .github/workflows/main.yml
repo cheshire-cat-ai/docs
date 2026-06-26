@@ -23,14 +23,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Clone core (v1, pinned) 🐱
-      uses: actions/checkout@v4
-      with:
-        repository: cheshire-cat-ai/core
-        ref: '1.9.2'
-        # Relative path under $GITHUB_WORKSPACE to place the repository
-        path: core
-
     - name: Configure Git 🔧
       run: |
         git config user.name "github-actions[bot]"
@@ -38,6 +30,5 @@ jobs:
 
     - name: Deploy v1 with mike 🚀
       run: |
-        cp -r core/core/cat ./
         git fetch origin gh-pages --depth=1 || true
         mike deploy --push 1

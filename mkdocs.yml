@@ -157,7 +157,7 @@ theme:
   font:
     #text: Old Standard TT
     #text: Source Serif Pro
-    text: Lato
+    text: Roboto Mono
   features:
     - navigation.indexes
     - navigation.footer

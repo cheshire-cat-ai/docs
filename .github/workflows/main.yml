@@ -1,49 +1,65 @@
-name: Build and deploy mkdocs (v2 / latest) on gh-pages
+name: Build and deploy docs (Astro Starlight) to gh-pages
 
 on:
   push:
     branches:
       - main
-  schedule:
-    - cron: '0 4 * * 1' # Every Monday at 4:00 AM
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: true
+
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0 # full history so mike can update the gh-pages branch
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
 
-    - name: Install uv 📦
-      uses: astral-sh/setup-uv@v5
+      - name: Setup Node ⬢
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
 
-    - name: Install dependencies
-      run: uv sync
+      - name: Install dependencies 📦
+        run: npm ci
 
-    - name: Clone core (v2) 🐱
-      uses: actions/checkout@v4
-      with:
-        repository: cheshire-cat-ai/core
-        ref: v2
-        # Relative path under $GITHUB_WORKSPACE to place the repository
-        path: core
+      - name: Build 🏗️
+        run: npm run build
 
-    - name: Configure Git 🔧
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
+      # v1 docs are already deployed under gh-pages /1 (served at /docs/1/).
+      # We never rebuild them — just carry the existing folder into the new
+      # publish so a clean (force_orphan) deploy doesn't wipe it.
+      - name: Fetch current gh-pages 🗂️
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: .ghpages
+        continue-on-error: true
 
-    - name: Deploy v2 as "latest" with mike 🚀
-      # The prepare_cat hook materialises ./cat from core/src/cat (and strips the
-      # top-level __init__.py so mkdocstrings can collect the package), so no
-      # manual copy is needed here.
-      run: |
-        git fetch origin gh-pages --depth=1 || true
-        uv run mike deploy --push --update-aliases --title "v2" 2 latest
-        uv run mike set-default --push latest
+      - name: Preserve already-deployed v1 (/docs/1/) 🧊
+        run: |
+          if [ -d .ghpages/1 ]; then
+            echo "Carrying over existing v1 docs"
+            rm -rf dist/1
+            cp -r .ghpages/1 dist/1
+          else
+            echo "No existing v1 folder found on gh-pages — skipping"
+          fi
+
+      - name: Deploy to gh-pages 🚀
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          # Clean publish: drops stale mike artifacts (2/, latest, versions.json,
+          # old top-level dirs) while the step above keeps /1 intact.
+          force_orphan: true
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com

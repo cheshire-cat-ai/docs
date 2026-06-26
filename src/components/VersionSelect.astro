@@ -1,0 +1,50 @@
+---
+// Lightweight version switcher.
+// v2 = this Starlight site (served at BASE_URL, e.g. /docs/).
+// v1 = the previously deployed MkDocs build, left untouched at /docs/1/.
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const versions = [
+  { label: 'v2 (latest)', value: `${base}/`, current: true },
+  { label: 'v1', value: `${base}/1/`, current: false },
+];
+---
+
+<label class="ccat-version">
+  <span class="ccat-version__label">Version</span>
+  <select class="ccat-version__select" aria-label="Select documentation version">
+    {versions.map((v) => (
+      <option value={v.value} selected={v.current}>{v.label}</option>
+    ))}
+  </select>
+</label>
+
+<script>
+  document.querySelectorAll('.ccat-version__select').forEach((el) => {
+    el.addEventListener('change', (e) => {
+      const value = (e.target as HTMLSelectElement).value;
+      if (value) window.location.href = value;
+    });
+  });
+</script>
+
+<style>
+  .ccat-version {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: var(--sl-text-sm);
+  }
+  .ccat-version__label {
+    color: var(--sl-color-gray-3);
+  }
+  .ccat-version__select {
+    flex: 1;
+    padding: 0.3rem 0.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--sl-color-gray-5);
+    background-color: var(--sl-color-bg-nav);
+    color: var(--sl-color-white);
+    cursor: pointer;
+  }
+</style>

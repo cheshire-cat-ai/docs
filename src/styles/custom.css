@@ -1,0 +1,55 @@
+/* Cheshire Cat docs theme — ported from the old MkDocs Material extra.css.
+   Teal accent, soft surfaces, Roboto Mono, generous line-height. */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* Teal accent (was --md-typeset-a-color / --md-accent-fg-color) */
+  --sl-color-accent-low: #0d3a36;
+  --sl-color-accent: #0d9488;
+  --sl-color-accent-high: #5eead4;
+
+  --sl-font: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sl-line-height: 1.7;
+
+  /* Slightly rounded surfaces */
+  --ccat-radius: 8px;
+}
+
+/* Light theme: soft off-white background like the old site */
+:root[data-theme='light'] {
+  --sl-color-bg: #fafafa;
+  --sl-color-bg-nav: #fafafa;
+  --sl-color-bg-sidebar: #fafafa;
+}
+
+/* Teal links in content */
+.sl-markdown-content a:not(:where(.not-content *)) {
+  color: var(--sl-color-accent);
+}
+
+/* Soft rounding + light borders on surfaces */
+.sl-markdown-content pre,
+.sl-markdown-content :not(pre) > code,
+.sl-markdown-content table,
+.starlight-aside {
+  border-radius: var(--ccat-radius);
+}
+
+.sl-markdown-content pre {
+  border: 1px solid color-mix(in srgb, var(--sl-color-gray-5) 60%, transparent);
+}
+
+.sl-markdown-content table {
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.starlight-aside {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Logo a touch larger, like the old header */
+.site-title img {
+  height: 2.2rem;
+}

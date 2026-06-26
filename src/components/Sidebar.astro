@@ -1,0 +1,9 @@
+---
+// Override of Starlight's Sidebar: render the version switcher above the
+// default navigation, then the default sidebar untouched.
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+import VersionSelect from './VersionSelect.astro';
+---
+
+<VersionSelect />
+<Default><slot /></Default>

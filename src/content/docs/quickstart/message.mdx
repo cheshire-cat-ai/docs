@@ -8,20 +8,24 @@ The Cat is an **API-first** framework, it is intended to be used machine to mach
 
 ## Web UI
 
-A minimal web UI is included in plugin `ui`, automatically installed at first launch. Find it at [http://localhost:1865](http://localhost:1865).  
+A minimal web UI is included in plugin `ui`, automatically installed at first launch. Find it at [localhost:1865](http://localhost:1865).  
 The UI also allows you to manage settings and plugins. 
 
 ![The web playground](../assets/img/quickstart/play-with-the-cat/play-with-the-cat.png)
 
 ## REST API
 
-To talk to the Cat from another application, send a `POST` request to:
+To use the Cat from another application check out the endpoints:
+ - point your coding agent to [localhost:1865/openapi.json](http://localhost:1865/openapi.json)
+ - play around visually with the endpoints at [localhost:1865/docs](http://localhost:1865/docs)
+
+To message an agent, send a `POST` request to:
 
 ```http
 POST /agents/{slug}/message
 ```
 
-- `{slug}` is the id of the agent you want to talk to. Every fresh install ships a built-in agent with slug `default`, so use `default` if you have not written your own agent yet. You can list every registered agent at [http://localhost:1865/agents](http://localhost:1865/agents).
+- `{slug}` is the id of the agent you want to talk to. Every fresh install ships a built-in agent with slug `default`, so use `default` if you have not written your own agent yet. You can list every registered agent at [localhost:1865/agents](http://localhost:1865/agents).
 - Authentication is a single header: `Authorization: meow`. `meow` is the default master key for local development. Change it before going to production (see [Authentication](/docs/production/auth/authentication/)).
 - The body carries the conversation as a list of `messages`, composed of one or more `ContentBlock`.
 

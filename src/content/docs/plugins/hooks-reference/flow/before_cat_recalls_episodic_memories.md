@@ -23,7 +23,7 @@ It also returns the embedded query (embedding) and the conditions on recall (met
 | Name                     | Type                                                                    | Description                                                        |
 |:-------------------------|:------------------------------------------------------------------------|--------------------------------------------------------------------|
 | `episodic_recall_config` | `dict`                                                                  | Dictionary with data needed to recall episodic memories.           |
-| `cat`                    | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components. |
+| `cat`                    | Cat | Cheshire Cat instance, allows you to use the framework components. |
 
 The default value of `episodic_recall_config` is:
 ```python

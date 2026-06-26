@@ -22,7 +22,7 @@ An official plugin is available to test this technique.
 | Name           | Type                                                                    | Description                                                        |
 |:---------------|:------------------------------------------------------------------------|--------------------------------------------------------------------|
 | `user_message` | `str`                                                                   | The user's message that will be used to query the vector memories. |
-| `cat`          | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components. |
+| `cat`          | Cat | Cheshire Cat instance, allows you to use the framework components. |
 
 ## &#x21A9;&#xFE0F; Return
 

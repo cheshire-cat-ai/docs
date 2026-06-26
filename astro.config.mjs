@@ -33,9 +33,7 @@ export default defineConfig({
           label: 'Quickstart',
           items: [
             { label: 'Install', slug: 'quickstart/installation-configuration' },
-            { label: 'Play with the Cat', slug: 'quickstart/play-with-the-cat' },
-            { label: 'Upload a Document', slug: 'quickstart/upload-document' },
-            { label: 'Install a Plugin', slug: 'quickstart/installing-plugin' },
+            { label: 'Message the Cat', slug: 'quickstart/message' },
             { label: 'Create a Plugin', slug: 'quickstart/prepare-plugin' },
             { label: 'Write the first Tool', slug: 'quickstart/writing-tool' },
             { label: 'Write the first Hook', slug: 'quickstart/writing-hook' },
@@ -45,6 +43,7 @@ export default defineConfig({
         {
           label: 'Plugins',
           items: [
+            { label: 'Install a Plugin', slug: 'quickstart/installing-plugin' },
             { label: 'How to Write a Plugin', slug: 'plugins/plugins' },
             { label: 'Write an Agent', slug: 'plugins/agents' },
             { label: 'Tools', slug: 'plugins/tools' },

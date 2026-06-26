@@ -147,7 +147,7 @@ flowchart TD
         def activated(plugin):
             # Upload an url in the memory when the plugin is activated
             url = "https://cheshire-cat-ai.github.io/docs/technical/plugins/hooks/"
-            ccat.rabbit_hole.ingest_file(stray=ccat, file=url)
+            ccat.rabbit_hole.ingest_file(file=url)
         ```
 
     ??? note "Other resources"
@@ -419,7 +419,7 @@ This hook returns the default prefix that describes who the AI is and how it is 
 
 When considering hooks' arguments, remember:
 
-- `cat` will always be present, as it allows you to use the framework components. It will be always the last one. See [here](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) for details and examples.
+- `cat` will always be present, as it allows you to use the framework components. It will be always the last one.
     ```python
     @hook
     def hook_name(cat):

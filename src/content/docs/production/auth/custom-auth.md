@@ -140,4 +140,4 @@ The `factory_allowed_auth_handlers` hook allows you to add your own auth handler
 The `AuthUserInfo` class represents the decoded content of an authentication token. This class is used to standardize the 
 output of AuthHandlers, ensuring that token details are consistent across different authentication systems. 
 The AuthUserInfo object is crucial for session management within Cat's core, as it either retrieves or creates a user 
-session, known as a StrayCat. 
+session. 

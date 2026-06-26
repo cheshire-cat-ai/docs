@@ -15,7 +15,7 @@ from cat import Agent
 class Poet(Agent):
     # `slug` is the id clients use to address this agent. Keep it short.
     slug = "poet"
-    # `name` and `description` show up in agent listings (e.g. the UI).
+    # `name` and `description` show up in agent listings.
     name = "Poet"
     description = "Answers every message in rhyme."
 
@@ -25,7 +25,7 @@ class Poet(Agent):
 
 Drop this in `plugins/my_plugin/my_agent.py`, and the Cat picks it up automatically.
 
-## Giving the agent hands: tools
+## Agent with tools
 
 A tool is a method decorated with `@tool`. Its name, docstring and type hints become the schema the LLM sees - so the docstring *is* the tool's manual. Tools are `async`, so they can `await` a database, the network, anything.
 
@@ -73,14 +73,25 @@ Two things to notice:
 
 Send a message and name the agent by its `slug`:
 
-```http
-POST /agents/{slug}/message
-{ "messages": [{ "role": "user", "content": "add milk and eggs, then show my list" }] }
+```bash
+curl -X POST http://localhost:1865/agents/todo/message \
+  -H "Authorization: meow" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "messages": [
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "add milk and eggs, then show my list"
+                }
+            ]
+        }
+    ]
+}'
 ```
 
 The built-in agent is `default`. Any agent in any installed plugin can be addressed by its `slug`. You can browse every registered agent - and its argument schema - via `GET` [localhost:1865/agents](http://localhost:1865/agents), or feed [localhost:1865/openapi.json](http://localhost:1865/openapi.json) to your own coding agent.
 
-## Where to go next
 
-- [Tools](/docs/plugins/tools/) — the agent's hands, in depth.
-- [Hooks](/docs/plugins/hooks/) — adapt the Cat's flow around your agent.

@@ -12,7 +12,7 @@ We divide users in 3 categories:
 
 If you are developing an application that supports multiple users, it's crucial to ensure that each user's session and memories are isolated, with granular access.
 
-Each user interacts with the Cat via a dedicated [`StrayCat`](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) instance, which in turn you will be able to use in your plugins as `cat`.
+Each user interacts with the Cat via a dedicated session, which in turn you will be able to use in your plugins as `cat`.
 
 Let's now see the 3 types of users in detail.
 
@@ -93,7 +93,7 @@ This allows for auth and user management customization without breaking the many
 
 ### Access current user from a plugin
 
-In hooks, tools and custom endpoints you can easily obtain user information from the `cat` variable, instance of [`StrayCat`](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/).
+In hooks, tools and custom endpoints you can easily obtain user information from the `cat` variable.
 
 ```python
 from cat.mad_hatter.decorators import tool

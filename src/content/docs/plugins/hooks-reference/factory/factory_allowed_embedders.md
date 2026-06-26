@@ -18,7 +18,7 @@ Useful to extend or restrict support of embedders.
 | Name      | Type                                                                    | Description                                                        |
 |:----------|:------------------------------------------------------------------------|--------------------------------------------------------------------|
 | `allowed` | `List[EmbedderSettings]`                                                | List of EmbedderSettings classes, contains the allowed embedders.  |
-| `cat`     | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components. |
+| `cat`     | Cat | Cheshire Cat instance, allows you to use the framework components. |
 
 ## &#x21A9;&#xFE0F; Return
 

@@ -107,10 +107,9 @@ Your Cat now replies to GET requests to `localhost:1865/custom/new` and is liste
 You can add permissions to the endpoint and easily obtain the user session (what you saw above as `cat`), use the LLM or change the working memory.  
 See more details and examples [here](/docs/plugins/endpoints/).
 
-## &#128570; StrayCat
+## &#128570; The `cat`
 
 You surely noticed that all the primitives listed above put at your disposal a variable called `cat`.
-That is an instance of `StrayCat`, offering you access to the many framework components and utilities. Just to give an example, you can invoke the LLM directly using `cat.llm("write here a prompt")`.
+It gives you access to the many framework components and utilities. Just to give an example, you can invoke the LLM directly using `cat.llm("write here a prompt")`.
 
 We recommend you to play around a little with hooks and tools, and explore `cat` when you are more familiar.
-See [examples](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) on how to use `cat` in your plugins, and the full [`StrayCat` reference](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/).

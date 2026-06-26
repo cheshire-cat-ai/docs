@@ -18,7 +18,7 @@ Useful to extend or restrict support of LLMs.
 | Name      | Type                                                                    | Description                                                        |
 |:----------|:------------------------------------------------------------------------|--------------------------------------------------------------------|
 | `allowed` | `List[LLMSettings]`                                                     | List of LLMSettings classes, contains the allowed language models. |
-| `cat`     | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components. |
+| `cat`     | Cat | Cheshire Cat instance, allows you to use the framework components. |
 
 ## &#x21A9;&#xFE0F; Return
 

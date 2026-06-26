@@ -19,7 +19,7 @@ and launch custom chains with `cat._llm`.
 | Name            | Type                                                                    | Description                                                        |
 |:----------------|:------------------------------------------------------------------------|--------------------------------------------------------------------|
 | `allowed_tools` | `List[str]`                                                             | Set with string names of the tools retrieved from the memory.      |
-| `cat`           | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components. |
+| `cat`           | Cat | Cheshire Cat instance, allows you to use the framework components. |
 
 `allowed_tools` could be something along the lines of:
 ```python

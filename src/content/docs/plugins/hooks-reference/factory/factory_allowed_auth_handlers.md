@@ -18,7 +18,7 @@ Useful to extend support for custom auth handlers. For more information see [Cus
 | Name      | Type                                                                    | Description                                                           |
 |:----------|:------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | `allowed` | `List[AuthHandlerConfig]`                                               | List of AuthHandlerConfig classes, contains the custom auth handlers. |
-| `cat`     | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components.    |
+| `cat`     | Cat | Cheshire Cat instance, allows you to use the framework components.    |
 
 ## &#x21A9;&#xFE0F; Return
 

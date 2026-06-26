@@ -23,7 +23,7 @@ P.S.: this is the perfect place to instantiate and execute your own custom agent
 | Name         | Type                                                                    | Description                                                        |
 |:-------------|:------------------------------------------------------------------------|--------------------------------------------------------------------|
 | `fast_reply` | `dict`                                                                  | An initially empty dict that can be populated with a response.     |
-| `cat`        | [StrayCat](https://cheshire-cat-ai.github.io/docs/API_Documentation/looking_glass/stray_cat/) | Cheshire Cat instance, allows you to use the framework components. |
+| `cat`        | Cat | Cheshire Cat instance, allows you to use the framework components. |
 
 ## &#x21A9;&#xFE0F; Return
 
